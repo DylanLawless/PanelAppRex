@@ -1,6 +1,8 @@
 # PanelAppRex
 Aggregating and analysing gene panel data in R from Genomics England
 
+<img src="images/PanelAppRex_logo.webp" style="width: 80%;" alt="Logo of DNA wizard"/>
+
 ## Overview
 PanelAppRex is an R project aimed at aggregating and analysing gene panel data from Genomics England's PanelApp. Our repository integrates data that is used in both the NHS National Genomic Test Directory and the virtual gene panels used in the 100,000 Genomes Project. This dataset facilitates research and development by providing insights into disease-gene correlations and enhancing variant classification methodologies.
 
