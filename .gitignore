@@ -1,0 +1,7 @@
+credentials
+# For the reader's information the contents are:
+credentials/creds_api_key.txt
+credentials/creds_geomics_england_panel_app_user.txt
+
+.Rhistory
+.DS_Store
