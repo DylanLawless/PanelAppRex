@@ -71,10 +71,11 @@ df_minimal <- df |> select(id, Gene)
 df_minimal$SYMBOL <- df_minimal$Gene
 
 # export tables ----
-write.csv2(df_names, file= paste0(path_PanelAppData_genes_combined_meta, "_names.csv"))
-write.csv2(df_unique_counts, file= paste0(path_PanelAppData_genes_combined_meta, "_variable_counts.csv"))
-write.csv2(df_core, file= paste0(path_PanelAppData_genes_combined_core, ".csv"))
-write.csv2(df_minimal, file= paste0(path_PanelAppData_genes_combined_minimal, ".csv"))
+write.table(df_names, file= paste0(path_PanelAppData_genes_combined_meta, "_names.tsv"), quote = FALSE, row.names = FALSE, sep = "\t")
+write.table(df_unique_counts, file= paste0(path_PanelAppData_genes_combined_meta, "_variable_counts.tsv"), quote = FALSE, row.names = FALSE, sep = "\t")
+write.table(df_core, file= paste0(path_PanelAppData_genes_combined_core, ".tsv"), quote = FALSE, row.names = FALSE, sep = "\t")
+write.table(df_minimal, file= paste0(path_PanelAppData_genes_combined_minimal, ".tsv"), quote = FALSE, row.names = FALSE, sep = "\t")
+
 
 # check an example panels
 df_select <- df %>% filter(panel_id == 398) # PID genes

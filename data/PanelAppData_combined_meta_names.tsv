@@ -1,0 +1,448 @@
+panel_id	name
+1	Thoracic aortic aneurysm or dissection
+3	Stickler syndrome
+5	Currarino triad
+6	Familial hypercholesterolaemia
+7	Familial dysautonomia
+8	Refuted genes
+9	Differences in sex development
+11	Familial Neural Tube Defects
+13	Brugada syndrome and cardiac sodium channel disease
+17	Prostate cancer pertinent cancer susceptibility
+18	Monogenic nephrogenic diabetes insipidus
+19	Multiple lipomas
+20	Hereditary ataxia
+23	Familial hidradenitis suppurativa
+24	Peeling skin syndrome
+25	Congenital disorders of glycosylation
+26	Diabetes with additional phenotypes suggestive of a monogenic aetiology
+30	Chondrodysplasia punctata
+31	Congenital hypothyroidism
+33	Gastrointestinal epithelial barrier disorders
+34	Anophthalmia or microphthalmia
+36	Multiple endocrine tumours
+38	Beckwith-Wiedemann syndrome (BWS) and other congenital overgrowth disorders
+39	Parkinson Disease and Complex Parkinsonism
+42	Inherited white matter disorders
+45	Sudden death in young people
+47	Dilated Cardiomyopathy and conduction defects
+48	RASopathies
+49	Hypertrophic cardiomyopathy
+50	Familial cerebral small vessel disease
+53	Ehlers Danlos syndrome with a likely monogenic cause
+55	Breast cancer pertinent cancer susceptibility
+59	Haematological malignancies cancer susceptibility
+60	Periodic fever syndromes
+61	Gastrointestinal neuromuscular disorders
+62	Severe multi-system atopic disease with high IgE
+63	Familial Hirschsprung Disease
+64	ClinGen Gene Validity Curations
+65	Primary lymphoedema
+66	Rhabdomyolysis and metabolic muscle disorders
+75	Mucopolysaccharideosis, Gaucher, Fabry
+76	Long QT syndrome
+77	Xeroderma pigmentosum, Trichothiodystrophy or Cockayne syndrome
+78	Holoprosencephaly - NOT chromosomal
+79	Paediatric motor neuronopathies
+81	Clefting
+83	Membranoproliferative glomerulonephritis including C3 glomerulopathy
+85	Hereditary neuropathy
+86	Parathyroid Cancer
+87	Multi-organ autoimmune diabetes
+90	Brain channelopathy
+91	Erythropoietic protoporphyria, mild variant
+92	Hypogonadotropic hypogonadism
+94	PHACE(S) syndrome
+96	Malformations of cortical development
+97	Inherited phaeochromocytoma and paraganglioma
+98	Segmental overgrowth disorders - Deep sequencing
+99	Haematuria
+101	VACTERL-like phenotypes
+105	Pneumothorax - familial
+106	Proteinuric renal disease
+109	Cerebral folate deficiency
+110	Familial disseminated superficial actinic porokeratosis
+111	COVID-19 research
+112	Mitochondrial disorders
+114	Peroxisomal disorders
+115	Head and neck cancer pertinent cancer susceptibility
+117	Ovarian cancer pertinent cancer susceptibility
+119	Epidermolysis bullosa
+122	Thoracic dystrophies
+123	Hereditary haemorrhagic telangiectasia
+126	Monogenic hearing loss
+128	Ocular and oculo-cutaneous albinism
+130	Severe early-onset obesity
+131	IUGR and IGF abnormalities
+132	Generalised pustular psoriasis
+133	Melanoma pertinent cancer susceptibility
+134	Arrhythmogenic right ventricular cardiomyopathy
+136	Ectodermal dysplasia without a known gene mutation
+139	Atypical haemolytic uraemic syndrome
+143	Inherited ovarian cancer (without breast cancer)
+144	Fetal hydrops
+145	Congenital adrenal hypoplasia
+147	Cerebral vascular malformations
+149	Nephrocalcinosis or nephrolithiasis
+150	Rare multisystem ciliopathy disorders
+152	Familial diabetes
+154	Renal cancer pertinent cancer susceptibility
+155	Primary ovarian insufficiency
+156	Unexplained kidney failure in young people
+157	Hereditary Erythrocytosis
+158	Familial breast cancer
+159	Cytopenias and congenital anaemias
+162	Severe microcephaly
+165	Hereditary spastic paraplegia
+166	Brain cancer pertinent cancer susceptibility
+167	Familial Tumours Syndromes of the central & peripheral Nervous system
+168	Rare syndromic craniosynostosis or isolated multisuture synostosis
+171	Inherited non-medullary thyroid cancer
+173	Kabuki syndrome
+174	Insulin resistance (including lipodystrophy)
+175	Inherited bleeding disorders
+176	Infantile enterocolitis & monogenic inflammatory bowel disease
+178	Primary ciliary disorders
+179	Hydrocephalus
+180	Structural basal ganglia disorders
+183	Neuroendocrine cancer pertinent cancer susceptibility
+185	Limb girdle muscular dystrophies, myofibrillar myopathies and distal myopathies
+186	Optic neuropathy
+189	Non-syndromic hypotrichosis
+192	Early onset dystonia
+193	Pulmonary arterial hypertension
+196	Osteogenesis imperfecta
+197	Classical tuberous sclerosis
+199	Silver Russell syndrome
+200	Familial pulmonary fibrosis
+201	Genodermatoses with malignancies
+207	Congenital muscular dystrophy
+208	Bladder cancer pertinent cancer susceptibility
+209	Ductal plate malformation
+210	ClinGen_Familial thoracic aortic aneurysm and aortic dissection
+211	Multiple Epiphyseal Dysplasia
+212	Familial non syndromic congenital heart disease
+213	Kleine-Levin syndrome
+214	Catecholaminergic polymorphic VT
+215	Palmoplantar keratoderma and erythrokeratodermas
+217	Sarcoma cancer susceptibility
+219	Neurotransmitter disorders
+221	Choanal atresia
+222	Vici Syndrome and other autophagy disorders
+224	Short QT syndrome
+225	Congenital myopathy
+227	Genomic imprinting
+228	Severe hypertriglyceridaemia
+229	Skeletal Muscle Channelopathies
+230	Bilateral congenital or childhood onset cataracts
+232	Congenital myaesthenic syndrome
+234	CAKUT
+235	Distal myopathies
+236	Hyperthyroidism
+238	Left Ventricular Noncompaction Cardiomyopathy
+239	Juvenile dermatomyositis
+243	Childhood solid tumours
+244	Colorectal cancer pertinent cancer susceptibility
+245	Adult solid tumours cancer susceptibility
+246	Infantile nystagmus
+247	Radial dysplasia
+248	Ketotic hypoglycaemia
+249	Glaucoma (developmental)
+250	Corneal abnormalities
+251	Deafness and congenital structural abnormalities
+253	Non-syndromic familial congenital anorectal malformations
+254	GI tract tumours
+255	Neurofibromatosis Type 1
+258	Arthrogryposis
+259	Childhood solid tumours cancer susceptibility
+260	Auditory Neuropathy Spectrum Disorde
+262	Severe familial anorexia
+263	Amyotrophic lateral sclerosis/motor neuron disease
+265	Early onset dementia (encompassing fronto-temporal dementia and prion disease)
+267	Hyperammonaemia
+269	Amelogenesis imperfecta
+271	Endometrial cancer pertinent cancer susceptibility
+273	Upper gastrointestinal cancer pertinent cancer susceptibility
+277	Idiopathic ventricular fibrillation
+282	Autosomal recessive congenital ichthyosis
+283	Cystic kidney disease
+285	Intellectual disability
+286	Cerebellar hypoplasia
+288	Pain syndromes
+290	Familial rhabdomyosarcoma
+292	Renal tubulopathies
+293	Neonatal diabetes
+294	Ocular coloboma
+296	Non-CF bronchiectasis
+302	Undiagnosed metabolic disorders
+305	Familial cicatricial alopecia
+307	Retinal disorders
+308	Congenital hyperinsulinism
+309	Skeletal dysplasia
+310	Hydroa vacciniforme
+311	Pityriasis rubra pilaris
+312	Familial hypoparathyroidism
+314	Extreme early-onset hypertension
+315	Intracerebral calcification disorders
+318	Familial prostate cancer
+384	Limb disorders
+385	Neonatal cholestasis
+386	Pancreatitis
+391	Adult solid tumours for rare disease
+394	Familial Meniere Disease
+398	Primary immunodeficiency or monogenic inflammatory bowel disease
+399	Additional findings health related
+402	Early onset or syndromic epilepsy
+407	Haematological malignancies for rare disease
+412	Gene therapy clinical trials
+421	Thyroid cancer pertinent cancer susceptibility
+465	Other rare neuromuscular disorders
+466	Hereditary ataxia with onset in adulthood
+467	Likely inborn error of metabolism
+472	Monogenic diabetes
+474	Adult onset neurodegenerative disorder
+476	White matter disorders and cerebral calcification - narrow panel
+477	Ataxia and cerebellar anomalies - narrow panel
+478	Fetal anomalies
+479	Paediatric disorders - additional genes
+480	Familial hyperparathyroidism or hypocalciuric hypercalcaemia
+482	Hypophosphataemia or rickets
+483	Pituitary hormone deficiency
+484	DDG2P
+486	Paediatric disorders
+487	Cystic renal disease
+488	Hereditary ataxia and cerebellar anomalies - childhood onset
+490	Hypotonic infant
+491	Cerebral malformation
+496	Childhood onset leukodystrophy
+502	Hereditary systemic amyloidosis
+503	Inherited MMR deficiency (Lynch syndrome)
+504	Inherited polyposis and early onset colorectal cancer - germline testing
+506	Progressive cardiac conduction disease
+507	Common craniosynostosis syndromes
+508	Confirmed Fanconi anaemia or Bloom syndrome
+509	Structural eye disease
+510	Sporadic aniridia
+511	Albinism or congenital nystagmus
+512	Congenital fibrosis of the extraocular muscles
+513	Non-acute porphyrias
+514	Intestinal failure or congenital diarrhoea
+515	Iron metabolism disorders - NOT common HFE mutations
+516	Thrombophilia with a likely monogenic cause
+517	Combined factor V and VIII deficiency
+518	Rare anaemia
+519	Cytopenia - NOT Fanconi anaemia
+521	Inherited renal cancer
+522	Familial melanoma
+523	Inherited predisposition to GIST
+524	Inherited pancreatic cancer
+525	Inherited predisposition to acute myeloid leukaemia (AML)
+526	Neuronal ceroid lipofuscinosis
+527	Familial chylomicronaemia syndrome (FCS)
+528	Glycogen storage disease
+529	Lysosomal storage disorder
+530	Leber hereditary optic neuropathy
+531	Pyruvate dehydrogenase (PDH) deficiency
+532	Mitochondrial liver disease, including transient infantile liver failure
+533	Mitochondrial DNA maintenance disorder
+534	Mitochondrial disorder with complex I deficiency
+535	Mitochondrial disorder with complex II deficiency
+536	Mitochondrial disorder with complex III deficiency
+537	Mitochondrial disorder with complex IV deficiency
+538	Mitochondrial disorder with complex V deficiency
+539	Possible mitochondrial disorder - nuclear genes
+540	Adult onset dystonia, chorea or related movement disorder
+541	Paroxysmal central nervous system disorders
+542	Skeletal muscle channelopathy
+543	Bardet Biedl syndrome
+544	Cholestasis
+545	Bleeding and platelet disorders
+546	Lipodystrophy - childhood onset
+548	Tubulointerstitial kidney disease
+549	Laterality disorders and isomerism
+550	Respiratory ciliopathies including non-CF bronchiectasis
+551	Surfactant deficiency
+552	Familial tumoral calcinosis
+553	Ectodermal dysplasia
+554	Epidermolysis bullosa and congenital skin fragility
+555	Ichthyosis and erythrokeratoderma
+556	Palmoplantar keratodermas
+557	Autosomal recessive primary hypertrophic osteoarthropathy
+558	Multiple monogenic benign skin tumours
+559	Pigmentary skin disorders
+560	Cutaneous photosensitivity with a likely genetic cause
+562	Epidermodysplasia verruciformis
+563	Vascular skin disorders
+564	Mosaic skin disorders - deep sequencing
+565	Rare genetic inflammatory skin disorders
+566	Primary pigmented nodular adrenocortical disease
+567	Adult onset hereditary spastic paraplegia
+568	Childhood onset hereditary spastic paraplegia
+579	Adult onset leukodystrophy
+600	Familial rhabdoid tumours
+635	Inherited breast cancer and ovarian cancer
+648	Endocrine neoplasia
+649	Inherited phaeochromocytoma and paraganglioma excluding NF1
+650	Hypogonadotropic hypogonadism (GMS)
+652	Dilated and arrhythmogenic cardiomyopathy
+653	Polycystic liver disease
+657	Autism
+658	Corneal dystrophy
+678	Unexplained young onset end-stage renal disease
+700	Thoracic aortic aneurysm or dissection (GMS)
+720	Groopman et al 2019 - Genes with diagnostic variants
+722	Ophthalmological ciliopathies
+724	Neurological ciliopathies
+725	Renal ciliopathies
+726	Skeletal ciliopathies
+728	Rare multisystem ciliopathy Super panel
+734	Sarcoma susceptibility
+736	Neurological segmental overgrowth
+745	CHARGE syndrome
+749	Paediatric or syndromic cardiomyopathy
+772	Familial hypercholesterolaemia (GMS)
+774	Additional findings reproductive carrier status
+841	Sudden unexplained death or survivors of a cardiac event
+842	Cardiac arrhythmias
+843	Cardiac arrhythmias - additional genes
+846	Hereditary neuropathy or pain disorder
+847	Childhood onset dystonia, chorea or related movement disorder
+902	Renal superpanel - broad
+903	Renal superpanel - narrow
+921	Research panel - Severe Paediatric Disorders
+928	Viral resistance
+929	Additional findings health related - adult specific
+930	Additional findings health related - children
+931	Additional findings health related - CNV analysis adult specific
+932	Additional findings health related - CNV analysis children
+933	Additional findings health related - adults
+934	Additional findings health related - CNV analysis adults
+943	Osteopetrosis
+945	Thrombocythaemia
+1075	Autoinflammatory disorders
+1076	Malignant hyperthermia
+1108	Wilms tumour with features suggestive of predisposition
+1109	Multi locus imprinting disorders
+1141	Acute rhabdomyolysis
+1174	Pulmonary fibrosis familial
+1207	Acute intermittent porphyria
+1208	Agammaglobulinaemia with absent BTK expression
+1209	Albright hereditary osteodystrophy, pseudohypoparathyroidism, pseudopseudohypoparathyroidism, acrodysostosis and osteoma cutis
+1210	Alstrom syndrome
+1211	Alveolar capillary dysplasia with misalignment of pulmonary veins
+1212	APC associated Polyposis
+1213	Ataxia telangiectasia - mutation testing
+1214	Autoimmune lymphoproliferative syndrome with defective apoptosis
+1215	Autoimmune Polyendocrine Syndrome
+1216	BAP1 associated tumour predisposition syndrome
+1217	Paediatric pseudo-obstruction syndrome
+1220	Unexplained death in infancy and sudden unexplained death in childhood
+1221	Hereditary diffuse gastric cancer
+1222	Li Fraumeni Syndrome
+1223	Inherited prostate cancer
+1225	Hereditary isolated diabetes insipidus
+1226	Hereditary alpha tryptasaemia
+1308	Barth syndrome
+1309	Beckwith-Wiedemann syndrome
+1310	Blepharophimosis ptosis and epicanthus inversus
+1311	CADASIL
+1312	Calcium-sensing receptor phenotypes
+1313	Carney complex
+1314	Central congenital hypoventilation
+1315	Cleidocranial Dysplasia
+1316	Combined vitamin K-dependent clotting factor deficiency
+1317	Congenital adrenal hyperplasia diagnostic test
+1318	Cystic fibrosis diagnostic test
+1319	Cystinosis
+1320	DICER1-related cancer predisposition
+1321	Duchenne or Becker muscular dystrophy
+1322	Elastin-related phenotypes
+1323	Fabry disease
+1324	Facioscapulohumeral muscular dystrophy - extended testing
+1325	Factor II deficiency
+1326	Factor IX deficiency
+1327	Factor V deficiency
+1328	Factor VII deficiency
+1329	Factor VIII deficiency
+1330	Factor X deficiency
+1331	Factor XI deficiency
+1332	Factor XIII deficiency
+1333	Familial dysalbuminaemic hyperthyroxinaemia
+1334	Familial tumours of the nervous system
+1335	Fumarate hydratase-related tumour syndromes
+1336	Gaucher disease
+1337	Generalised arterial calcification in infancy
+1338	Glucokinase-related fasting hyperglycaemia
+1340	Glycogen storage disease V
+1341	GM1 Gangliosidosis and Mucopolysaccharidosis Type IVB
+1342	Haemoglobinopathy trait or carrier testing
+1343	Haemophagocytic syndrome with absent perforin expression
+1344	Haemophagocytic syndrome with absent XIAP expression
+1345	Hereditary angioedema types I and II
+1346	Hirschsprung disease
+1347	Incontinentia pigmenti
+1348	Inherited parathyroid cancer
+1349	Inherited susceptibility to acute lymphoblastoid leukaemia (ALL)
+1350	IPEX - Immunodysregulation Polyendocrinopathy and Enteropathy, X-Linked
+1351	Krabbe disease - GALC deficiency
+1352	Krabbe disease - Saposin A deficiency
+1353	Lymphoproliferative syndrome with absent SAP expression
+1354	Lysosomal acid lipase deficiency
+1356	Mitochondrial Complex V deficiency, TMEM70 type
+1357	Mitochondrial neurogastrointestinal encephalopathy
+1358	Monitoring for G(M)CSF escape mutations
+1359	Mucolipidosis II and III Alpha or Beta
+1360	Mucopolysaccharidosis type IH or S
+1361	Mucopolysaccharidosis type II
+1362	Mucopolysaccharidosis type IIIA
+1363	Mucopolysaccharidosis type IIIB
+1364	Mucopolysaccharidosis type IVA
+1365	Mucopolysaccharidosis type VI
+1366	Multiple endocrine neoplasia type 2
+1367	Multiple exostoses
+1368	NARP syndrome or maternally inherited Leigh syndrome
+1369	Neonatal diabetes - small panel
+1370	Neurofibromatosis type 1 (GMS)
+1371	Neuronal ceroid lipofuscinosis type 2
+1372	Neutropaenia consistent with ELANE mutations
+1373	Nevoid Basal Cell Carcinoma Syndrome or Gorlin syndrome
+1374	Niemann Pick disease type C
+1375	Niemann-Pick disease type A or B
+1376	Nijmegen breakage syndrome
+1377	Peutz Jeghers Syndrome
+1378	Phenylketonuria
+1379	POLG-related disorder
+1380	Primary hyperaldosteronism - KCNJ5
+1381	Pseudoxanthoma elasticum
+1382	PTEN Hamartoma Tumor Syndrome
+1383	Pulmonary alveolar microlithiasis
+1384	Retinoblastoma
+1385	Sandhoff disease
+1386	SCID with features of gamma chain deficiency
+1387	Segmental or atypical neurofibromatosis type 1 testing
+1388	Severe combined immunodeficiency with adenosine deaminase deficiency
+1389	Severe combined immunodeficiency with PNP deficiency
+1390	Short stature - SHOX deficiency
+1391	Sitosterolaemia
+1392	Smith-Lemli-Opitz syndrome
+1393	Spinal muscular atrophy type 1 rare mutation testing
+1394	Subcutaneous panniculitis T-cell lymphoma (SPTCL)
+1395	Syndromic and non syndromic craniosynostosis involving midline sutures
+1396	Tay-Sachs disease
+1397	Thalassaemia and other haemoglobinopathies
+1398	Thanatophoric dysplasia
+1399	Thiamine metabolism dysfunction syndrome 2
+1400	Tuberous sclerosis
+1401	Van der Woude syndrome
+1402	Variegate porphyria
+1403	Von Hippel Lindau syndrome
+1404	von Willebrand disease
+1405	Wilson disease
+1406	Wiskott-Aldrich syndrome
+1471	Monogenic short stature
+1504	Diagnostic testing for Isovaleric acidaemia
+1505	Diagnostic testing for Glutaric acidaemia I
+1506	Diagnostic testing for MCADD - Medium-chain acyl-CoA dehydrogenase deficiency - full ACADM sequencing
+1537	Unexplained young onset end-stage renal disease - additional genes
+1570	NICE approved PARP inhibitor treatment
+1571	APOL1 kidney donor testing
