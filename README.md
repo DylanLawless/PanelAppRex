@@ -99,13 +99,36 @@ Some genes are found across many different panels.
 Here are a few annotated example to illustrate. 
 If you are performing WGS analysis and score a variant due to it being a "disease gene", consider that some genes are repeated in many panels and may be unfairly biased.
 
-![img](./images/plot_patch2_annotated_example.pdf)
+![img](./images/plot_patch2_annotated_example.png)
+
+An example is panel 398 with 572 PID genes which are well established as consensus in the community.
+Another example is panel 1220 with 1675 genes which are associated with unexplained death in infancy and sudden unexplained death in childhood.
 
 ## Source
 Our main data source is the Genomics England PanelApp, accessible [here](https://panelapp.genomicsengland.co.uk). PanelApp hosts comprehensive gene panels related to genomic tests covered by the NHS, as well as data from historic genomic projects.
 
 ## Objectives
 The goal of PanelAppRex is to prepare a single dataset that is flexible and instantly usable for human genetic analysis.
+
+## Example import with R
+
+For the full code used see `./src/genomics_england_panels.R`.
+
+You can import either the TSV format or Rds format.
+The following code is shown in `minimal_example.R`:
+
+```
+# TSV format
+path_PanelAppData_genes_combined_core <- paste0(path_data, "/PanelAppData_combined_core")
+path_PanelAppData_genes_combined_minimal <- paste0(path_data, "/PanelAppData_combined_minimal")
+df_core <- read.table(file= paste0(path_PanelAppData_genes_combined_core, ".tsv"), sep = "\t")
+df_minimal <- read.table(file= paste0(path_PanelAppData_genes_combined_minimal, ".tsv"), sep = "\t")
+
+# Rds format
+path_data <- "../data"
+path_PanelAppData_genes_combined_Rds <- paste0(path_data, "/path_PanelAppData_genes_combined_Rds")
+df_core <- readRDS(file= path_PanelAppData_genes_combined_Rds)
+```
 
 ## Contributing
 Contributions to PanelAppRex are welcome. Please submit a pull request with your updates.

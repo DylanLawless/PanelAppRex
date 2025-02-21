@@ -174,7 +174,7 @@ patch2 <- p1 / p2b / p3b
 patch2
 
 ggsave(patch2, file = paste0(path_images, "/plot_patch2_annotated_example.pdf") )
-
+ggsave(patch2, file = paste0(path_images, "/plot_patch2_annotated_example.png") )
 # example info ----
 print("An example is panel 398 with 572 PID genes which are well established as consensus in the community.")
 print("An example is panel 1220 with 1675 genes which are associated with unexplained death in infancy and sudden unexplained death in childhood.")
