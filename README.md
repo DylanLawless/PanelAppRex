@@ -5,6 +5,101 @@ Aggregating and analysing gene panel data in R from Genomics England
 
 ## Overview
 PanelAppRex is an R project aimed at aggregating and analysing gene panel data from Genomics England's PanelApp. Our repository integrates data that is used in both the NHS National Genomic Test Directory and the virtual gene panels used in the 100,000 Genomes Project. This dataset facilitates research and development by providing insights into disease-gene correlations and enhancing variant classification methodologies.
+View the original GE panels here <https://panelapp.genomicsengland.co.uk/panels/> to browse and manually download single panels. 
+
+## What you want
+
+PanelAppRex skips the hard work by performing credentialed access to Genomics England API where it retrieves all gene panels, including the approved "451" panels.
+
+All panels are merged into single tables for your use:
+* Simplified (Panel ID, Gene)
+    - [./data/PanelAppData_combined_minimal.tsv](https://github.com/DylanLawless/PanelAppRex/blob/main/data/PanelAppData_combined_minimal.tsv)
+* Complex (All metadata: Panel id, Gene, confidence_level, mode_of_inheritance, name, disease_group, disease_sub_group, status)
+    - [./data/PanelAppData_combined_core.tsv](https://github.com/DylanLawless/PanelAppRex/blob/main/data/PanelAppData_combined_core.tsv)
+
+## Contents
+### Gene panels
+
+Simplified (Panel ID, Gene)
+
+```
+# Number of panel IDs simplified
+$ cut -f1 PanelAppData_combined_minimal.tsv | sort | uniq | wc -l
+448
+
+$ head PanelAppData_combined_minimal.tsv
+
+id      Gene    SYMBOL
+1       ABL1    ABL1
+1       ACTA2   ACTA2
+1       ADAMTSL4        ADAMTSL4
+1       ARIH1   ARIH1
+1       BGN     BGN
+1       COL1A1  COL1A1
+1       COL1A2  COL1A2
+1       COL3A1  COL3A1
+1       COL5A1  COL5A1
+```
+
+Complex (All metadata: Panel id, Gene, confidence_level, mode_of_inheritance, name, disease_group, disease_sub_group, status)
+
+```
+# Number of panel IDs including metadata
+cut -f1 data/PanelAppData_combined_core.tsv | sort | uniq | wc -l
+448
+
+$ head ./PanelAppData_combined_core.tsv
+id      Gene    confidence_level        mode_of_inheritance     name    disease_group   disease_sub_group       status
+1       ABL1    3       MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted        Thoracic aortic aneurysm or dissection  Cardiovascular disorders        Connective tissue disorders and aortopathies    public
+1       ACTA2   3       MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted        Thoracic aortic aneurysm or dissection  Cardiovascular disorders        Connective tissue disorders and aortopathies    public
+1       ADAMTSL4        3       BIALLELIC, autosomal or pseudoautosomal Thoracic aortic aneurysm or dissection  Cardiovascular disorders        Connective tissue disorders and aortopathies    public
+1       ARIH1   3       MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted        Thoracic aortic aneurysm or dissection  Cardiovascular disorders        Connective tissue disorders and aortopathies    public
+1       BGN     3       X-LINKED: hemizygous mutation in males, monoallelic mutations in females may cause disease (may be less severe, later onset than males) Thoracic aortic aneurysm or dissection Cardiovascular disorders Connective tissue disorders and aortopathies    public
+1       COL1A1  3       MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted        Thoracic aortic aneurysm or dissection  Cardiovascular disorders        Connective tissue disorders and aortopathies    public
+1       COL1A2  3       MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown     Thoracic aortic aneurysm or dissection  Cardiovascular disorders        Connective tissue disorders and aortopathies    public
+1       COL3A1  3       BOTH monoallelic and biallelic, autosomal or pseudoautosomal    Thoracic aortic aneurysm or dissection  Cardiovascular disorders        Connective tissue disorders and aortopathies    public
+1       COL5A1  3       MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted        Thoracic aortic aneurysm or dissection  Cardiovascular disorders        Connective tissue disorders and aortopathies    public
+```
+
+### Meta data
+
+```
+$ head PanelAppData_combined_meta_names.tsv
+
+panel_id        name
+1       Thoracic aortic aneurysm or dissection
+3       Stickler syndrome
+5       Currarino triad
+6       Familial hypercholesterolaemia
+7       Familial dysautonomia
+8       Refuted genes
+9       Differences in sex development
+11      Familial Neural Tube Defects
+13      Brugada syndrome and cardiac sodium channel disease
+...
+```
+
+```
+$ head PanelAppData_combined_meta_variable_counts.tsv
+
+Column_Name     Unique_Counts
+id      447
+entity_type     1
+Gene    6280
+confidence_level        4
+penetrance      4
+mode_of_pathogenicity   12
+publications    13102
+evidence        3653
+phenotypes      21636
+```
+
+The contents of panels themselves vary in number of genes. 
+Some genes are found across many different panels. 
+Here are a few annotated example to illustrate. 
+If you are performing WGS analysis and score a variant due to it being a "disease gene", consider that some genes are repeated in many panels and may be unfairly biased.
+
+![img](./images/plot_patch2_annotated_example.pdf)
 
 ## Source
 Our main data source is the Genomics England PanelApp, accessible [here](https://panelapp.genomicsengland.co.uk). PanelApp hosts comprehensive gene panels related to genomic tests covered by the NHS, as well as data from historic genomic projects.
