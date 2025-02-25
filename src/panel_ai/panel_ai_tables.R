@@ -2,6 +2,7 @@ library(dplyr)
 library(DT)
 library(htmlwidgets)
 
+path_root <- "../../data"
 path_data <- "."
 output_directory <- "panel_data_html"
 dir.create(file.path(path_data, output_directory), showWarnings = FALSE)
@@ -10,11 +11,11 @@ dir.create(file.path(path_data, output_directory), showWarnings = FALSE)
 common_lib_dir <- "common_lib"
 dir.create(file.path(path_data, output_directory, common_lib_dir), showWarnings = FALSE)
 
-path_PanelAppData_genes_combined_Rds <- file.path(path_data, "path_PanelAppData_genes_combined_Rds")
+path_PanelAppData_genes_combined_Rds <- file.path(path_root, "path_PanelAppData_genes_combined_Rds")
 df_core <- readRDS(file = path_PanelAppData_genes_combined_Rds)
 df_core <- df_core |> select(panel_id, entity_name, name, everything())
 
-unique_panel_ids <- unique(df_core$panel_id) # |> head(20)
+unique_panel_ids <- unique(df_core$panel_id)  |> head(20)
 
 for (pid in unique_panel_ids) {
   df_subset <- df_core |> filter(panel_id == pid)
