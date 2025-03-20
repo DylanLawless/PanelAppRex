@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: panelapprex2025lawless.aux
+White space in argument---line 26 of file panelapprex2025lawless.aux
+ : \citation{arruda_genetic_2015,mcaleer_severe_2015,verhoeven_hematopoietic_2022
+ :                                                                                magerus-chatinet_autoimmune_2013,sharfe_fatal_2014}
+I'm skipping whatever remains of this command
+White space in argument---line 30 of file panelapprex2025lawless.aux
+ : \citation{verhoeven_hematopoietic_2022
+ :                                        magerus-chatinet_autoimmune_2013}
+I'm skipping whatever remains of this command
+The style file: unsrtnat.bst
+Database file #1: references.bib
+You've used 4 entries,
+            2481 wiz_defined-function locations,
+            588 strings with 6675 characters,
+and the built_in function-call counts, 3055 in all, are:
+= -- 178
+> -- 360
+< -- 0
++ -- 124
+- -- 116
+* -- 363
+:= -- 584
+add.period$ -- 24
+call.type$ -- 4
+change.case$ -- 8
+chr.to.int$ -- 4
+cite$ -- 4
+duplicate$ -- 76
+empty$ -- 155
+format.name$ -- 120
+if$ -- 567
+int.to.chr$ -- 1
+int.to.str$ -- 5
+missing$ -- 4
+newline$ -- 40
+num.names$ -- 12
+pop$ -- 16
+preamble$ -- 1
+purify$ -- 4
+quote$ -- 0
+skip$ -- 37
+stack$ -- 0
+substring$ -- 110
+swap$ -- 12
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 28
+warning$ -- 0
+while$ -- 15
+width$ -- 0
+write$ -- 83
+(There were 2 error messages)

@@ -1,0 +1,71 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Martin et~al.(2019)Martin, Williams, Foulger, Leigh, Daugherty,
+  Niblock, Leong, Smith, Gerasimenko, Haraldsdottir, Thomas, Scott, Baple,
+  Tucci, Brittain, De~Burca, Ibañez, Kasperaviciute, Smedley, Caulfield,
+  Rendon, and McDonagh]{martin_panelapp_2019}
+Antonio~Rueda Martin, Eleanor Williams, Rebecca~E. Foulger, Sarah Leigh,
+  Louise~C. Daugherty, Olivia Niblock, Ivone U.~S. Leong, Katherine~R. Smith,
+  Oleg Gerasimenko, Eik Haraldsdottir, Ellen Thomas, Richard~H. Scott, Emma
+  Baple, Arianna Tucci, Helen Brittain, Anna De~Burca, Kristina Ibañez, Dalia
+  Kasperaviciute, Damian Smedley, Mark Caulfield, Augusto Rendon, and Ellen~M.
+  McDonagh.
+\newblock {PanelApp} crowdsources expert knowledge to establish consensus
+  diagnostic gene panels.
+\newblock \emph{Nature Genetics}, 51\penalty0 (11):\penalty0 1560--1565,
+  November 2019.
+\newblock ISSN 1061-4036, 1546-1718.
+\newblock \doi{10.1038/s41588-019-0528-2}.
+\newblock URL \url{https://www.nature.com/articles/s41588-019-0528-2}.
+
+\bibitem[Arruda et~al.(2015)Arruda, Delcaro, Botelho~Palhas, Dias, Muglia,
+  Castelli, Bork, and Moreno]{arruda_genetic_2015}
+Luisa Karla~P. Arruda, Luana Delcaro, Priscila~B. Botelho~Palhas, Marina~M.
+  Dias, Valdair~F. Muglia, Erick~C. Castelli, Konrad Bork, and Adriana~S.
+  Moreno.
+\newblock Genetic {Analysis} {As} a {Practical} {Tool} to {Diagnose}
+  {Hereditary} {Angioedema} with {Normal} {C1} {Inhibitor}: {A} {Case}
+  {Report}.
+\newblock \emph{Journal of Allergy and Clinical Immunology}, 135\penalty0
+  (2):\penalty0 AB197, February 2015.
+\newblock ISSN 00916749.
+\newblock \doi{10.1016/j.jaci.2014.12.1578}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0091674914033594}.
+
+\bibitem[McAleer et~al.(2015)McAleer, Pohler, Smith, Wilson, Cole, MacGowan,
+  Koetsier, Godsel, Harmon, Gruber, Crumrine, Elias, McDermott, Butler,
+  Broderick, Sarig, Sprecher, Green, McLean, and Irvine]{mcaleer_severe_2015}
+Maeve~A. McAleer, Elizabeth Pohler, Frances~J.D. Smith, Neil~J. Wilson,
+  Christian Cole, Stuart MacGowan, Jennifer~L. Koetsier, Lisa~M. Godsel,
+  Robert~M. Harmon, Robert Gruber, Debra Crumrine, Peter~M. Elias, Michael
+  McDermott, Karina Butler, Annemarie Broderick, Ofer Sarig, Eli Sprecher,
+  Kathleen~J. Green, W.H.~Irwin McLean, and Alan~D. Irvine.
+\newblock Severe dermatitis, multiple allergies, and metabolic wasting syndrome
+  caused by a novel mutation in the {N}-terminal plakin domain of desmoplakin.
+\newblock \emph{Journal of Allergy and Clinical Immunology}, 136\penalty0
+  (5):\penalty0 1268--1276, November 2015.
+\newblock ISSN 00916749.
+\newblock \doi{10.1016/j.jaci.2015.05.002}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0091674915006533}.
+
+\bibitem[Sharfe et~al.(2014)Sharfe, Nahum, Newell, Dadi, Ngan, Pereira,
+  Herbrick, and Roifman]{sharfe_fatal_2014}
+Nigel Sharfe, Amit Nahum, Andrea Newell, Harjit Dadi, Bo~Ngan, Sergio~L.
+  Pereira, Jo-Anne Herbrick, and Chaim~M. Roifman.
+\newblock Fatal combined immunodeficiency associated with heterozygous mutation
+  in {STAT1}.
+\newblock \emph{Journal of Allergy and Clinical Immunology}, 133\penalty0
+  (3):\penalty0 807--817, March 2014.
+\newblock ISSN 00916749.
+\newblock \doi{10.1016/j.jaci.2013.09.032}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0091674913014796}.
+
+\end{thebibliography}
