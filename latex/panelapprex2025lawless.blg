@@ -1,55 +1,51 @@
 This is BibTeX, Version 0.99d (TeX Live 2018)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: panelapprex2025lawless.aux
-White space in argument---line 26 of file panelapprex2025lawless.aux
- : \citation{arruda_genetic_2015,mcaleer_severe_2015,verhoeven_hematopoietic_2022
- :                                                                                magerus-chatinet_autoimmune_2013,sharfe_fatal_2014}
-I'm skipping whatever remains of this command
-White space in argument---line 30 of file panelapprex2025lawless.aux
- : \citation{verhoeven_hematopoietic_2022
- :                                        magerus-chatinet_autoimmune_2013}
-I'm skipping whatever remains of this command
 The style file: unsrtnat.bst
 Database file #1: references.bib
-You've used 4 entries,
+Name 8 in "{The UniProt Consortium} and Bateman, Alex and Martin, Maria-Jesus and Orchard, Sandra and Magrane, Michele and Adesina, Aduragbemi and Ahmad, Shadab and Bowler-Barnett, and Others." has a comma at the end for entry the_uniprot_consortium_uniprot_2025
+while executing---line 1315 of file unsrtnat.bst
+Name 8 in "{The UniProt Consortium} and Bateman, Alex and Martin, Maria-Jesus and Orchard, Sandra and Magrane, Michele and Adesina, Aduragbemi and Ahmad, Shadab and Bowler-Barnett, and Others." has a comma at the end for entry the_uniprot_consortium_uniprot_2025
+while executing---line 1315 of file unsrtnat.bst
+You've used 8 entries,
             2481 wiz_defined-function locations,
-            588 strings with 6675 characters,
-and the built_in function-call counts, 3055 in all, are:
-= -- 178
-> -- 360
+            623 strings with 8837 characters,
+and the built_in function-call counts, 6196 in all, are:
+= -- 369
+> -- 726
 < -- 0
-+ -- 124
-- -- 116
-* -- 363
-:= -- 584
-add.period$ -- 24
-call.type$ -- 4
-change.case$ -- 8
-chr.to.int$ -- 4
-cite$ -- 4
-duplicate$ -- 76
-empty$ -- 155
-format.name$ -- 120
-if$ -- 567
++ -- 250
+- -- 234
+* -- 738
+:= -- 1173
+add.period$ -- 48
+call.type$ -- 8
+change.case$ -- 16
+chr.to.int$ -- 8
+cite$ -- 8
+duplicate$ -- 152
+empty$ -- 318
+format.name$ -- 242
+if$ -- 1157
 int.to.chr$ -- 1
-int.to.str$ -- 5
-missing$ -- 4
-newline$ -- 40
-num.names$ -- 12
-pop$ -- 16
+int.to.str$ -- 9
+missing$ -- 8
+newline$ -- 72
+num.names$ -- 24
+pop$ -- 32
 preamble$ -- 1
-purify$ -- 4
+purify$ -- 8
 quote$ -- 0
-skip$ -- 37
+skip$ -- 73
 stack$ -- 0
-substring$ -- 110
-swap$ -- 12
+substring$ -- 251
+swap$ -- 24
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 28
+type$ -- 56
 warning$ -- 0
-while$ -- 15
+while$ -- 31
 width$ -- 0
-write$ -- 83
+write$ -- 159
 (There were 2 error messages)

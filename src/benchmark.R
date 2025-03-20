@@ -72,4 +72,4 @@ print(combined_plot)
 final_plot <- p1 / combined_plot + plot_annotation(tag_levels = 'A')
 print(final_plot)
 
-ggsave(final_plot, file = "../images/benchmark.png", width = 8, height = 5)
+ggsave(final_plot, file = "../images/benchmark.pdf", width = 8, height = 5)

@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -22,6 +22,36 @@ Antonio~Rueda Martin, Eleanor Williams, Rebecca~E. Foulger, Sarah Leigh,
 \newblock ISSN 1061-4036, 1546-1718.
 \newblock \doi{10.1038/s41588-019-0528-2}.
 \newblock URL \url{https://www.nature.com/articles/s41588-019-0528-2}.
+
+\bibitem[Landrum et~al.(2018)Landrum, Lee, Benson, Brown, Chao, Chitipiralla,
+  Gu, Hart, Hoffman, Jang, Karapetyan, Katz, Liu, Maddipatla, Malheiro,
+  McDaniel, Ovetsky, Riley, Zhou, Holmes, Kattman, and
+  Maglott]{landrum_clinvar_2018}
+Melissa~J Landrum, Jennifer~M Lee, Mark Benson, Garth~R Brown, Chen Chao,
+  Shanmuga Chitipiralla, Baoshan Gu, Jennifer Hart, Douglas Hoffman, Wonhee
+  Jang, Karen Karapetyan, Kenneth Katz, Chunlei Liu, Zenith Maddipatla, Adriana
+  Malheiro, Kurt McDaniel, Michael Ovetsky, George Riley, George Zhou,
+  J~Bradley Holmes, Brandi~L Kattman, and Donna~R Maglott.
+\newblock {ClinVar}: improving access to variant interpretations and supporting
+  evidence.
+\newblock \emph{Nucleic Acids Research}, 46\penalty0 (D1):\penalty0
+  D1062--D1067, January 2018.
+\newblock ISSN 0305-1048, 1362-4962.
+\newblock \doi{10.1093/nar/gkx1153}.
+\newblock URL \url{http://academic.oup.com/nar/article/46/D1/D1062/4641904}.
+
+\bibitem[{The UniProt Consortium} et~al.(2025){The UniProt Consortium},
+  Bateman, Martin, Orchard, Magrane, Adesina, Ahmad, Bowler-Barnett, and
+  Others.]{the_uniprot_consortium_uniprot_2025}
+{The UniProt Consortium}, Alex Bateman, Maria-Jesus Martin, Sandra Orchard,
+  Michele Magrane, Aduragbemi Adesina, Shadab Ahmad, Bowler-Barnett, and
+  Others.
+\newblock {UniProt}: the {Universal} {Protein} {Knowledgebase} in 2025.
+\newblock \emph{Nucleic Acids Research}, 53\penalty0 (D1):\penalty0 D609--D617,
+  January 2025.
+\newblock ISSN 0305-1048, 1362-4962.
+\newblock \doi{10.1093/nar/gkae1010}.
+\newblock URL \url{https://academic.oup.com/nar/article/53/D1/D609/7902999}.
 
 \bibitem[Arruda et~al.(2015)Arruda, Delcaro, Botelho~Palhas, Dias, Muglia,
   Castelli, Bork, and Moreno]{arruda_genetic_2015}
@@ -54,6 +84,40 @@ Maeve~A. McAleer, Elizabeth Pohler, Frances~J.D. Smith, Neil~J. Wilson,
 \newblock \doi{10.1016/j.jaci.2015.05.002}.
 \newblock URL
   \url{https://linkinghub.elsevier.com/retrieve/pii/S0091674915006533}.
+
+\bibitem[Verhoeven et~al.(2022)Verhoeven, Schonenberg-Meinema, Ebstein,
+  Papendorf, Baars, Van~Leeuwen, Jansen, Lankester, Van Der~Burg, Florquin,
+  Maas, Van~Koningsbruggen, Krüger, Van Den~Berg, and
+  Kuijpers]{verhoeven_hematopoietic_2022}
+Dorit Verhoeven, Dieneke Schonenberg-Meinema, Frédéric Ebstein, Jonas~J.
+  Papendorf, Paul~A. Baars, Ester~M.M. Van~Leeuwen, Machiel~H. Jansen, Arjan~C.
+  Lankester, Mirjam Van Der~Burg, Sandrine Florquin, Saskia~M. Maas, Silvana
+  Van~Koningsbruggen, Elke Krüger, J.~Merlijn Van Den~Berg, and Taco~W.
+  Kuijpers.
+\newblock Hematopoietic stem cell transplantation in a patient with
+  proteasome-associated autoinflammatory syndrome ({PRAAS}).
+\newblock \emph{Journal of Allergy and Clinical Immunology}, 149\penalty0
+  (3):\penalty0 1120--1127.e8, March 2022.
+\newblock ISSN 00916749.
+\newblock \doi{10.1016/j.jaci.2021.07.039}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0091674921012446}.
+
+\bibitem[Magerus-Chatinet et~al.(2013)Magerus-Chatinet, Stolzenberg,
+  Lanzarotti, Neven, Daussy, Picard, Neveux, Desai, Rao, Ghosh, Madkaikar,
+  Fischer, and Rieux-Laucat]{magerus-chatinet_autoimmune_2013}
+Aude Magerus-Chatinet, Marie-Claude Stolzenberg, Nina Lanzarotti, Bénédicte
+  Neven, Cécile Daussy, Capucine Picard, Nathalie Neveux, Mukesh Desai,
+  Meghana Rao, Kanjaksha Ghosh, Manisha Madkaikar, Alain Fischer, and
+  Frédéric Rieux-Laucat.
+\newblock Autoimmune lymphoproliferative syndrome caused by a homozygous null
+  {FAS} ligand ({FASLG}) mutation.
+\newblock \emph{Journal of Allergy and Clinical Immunology}, 131\penalty0
+  (2):\penalty0 486--490, February 2013.
+\newblock ISSN 00916749.
+\newblock \doi{10.1016/j.jaci.2012.06.011}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0091674912009645}.
 
 \bibitem[Sharfe et~al.(2014)Sharfe, Nahum, Newell, Dadi, Ngan, Pereira,
   Herbrick, and Roifman]{sharfe_fatal_2014}
