@@ -1,4 +1,4 @@
-\begin{thebibliography}{8}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -52,6 +52,35 @@ Melissa~J Landrum, Jennifer~M Lee, Mark Benson, Garth~R Brown, Chen Chao,
 \newblock ISSN 0305-1048, 1362-4962.
 \newblock \doi{10.1093/nar/gkae1010}.
 \newblock URL \url{https://academic.oup.com/nar/article/53/D1/D609/7902999}.
+
+\bibitem[Lawless(2025)]{lawless_panelapprex_2025}
+Dylan Lawless.
+\newblock {PanelAppRex} aggregates disease gene panels and facilitates
+  sophisticated search.
+\newblock March 2025.
+\newblock \doi{10.1101/2025.03.20.25324319}.
+\newblock URL \url{http://medrxiv.org/lookup/doi/10.1101/2025.03.20.25324319}.
+
+\bibitem[Karczewski et~al.(2020)Karczewski, Francioli, Tiao, Cummings,
+  Alf{\"o}ldi, Wang, Collins, Laricchia, Ganna, Birnbaum,
+  et~al.]{karczewski2020mutational}
+Konrad~J Karczewski, Laurent~C Francioli, Grace Tiao, Beryl~B Cummings, Jessica
+  Alf{\"o}ldi, Qingbo Wang, Ryan~L Collins, Kristen~M Laricchia, Andrea Ganna,
+  Daniel~P Birnbaum, et~al.
+\newblock The mutational constraint spectrum quantified from variation in
+  141,456 humans.
+\newblock \emph{Nature}, 581\penalty0 (7809):\penalty0 434--443, 2020.
+
+\bibitem[Liu et~al.(2020)Liu, Li, Mou, Dong, and Tu]{liu_dbnsfp_2020}
+Xiaoming Liu, Chang Li, Chengcheng Mou, Yibo Dong, and Yicheng Tu.
+\newblock {dbNSFP} v4: a comprehensive database of transcript-specific
+  functional predictions and annotations for human nonsynonymous and
+  splice-site {SNVs}.
+\newblock \emph{Genome Medicine}, 12\penalty0 (1):\penalty0 103, December 2020.
+\newblock ISSN 1756-994X.
+\newblock \doi{10.1186/s13073-020-00803-9}.
+\newblock URL
+  \url{https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-020-00803-9}.
 
 \bibitem[Arruda et~al.(2015)Arruda, Delcaro, Botelho~Palhas, Dias, Muglia,
   Castelli, Bork, and Moreno]{arruda_genetic_2015}

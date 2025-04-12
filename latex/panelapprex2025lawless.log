@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.7.19)  20 MAR 2025 16:11
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.7.19)  27 MAR 2025 15:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1746,17 +1746,18 @@ although it is yet undefined on input line 56.
 ]
 Package acronym Info: Label `acro:html' newly defined as it shall be overridden
 
-although it is yet undefined on input line 69.
+although it is yet undefined on input line 100.
 
-Overfull \hbox (29.34085pt too wide) in paragraph at lines 71--73
+Overfull \hbox (29.34085pt too wide) in paragraph at lines 102--104
 \TU/lmr/m/n/12 merging with gene/protein ID. The following code snippet, availa
 ble in \TU/lmtt/m/n/12 minimal_example.R\TU/lmr/m/n/12 ,
  []
 
+[3]
 Package acronym Info: Label `acro:csv' newly defined as it shall be overridden
-although it is yet undefined on input line 96.
+although it is yet undefined on input line 127.
 Package acronym Info: Label `acro:pdf' newly defined as it shall be overridden
-although it is yet undefined on input line 96.
+although it is yet undefined on input line 127.
 File: ../images/screenshot_1.png Graphic file (type bmp)
 <../images/screenshot_1.png>
 File: ../images/screenshot_2.png Graphic file (type bmp)
@@ -1764,30 +1765,36 @@ File: ../images/screenshot_2.png Graphic file (type bmp)
 File: ../images/benchmark.pdf Graphic file (type pdf)
 <use ../images/benchmark.pdf>
 Package acronym Info: Label `acro:pid' newly defined as it shall be overridden
-although it is yet undefined on input line 114.
+although it is yet undefined on input line 145.
 Package acronym Info: Label `acro:jaci' newly defined as it shall be overridden
 
-although it is yet undefined on input line 114.
-[3] [4] [5] (./panelapprex2025lawless.bbl [6
+although it is yet undefined on input line 145.
+ [4] [5] (./panelapprex2025lawless.bbl [6
 
-] [7]) [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 147.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 147.
+]
+Underfull \hbox (badness 1354) in paragraph at lines 75--84
+[][][][] [] [][][][][][][][][][][][][][][][][][][][][]$\TU/lmr/m/n/12 .  URL []
+[]$[][][][][] [] [] [] [][][][][][][][][][][][][][] [] [][][][][][][][][][][][]
+[] []
+ []
 
-(./panelapprex2025lawless.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 147.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 147.
+[7]) [8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 178.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 178.
+ (./panelapprex2025lawless.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 178.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 178.
 Package rerunfilecheck Info: File `panelapprex2025lawless.out' has not changed.
 
-(rerunfilecheck)             Checksum: EE9D0BAC68F2B5698CA9FF4863E81DD5.
+(rerunfilecheck)             Checksum: 78157F298005002A85385DC914B3373D.
  ) 
 Here is how much of TeX's memory you used:
- 40608 strings out of 492970
- 847651 string characters out of 6133938
- 1002388 words of memory out of 5000000
- 44010 multiletter control sequences out of 15000+600000
+ 40617 strings out of 492970
+ 847912 string characters out of 6133938
+ 1003607 words of memory out of 5000000
+ 44019 multiletter control sequences out of 15000+600000
  540020 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 65i,6n,101p,10565b,890s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,6n,101p,10565b,892s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on panelapprex2025lawless.pdf (8 pages).

@@ -55,7 +55,38 @@ For instance, these are integral in the NHS and research projects such as the 10
 landrum_clinvar_2018, the_uniprot_consortium_uniprot_2025}. 
 The novel natural language-style search capability further streamlines the discovery of disease gene panels by allowing queries based on gene names, phenotypes, disease groups and additional key attributes which were supplemented with evidence-based \ac{rag}.
 
+
+%\section{Introduction}
+%Quantifying the risk that a newborn inherits a disease-causing variant is a fundamental challenge in genomics. Currently, genetic risk estimation is most commonly performed using classical statistical approaches grounded in Hardy–Weinberg equilibrium (HWE)
+%\cite{MayoCentury2008, AbramovsHardyWeinberg2020}. 
+%These methods are considered best practice for calculating genetic inheritance probabilities across the genome for single nucleotide variants (SNVs). Using \textit{TNFAIP3} as a model gene, we calculate the expected incidence of pathogenic variants in a cohort representative of the annual birth population in Switzerland.
+%
+%Our work lays the groundwork for future studies aimed at developing a Bayesian framework for variant occurrence. Such a framework would refine these classical estimates by incorporating prior knowledge and continuously updating probabilities as new data become available. Moreover, our approach builds on several key aspects of current variant interpretation and statistical genomics. For example, guidelines from the American College of Medical Genetics and Genomics (ACMG) \citep{richards2015standards, tavtigian2020fitting} provide a foundation for classifying variants into categories (Pathogenic, Likely Pathogenic, VUS, Likely Benign, and Benign). Standardised variant interpretation protocols further integrate quality control and filtering criteria to ensure robust genomic analysis \citep{pedersen2021effective,anderson2010data}. In parallel, the concept of qualifying variants (QVs) is important for suitably filtering and interpreting SNVs \citep{cirulli2015exome, Povysil2019rare}. These components, together with advanced statistical approaches (e.g., ACAT and SKAT \citep{liu2019acat,li2020dynamic,wu2011rare,lee2012optimal}) and multi-block data fusion techniques \citep{kong2018nature,howe2021within}, form the pillars of current practices in variant interpretation. Furthermore, standardized reporting formats and unique identifiers for QV sets (e.g., using ACMG SF v3.2 \citep{miller2023acmg}) enhance reproducibility and interoperability. These concepts underpin our methodology and provide a strong foundation for future Bayesian extensions.
+
+
+
+
+
+
+
+%\section{Introduction2}
+%
+%Advances in genomic sequencing have enabled the comprehensive characterisation of genetic variation across populations, yet the clinical interpretation of these variants remains challenging. While true positive pathogenic variants are generally straightforward to confirm, benign variants or variants of uncertain significance (VUS) pose a greater challenge. These variants may be mistakenly given undue importance simply because they occur in genes known to be associated with disease, even if their occurrence in the general population is merely by chance.
+%
+%In this study, we integrate a Bayesian framework with classical probability models to refine the estimation of disease occurrence. By explicitly modelling the empirical occurrence probability of every variant-including benign and VUS variants-we ensure that the expected prior probability is appropriately incorporated into pathogenicity assessments. This approach provides a more balanced view that aids clinical interpretation by preventing overestimation of the clinical relevance of common variants.
+%
+%We demonstrate our integrated framework using examples from autosomal dominant (\textit{NFKB1}) and autosomal recessive (CFTR p.Arg117His) disorders. This framework not only improves our understanding of the true burden of disease but also offers clinical practitioners a cautious perspective, particularly when interpreting variants that might otherwise be erroneously prioritized.
+
+
 \section{Materials and methods}
+
+\subsection{Data}
+The PanelAppRex core model contained 58,592 entries consisting of 52 sets of annotations, including the gene name, disease-gene panel ID, diseases-related features, confidence measurements \cite{lawless_panelapprex_2025}.
+Data from gnomAD v4 comprised 807,162 individuals, including 730,947 exomes and 76,215 genomes \cite{karczewski2020mutational}. This dataset provided 786,500,648 single nucleotide variants and 122,583,462 InDels, with variant type counts of 9,643,254 synonymous, 16,412,219 missense, 726,924 nonsense, 1,186,588 frameshift and 542,514 canonical splice site variants. ClinVar data were obtained from the variant summary dataset (this version: 16 March 2025) available from the NCBI FTP site, and included 6,845,091 entries, which were processed into 91,319 gene classification groups and a total of 38,983 gene classifications; for example, the gene A1BG contained four variants classified as likely benign and 102 total entries \cite{landrum_clinvar_2018}. For our analysis phase we also used dbNSFP which consisted of a number of annotations for 121,832,908 single nucleotide variants 
+\cite{liu_dbnsfp_2020}. 
+
+
+
 \subsection{Implementation}
 \noindent
 PanelAppRex was implemented in R and integrates data from \ac{ge}’s PanelApp, ClinVar, and UniProt
