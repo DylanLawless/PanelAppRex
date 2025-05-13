@@ -3,50 +3,58 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: panelapprex2025lawless.aux
 The style file: unsrtnat.bst
 Database file #1: references.bib
+Repeated entry---line 194 of file references.bib
+ : @article{karczewski2020mutational
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 205 of file references.bib
+ : @article{landrum_clinvar_2018
+ :                              ,
+I'm skipping whatever remains of this entry
 Name 8 in "{The UniProt Consortium} and Bateman, Alex and Martin, Maria-Jesus and Orchard, Sandra and Magrane, Michele and Adesina, Aduragbemi and Ahmad, Shadab and Bowler-Barnett, and Others." has a comma at the end for entry the_uniprot_consortium_uniprot_2025
 while executing---line 1315 of file unsrtnat.bst
 Name 8 in "{The UniProt Consortium} and Bateman, Alex and Martin, Maria-Jesus and Orchard, Sandra and Magrane, Michele and Adesina, Aduragbemi and Ahmad, Shadab and Bowler-Barnett, and Others." has a comma at the end for entry the_uniprot_consortium_uniprot_2025
 while executing---line 1315 of file unsrtnat.bst
 Warning--empty journal in lawless_panelapprex_2025
-You've used 11 entries,
+You've used 16 entries,
             2481 wiz_defined-function locations,
-            646 strings with 9792 characters,
-and the built_in function-call counts, 7559 in all, are:
-= -- 469
-> -- 835
-< -- 1
-+ -- 290
-- -- 268
-* -- 869
-:= -- 1415
-add.period$ -- 62
-call.type$ -- 11
-change.case$ -- 22
-chr.to.int$ -- 11
-cite$ -- 12
-duplicate$ -- 208
-empty$ -- 418
-format.name$ -- 279
-if$ -- 1428
+            693 strings with 12103 characters,
+and the built_in function-call counts, 10825 in all, are:
+= -- 663
+> -- 1208
+< -- 2
++ -- 420
+- -- 388
+* -- 1237
+:= -- 2030
+add.period$ -- 89
+call.type$ -- 16
+change.case$ -- 32
+chr.to.int$ -- 16
+cite$ -- 17
+duplicate$ -- 298
+empty$ -- 599
+format.name$ -- 404
+if$ -- 2048
 int.to.chr$ -- 1
-int.to.str$ -- 12
-missing$ -- 11
-newline$ -- 92
-num.names$ -- 33
-pop$ -- 52
+int.to.str$ -- 17
+missing$ -- 15
+newline$ -- 129
+num.names$ -- 48
+pop$ -- 80
 preamble$ -- 1
-purify$ -- 11
+purify$ -- 16
 quote$ -- 0
-skip$ -- 102
+skip$ -- 151
 stack$ -- 0
-substring$ -- 291
-swap$ -- 31
+substring$ -- 393
+swap$ -- 44
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 77
+type$ -- 112
 warning$ -- 1
-while$ -- 40
+while$ -- 56
 width$ -- 0
-write$ -- 206
-(There were 2 error messages)
+write$ -- 294
+(There were 4 error messages)

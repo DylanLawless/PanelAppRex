@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{16}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -82,6 +82,12 @@ Xiaoming Liu, Chang Li, Chengcheng Mou, Yibo Dong, and Yicheng Tu.
 \newblock URL
   \url{https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-020-00803-9}.
 
+\bibitem[Steffen Durinck
+  {\textless}Biomartdev@Gmail.~Com{\textgreater}(2017)]{steffen_durinck_biomart}
+Wolfgang~Huber Steffen Durinck {\textless}Biomartdev@Gmail.~Com{\textgreater}.
+\newblock {biomaRt}, 2017.
+\newblock URL \url{https://bioconductor.org/packages/biomaRt}.
+
 \bibitem[Arruda et~al.(2015)Arruda, Delcaro, Botelho~Palhas, Dias, Muglia,
   Castelli, Bork, and Moreno]{arruda_genetic_2015}
 Luisa Karla~P. Arruda, Luana Delcaro, Priscila~B. Botelho~Palhas, Marina~M.
@@ -160,5 +166,63 @@ Nigel Sharfe, Amit Nahum, Andrea Newell, Harjit Dadi, Bo~Ngan, Sergio~L.
 \newblock \doi{10.1016/j.jaci.2013.09.032}.
 \newblock URL
   \url{https://linkinghub.elsevier.com/retrieve/pii/S0091674913014796}.
+
+\bibitem[Hannah et~al.(2024)Hannah, Drumm, Nykamp, Pramparo, Steiner, and
+  Schrodi]{hannah_using_2024}
+William~B. Hannah, Mitchell~L. Drumm, Keith Nykamp, Tiziano Pramparo, Robert~D.
+  Steiner, and Steven~J. Schrodi.
+\newblock Using genomic databases to determine the frequency and
+  population-based heterogeneity of autosomal recessive conditions.
+\newblock \emph{Genetics in Medicine Open}, 2:\penalty0 101881, 2024.
+\newblock ISSN 29497744.
+\newblock \doi{10.1016/j.gimo.2024.101881}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S2949774424010276}.
+
+\bibitem[Zschocke et~al.(2023)Zschocke, Byers, and
+  Wilkie]{zschocke_mendelian_2023}
+Johannes Zschocke, Peter~H. Byers, and Andrew O.~M. Wilkie.
+\newblock Mendelian inheritance revisited: dominance and recessiveness in
+  medical genetics.
+\newblock \emph{Nature Reviews Genetics}, 24\penalty0 (7):\penalty0 442--463,
+  July 2023.
+\newblock ISSN 1471-0056, 1471-0064.
+\newblock \doi{10.1038/s41576-023-00574-0}.
+\newblock URL \url{https://www.nature.com/articles/s41576-023-00574-0}.
+
+\bibitem[Jumper et~al.(2021)Jumper, Evans, Pritzel, Green, Figurnov,
+  Ronneberger, Tunyasuvunakool, Bates, Žídek, Potapenko, Bridgland, Meyer,
+  Kohl, Ballard, Cowie, Romera-Paredes, Nikolov, Jain, Adler, Back, Petersen,
+  Reiman, Clancy, Zielinski, Steinegger, Pacholska, Berghammer, Bodenstein,
+  Silver, Vinyals, Senior, Kavukcuoglu, Kohli, and
+  Hassabis]{jumper_highly_2021}
+John Jumper, Richard Evans, Alexander Pritzel, Tim Green, Michael Figurnov,
+  Olaf Ronneberger, Kathryn Tunyasuvunakool, Russ Bates, Augustin Žídek, Anna
+  Potapenko, Alex Bridgland, Clemens Meyer, Simon A.~A. Kohl, Andrew~J.
+  Ballard, Andrew Cowie, Bernardino Romera-Paredes, Stanislav Nikolov, Rishub
+  Jain, Jonas Adler, Trevor Back, Stig Petersen, David Reiman, Ellen Clancy,
+  Michal Zielinski, Martin Steinegger, Michalina Pacholska, Tamas Berghammer,
+  Sebastian Bodenstein, David Silver, Oriol Vinyals, Andrew~W. Senior, Koray
+  Kavukcuoglu, Pushmeet Kohli, and Demis Hassabis.
+\newblock Highly accurate protein structure prediction with {AlphaFold}.
+\newblock \emph{Nature}, 596\penalty0 (7873):\penalty0 583--589, August 2021.
+\newblock ISSN 0028-0836, 1476-4687.
+\newblock \doi{10.1038/s41586-021-03819-2}.
+\newblock URL \url{https://www.nature.com/articles/s41586-021-03819-2}.
+
+\bibitem[Cheng et~al.(2023)Cheng, Novati, Pan, Bycroft, Žemgulytė, Applebaum,
+  Pritzel, Wong, Zielinski, Sargeant, Schneider, Senior, Jumper, Hassabis,
+  Kohli, and Avsec]{cheng_accurate_2023}
+Jun Cheng, Guido Novati, Joshua Pan, Clare Bycroft, Akvilė Žemgulytė, Taylor
+  Applebaum, Alexander Pritzel, Lai~Hong Wong, Michal Zielinski, Tobias
+  Sargeant, Rosalia~G. Schneider, Andrew~W. Senior, John Jumper, Demis
+  Hassabis, Pushmeet Kohli, and Žiga Avsec.
+\newblock Accurate proteome-wide missense variant effect prediction with
+  {AlphaMissense}.
+\newblock \emph{Science}, 381\penalty0 (6664):\penalty0 eadg7492, September
+  2023.
+\newblock ISSN 0036-8075, 1095-9203.
+\newblock \doi{10.1126/science.adg7492}.
+\newblock URL \url{https://www.science.org/doi/10.1126/science.adg7492}.
 
 \end{thebibliography}

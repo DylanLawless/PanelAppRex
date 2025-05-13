@@ -214,6 +214,7 @@ dt_small <- datatable(
   rownames = TRUE,
   escape = FALSE,
   options = list(
+    searchHighlight = TRUE,
     pageLength = 25,
     lengthChange = FALSE,
     deferRender = TRUE,
@@ -254,9 +255,18 @@ dt_small <- datatable(
         $('.sparkline').sparkline('html', {
           type: 'box',
           raw: true,
-          showOutliers: false
+          showOutliers: false,
           // chartRangeMin: 1,
           // chartRangeMax: 20
+          // width: '100%',
+          // disableHiddenCheck: true,
+          // boxLineColor: 'red',
+          // boxFillColor: '#f4cccc',
+          // whiskerColor: 'red',
+          // outlierLineColor: 'red',
+          // outlierFillColor: '#43b4eb',
+          // spotRadius: 2,
+          // medianColor: 'black'
         });
       }
     ")
