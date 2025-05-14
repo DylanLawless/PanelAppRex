@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -52,6 +52,48 @@ Melissa~J Landrum, Jennifer~M Lee, Mark Benson, Garth~R Brown, Chen Chao,
 \newblock ISSN 0305-1048, 1362-4962.
 \newblock \doi{10.1093/nar/gkae1010}.
 \newblock URL \url{https://academic.oup.com/nar/article/53/D1/D609/7902999}.
+
+\bibitem[Dyer et~al.(2025)Dyer, Austine-Orimoloye, Azov, Barba, Barnes,
+  Barrera-Enriquez, Becker, Bennett, Beracochea, Berry, Bhai, Bhurji, Boddu,
+  Branco~Lins, Brooks, Ramaraju, Campbell, Martinez, Charkhchi, Cortes,
+  Davidson, Denni, Dodiya, Donaldson, El~Houdaigui, El~Naboulsi, Falola,
+  Fatima, Genez, Martinez, Gurbich, Hardy, Hollis, Hunt, Kay, Kaykala, Lemos,
+  Lodha, Mathlouthi, Merino, Merritt, Mirabueno, Mushtaq, Hossain,
+  Pérez-Silva, Perry, Piližota, Poppleton, Prosovetskaia, Raj, Salam, Saraf,
+  Saraiva-Agostinho, Sinha, Sipos, Sitnik, Steed, Suner, Surapaneni, Sutinen,
+  Tricomi, Tsang, Urbina-Gómez, Veidenberg, Walsh, Willhoft, Allen,
+  Alvarez-Jarreta, Chakiachvili, Cheema, da~Rocha, De~Silva, Giorgetti,
+  Haggerty, Ilsley, Keatley, Loveland, Moore, Mudge, Naamati, Tate, Trevanion,
+  Winterbottom, Flint, Frankish, Hunt, Finn, Freeberg, Harrison, Martin, and
+  Yates]{dyer_ensembl_2025}
+Sarah~C Dyer, Olanrewaju Austine-Orimoloye, Andrey~G Azov, Matthieu Barba,
+  If~Barnes, Vianey~Paola Barrera-Enriquez, Arne Becker, Ruth Bennett, Martin
+  Beracochea, Andrew Berry, Jyothish Bhai, Simarpreet~Kaur Bhurji, Sanjay
+  Boddu, Paulo~R Branco~Lins, Lucy Brooks, Shashank~Budhanuru Ramaraju,
+  Lahcen~I Campbell, Manuel~Carbajo Martinez, Mehrnaz Charkhchi, Lucas~A
+  Cortes, Claire Davidson, Sukanya Denni, Kamalkumar Dodiya, Sarah Donaldson,
+  Bilal El~Houdaigui, Tamara El~Naboulsi, Oluwadamilare Falola, Reham Fatima,
+  Thiago Genez, Jose~Gonzalez Martinez, Tatiana Gurbich, Matthew Hardy, Zoe
+  Hollis, Toby Hunt, Mike Kay, Vinay Kaykala, Diana Lemos, Disha Lodha, Nourhen
+  Mathlouthi, Gabriela~Alejandra Merino, Ryan Merritt, Louisse~Paola Mirabueno,
+  Aleena Mushtaq, Syed~Nakib Hossain, José~G Pérez-Silva, Malcolm Perry,
+  Ivana Piližota, Daniel Poppleton, Irina Prosovetskaia, Shriya Raj, Ahamed
+  Imran~Abdul Salam, Shradha Saraf, Nuno Saraiva-Agostinho, Swati Sinha, Botond
+  Sipos, Vasily Sitnik, Emily Steed, Marie-Marthe Suner, Likhitha Surapaneni,
+  Kyösti Sutinen, Francesca~Floriana Tricomi, Ian Tsang, David Urbina-Gómez,
+  Andres Veidenberg, Thomas~A Walsh, Natalie~L Willhoft, Jamie Allen, Jorge
+  Alvarez-Jarreta, Marc Chakiachvili, Jitender Cheema, Jorge~Batista da~Rocha,
+  Nishadi~H De~Silva, Stefano Giorgetti, Leanne Haggerty, Garth~R Ilsley, Jon
+  Keatley, Jane~E Loveland, Benjamin Moore, Jonathan~M Mudge, Guy Naamati, John
+  Tate, Stephen~J Trevanion, Andrea Winterbottom, Bethany Flint, Adam Frankish,
+  Sarah~E Hunt, Robert~D Finn, Mallory~A Freeberg, Peter~W Harrison, Fergal~J
+  Martin, and Andrew~D Yates.
+\newblock Ensembl 2025.
+\newblock \emph{Nucleic Acids Research}, 53\penalty0 (D1):\penalty0 D948--D957,
+  January 2025.
+\newblock ISSN 0305-1048, 1362-4962.
+\newblock \doi{10.1093/nar/gkae1071}.
+\newblock URL \url{https://academic.oup.com/nar/article/53/D1/D948/7916352}.
 
 \bibitem[Lawless(2025)]{lawless_panelapprex_2025}
 Dylan Lawless.

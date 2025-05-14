@@ -1,6 +1,3 @@
-
-
-
 library(ggplot2); theme_set(theme_bw())
 library(patchwork)
 library(tidyr)
@@ -8,11 +5,11 @@ library(RColorBrewer)
 
 df <- read.table(file = "../data/benchmark.tsv", header = TRUE, sep = "\t")
 
-total_exact_accuracy <- mean(df$causal_gene_in_all_results) * 100
-total_causal_accuracy <- mean(df$causal_gene_in_subjective_choice) * 100
+total_exact_accuracy <- mean(df$Causal_gene_in_all_results) * 100
+total_causal_accuracy <- mean(df$Causal_gene_in_subjective_choice) * 100
 
 cat("Total accuracy for exact_relevance_ratio:", round(total_exact_accuracy, 1), "%\n")
-cat("Total accuracy for causal_gene_in_subjective_choice:", round(total_causal_accuracy, 1), "%\n")
+cat("Total accuracy for Causal_gene_in_subjective_choice:", round(total_causal_accuracy, 1), "%\n")
 
 df_counts <- df[, c("Case_study", "query_result_panels", "subjective_best_panels", "panels_with_causal_gene")]
 
@@ -25,11 +22,23 @@ df_long <- pivot_longer(
 
 df_long$metric <- factor(df_long$metric, levels = c("query_result_panels", "panels_with_causal_gene", "subjective_best_panels"))
 
+library(ggrepel)
 p1 <- ggplot(df_long, aes(x = factor(Case_study), y = value, fill = metric)) +
   geom_bar(stat = "identity", position = position_dodge(width = 0.9), color = "black") +
   geom_text(aes(label = value),
             position = position_dodge(width = 0.9),
             vjust = -0.5) +
+  geom_hline(linetype="dotted", 
+             yintercept=1, color = "darkgreen") +
+  geom_text_repel(
+    data = data.frame(x = 5.5, y = 1, label = "Successful\ncausal match"),
+    aes(x = x, y = y, label = label),
+    nudge_y = 2,
+    segment.color = "darkgreen",
+    colour = "darkgreen",
+    size = 3.5,
+    inherit.aes = FALSE
+  ) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
   labs(x = "Case Study", y = stringr::str_wrap("Count", width = 10), fill = "Metric") +
   scale_fill_brewer(palette = "RdYlBu", labels = function(x) stringr::str_wrap(gsub("_", " ", x), width = 40)) +
@@ -38,15 +47,15 @@ p1 <- ggplot(df_long, aes(x = factor(Case_study), y = value, fill = metric)) +
     
 p1
 
-numeric_cols_percent <- c("causal_gene_in_all_results", "causal_gene_in_subjective_choice")
+numeric_cols_percent <- c("Causal_gene_in_all_results", "Causal_gene_in_subjective_choice")
 
 plot_percentages <- function(df, cols) {
   plots <- lapply(cols, function(col) {
     
     annotation <- ""
-    if (col == "causal_gene_in_all_results") {
+    if (col == "Causal_gene_in_all_results") {
       annotation <- paste("Total accuracy:", round(total_exact_accuracy, 1), "%")
-    } else if (col == "causal_gene_in_subjective_choice") {
+    } else if (col == "Causal_gene_in_subjective_choice") {
       annotation <- paste("Total accuracy:", round(total_causal_accuracy, 1), "%")
     }
     
