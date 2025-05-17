@@ -39,7 +39,7 @@
 \clearpage
 \begin{abstract}
 \noindent
-Gene panel data is critical for variant interpretation and genomic diagnostics, yet existing resources remain fragmented, inconsistently annotated, and difficult to interrogate programmatically. We present PanelAppRex, a harmonised resource and interactive search platform integrating over 58,000 curated gene–panel associations, including NHS-approved diagnostic panels. It supports natural language-style queries by gene, phenotype, disease group, and mode of inheritance (MOI), returning machine-readable results in multiple export formats. The system achieved 100\% top-panel accuracy in benchmarked case studies of inborn errors of immunity, outperforming manual workflows for variant interpretation. The core dataset includes standardised gene identifiers, disease annotations, MOI, and supporting literature, enabling seamless integration into bioinformatic pipelines. Beyond interactive search, PanelAppRex provides a structured foundation for modelling genome-wide diagnostic priors and evidence-aware variant interpretation. 
+Gene panel data is critical for variant interpretation and genomic diagnostics, yet existing resources remain fragmented, inconsistently annotated, and difficult to interrogate programmatically. We present PanelAppRex, a harmonised resource and interactive search platform integrating over 58,000 curated gene-disease panel associations, including NHS-approved diagnostic panels. It supports natural language-style queries by gene, phenotype, disease group, and mode of inheritance (MOI), returning machine-readable results in multiple export formats. The system achieved 100\% top-panel accuracy in benchmarked case studies of genetic immune disease diagnosis. The core dataset includes standardised gene identifiers, disease annotations, MOI, and supporting literature, enabling integration into bioinformatic pipelines. Beyond interactive search, PanelAppRex provides a structured foundation for modelling genome-wide diagnostic priors and evidence-aware variant interpretation. 
 
 \noindent \textbf{Availability:} The platform data and source code is openly available at [ZENODO LINK] and \url{https://github.com/DylanLawless/PanelAppRex}. PanelAppRex is available under the MIT licence. 
 The dataset is maintained for a minimum of two years following publication.
@@ -56,6 +56,8 @@ The dataset is maintained for a minimum of two years following publication.
 \acro{csv}[CSV]{comma-separated values}
 \acro{ge}[GE]{Genomics England}
 \acro{hgnc}[HGNC]{Human genome organisation Gene Nomenclature Committee}
+\acro{iei}{Inborn Errors of Immunity}
+\acro{iem}{Inborn Errors of Metabolism}
 \acro{html}[HTML]{HyperText Markup Language}
 \acro{jaci}[JACI]{Journal of Allergy and Clinical Immunology}
 \acro{mit}[MIT]{Massachusetts Institute of Technology}
@@ -75,11 +77,11 @@ The dataset is maintained for a minimum of two years following publication.
 Disease-gene panels are widely used in both clinical and research settings to support the diagnosis and interpretation of genetic disorders. 
 These panels provide structured lists of genes known to be associated with specific phenotypes or disease groups, helping clinicians prioritise candidate variants during genomic analysis. 
 Sources like \ac{ge}’s PanelApp and PanelApp Australia host comprehensive, expert-curated panels that are actively maintained to reflect new genetic knowledge \cite{martin_panelapp_2019}. 
-For instance, these resources are integral to the NHS National Genomic Test Directory and research initiatives such as the 100,000 Genomes Project \cite{martin_panelapp_2019}. 
+For instance, these resources are integral to the NHS National Genomic Test Directory and the 100,000 Genomes Project \cite{martin_panelapp_2019}. 
 Despite their utility, these panel datasets are distributed across multiple platforms and formats, and are difficult to aggregate programmatically without data loss or inconsistency. 
 Manual selection, interpretation, and cross-referencing of gene panels remain labour intensive, especially when integrating with other variant-level annotations from genomic resources. 
 
-Accurate interpretation requires consistent integration of structured annotations from key resources including \ac{ge}’s PanelApp, ClinVar, UniProt, and Ensembl \cite{martin_panelapp_2019, landrum_clinvar_2018, the_uniprot_consortium_uniprot_2025, dyer_ensembl_2025}. 
+Accurate causal variant interpretation requires consistent integration of structured annotations from key resources such as \ac{ge}’s PanelApp, ClinVar, UniProt, and Ensembl \cite{martin_panelapp_2019, landrum_clinvar_2018, the_uniprot_consortium_uniprot_2025, dyer_ensembl_2025}. 
 To address this, we developed PanelAppRex, a tool that automates panel aggregation and prepares a machine-readable dataset with complete coverage of core gene-level fields, including gene identifiers, inheritance modes, disease terms, and supporting evidence. 
 The dataset is suitable for integration into AI-based workflows and downstream variant interpretation pipelines. 
 In parallel, PanelAppRex provides a natural language-style search interface that streamlines discovery by supporting queries based on gene names, phenotypes, disease groups, and other key attributes. 
@@ -91,7 +93,9 @@ This functionality is enhanced by evidence-based \ac{rag}, allowing users to exp
 The PanelAppRex core model contained 58,592 entries consisting of 52 sets of annotations, including the gene name, disease-gene panel ID, diseases-related features, confidence measurements.
 Disease interactions were sourced from \ac{ge}’s PanelApp
 \cite{martin_panelapp_2019}.
-Data from gnomAD v4 comprised 807,162 individuals, including 730,947 exomes and 76,215 genomes \cite{karczewski2020mutational}. This dataset provided 786,500,648 single nucleotide variants and 122,583,462 InDels, with variant type counts of 9,643,254 synonymous, 16,412,219 missense, 726,924 nonsense, 1,186,588 frameshift and 542,514 canonical splice site variants. ClinVar data were obtained from the variant summary dataset (this version: 16 March 2025) available from the NCBI FTP site, and included 6,845,091 entries, which were processed into 91,319 gene classification groups and a total of 38,983 gene classifications 
+Data from gnomAD v4 comprised 807,162 individuals, including 730,947 exomes and 76,215 genomes \cite{karczewski2020mutational}. This dataset provided 786,500,648 single nucleotide variants and 122,583,462 InDels, with variant type counts of 9,643,254 synonymous, 16,412,219 missense, 726,924 nonsense, 1,186,588 frameshift and 542,514 canonical splice site variants. ClinVar data were obtained from the variant summary dataset 
+%(this version: 16 March 2025)
+ available from the NCBI FTP site, and included 6,845,091 entries, which were processed into 91,319 gene classification groups and a total of 38,983 gene classifications 
 % for example, the gene \textit{A1BG} contained four variants classified as likely benign and 102 total entries 
 \cite{landrum_clinvar_2018}. 
 Data from Ensembl was sourced for validation of identifiers such as \ac{omim} gene IDs and \ac{hgnc} symbols
@@ -101,16 +105,19 @@ Data from Ensembl was sourced for validation of identifiers such as \ac{omim} ge
 \subsection{Implementation}
 \noindent
 PanelAppRex was implemented in R and integrated data from the sources listed above.
-It performed credentialed access to the API to retrieve all approved panels, merging them into two formats: a simplified version (Panel ID, Gene) and a complex version (including metadata such as confidence level, \ac{moi}, and disease information), and several metadata summary statistics. In addition, the tool incorporates a search module to execute complex user queries. The search functionality supports queries by gene names, phenotypes, disease names, disease groups, panel names, genomic locations and other identifiers. 
+It performed credentialed access to APIs to retrieve all approved panels, merging them into two formats: a simplified version (Panel ID, Gene) and a complex version including metadata such as confidence level, \ac{moi}, and disease information, and several metadata summary statistics. In addition, the tool incorporated a search module to execute complex user queries. The search functionality supports queries by gene names, phenotypes, disease names, disease groups, panel names, genomic locations and other identifiers. 
 \ac{rag} was used to improve the natural queries in hidden states based on evidence about the disease and gene function by supplementing the data with additional sources including ClinVar, UniProt, etc. 
 
 \subsection{Usage}
 \noindent
-On a desktop browser, queries can be executed via the integrated search bar in our \ac{html} version, where a JavaScript function splits the query into individual terms and progressively filters rows - retaining only those that match all active terms while ignoring unmatched ones. This enables users to perform complex, partial matching queries (e.g. ``paediatric \textit{RAG1} primary immunodeficiency skin disorder'') to rapidly identify the panel most closely associated with their hypothesis on primary immunodeficiency and paediatric skin disorders.
-The recommended bioinformatic strategy is to use the union of returned panels, or optionally apply a scoring system to rank panels in multi-group analyses.
+We provide both a pre-compiled user interface and an analysis-ready dataset.
+On a desktop browser, the user interface allows for queries via the integrated search bar in \ac{html}, where a JavaScript function splits the query into individual terms and progressively filters all entries - retaining only those that match all active terms while ignoring unmatched ones. This enables users to perform complex, partial matching queries (e.g. ``paediatric \textit{RAG1} primary immunodeficiency skin disorder'') to rapidly identify the panel most closely associated with their hypothesis on primary immunodeficiency and paediatric skin disorders.
+After querying and selecting a panel, the complete underlying data is returned.
 
-Bioinformatically, users can import the provided, ready-for-use, datasets in TSV or Rds formats. 
-A typical use case might involve users merging with their own omic data based on gene or protein ID.
+The analysis-ready dataset contains the same dataset in multiple file formats.
+Our recommended strategy is a bioinformatic approach which can use the union of returned panels, or to apply a scoring system to rank panels in multi-group analyses.
+Bioinformatically, users can import the provided, ready-for-use, datasets in TSV or Rds formats.
+A typical use case might involve users merging with their own omic data based on gene or Ensembl ID.
 The following code snippet, available in \texttt{minimal\_example.R}, demonstrates how to load the data in R:
 \begin{verbatim}
 # TSV format
@@ -140,14 +147,14 @@ This validation step was applied to the full integrated PanelAppRex dataset.
 
 \subsection{Benchmarking for manual queries}
 \noindent
-To mimic a clinician diagnosing a new disease such as \ac{pid}, we systematically selected genetic diagnosis case studies from the current online catalogue from the \ac{jaci}, using the first five results  \cite{arruda_genetic_2015, 
+To mimic a clinician who is trying to diagnose a new disease such as \ac{pid}, we systematically selected genetic diagnosis case studies from the current online catalogue from the \ac{jaci}, using the first five results  \cite{arruda_genetic_2015, 
 mcaleer_severe_2015,
 verhoeven_hematopoietic_2022,
 magerus-chatinet_autoimmune_2013,
 sharfe_fatal_2014}. 
 Although the method presented here is generalisable to genetic diagnosis across disease areas, we chose to validate it using \ac{pid} case studies, as this is the primary focus of our own research.
 
-The clinical background from these studies was used to construct keyword queries from patient features, simulating a naïve starting position for a clinician.
+The clinical background from each of these studies was used to construct keyword queries from patient features, simulating a naïve starting position for a clinician.
 We then tested whether our PanelAppRex tool could successfully retrieve panels that included the final causal gene reported in each case study. 
 The sources, queries, and results are shown in \textbf{Table \ref{tab:benchmark}}. 
 
@@ -158,6 +165,11 @@ PanelAppRex successfully aggregated data, currently from 451 panels, and several
 Users can retrieve results filtered by gene names, phenotypes, disease groups and other criteria. 
 The system returned a table view with panel details and provided options for exporting results in \ac{csv}, Excel, or \ac{pdf} formats.
 Bioinformatic uses may include generating virtual panels, constructing prior odds, or supporting formal reporting in qualifying variant protocols.
+Summary statistics are reported in 
+\textbf{Figure \ref{fig:summary_stats}}. The majority of genes were cited with high confidence. Some genes were present in more panels that others; for instance, RAG1 was present in 7 panels. The majority of panels had fewer than 1000 genes; a
+ examples we annotate 
+panel ID 398 with 572 genes of \ac{pid} which are well established as consensus in the community, also called \ac{iei} and a second example
+of panel ID 1220 with 1675 genes which are associated with unexplained death in infancy and sudden unexplained death in childhood and also called \ac{iem}.
 
 \begin{figure}[ht]
     \centering
@@ -312,5 +324,17 @@ The study was conducted in accordance with the Declaration of Helsinki.
 \bibliographystyle{unsrtnat}
 \bibliography{references.bib}
 \clearpage
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\beginsupplement
+\section{Supplemental} \label{Supplemental_text}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.99\textwidth]{plot_patch2_annotated_example.png}    
+\caption{\textbf{Summary statistics. Color scales are synonymous with the y-axis.} }
+    \label{fig:summary_stats}
+\end{figure}
+
 
 \end{document}

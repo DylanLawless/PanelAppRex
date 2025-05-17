@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.7.19)  14 MAY 2025 16:51
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.7.19)  17 MAY 2025 15:39
  restricted system commands enabled.
 **panelapprex2025lawless.tex
 (./panelapprex2025lawless.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.120 seconds
+luaotfload | main : initialization completed in 0.107 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (./head.tex (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -1787,293 +1787,297 @@ d.luc) [2
 
 ]
 Package acronym Info: Label `acro:ge' newly defined as it shall be overridden
-although it is yet undefined on input line 77.
+although it is yet undefined on input line 79.
 Package acronym Info: Label `acro:rag' newly defined as it shall be overridden
-although it is yet undefined on input line 86.
+although it is yet undefined on input line 88.
 Package acronym Info: Label `acro:omim' newly defined as it shall be overridden
-although it is yet undefined on input line 97.
+although it is yet undefined on input line 101.
 Package acronym Info: Label `acro:hgnc' newly defined as it shall be overridden
-although it is yet undefined on input line 97.
+although it is yet undefined on input line 101.
  [3
 
 ]
 Package acronym Info: Label `acro:moi' newly defined as it shall be overridden
-although it is yet undefined on input line 104.
+although it is yet undefined on input line 108.
 Package acronym Info: Label `acro:html' newly defined as it shall be overridden
-although it is yet undefined on input line 109.
+although it is yet undefined on input line 114.
  [4]
 Package acronym Info: Label `acro:pid' newly defined as it shall be overridden
-although it is yet undefined on input line 143.
+although it is yet undefined on input line 150.
 Package acronym Info: Label `acro:jaci' newly defined as it shall be overridden
-although it is yet undefined on input line 143.
+although it is yet undefined on input line 150.
  [5]
 Package acronym Info: Label `acro:csv' newly defined as it shall be overridden
-although it is yet undefined on input line 159.
+although it is yet undefined on input line 166.
 Package acronym Info: Label `acro:pdf' newly defined as it shall be overridden
-although it is yet undefined on input line 159.
-<../images/screenshot_1.png, id=163, 887.315pt x 944.52875pt>
+although it is yet undefined on input line 166.
+Package acronym Info: Label `acro:iei' newly defined as it shall be overridden
+although it is yet undefined on input line 171.
+Package acronym Info: Label `acro:iem' newly defined as it shall be overridden
+although it is yet undefined on input line 172.
+<../images/screenshot_1.png, id=170, 887.315pt x 944.52875pt>
 File: ../images/screenshot_1.png Graphic file (type png)
 <use ../images/screenshot_1.png>
-Package luatex.def Info: ../images/screenshot_1.png  used on input line 164.
+Package luatex.def Info: ../images/screenshot_1.png  used on input line 176.
 (luatex.def)             Requested size: 212.47617pt x 226.17268pt.
-<../images/screenshot_2.png, id=164, 885.3075pt x 941.5175pt>
+<../images/screenshot_2.png, id=171, 885.3075pt x 941.5175pt>
 File: ../images/screenshot_2.png Graphic file (type png)
 <use ../images/screenshot_2.png>
-Package luatex.def Info: ../images/screenshot_2.png  used on input line 165.
+Package luatex.def Info: ../images/screenshot_2.png  used on input line 177.
 (luatex.def)             Requested size: 212.47617pt x 225.96881pt.
-<../images/benchmark.pdf, id=165, 578.16pt x 361.35pt>
+<../images/benchmark.pdf, id=172, 578.16pt x 361.35pt>
 File: ../images/benchmark.pdf Graphic file (type pdf)
 <use ../images/benchmark.pdf>
-Package luatex.def Info: ../images/benchmark.pdf  used on input line 166.
+Package luatex.def Info: ../images/benchmark.pdf  used on input line 178.
 (luatex.def)             Requested size: 368.57964pt x 230.35895pt.
-<../images/validation_counts.pdf, id=167, 722.7pt x 361.35pt>
+<../images/validation_counts.pdf, id=174, 722.7pt x 361.35pt>
 File: ../images/validation_counts.pdf Graphic file (type pdf)
 <use ../images/validation_counts.pdf>
-Package luatex.def Info: ../images/validation_counts.pdf  used on input line 183
+Package luatex.def Info: ../images/validation_counts.pdf  used on input line 195
 .
 (luatex.def)             Requested size: 429.28616pt x 214.64476pt.
  [6]
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 []|\TU/lmr/bx/n/12 Case
  []
 
 
-Overfull \hbox (3.75526pt too wide) in paragraph at lines 248--248
+Overfull \hbox (3.75526pt too wide) in paragraph at lines 260--260
 \TU/lmr/bx/n/12 study
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 []|\TU/lmr/bx/n/12 Causal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 []|\TU/lmr/bx/n/12 Re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/bx/n/12 sult
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 []|\TU/lmr/bx/n/12 Sub-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/bx/n/12 jec-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/bx/n/12 tive
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/bx/n/12 best
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 []|\TU/lmr/bx/n/12 Pan-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/bx/n/12 els
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/bx/n/12 with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/bx/n/12 causal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 []|\TU/lmr/bx/n/12 Sub-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/bx/n/12 jec-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/bx/n/12 tive
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/bx/n/12 rel-e-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/bx/n/12 vance
  []
 
 
-Overfull \hbox (2.47932pt too wide) in paragraph at lines 248--248
+Overfull \hbox (2.47932pt too wide) in paragraph at lines 260--260
 []|\TU/lmr/bx/n/12 Causal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/bx/n/12 gene
  []
 
 
-Underfull \hbox (badness 3209) in paragraph at lines 248--248
+Underfull \hbox (badness 3209) in paragraph at lines 260--260
 \TU/lmr/bx/n/12 in all
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/bx/n/12 re-
  []
 
 
-Underfull \hbox (badness 1997) in paragraph at lines 248--248
+Underfull \hbox (badness 1997) in paragraph at lines 260--260
 \TU/lmr/m/n/12 192 Pri-mary im-mun-od-e-fi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 []|\TU/lmr/m/n/12 2
  []
 
 
-Underfull \hbox (badness 6842) in paragraph at lines 248--248
+Underfull \hbox (badness 6842) in paragraph at lines 260--260
 \TU/lmr/m/n/12 ti-ple al-ler-gies, and
  []
 
 
-Underfull \hbox (badness 2057) in paragraph at lines 248--248
+Underfull \hbox (badness 2057) in paragraph at lines 260--260
 \TU/lmr/m/n/12 drome caused by a
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 248--248
+Underfull \hbox (badness 2368) in paragraph at lines 260--260
 \TU/lmr/m/n/12 der-mati-tis metabolic
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 []|\TU/lmr/m/n/12 3
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 []|\TU/lmr/m/n/12 Hematopoi-etic stem
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/m/n/12 cell trans-plan-ta-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/m/n/12 in a pa-tient with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/m/n/12 proteasome-associated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/m/n/12 au-toin-flam-ma-tory
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 []|\TU/lmr/m/n/12 re-sis-tant cu-ta-neous
  []
 
 
-Underfull \hbox (badness 1997) in paragraph at lines 248--248
+Underfull \hbox (badness 1997) in paragraph at lines 260--260
 \TU/lmr/m/n/12 192 Pri-mary im-mun-od-e-fi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 []|\TU/lmr/m/n/12 4
  []
 
 
-Underfull \hbox (badness 1997) in paragraph at lines 248--248
+Underfull \hbox (badness 1997) in paragraph at lines 260--260
 \TU/lmr/m/n/12 192 Pri-mary im-mun-od-e-fi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 []|\TU/lmr/m/n/12 5*
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 []|\TU/lmr/m/n/12 Fa-tal com-bined
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/m/n/12 im-mun-od-e-fi-ciency
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 248--248
+Underfull \hbox (badness 2181) in paragraph at lines 260--260
 \TU/lmr/m/n/12 as-so-ci-ated with het-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 []|\TU/lmr/m/n/12 pri-mary im-mun-od-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/m/n/12 e-fi-ciency re-cur-rent
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/m/n/12 pneu-mo-nia chronic
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 248--248
+Underfull \hbox (badness 1087) in paragraph at lines 260--260
 \TU/lmr/m/n/12 di-ar-rhea oral thrush
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/m/n/12 bronchiec-ta-sis lym-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/m/n/12 phadenopa-thy hep-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 \TU/lmr/m/n/12 atosplenomegaly
  []
 
 
-Underfull \hbox (badness 1681) in paragraph at lines 248--248
+Underfull \hbox (badness 1681) in paragraph at lines 260--260
 []|\TU/lmr/m/n/12 192 Pri-mary im-mun-od-e-fi-
  []
 
@@ -2082,27 +2086,41 @@ chmark.pdf>] [10<../images/validation_counts.pdf>] [11
 
 ] [12]
 (./panelapprex2025lawless.bbl [13] [14] [15]) [16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 316.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 316.
+<../images/plot_patch2_annotated_example.png, id=309, 361.35pt x 433.62pt>
+File: ../images/plot_patch2_annotated_example.png Graphic file (type png)
+<use ../images/plot_patch2_annotated_example.png>
+Package luatex.def Info: ../images/plot_patch2_annotated_example.png  used on in
+put line 334.
+(luatex.def)             Requested size: 429.28616pt x 515.14745pt.
+
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.1'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.1'
+[17
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 340.
+ [18<../images/plot_patch2_annotated_example.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 340.
 
 (./panelapprex2025lawless.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 316.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 316.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 340.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 340.
 Package rerunfilecheck Info: File `panelapprex2025lawless.out' has not changed.
-(rerunfilecheck)             Checksum: 63EEC3ABFB44CE7E4A964CFD81D36912;875.
+(rerunfilecheck)             Checksum: 5122FEF702E77D39CEB18CDCB9501F6A;923.
 )
 
 Here is how much of LuaTeX's memory you used:
- 38748 strings out of 494413
+ 38776 strings out of 494413
  100000,1144653 words of node,token memory allocated
- 1549 words of node memory still in use:
-   18 hlist, 2 vlist, 14 rule, 3 glue, 1 kern, 79 attribute, 123 glue_spec, 79 a
-ttribute_list, 2 write, 24 pdf_literal, 10 pdf_action, 24 pdf_colorstack nodes
-   avail lists: 1:4,2:580,3:426,4:188,5:398,6:125,7:8350,8:418,9:768,10:23,11:67
-7
- 41572 multiletter control sequences out of 65536+600000
+ 1542 words of node memory still in use:
+   18 hlist, 2 vlist, 14 rule, 3 glue, 1 kern, 78 attribute, 123 glue_spec, 78 a
+ttribute_list, 1 write, 24 pdf_literal, 10 pdf_action, 24 pdf_colorstack nodes
+   avail lists: 1:4,2:620,3:433,4:195,5:420,6:127,7:8948,8:420,9:778,10:23,11:71
+5
+ 41589 multiletter control sequences out of 65536+600000
  86 fonts using 11390095 bytes
- 65i,12n,101p,1065b,924s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 65i,12n,101p,1010b,924s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.ot
 f></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmroman12-italic.
 otf></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.
@@ -2113,10 +2131,10 @@ lar.otf></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmroman10-r
 egular.otf></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmroman1
 2-regular.otf></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmrom
 an17-regular.otf>
-Output written on panelapprex2025lawless.pdf (16 pages, 290169 bytes).
+Output written on panelapprex2025lawless.pdf (18 pages, 418510 bytes).
 
-PDF statistics: 364 PDF objects out of 1000 (max. 8388607)
- 283 compressed objects within 3 object streams
- 57 named destinations out of 1000 (max. 131072)
- 360 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 380 PDF objects out of 1000 (max. 8388607)
+ 296 compressed objects within 3 object streams
+ 60 named destinations out of 1000 (max. 131072)
+ 368 words of extra memory for PDF output out of 10000 (max. 100000000)
 
