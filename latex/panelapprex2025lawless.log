@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.7.19)  14 MAY 2025 10:37
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.7.19)  14 MAY 2025 16:51
  restricted system commands enabled.
 **panelapprex2025lawless.tex
 (./panelapprex2025lawless.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.164 seconds
+luaotfload | main : initialization completed in 0.120 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (./head.tex (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -2080,29 +2080,29 @@ Underfull \hbox (badness 1681) in paragraph at lines 248--248
 [7] [8] [9<../images/screenshot_1.png><../images/screenshot_2.png><../images/ben
 chmark.pdf>] [10<../images/validation_counts.pdf>] [11
 
-]
-(./panelapprex2025lawless.bbl [12] [13] [14]) [15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 300.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 300.
+] [12]
+(./panelapprex2025lawless.bbl [13] [14] [15]) [16]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 316.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 316.
 
 (./panelapprex2025lawless.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 300.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 300.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 316.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 316.
 Package rerunfilecheck Info: File `panelapprex2025lawless.out' has not changed.
 (rerunfilecheck)             Checksum: 63EEC3ABFB44CE7E4A964CFD81D36912;875.
 )
 
 Here is how much of LuaTeX's memory you used:
- 38747 strings out of 494413
+ 38748 strings out of 494413
  100000,1144653 words of node,token memory allocated
  1549 words of node memory still in use:
    18 hlist, 2 vlist, 14 rule, 3 glue, 1 kern, 79 attribute, 123 glue_spec, 79 a
 ttribute_list, 2 write, 24 pdf_literal, 10 pdf_action, 24 pdf_colorstack nodes
    avail lists: 1:4,2:580,3:426,4:188,5:398,6:125,7:8350,8:418,9:768,10:23,11:67
 7
- 41575 multiletter control sequences out of 65536+600000
+ 41572 multiletter control sequences out of 65536+600000
  86 fonts using 11390095 bytes
- 65i,12n,101p,1065b,918s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 65i,12n,101p,1065b,924s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.ot
 f></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmroman12-italic.
 otf></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.
@@ -2113,10 +2113,10 @@ lar.otf></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmroman10-r
 egular.otf></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmroman1
 2-regular.otf></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmrom
 an17-regular.otf>
-Output written on panelapprex2025lawless.pdf (15 pages, 288786 bytes).
+Output written on panelapprex2025lawless.pdf (16 pages, 290169 bytes).
 
-PDF statistics: 356 PDF objects out of 1000 (max. 8388607)
- 276 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 131072)
+PDF statistics: 364 PDF objects out of 1000 (max. 8388607)
+ 283 compressed objects within 3 object streams
+ 57 named destinations out of 1000 (max. 131072)
  360 words of extra memory for PDF output out of 10000 (max. 100000000)
 

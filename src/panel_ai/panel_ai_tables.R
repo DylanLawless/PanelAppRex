@@ -140,6 +140,10 @@ dt_small <- datatable(
   rownames = TRUE,
   escape = FALSE,
   options = list(
+    scrollX = F,
+    # scrollY = F,  # vertical scroll region
+    # scrollY = "200px",  # vertical scroll region
+    scroller = TRUE,    # optional for smoother virtual scrolling
     pageLength = 25,
     lengthChange = FALSE,
     deferRender = TRUE,
@@ -175,6 +179,7 @@ dt_small <- datatable(
       }
     ")
   )
+  
 ) %>%
   formatStyle(
     'Gene count',
@@ -186,3 +191,46 @@ dt_small <- datatable(
 
 dt_small
 saveWidget(dt_small, "landing_page.html", selfcontained = FALSE)
+
+
+
+
+
+
+# new ----
+# library(DT)
+# library(htmlwidgets)
+# library(dplyr)
+# 
+# 
+# dt_small <- datatable(
+#   df_small,
+#   rownames = TRUE,
+#   escape = FALSE,
+#   options = list(
+#     scrollX = F,
+#     # scrollY = F,  # vertical scroll region
+#     # scrollY = "200px",  # vertical scroll region
+#     scroller = TRUE,    # optional for smoother virtual scrolling
+#     pageLength = 25,
+#     lengthChange = FALSE,
+#     deferRender = TRUE,
+#     autoWidth = TRUE,
+#     columnDefs = list(
+#       list(visible = FALSE, targets = seq(3, ncol(df_small)), searchable = TRUE)
+#     ),
+#     language = list(
+#       search = "",
+#       searchPlaceholder = "Enter natural language query..."
+#     )
+#   )
+# ) %>%
+#   formatStyle(
+#     'Gene count',
+#     background = styleColorBar(as.numeric(df_small$`Gene count`), '#43b4eb'),
+#     backgroundRepeat = 'no-repeat',
+#     backgroundPosition = 'center'
+#   )
+# 
+# dt_small
+# saveWidget(dt_small, file = "landing_page.html", selfcontained = FALSE)
