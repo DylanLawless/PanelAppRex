@@ -59,9 +59,9 @@ df_unique_counts <- df %>%
 
 df_core <- df |>
   select(id,
+         mode_of_inheritance,
          Gene,
          confidence_level, 
-         mode_of_inheritance,
          name,
          disease_group,
          disease_sub_group,   

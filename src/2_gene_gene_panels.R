@@ -71,6 +71,45 @@ if (length(panel_data_list) > 0) {
   print("No data was combined; all panels fetched were empty.")
 }
 
+# saveRDS(combined_panel_data, file = path_PanelAppData_genes_combined_Rds, compress = TRUE)
+
+# clean MOI ----
+combined_panel_data <- readRDS(file = path_PanelAppData_genes_combined_Rds)
+
+# colnames(df)[colnames(df) == 'oldName'] <- 'newName'
+colnames(combined_panel_data)[colnames(combined_panel_data) == 'mode_of_inheritance'] <- 'mode_of_inheritance_raw'
+
+combined_panel_data <- combined_panel_data |>
+  mutate(
+    mode_of_inheritance = case_when(
+      mode_of_inheritance_raw %in% c(
+        "MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted",
+        "MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown",
+        "MONOALLELIC, autosomal or pseudoautosomal, paternally imprinted (maternal allele expressed)",
+        "MONOALLELIC, autosomal or pseudoautosomal, maternally imprinted (paternal allele expressed)"
+      ) ~ "AD",
+      
+      mode_of_inheritance_raw %in% c(
+        "BIALLELIC, autosomal or pseudoautosomal"
+      ) ~ "AR",
+      
+      mode_of_inheritance_raw %in% c(
+        "X-LINKED: hemizygous mutation in males, monoallelic mutations in females may cause disease (may be less severe, later onset than males)",
+        "X-LINKED: hemizygous mutation in males, biallelic mutations in females"
+      ) ~ "XL",
+      
+      mode_of_inheritance_raw %in% c(
+        "BOTH monoallelic and biallelic, autosomal or pseudoautosomal",
+        "BOTH monoallelic and biallelic (but BIALLELIC mutations cause a more SEVERE disease form), autosomal or pseudoautosomal"
+      ) ~ "AD/AR",
+      
+      mode_of_inheritance_raw == "MITOCHONDRIAL" ~ "MT",
+      
+      TRUE ~ NA_character_
+    )
+  ) |>
+ dplyr:: select(mode_of_inheritance, everything())
+
 # Store copies ----
 saveRDS(panel_data_list, file = path_PanelAppData_genes_list_Rds, compress = TRUE)
 saveRDS(combined_panel_data, file = path_PanelAppData_genes_combined_Rds, compress = TRUE)

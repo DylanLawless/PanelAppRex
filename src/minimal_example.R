@@ -2,8 +2,8 @@
 path_data <- "../data"
 path_PanelAppData_genes_combined_core <- paste0(path_data, "/PanelAppData_combined_core")
 path_PanelAppData_genes_combined_minimal <- paste0(path_data, "/PanelAppData_combined_minimal")
-df_core <- read.table(file= paste0(path_PanelAppData_genes_combined_core, ".tsv"), sep = "\t")
-df_minimal <- read.table(file= paste0(path_PanelAppData_genes_combined_minimal, ".tsv"), sep = "\t")
+df_core <- read.table(file= paste0(path_PanelAppData_genes_combined_core, ".tsv"), sep = "\t", header = TRUE)
+df_minimal <- read.table(file= paste0(path_PanelAppData_genes_combined_minimal, ".tsv"), sep = "\t", header = TRUE)
 
 # Rds format
 path_data <- "../data"

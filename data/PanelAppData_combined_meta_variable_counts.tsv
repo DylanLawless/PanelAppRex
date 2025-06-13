@@ -1,5 +1,6 @@
 Column_Name	Unique_Counts
 id	447
+mode_of_inheritance	6
 entity_type	1
 Gene	6280
 confidence_level	4
@@ -8,7 +9,7 @@ mode_of_pathogenicity	12
 publications	13102
 evidence	3653
 phenotypes	21636
-mode_of_inheritance	15
+mode_of_inheritance_raw	15
 tags	249
 transcript	19
 gene_data.alias	5135
