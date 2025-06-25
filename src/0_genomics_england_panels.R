@@ -17,11 +17,11 @@ path_images <-"../images"
 path_data <- "../data"
 path_PAdata_json <- paste0(path_data, "/PanelAppData.json")
 path_PanelAppData_list_Rds <- paste0(path_data, "/PanelAppData_list.Rds")
-path_PanelAppData_combined_Rds <- paste0(path_data, "/path_PanelAppData_combined_Rds")
+path_PanelAppData_combined_Rds <- paste0(path_data, "/PanelAppData_combined_Rds")
 
 path_PAdata_genes_json <- paste0(path_data, "/PanelAppData_genes.json")
 path_PanelAppData_genes_list_Rds <- paste0(path_data, "/PanelAppData_genes_list.Rds")
-path_PanelAppData_genes_combined_Rds <- paste0(path_data, "/path_PanelAppData_genes_combined_Rds")
+path_PanelAppData_genes_combined_Rds <- paste0(path_data, "/PanelAppData_genes_combined_Rds")
 
 path_PanelAppData_genes_combined_meta <- paste0(path_data, "/PanelAppData_combined_meta")
 path_PanelAppData_genes_combined_core <- paste0(path_data, "/PanelAppData_combined_core")
@@ -29,7 +29,7 @@ path_PanelAppData_genes_combined_minimal <- paste0(path_data, "/PanelAppData_com
 
 
 
-# path_PanelAppData_genes_combined_full <- paste0(path_data, "/PanelAppData_combined_full")
+# PanelAppData_genes_combined_full <- paste0(path_data, "/PanelAppData_combined_full")
 
 # Run downloads ----
 # Get meta

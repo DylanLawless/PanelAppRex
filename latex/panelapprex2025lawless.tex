@@ -5,30 +5,31 @@
 \title{PanelAppRex aggregates disease gene panels and facilitates sophisticated search}	
 
 % in your preamble, before \author:
-%\newcommand{\QUANT}{1}
-%\newcommand{\KISPIIMM}{3}
-\newcommand{\IPSNEO}{1}
+\newcommand{\QUANT}{1}
 \newcommand{\GHI}{2}
-\newcommand{\METAB}{3}
-\newcommand{\LEEDS}{4}
+\newcommand{\LEEDS}{3}
+\newcommand{\IPSNEO}{4}
+%\newcommand{\KISPIIMM}{3}
+% \newcommand{\METAB}{4}
 
+\author[\QUANT]{Quant Group} 
+\author[\GHI]{Simon Boutry}% \textsuperscript{†}}
+\author[\GHI]{Ali Saadat}% \textsuperscript{†}} \textsuperscript{†}}
+%\author[\METAB]{D. Sean Froese}
+\author[\GHI]{Jacques Fellay}
+\author[\LEEDS]{Sinisa Savic}% orcid.org/0000-0001-7910-0554
+\author[\IPSNEO]{Luregn J. Schlapbach}
 \author[\IPSNEO]{Dylan Lawless \thanks{Addresses for correspondence: \href{mailto:Dylan.Lawless@kispi.uzh.ch}{Dylan.Lawless@kispi.uzh.ch}}
 }
-%\author[\METAB]{D. Sean Froese}
-%\author[\GHI]{Jacques Fellay}
-%\author[\LEEDS]{Sinisa Savic}% orcid.org/0000-0001-7910-0554
-%\author[\IPSNEO]{Luregn J. Schlapbach}
-%\author[\QUANT]{Quant Group} 
-%\author[\GHI]{Simon Boutry}% \textsuperscript{†}}
-%\author[\GHI]{Ali Saadat}% \textsuperscript{†}} \textsuperscript{†}}
+
 %\author[\KISPIIMM]{Maarja Soomann}% \textsuperscript{†}} \textsuperscript{†}}
 %\author[\KISPIIMM]{Johannes Trück}
 \affil[\IPSNEO]{Department of Intensive Care and Neonatology, University Children's Hospital Zurich, University of Zurich, Zurich, Switzerland.}
 \affil[\GHI]{Global Health Institute, School of Life Sciences, École Polytechnique Fédérale de Lausanne, Switzerland.}
-\affil[\METAB]{Division of Metabolism and Children’s Research Center, University Children’s Hospital Zürich, University of Zurich, Zurich, Switzerland.}
+% \affil[\METAB]{Division of Metabolism and Children’s Research Center, University Children’s Hospital Zürich, University of Zurich, Zurich, Switzerland.}
 \affil[\LEEDS]{Leeds Institute of Rheumatic and Musculoskeletal Medicine, University of Leeds, Leeds, UK.}
 
-%\affil[\QUANT]{The quantitative omic epidemiology group.} 
+\affil[\QUANT]{The quantitative omic epidemiology group.} 
 %\affil[\KISPIIMM]{Division of Immunology and the Children’s Research Center, University Children’s Hospital Zurich, University of Zurich, Zurich, Switzerland.}
 
 \maketitle
@@ -200,12 +201,12 @@ This validated dataset ensures that users can confidently build on a consistent 
 (D) Gene entries with associated disease panel names.
 (E) Gene entries with annotated \ac{moi}.
 (F) Gene entries linked to an OMIM gene ID.
-Each bar shows the count of entries with non-missing values for the respective field. Updated fields (HGNC and Ensembl ID) reflect values recovered via external lookup using HGNC symbols.
+Each bar shows the count of entries with non-missing values for the respective field. Updated fields (HGNC and Ensembl ID) reflect values recovered via external lookup using HGNC symbols. Percentage shows the complete recovery of coverage across features.
 }
     \label{fig:validation}
 \end{figure}
 
-\subsection{Benchmarking for manual queries confirms accurate retrieval of causal gene}
+\subsection{Benchmarking for manual queries confirms accurate retrieval of causal disease genes}
 \noindent
 To evaluate the practical utility of our system on a desktop browser, we applied the benchmarking approach described in methods using five published case studies of \ac{pid}
 \cite{arruda_genetic_2015, 
@@ -260,6 +261,15 @@ Overall, the results confirm that our approach accurately identifies the most re
 }
 \end{table}
 
+\subsection{Structured inheritance annotations reveal overlapping gene-MOI relationships}
+
+To assess the distribution of inheritance annotations in, we summarised all unique gene-\ac{moi} combinations across 58,592 curated panel entries as displayed in 
+\textbf{Figure \ref{fig:uniq_gene_moi}}. Among 6,280 distinct genes, a total of 9,237 unique gene-\ac{moi} pairs were identified, reflecting instances where a gene appears with multiple inheritance modes across different panels. 
+The most common annotations were \ac{ar} and \ac{ar}, consistent with their prevalence in monogenic disease panels. 
+These structured inheritance annotations underpin key applications 
+enabled by PanelAppRex, including \ac{moi}-filtered search and model-based prior estimation.
+
+
 \FloatBarrier
 \section{Discussion and conclusion}
 \noindent
@@ -291,7 +301,7 @@ Future work will focus on expanding supported queries, integrating additional va
 
 \section{Conclusion}
 \noindent
-PanelAppRex offers a robust solution for aggregating and querying gene panel data. Its sophisticated search feature simplifies data exploration and enhances variant interpretation. 
+PanelAppRex offers a robust solution for bioinformatically aggregating and querying gene panel data. Its additional user interface with sophisticated search feature simplifies data exploration and enhances variant interpretation. 
 
 \section*{Acknowledgements}
 \noindent
@@ -319,7 +329,7 @@ This  SwissPedHealth study, under which this work was carried out, was approved 
 The study was conducted in accordance with the Declaration of Helsinki.
 
 \section*{Funding}
-\noindent This project was supported through the grant NDS-2021-911 (SwissPedHealth) from the Swiss Personalized Health Network and the Strategic Focal Area `Personalized Health and Related Technologies' of the ETH Domain (Swiss Federal Institutes of Technology).
+\noindent This project was supported through the grant Swiss National Science Foundation  (SNF) 320030\_201060, and NDS-2021-911 (SwissPedHealth) from the Swiss Personalized Health Network and the Strategic Focal Area `Personalized Health and Related Technologies' of the ETH Domain (Swiss Federal Institutes of Technology).
 
 \bibliographystyle{unsrtnat}
 \bibliography{references.bib}
@@ -331,10 +341,24 @@ The study was conducted in accordance with the Declaration of Helsinki.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.99\textwidth]{plot_patch2_annotated_example.png}    
-\caption{\textbf{Summary statistics. Color scales are synonymous with the y-axis.} }
+    \includegraphics[width=0.75\textwidth]{plot_patch2_annotated_example.png}    
+\caption{\textbf{Summary of gene confidence levels, reuse across panels, and panel sizes in the PanelAppRex dataset.}
+(A) Number of genes per confidence level. 
+(B) Number of panels in which each gene is included, with the example gene \textit{RAG1} highlighted to demonstrate that it is present in 7 panels. 
+(C) Number of genes per panel, with two representative panels annotated: panel ID 398 (\ac{pid}/\ac{iei}) and panel ID 1220 (\ac{iem}).
+}
     \label{fig:summary_stats}
 \end{figure}
 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.99\textwidth]{plot_patch_uniq_gene_moi_summary.pdf}
+\caption{\textbf{Summary of mode of inheritance annotations in the PanelAppRex dataset.}
+(A) Counts of unique genes annotated with each \ac{moi}, based on non-redundant gene-\ac{moi} combinations.
+(B) Total number of unique genes and total number of gene-\ac{moi} combinations in the harmonised PanelAppRex dataset.
+}
+    \label{fig:uniq_gene_moi}
+\end{figure}
 
 \end{document}

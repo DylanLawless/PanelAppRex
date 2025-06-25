@@ -9,7 +9,7 @@ theme_set(theme_bw())
 path_images <- "../images"
 
 # Load data
-df_core <- readRDS(file = "../data/path_PanelAppData_genes_combined_Rds")
+df_core <- readRDS(file = "../data/PanelAppData_genes_combined_Rds")
 df_core$Gene <- df_core$entity_name
 
 # Remove NA MOI

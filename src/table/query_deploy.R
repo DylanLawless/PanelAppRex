@@ -1,8 +1,8 @@
 # install.packages('rsconnect')
 
 # https://www.shinyapps.io/admin/#/dashboard
-rsconnect::setAccountInfo(name='switzerlandomics',
-                          token='F852B8DEAD2012EBD9BB61D3AA4412A3',
+rsconnect::setAccountInfo(name=' ',
+                          token=' ',
                           secret='<SECRET>')
 
 # deploy your app

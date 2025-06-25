@@ -15,9 +15,8 @@ library(dplyr)
 
 # Rds format
 path_data <- "../data"
-path_PanelAppData_genes_combined_Rds <- paste0(path_data, "/path_PanelAppData_genes_combined_Rds")
+path_PanelAppData_genes_combined_Rds <- paste0(path_data, "/PanelAppData_genes_combined_Rds")
 df_core <- readRDS(file= path_PanelAppData_genes_combined_Rds)
-
 
 # colors ----
 # extract two colours from the RdYlBu palette
@@ -101,7 +100,7 @@ p2 <- ggplot(pubs_counts, aes(x = metric, y = count, fill = metric)) +
   geom_bar(stat = "identity", colour = "black", width = 0.7) +
   geom_text(aes(label = count), vjust = -0.5, size = 3.5) +
   scale_y_continuous(limits =  c(0,69000)) +
-    scale_fill_manual(values = cols) +
+    # scale_fill_manual(values = cols) +
   scale_fill_manual(values = cols_unchange) +
   labs(
     subtitle = "Publication fields",
@@ -258,13 +257,28 @@ p6
 
 
 
+# annotate ----
+add_100pct <- function(p) {
+  ymax <- ggplot_build(p)$layout$panel_params[[1]]$y.range[2]
+  y_annot <- ymax * 0.95
+  p + annotate("text", x = Inf, y = y_annot, label = "100%", hjust = 1.1, vjust = 1.1)
+}
+
+# apply to each plot
+p1 <- add_100pct(p1)
+p2 <- add_100pct(p2)
+p3 <- add_100pct(p3)
+p4 <- add_100pct(p4)
+p5 <- add_100pct(p5)
+p6 <- add_100pct(p6)
+
 # joint plot ----
 library(patchwork)
 final_plot <- p1 + p2 + p3 + p4 + p5 + p6 + plot_layout(guides = 'collect', axis = "collect")  + plot_annotation(tag_levels = 'A')
 
 print(final_plot)
 
-ggsave(final_plot, file = "../images/validation_counts.pdf", width = 10, height = 5)
+ggsave(final_plot, file = "../images/validation_counts.pdf", width = 11, height = 5.5)
 
 
 
