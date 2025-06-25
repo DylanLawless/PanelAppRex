@@ -2,9 +2,9 @@ library(dplyr)
 library(DT)
 library(htmlwidgets)
 
-path_root <- "../../data"
+# path_root <- "../data"
 # path_data <- "."
-path_data <- "../../data"
+path_data <- "../data"
 output_directory <- "panel_data_html"
 dir.create(file.path(path_data, output_directory), showWarnings = FALSE)
 
