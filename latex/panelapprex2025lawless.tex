@@ -16,9 +16,9 @@
 \author[\GHI]{Simon Boutry}% \textsuperscript{†}}
 \author[\GHI]{Ali Saadat}% \textsuperscript{†}} \textsuperscript{†}}
 %\author[\METAB]{D. Sean Froese}
-\author[\GHI]{Jacques Fellay}
 \author[\LEEDS]{Sinisa Savic}% orcid.org/0000-0001-7910-0554
 \author[\IPSNEO]{Luregn J. Schlapbach}
+\author[\GHI]{Jacques Fellay}
 \author[\IPSNEO]{Dylan Lawless \thanks{Addresses for correspondence: \href{mailto:Dylan.Lawless@kispi.uzh.ch}{Dylan.Lawless@kispi.uzh.ch}}
 }
 
@@ -38,16 +38,29 @@
 \maketitle
 \justify
 
-\maketitle
- Word count: ~2560
+%  Word count: ~2560
+
 \clearpage
 \begin{abstract}
-\noindent
-Gene panel data is critical for variant interpretation and genomic diagnostics, yet existing resources remain fragmented, inconsistently annotated, and difficult to interrogate programmatically. We present PanelAppRex, a harmonised resource and interactive search platform integrating over 58,000 curated gene-disease panel associations, including NHS-approved diagnostic panels. It supports natural language-style queries by gene, phenotype, disease group, and mode of inheritance (MOI), returning machine-readable results in multiple export formats. The system achieved 100\% top-panel accuracy in benchmarked case studies of genetic immune disease diagnosis. The core dataset includes standardised gene identifiers, disease annotations, MOI, and supporting literature, enabling integration into bioinformatic pipelines. Beyond interactive search, PanelAppRex provides a structured foundation for modelling genome-wide diagnostic priors and evidence-aware variant interpretation. 
+\noindent \textbf{Purpose:}\\
+Gene panel data are essential for variant interpretation and genomic diagnostics, but existing resources are fragmented, inconsistently annotated, and not easily accessible for programmatic use. 
 
-\noindent \textbf{Availability:} The platform data is openly available at Lawless, D. (2025). PanelAppRex base [Data set]. Zenodo. \url{https://doi.org/10.5281/zenodo.15736689},
+\vspace{1em}
+\noindent \textbf{Methods:}\\
+We developed PanelAppRex, a harmonised dataset and interactive search tool that integrates over 58,000 curated gene-disease panel associations, including NHS-approved diagnostic panels. It supports natural language-style queries by gene, phenotype, disease group, and mode of inheritance (MOI), with results returned in machine-readable export formats. 
+
+\vspace{1em}
+\noindent \textbf{Results:}\\
+In benchmarked case studies of immune disease diagnostics, the system achieved 100\% accuracy in identifying the most relevant gene panel. The underlying dataset includes standardised gene identifiers, disease annotations, MOI, and literature support, enabling seamless integration into bioinformatic pipelines. 
+
+\vspace{1em}
+\noindent \textbf{Conclusion:}\\
+PanelAppRex aids genetic diagnosis and establishes a structured foundation for modelling genome-wide diagnostic priors for supporting evidence-aware variant interpretation.
+
+\vspace{1em}
+\noindent \textbf{Availability:} The platform data is openly available at  PanelAppRex base [Data set], Zenodo \url{https://doi.org/10.5281/zenodo.15736689}, with
 source code at \url{https://github.com/DylanLawless/PanelAppRex},
-and demo page at \url{http://DylanLawless.github.io/panelapprex.github.io/landing_page.html}. 
+and demonstration page at \url{https://DylanLawless.github.io/panelapprex.github.io/landing_page.html}. 
 PanelAppRex is available under the MIT licence. 
 The dataset is maintained for a minimum of two years following publication.
 \end{abstract}
@@ -59,12 +72,14 @@ The dataset is maintained for a minimum of two years following publication.
     \parsep-1em\itemsep0pt\let\makelabel\descriptionlabel}}
                {\endlist}
 \begin{acronym} 
+\acro{ad}[AD]{Autosomal dominant}
+\acro{ar}[AR]{Autosomal recessive}
 \acro{api}[API]{Application Programming Interface}
 \acro{csv}[CSV]{comma-separated values}
 \acro{ge}[GE]{Genomics England}
 \acro{hgnc}[HGNC]{Human genome organisation Gene Nomenclature Committee}
-\acro{iei}{Inborn Errors of Immunity}
-\acro{iem}{Inborn Errors of Metabolism}
+\acro{iei}[IEI]{Inborn Errors of Immunity}
+\acro{iem}[IEM]{Inborn Errors of Metabolism}
 \acro{html}[HTML]{HyperText Markup Language}
 \acro{jaci}[JACI]{Journal of Allergy and Clinical Immunology}
 \acro{mit}[MIT]{Massachusetts Institute of Technology}
@@ -168,15 +183,17 @@ The sources, queries, and results are shown in \textbf{Table \ref{tab:benchmark}
 \section{Results}
 \noindent
 \subsection{Core dataset}
-PanelAppRex successfully aggregated data, currently from 451 panels, and several genomics databases to offer a user-friendly search functionality (\textbf{Figure \ref{fig:performance}}).
+PanelAppRex successfully aggregated data, currently from 451 panels and several genomics databases, to offer a database and user-friendly search functionality (\textbf{Figure \ref{fig:performance}}).
 Users can retrieve results filtered by gene names, phenotypes, disease groups and other criteria. 
 The system returned a table view with panel details and provided options for exporting results in \ac{csv}, Excel, or \ac{pdf} formats.
 Bioinformatic uses may include generating virtual panels, constructing prior odds, or supporting formal reporting in qualifying variant protocols.
 Summary statistics are reported in 
-\textbf{Figure \ref{fig:summary_stats}}. The majority of genes were cited with high confidence. Some genes were present in more panels that others; for instance, RAG1 was present in 7 panels. The majority of panels had fewer than 1000 genes; a
- examples we annotate 
-panel ID 398 with 572 genes of \ac{pid} which are well established as consensus in the community, also called \ac{iei} and a second example
-of panel ID 1220 with 1675 genes which are associated with unexplained death in infancy and sudden unexplained death in childhood and also called \ac{iem}.
+\textbf{Figure \ref{fig:summary_stats}}. The majority of genes were cited with high confidence. 
+Panel reuse varied across genes, with some like \textit{RAG1} appearing in up to 7 distinct panels 
+(\textbf{Figure \ref{fig:summary_stats} B}). 
+The majority of panels had fewer than 1000 genes.
+For example, panel ID 398 contains 572 genes associated with \ac{pid}, also referred to as \ac{iei}, while panel ID 1220 includes 1675 genes linked to \ac{iei} and unexplained death in infancy 
+(\textbf{Figure \ref{fig:summary_stats} C}).
 
 \begin{figure}[ht]
     \centering
@@ -224,17 +241,20 @@ The tool's query process retrieved gene panels using natural language-style inpu
 For example, in the first case study on Hereditary Angioedema, the authors reported suspecting that the condition was linked to ``\textit{SERPING1}, Factor XII, and edema" which we used as the query terms. 
 Although the true causal gene term \textit{F12} (using its official \ac{hgnc} name) was not mentioned, the inclusion of the alias name and/or related disease terms enabled the system to correctly retrieve the panel containing \textit{F12} based on the hidden search knowledge.
 
-While an expert might readily recognise ``Factor XII'' as an alias name for \textit{F12}, this correct query result demonstrates that the system can make such connections automatically, supporting users with varying levels of genetic expertise.
+While an expert might readily recognise ``Factor XII'' as an alias name for \textit{F12}, this correct query result demonstrates that the system can make such connections automatically, based on its extensive metadata, supporting users with varying levels of genetic expertise.
+Notably, for all five case studies, all correct causal genes were successfully retrieved by the system despite never appearing explicitly in any of our submitted query terms (\textbf{Table \ref{tab:benchmark}}).
 
 In our evaluation, PanelAppRex returned panels in which the causal gene was present in 93\% of all returned panels, with the subjective user-selected ``best panel'' achieving a perfect accuracy of 100\% 
 (\textbf{Figure \ref{fig:performance}}).
  These metrics were derived by comparing the causal gene identified from the case study abstracts to the panels returned by our query, and by applying a subjective relevance measure to mimic intuitive panel selection - acknowledging that certain panels, such as the established \ac{pid} gene panel, are inherently more reliable than broader, less specific panels.
+ 
 % (i.e. \ac{pid} panel instead of COVID-19 research panel for  diagnosis of immune disorder}). 
 Overall, the results confirm that our approach accurately identifies the most relevant panels and effectively supports clinical decision-making in complex diagnostic scenarios.
 
 \begin{table}[htbp]
-\caption{\textbf{Summary of case study queries and PanelAppRex results.} *Case study 5 had five individual cases and patient information was significantly longer that other studies. It was therefore converted to keyword query automatically by the OpenAI model o3-mini to remove subjective bias and align with the other queries.
+\caption{\textbf{Summary of case study queries and PanelAppRex results.} 
 ``Subjective best panels'' are those reasonably preferable to the clinical query and unlikely to be excluded by users. In the benchmark scenario, broad or less relevant panels (e.g. ``COVID-19 research'') might be deprioritised in favour of more clinically aligned options such as ``Fetal anomalies'', or ``Paediatric disorders''. Summarised in \textbf{Figure \ref{fig:performance}}.
+*Case study 5 had five individual cases and patient information was significantly longer than other studies. Therefore, we used OpenAI model o3-mini to converted it to a standardised keyword query automatically, thereby removing our subjective bias and aligning with the other queries.
 }
 \label{tab:benchmark}
 \centering
@@ -269,21 +289,22 @@ Overall, the results confirm that our approach accurately identifies the most re
 
 \subsection{Structured inheritance annotations reveal overlapping gene-MOI relationships}
 
-To assess the distribution of inheritance annotations in, we summarised all unique gene-\ac{moi} combinations across 58,592 curated panel entries as displayed in 
+To assess the distribution of inheritance annotations we summarised all unique gene-\ac{moi} combinations across 58,592 entries as displayed in 
 \textbf{Figure \ref{fig:uniq_gene_moi}}. Among 6,280 distinct genes, a total of 9,237 unique gene-\ac{moi} pairs were identified, reflecting instances where a gene appears with multiple inheritance modes across different panels. 
-The most common annotations were \ac{ar} and \ac{ar}, consistent with their prevalence in monogenic disease panels. 
+The most common annotations were \ac{ar} and \ac{ad}, consistent with their prevalence in monogenic disease panels. 
 These structured inheritance annotations underpin key applications 
 enabled by PanelAppRex, including \ac{moi}-filtered search and model-based prior estimation.
 
 
 \FloatBarrier
-\section{Discussion and conclusion}
+\section{Discussion}
 \noindent
 PanelAppRex provides an accessible and validated platform for querying, aggregating, and exporting curated disease-gene panel data. Designed for both clinical and research use, it simplifies study planning and variant interpretation through a user-friendly interface, while also offering a harmonised dataset for programmatic workflows. The core model integrates over 58,000 panel-gene associations, with full coverage of key fields including \ac{hgnc} symbols, Ensembl IDs, \ac{omim} annotations, \ac{moi}, and supporting publications.
 
 Beyond immediate usability, PanelAppRex lays a foundation for genome-wide statistical modelling of disease risk. 
-With annotations for gene-disease relationships, the dataset can support rigorous estimation of the prior probability of observing  variant classifications (e.g. benign, pathogenic) under different \ac{moi}.
-This helps address a persistent challenge in clinical genetics: the lack of principled priors for variant interpretation that account not only for known pathogenic variants (true positives), but also for unobserved variants and negative evidence (false negative causal pathogenic variant and true negative absence of causal variants) \cite{hannah_using_2024, zschocke_mendelian_2023}. 
+With annotations for gene-disease relationships, the dataset provides a core building block towards rigorous estimation of the prior probability of observing  variant classifications (e.g. benign, pathogenic) under different disease \ac{moi}.
+%This helps address a persistent challenge in clinical genetics: the lack of principled priors for variant interpretation that account not only for known pathogenic variants (true positives), but also for unobserved variants and negative evidence (false negative causal pathogenic variant and true negative absence of causal variants) \cite{hannah_using_2024, zschocke_mendelian_2023}. 
+This addresses a key challenge in clinical genetics: the absence of principled priors for variant interpretation that incorporate not only known pathogenic variants (true positives), but also unobserved pathogenic variants (false negatives) and the absence of pathogenic findings (true negatives) \cite{hannah_using_2024, zschocke_mendelian_2023}.
 By integrating high-resolution allele frequencies from gnomAD \cite{karczewski2020mutational}, curated classifications from ClinVar \cite{landrum_clinvar_2018}, and structured gene-disease associations \cite{martin_panelapp_2019}, 
 PanelAppRex can enable the derivation of calibrated genome-wide priors for Bayesian models of genetic risk.
 
@@ -319,10 +340,10 @@ Ensembl data and code are available without restriction; software is provided un
 
 \section*{Contributions}
 \noindent 
-DL performed main analyses and wrote the manuscript.
-%SB, AS, MS, and JT designed analysis and wrote the manuscript.
+DL designed and performed analyses and wrote the manuscript.
+SB, AS, SS, JF, LJS designed analysis and wrote the manuscript.
 %JF, LJS supervised the work, and applied for funding.
-%The Quant Group is a collaboration across multiple institutions where authors contribute equally; the members on this project were DL, SB, AS, and MS.
+The Quant Group is a collaboration across multiple institutions where authors contribute equally; the members on this project were DL, SB, and AS.
 
 \section*{Competing interest}
 \noindent
@@ -337,7 +358,7 @@ The study was conducted in accordance with the Declaration of Helsinki.
 \section*{Funding}
 \noindent This project was supported through the grant Swiss National Science Foundation  (SNF) 320030\_201060, and NDS-2021-911 (SwissPedHealth) from the Swiss Personalized Health Network and the Strategic Focal Area `Personalized Health and Related Technologies' of the ETH Domain (Swiss Federal Institutes of Technology).
 
-\section*{Web links}
+\section*{Data availability}
 \begin{itemize}
 \item Data: Lawless, D. (2025). PanelAppRex base Zenodo. \url{https://doi.org/10.5281/zenodo.15736689}
 \item Source code: \url{https://github.com/DylanLawless/PanelAppRex}

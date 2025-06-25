@@ -1,0 +1,50 @@
+\documentclass[12pt,a4paper]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage[backend=bibtex, style=authoryear, natbib=true, sorting=nyt]{biblatex} 
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{
+    linkcolor=blue,         % color of internal links
+    citecolor=black,         % color of citation links
+    urlcolor=blue           % color of URL links
+}
+\usepackage{filecontents}
+\usepackage{geometry}
+\geometry{left=3cm, top=2cm, right=3cm, bottom=2cm} 
+
+\address{Dylan Lawless@kispi.uzh.ch\\
+Department of Intensive\\
+Care and Neonatology,\\
+University Children's\\
+Hospital Zürich,\\
+University of Zürich.
+}
+\signature{Dylan Lawless, PhD\\
+on behalf of all co-authors} 
+
+\begin{document} 
+\begin{letter}{Dear Editors,}
+
+\opening{}
+
+We are pleased to submit our manuscript entitled \textit{``PanelAppRex aggregates disease gene panels and facilitates sophisticated search''} for consideration at \textit{Genetics in Medicine}.
+
+PanelAppRex provides a machine learning-ready dataset and search interface for disease gene panels, addressing a persistent gap in genomic diagnostics. It harmonises over 58,000 curated gene–disease associations, including all NHS-approved panels, with complete coverage of gene identifiers, inheritance modes, disease terms, and literature support.
+
+The dataset has been fully validated for field completeness, with automated recovery of missing identifiers using Ensembl resources. The platform supports natural language-style queries and delivers structured, exportable outputs suitable for diagnostic reporting, variant interpretation, and downstream modelling.
+
+We benchmarked the tool using published case studies of immune disorders. In all cases, PanelAppRex retrieved panels containing the correct causal gene, even when the gene name was absent from the query. This confirmed both technical performance and real-world utility.
+
+We believe this work offers immediate practical value to clinical genetics and will be of interest to readers of \textit{Genetics in Medicine}. The manuscript is original, approved by all authors, and not under consideration elsewhere.
+
+\closing{Yours sincerely,}
+
+\end{letter}
+\end{document}
+
+%\cc{Cclist} 
+%\ps{adding a postscript} 
+%\encl{list of enclosed material} 
+%\vfill
+%\printbibliography[heading=none]
