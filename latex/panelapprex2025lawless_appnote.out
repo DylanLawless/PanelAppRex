@@ -1,0 +1,14 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Methods}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Data}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Implementation}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Usage}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Validation\040for\040completeness\040in\040core\040data}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Benchmarking\040for\040manual\040queries}{section.2}% 7
+\BOOKMARK [1][-]{section.3}{Results}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{Core\040dataset}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{Validation\040shows\040completeness\040in\040the\040core\040dataset}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.3}{Benchmarking\040for\040manual\040queries\040confirms\040accurate\040retrieval\040of\040causal\040disease\040genes}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.4}{Structured\040inheritance\040annotations\040reveal\040overlapping\040gene-MOI\040relationships}{section.3}% 12
+\BOOKMARK [1][-]{section.4}{Discussion}{}% 13
+\BOOKMARK [1][-]{section.5}{Supplemental}{}% 14

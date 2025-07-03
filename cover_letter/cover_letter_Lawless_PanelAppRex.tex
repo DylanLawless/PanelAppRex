@@ -1,4 +1,5 @@
 \documentclass[12pt,a4paper]{letter}
+\usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage{microtype}
 \usepackage{amsmath, amsfonts, amssymb}
@@ -20,23 +21,40 @@ University Children's\\
 Hospital Zürich,\\
 University of Zürich.
 }
+
 \signature{Dylan Lawless, PhD\\
 on behalf of all co-authors} 
 
 \begin{document} 
+
 \begin{letter}{Dear Editors,}
 
 \opening{}
 
-We are pleased to submit our manuscript entitled \textit{``PanelAppRex aggregates disease gene panels and facilitates sophisticated search''} for consideration at \textit{Genetics in Medicine}.
+Accurate and systematic analysis of genomic data often relies on curated disease gene panels, yet these remain \textbf{fragmented} and \textbf{difficult to integrate} into clinical workflows. Our manuscript, \textit{``PanelAppRex aggregates disease gene panels and facilitates sophisticated search''}, introduces the first \textbf{openly available} harmonised platform of over \textbf{58,000 expert-curated} gene–disease associations, including all NHS-approved panels, consolidated into a \textbf{machine learning-ready} dataset with a \textbf{natural language search} interface.
 
-PanelAppRex provides a machine learning-ready dataset and search interface for disease gene panels, addressing a persistent gap in genomic diagnostics. It harmonises over 58,000 curated gene–disease associations, including all NHS-approved panels, with complete coverage of gene identifiers, inheritance modes, disease terms, and literature support.
+\begin{center}
+\includegraphics[width=\linewidth]{../images/panelapprex_logo_v2_16x9.png}
+\noindent
+\textbf{Figure:}\textit{ (logo) PanelAppRex reigns over genomic complexity.}
+\bigskip
+\end{center}
 
-The dataset has been fully validated for field completeness, with automated recovery of missing identifiers using Ensembl resources. The platform supports natural language-style queries and delivers structured, exportable outputs suitable for diagnostic reporting, variant interpretation, and downstream modelling.
+Our results demonstrate validation and benchmarking with:
+\begin{itemize}
+\item \textbf{Standardised} gene identifiers (HGNC, Ensembl, OMIM).
+\item Structured \textbf{annotations} for inheritance, disease terms, and literature.
+\item \textbf{Machine-readable} exports in TSV, CSV, and R.
+\item Interactive, intuitive \textbf{search} and \textbf{filtering}.
+\item Fully \textbf{open-source} and \textbf{freely accessible} for immediate clinical and research use.
+\item Import-ready \textbf{complete database}.
+\end{itemize}
 
-We benchmarked the tool using published case studies of immune disorders. In all cases, PanelAppRex retrieved panels containing the correct causal gene, even when the gene name was absent from the query. This confirmed both technical performance and real-world utility.
+PanelAppRex serves both technical and clinical users. Bioinformaticians can integrate it into variant prioritisation, modelling, and machine learning workflows. Clinicians and laboratory scientists can rapidly identify gene panels from partial clinical descriptions. In tests on published inborn errors of immunity cases, PanelAppRex retrieved the correct panels in all scenarios, even when gene names were absent.
 
-We believe this work offers immediate practical value to clinical genetics and will be of interest to readers of \textit{Genetics in Medicine}. The manuscript is original, approved by all authors, and not under consideration elsewhere.
+We believe it suits an \textit{Application Note} in \textit{Bioinformatics}, contributing to precision medicine and genomic interpretation for both academic and industrial researchers
+
+The manuscript is original, approved by all authors, and not under consideration elsewhere. Thank you for your consideration.
 
 \closing{Yours sincerely,}
 

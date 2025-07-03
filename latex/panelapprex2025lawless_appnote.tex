@@ -42,20 +42,19 @@
 
 \clearpage
 \begin{abstract}
-\noindent \textbf{Purpose:}\\
+% \noindent \textbf{Purpose:}\\
+\noindent \textbf{Motivation:}\\
 Gene panel data are essential for variant interpretation and genomic diagnostics, but existing resources are fragmented, inconsistently annotated, and not easily accessible for programmatic use. 
-
-\vspace{1em}
-\noindent \textbf{Methods:}\\
+%\vspace{1em}
+%\noindent \textbf{Methods:}\\
 We developed PanelAppRex, a harmonised dataset and interactive search tool that integrates over 58,000 curated gene-disease panel associations, including NHS-approved diagnostic panels. It supports natural language-style queries by gene, phenotype, disease group, and mode of inheritance (MOI), with results returned in machine-readable export formats. 
 
 \vspace{1em}
 \noindent \textbf{Results:}\\
 In benchmarked case studies of immune disease diagnostics, the system achieved 100\% accuracy in identifying the most relevant gene panel. The underlying dataset includes standardised gene identifiers, disease annotations, MOI, and literature support, enabling seamless integration into bioinformatic pipelines. 
-
-\vspace{1em}
-\noindent \textbf{Conclusion:}\\
-PanelAppRex aids genetic diagnosis and establishes a structured foundation for modelling genome-wide diagnostic priors for supporting evidence-aware variant interpretation.
+%\vspace{1em}
+%\noindent \textbf{Conclusion:}\\
+% PanelAppRex aids genetic diagnosis and establishes a structured foundation for modelling genome-wide diagnostic priors for supporting evidence-aware variant interpretation.
 
 \vspace{1em}
 \noindent \textbf{Availability:} The platform data is openly available at  PanelAppRex base [Data set], Zenodo \url{https://doi.org/10.5281/zenodo.15736689}, with
@@ -109,7 +108,7 @@ The dataset is suitable for integration into AI-based workflows and downstream v
 In parallel, PanelAppRex provides a natural language-style search interface that streamlines discovery by supporting queries based on gene names, phenotypes, disease groups, and other key attributes. 
 This functionality is enhanced by evidence-based \ac{rag}, allowing users to explore curated gene panel information efficiently. 
 
-\section{Materials and methods}
+\section{Methods}
 
 \subsection{Data}
 The PanelAppRex core model contained 58,592 entries consisting of 52 sets of annotations, including the gene name, disease-gene panel ID, diseases-related features, confidence measurements.
@@ -214,20 +213,6 @@ All entries included at least one publication, a disease panel name, a \ac{moi},
 After recovery of missing identifiers, completeness reached 100\% across all these core fields.
 This validated dataset ensures that users can confidently build on a consistent foundation, using standardised and stable identifiers to link or enrich the core data with external resources (\textbf{Figure \ref{fig:validation}}).
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.99\textwidth]{validation_counts.pdf}
-\caption{\textbf{Validation and recovery of core annotation fields in the PanelAppRex dataset.}
-(A) Unique genes and HGNC IDs before and after retrieving missing HGNC entries via Ensembl.
-(B) Availability of publication annotations for genes.
-(C) Unique genes and Ensembl gene IDs before and after biomart-based recovery of missing Ensembl IDs.
-(D) Gene entries with associated disease panel names.
-(E) Gene entries with annotated \ac{moi}.
-(F) Gene entries linked to an OMIM gene ID.
-Each bar shows the count of entries with non-missing values for the respective field. Updated fields (HGNC and Ensembl ID) reflect values recovered via external lookup using HGNC symbols. Percentage shows the complete recovery of coverage across features.
-}
-    \label{fig:validation}
-\end{figure}
 
 \subsection{Benchmarking for manual queries confirms accurate retrieval of causal disease genes}
 \noindent
@@ -251,41 +236,6 @@ In our evaluation, PanelAppRex returned panels in which the causal gene was pres
 % (i.e. \ac{pid} panel instead of COVID-19 research panel for  diagnosis of immune disorder}). 
 Overall, the results confirm that our approach accurately identifies the most relevant panels and effectively supports clinical decision-making in complex diagnostic scenarios.
 
-\begin{table}[htbp]
-\caption{\textbf{Summary of case study queries and PanelAppRex results.} 
-``Subjective best panels'' are those reasonably preferable to the clinical query and unlikely to be excluded by users. In the benchmark scenario, broad or less relevant panels (e.g. ``COVID-19 research'') might be deprioritised in favour of more clinically aligned options such as ``Fetal anomalies'', or ``Paediatric disorders''. Summarised in \textbf{Figure \ref{fig:performance}}.
-*Case study 5 had five individual cases and patient information was significantly longer than other studies. Therefore, we used OpenAI model o3-mini to converted it to a standardised keyword query automatically, thereby removing our subjective bias and aligning with the other queries.
-}
-\label{tab:benchmark}
-\centering
-\resizebox{\textwidth}{!}{
-\begin{tabular}{|
-    p{1cm}|
-    p{4cm}|
-    p{4cm}|
-    p{1.4cm}|
-    p{1.3cm}|
-    p{1.3cm}|
-    p{1.3cm}|
-    p{1.3cm}|
-    p{1.3cm}|
-    p{5cm}|}
-\hline
-\textbf{Case study}	(\textbf{Ref})	 & 	\textbf{Source title}	 & 	\textbf{Query}	 & 	\textbf{Causal gene}	 & 	\textbf{Result panels}	 & 	\textbf{Subjective best panels}	 & 	\textbf{Panels with causal gene}	 & 	\textbf{Subjective relevance ratio}	 & 	\textbf{Causal gene in all results}	 & 	\textbf{Result ID, panelName, geneCount} \\
-\hline																			
-1	\cite{arruda_genetic_2015}	 & 	Genetic Analysis As a Practical Tool to Diagnose Hereditary Angioedema with Normal C1 Inhibitor: A Case Report	 & 	SERPING1 Factor XII edema	 & 	F12	 & 	3	 & 	1	 & 	3	 & 	0.3	 & 	1	 & 	64 COVID-19 research 695; 192 Primary immunodeficiency or monogenic inflammatory bowel disease 572; 311 Research panel - Severe Paediatric Disorders 2691 \\
-\hline																			
-2	\cite{mcaleer_severe_2015}	 & 	Severe dermatitis, multiple allergies, and metabolic wasting syndrome caused by a novel mutation in the N-terminal plakin domain of desmoplakin	 & 	SAM syndrome DSG1 dermatitis metabolic wasting	 & 	DSP	 & 	3	 & 	3	 & 	3	 & 	1	 & 	1	 & 	205 Fetal anomalies 2185; 210 DDG2P 2422; 211 Paediatric disorders 3903 \\
-\hline																			
-3	\cite{verhoeven_hematopoietic_2022}	 & 	Hematopoietic stem cell transplantation in a patient with proteasome-associated autoinflammatory syndrome (PRAAS)	 & 	resistant cutaneous vasculitis SH2D1A	 & 	PSMB4	 & 	3	 & 	1	 & 	2	 & 	0.3	 & 	0.7	 & 	64 COVID-19 research 695; 192 Primary immunodeficiency or monogenic inflammatory bowel disease 572; 311 Research panel - Severe Paediatric Disorders 2691 \\
-\hline																			
-4	\cite{magerus-chatinet_autoimmune_2013}	 & 	Autoimmune lymphoproliferative syndrome caused by a homozygous null FAS ligand (FASLG) mutation	 & 	Autoimmune lymphoproliferative syndrome ALPS lymphoproliferation hypergammaglobulinemia autoimmune cytopenia	 & 	FASLG	 & 	2	 & 	1	 & 	2	 & 	0.5	 & 	1	 & 	64 COVID-19 research 695; 192 Primary immunodeficiency or monogenic inflammatory bowel disease 572 \\
-\hline																			
-5*	\cite{sharfe_fatal_2014}	 & 	Fatal combined immunodeficiency associated with heterozygous mutation in STAT1	 & 	primary immunodeficiency recurrent pneumonia chronic diarrhea oral thrush bronchiectasis lymphadenopathy hepatosplenomegaly autoimmune hepatitis Addison	 & 	STAT1	 & 	1	 & 	1	 & 	1	 & 	1	 & 	1	 & 	192 Primary immunodeficiency or monogenic inflammatory bowel disease 572 \\
-\hline
-\end{tabular}
-}
-\end{table}
 
 \subsection{Structured inheritance annotations reveal overlapping gene-MOI relationships}
 
@@ -326,9 +276,9 @@ PanelAppRex bridges expert-curated panel knowledge with genome-scale statistical
 It offers a robust tool for interactive search, a validated dataset for programmatic access, and a scalable framework for quantitative genomic modelling. 
 Future work will focus on expanding supported queries, integrating additional variant types and annotations, and enabling more sophisticated applications in variant interpretation and risk estimation.
 
-\section{Conclusion}
-\noindent
-PanelAppRex offers a robust solution for bioinformatically aggregating and querying gene panel data. Its additional user interface with sophisticated search feature simplifies data exploration and enhances variant interpretation. 
+%\section{Conclusion}
+%\noindent
+%PanelAppRex offers a robust solution for bioinformatically aggregating and querying gene panel data. Its additional user interface with sophisticated search feature simplifies data exploration and enhances variant interpretation. 
 
 \section*{Acknowledgements}
 \noindent
@@ -373,6 +323,81 @@ The study was conducted in accordance with the Declaration of Helsinki.
 \beginsupplement
 \section{Supplemental} \label{Supplemental_text}
 
+
+\begin{table}[htbp]
+\caption{\textbf{Summary of case study queries and PanelAppRex results.} 
+``Subjective best panels'' are those reasonably preferable to the clinical query and unlikely to be excluded by users. In the benchmark scenario, broad or less relevant panels (e.g. ``COVID-19 research'') might be deprioritised in favour of more clinically aligned options such as ``Fetal anomalies'', or ``Paediatric disorders''. Summarised in \textbf{Figure \ref{fig:performance}}.
+*Case study 5 had five individual cases and patient information was significantly longer than other studies. Therefore, we used OpenAI model o3-mini to converted it to a standardised keyword query automatically, thereby removing our subjective bias and aligning with the other queries.
+}
+\label{tab:benchmark}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|
+    p{1cm}|
+    p{4cm}|
+    p{4cm}|
+    p{1.4cm}|
+    p{1.3cm}|
+    p{1.3cm}|
+    p{1.3cm}|
+    p{1.3cm}|
+    p{1.3cm}|
+    p{5cm}|}
+\hline
+\textbf{Case study}	(\textbf{Ref})	 & 	\textbf{Source title}	 & 	\textbf{Query}	 & 	\textbf{Causal gene}	 & 	\textbf{Result panels}	 & 	\textbf{Subjective best panels}	 & 	\textbf{Panels with causal gene}	 & 	\textbf{Subjective relevance ratio}	 & 	\textbf{Causal gene in all results}	 & 	\textbf{Result ID, panelName, geneCount} \\
+\hline																			
+1	\cite{arruda_genetic_2015}	 & 	Genetic Analysis As a Practical Tool to Diagnose Hereditary Angioedema with Normal C1 Inhibitor: A Case Report	 & 	SERPING1 Factor XII edema	 & 	F12	 & 	3	 & 	1	 & 	3	 & 	0.3	 & 	1	 & 	64 COVID-19 research 695; 192 Primary immunodeficiency or monogenic inflammatory bowel disease 572; 311 Research panel - Severe Paediatric Disorders 2691 \\
+\hline																			
+2	\cite{mcaleer_severe_2015}	 & 	Severe dermatitis, multiple allergies, and metabolic wasting syndrome caused by a novel mutation in the N-terminal plakin domain of desmoplakin	 & 	SAM syndrome DSG1 dermatitis metabolic wasting	 & 	DSP	 & 	3	 & 	3	 & 	3	 & 	1	 & 	1	 & 	205 Fetal anomalies 2185; 210 DDG2P 2422; 211 Paediatric disorders 3903 \\
+\hline																			
+3	\cite{verhoeven_hematopoietic_2022}	 & 	Hematopoietic stem cell transplantation in a patient with proteasome-associated autoinflammatory syndrome (PRAAS)	 & 	resistant cutaneous vasculitis SH2D1A	 & 	PSMB4	 & 	3	 & 	1	 & 	2	 & 	0.3	 & 	0.7	 & 	64 COVID-19 research 695; 192 Primary immunodeficiency or monogenic inflammatory bowel disease 572; 311 Research panel - Severe Paediatric Disorders 2691 \\
+\hline																			
+4	\cite{magerus-chatinet_autoimmune_2013}	 & 	Autoimmune lymphoproliferative syndrome caused by a homozygous null FAS ligand (FASLG) mutation	 & 	Autoimmune lymphoproliferative syndrome ALPS lymphoproliferation hypergammaglobulinemia autoimmune cytopenia	 & 	FASLG	 & 	2	 & 	1	 & 	2	 & 	0.5	 & 	1	 & 	64 COVID-19 research 695; 192 Primary immunodeficiency or monogenic inflammatory bowel disease 572 \\
+\hline																			
+5*	\cite{sharfe_fatal_2014}	 & 	Fatal combined immunodeficiency associated with heterozygous mutation in STAT1	 & 	primary immunodeficiency recurrent pneumonia chronic diarrhea oral thrush bronchiectasis lymphadenopathy hepatosplenomegaly autoimmune hepatitis Addison	 & 	STAT1	 & 	1	 & 	1	 & 	1	 & 	1	 & 	1	 & 	192 Primary immunodeficiency or monogenic inflammatory bowel disease 572 \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+
+
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.99\textwidth]{validation_counts.pdf}
+\caption{\textbf{Validation and recovery of core annotation fields in the PanelAppRex dataset.}
+(A) Unique genes and HGNC IDs before and after retrieving missing HGNC entries via Ensembl.
+(B) Availability of publication annotations for genes.
+(C) Unique genes and Ensembl gene IDs before and after biomart-based recovery of missing Ensembl IDs.
+(D) Gene entries with associated disease panel names.
+(E) Gene entries with annotated \ac{moi}.
+(F) Gene entries linked to an OMIM gene ID.
+Each bar shows the count of entries with non-missing values for the respective field. Updated fields (HGNC and Ensembl ID) reflect values recovered via external lookup using HGNC symbols. Percentage shows the complete recovery of coverage across features.
+}
+    \label{fig:validation}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.75\textwidth]{plot_patch2_annotated_example.png}    
@@ -391,6 +416,14 @@ The study was conducted in accordance with the Declaration of Helsinki.
 \caption{\textbf{Summary of mode of inheritance annotations in the PanelAppRex dataset.}
 (A) Counts of unique genes annotated with each \ac{moi}, based on non-redundant gene-\ac{moi} combinations.
 (B) Total number of unique genes and total number of gene-\ac{moi} combinations in the harmonised PanelAppRex dataset.
+}
+    \label{fig:uniq_gene_moi}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.99\textwidth]{panelapprex_logo_v2_16x9.png}
+\caption{\textbf{(logo)} PanelAppRex reigns over genomic complexity.
 }
     \label{fig:uniq_gene_moi}
 \end{figure}

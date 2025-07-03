@@ -1,41 +1,11 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.7.19)  25 JUN 2025 16:25
- restricted system commands enabled.
-**panelapprex2025lawless.tex
-(./panelapprex2025lawless.tex
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.7.19)  3 JUL 2025 13:10
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**panelapprex2025lawless_appnote.tex
+(./panelapprex2025lawless_appnote.tex
 LaTeX2e <2018-04-01> patch level 2
-Lua module: luaotfload-main 2017/01/29 2.80001 OpenType layout system.
-Lua module: lualibs 2017-02-01 2.5 ConTeXt Lua standard libraries.
-Lua module: lualibs-extended 2017-02-01 2.5 ConTeXt Lua libraries -- extended co
-llection.(using write cache: /usr/local/texlive/2018/texmf-var/luatex-cache/gene
-ric)(using read cache: /usr/local/texlive/2018/texmf-var/luatex-cache/generic /U
-sers/dylanlawless/Library/texlive/2018/texmf-var/luatex-cache/generic)
-luaotfload | conf : Root cache directory is /usr/local/texlive/2018/texmf-var/lu
-atex-cache/generic/names.
-luaotfload | init : Loading fontloader “fontloader-2017-02-11.lua” from kpse
--resolved path “/usr/local/texlive/2018/texmf-dist/tex/luatex/luaotfload/fontl
-oader-2017-02-11.lua”.
-Lua-only attribute luaotfload@state = 1
-Lua-only attribute luaotfload@noligature = 2
-Lua-only attribute luaotfload@syllabe = 3
-luaotfload | init : Context OpenType loader version “3.027”
-Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
-Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
-Inserting `luaotfload.define_font' at position 1 in `define_font'.
-Lua-only attribute luaotfload_color_attribute = 4
-luaotfload | conf : Root cache directory is /usr/local/texlive/2018/texmf-var/lu
-atex-cache/generic/names.
-Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
-font'.
-Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
-_font'.
-Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
-t_unsafe'.
-Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
-'.
-Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
-.
-luaotfload | main : initialization completed in 0.181 seconds
-Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (./head.tex (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/fleqn.clo
@@ -50,9 +20,7 @@ Already applied: [0000/00/00] Make \] robust on input line 83.
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
-luaotfload | db : Font names database loaded from /usr/local/texlive/2018/texmf-
-var/luatex-cache/generic/names/luaotfload-names.luc(load luc: /usr/local/texlive
-/2018/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-regular.luc))
+)
 \c@part=\count80
 \c@section=\count81
 \c@subsection=\count82
@@ -64,7 +32,8 @@ var/luatex-cache/generic/names/luaotfload-names.luc(load luc: /usr/local/texlive
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen103
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/ms/ragged2e.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/ms/ragged2e.sty
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/ms/everysel.sty
@@ -135,10 +104,10 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: luatex.def on input line 99.
+Package graphics Info: Driver file: xetex.def on input line 99.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/luatex.def
-File: luatex.def 2018/01/08 v1.0l Graphics/color driver for luatex
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
 ))
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
@@ -175,21 +144,27 @@ ode.tex
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
-Driver file for pgf: pgfsys-luatex.def
+Driver file for pgf: pgfsys-xetex.def
 
-(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.d
-ef
-File: pgfsys-luatex.def 2014/10/11  (rcs-revision 1.35)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+File: pgfsys-xetex.def 2014/07/09  (rcs-revision 1.11)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+File: pgfsys-dvipdfmx.def 2014/07/09  (rcs-revision 1.14)
 
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
 df.def
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)
+\pgfsys@objnum=\count95
 )))
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count95
-\pgfsyssoftpath@bigbuffer@items=\count96
+\pgfsyssoftpath@smallbuffer@items=\count96
+\pgfsyssoftpath@bigbuffer@items=\count97
 )
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -200,9 +175,8 @@ Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: luatex.def on input line 225.
+Package xcolor Info: Driver file: xetex.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
@@ -218,7 +192,7 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen116
-\pgfmath@count=\count97
+\pgfmath@count=\count98
 \pgfmath@box=\box27
 \pgfmath@toks=\toks22
 \pgfmath@stack@operand=\toks23
@@ -243,7 +217,7 @@ code.tex)
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
 erarithmetics.code.tex)))
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count98
+\c@pgfmathroundto@lastzeros=\count99
 ))
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
@@ -281,7 +255,7 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box28
 \pgf@hbox=\box29
 \pgf@layerbox@main=\box30
-\pgf@picture@serial@count=\count99
+\pgf@picture@serial@count=\count100
 )
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
@@ -316,7 +290,7 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 e.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen140
-\pgf@sys@shading@range@num=\count100
+\pgf@sys@shading@range@num=\count101
 )
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -373,15 +347,15 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count101
+\etb@tempcnta=\count102
 )
 \tcb@titlebox=\box33
 \tcb@upperbox=\box34
 \tcb@lowerbox=\box35
 \tcb@phantombox=\box36
-\c@tcbbreakpart=\count102
-\c@tcblayer=\count103
-\tcolorbox@number=\count104
+\c@tcbbreakpart=\count103
+\c@tcblayer=\count104
+\tcolorbox@number=\count105
 \tcb@temp=\box37
 \tcb@temp=\box38
 \tcb@temp=\box39
@@ -391,16 +365,16 @@ Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
 Library (tcolorbox): 'tcbraster.code.tex' version '4.13'
-\c@tcbrastercolumn=\count105
-\c@tcbrasterrow=\count106
-\c@tcbraster=\count107
+\c@tcbrastercolumn=\count106
+\c@tcbrasterrow=\count107
+\c@tcbraster=\count108
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '4.13'
 (/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
 (/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
- (/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/math/pgfmath.sty
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
@@ -418,7 +392,7 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count108
+\pgf@plot@mark@count=\count109
 \pgfplotmarksize=\dimen145
 )
 \tikz@lastx=\dimen146
@@ -431,19 +405,19 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@figbox@bg=\box42
 \tikz@tempbox=\box43
 \tikz@tempbox@bg=\box44
-\tikztreelevel=\count109
-\tikznumberofchildren=\count110
-\tikznumberofcurrentchild=\count111
-\tikz@fig@count=\count112
+\tikztreelevel=\count110
+\tikznumberofchildren=\count111
+\tikznumberofcurrentchild=\count112
+\tikz@fig@count=\count113
 
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count113
-\pgfmatrixcurrentcolumn=\count114
-\pgf@matrix@numberofcolumns=\count115
+\pgfmatrixcurrentrow=\count114
+\pgfmatrixcurrentcolumn=\count115
+\pgf@matrix@numberofcolumns=\count116
 )
-\tikz@expandcount=\count116
+\tikz@expandcount=\count117
 
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
@@ -459,11 +433,7 @@ Library (tcolorbox): 'tcbbreakable.code.tex' version '4.13'
 \tcb@testbox=\box46
 \tcb@totalupperbox=\box47
 \tcb@totallowerbox=\box48
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX detected.
-))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
 Library (tcolorbox): 'tcbhooks.code.tex' version '4.13'
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
 Library (tcolorbox): 'tcbtheorems.code.tex' version '4.13'
@@ -487,13 +457,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count117
+\inf@bad=\count118
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count118
-\leftroot@=\count119
+\uproot@=\count119
+\leftroot@=\count120
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count120
-\DOTSCASE@=\count121
+\classnum@=\count121
+\DOTSCASE@=\count122
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
@@ -502,15 +472,15 @@ LaTeX Info: Redefining \cdots on input line 596.
 \big@size=\dimen154
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count122
-\c@MaxMatrixCols=\count123
+\macc@depth=\count123
+\c@MaxMatrixCols=\count124
 \dotsspace@=\muskip10
-\c@parentequation=\count124
-\dspbrk@lvl=\count125
+\c@parentequation=\count125
+\dspbrk@lvl=\count126
 \tag@help=\toks31
-\row@=\count126
-\column@=\count127
-\maxfields@=\count128
+\row@=\count127
+\column@=\count128
+\maxfields@=\count129
 \andhelp@=\toks32
 \eqnshift@=\dimen155
 \alignsep@=\dimen156
@@ -530,7 +500,7 @@ Library (tcolorbox): 'tcbfitting.code.tex' version '4.13'
 \tcbfitdim=\dimen161
 \tcb@lowerfitdim=\dimen162
 \tcb@upperfitdim=\dimen163
-\tcb@cur@hbadness=\count129
+\tcb@cur@hbadness=\count130
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
 Library (tcolorbox): 'tcbxparse.code.tex' version '4.13'
 (/usr/local/texlive/2018/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
@@ -539,19 +509,18 @@ Package: expl3 2018/03/05 L3 programming layer (loader)
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/l3kernel/expl3-code.tex
 Package: expl3 2018/03/05 L3 programming layer (code)
-\ucharcat@table=\catcodetable5
-\c_max_int=\count130
-\l_tmpa_int=\count131
-\l_tmpb_int=\count132
-\g_tmpa_int=\count133
-\g_tmpb_int=\count134
-\g__intarray_font_int=\count135
-\g__prg_map_int=\count136
-\c_log_iow=\count137
-\l_iow_line_count_int=\count138
-\l__iow_line_target_int=\count139
-\l__iow_one_indent_int=\count140
-\l__iow_indent_int=\count141
+\c_max_int=\count131
+\l_tmpa_int=\count132
+\l_tmpb_int=\count133
+\g_tmpa_int=\count134
+\g_tmpb_int=\count135
+\g__intarray_font_int=\count136
+\g__prg_map_int=\count137
+\c_log_iow=\count138
+\l_iow_line_count_int=\count139
+\l__iow_line_target_int=\count140
+\l__iow_one_indent_int=\count141
+\l__iow_indent_int=\count142
 \c_zero_dim=\dimen164
 \c_max_dim=\dimen165
 \l_tmpa_dim=\dimen166
@@ -570,75 +539,72 @@ Package: expl3 2018/03/05 L3 programming layer (code)
 \l_tmpb_muskip=\muskip14
 \g_tmpa_muskip=\muskip15
 \g_tmpb_muskip=\muskip16
-\l_keys_choice_int=\count142
-\c__fp_leading_shift_int=\count143
-\c__fp_middle_shift_int=\count144
-\c__fp_trailing_shift_int=\count145
-\c__fp_big_leading_shift_int=\count146
-\c__fp_big_middle_shift_int=\count147
-\c__fp_big_trailing_shift_int=\count148
-\c__fp_Bigg_leading_shift_int=\count149
-\c__fp_Bigg_middle_shift_int=\count150
-\c__fp_Bigg_trailing_shift_int=\count151
-\c__fp_rand_size_int=\count152
-\c__fp_rand_four_int=\count153
-\c__fp_rand_eight_int=\count154
-\l__sort_length_int=\count155
-\l__sort_min_int=\count156
-\l__sort_top_int=\count157
-\l__sort_max_int=\count158
-\l__sort_true_max_int=\count159
-\l__sort_block_int=\count160
-\l__sort_begin_int=\count161
-\l__sort_end_int=\count162
-\l__sort_A_int=\count163
-\l__sort_B_int=\count164
-\l__sort_C_int=\count165
-\l__tl_build_start_index_int=\count166
-\l__tl_build_index_int=\count167
-\l__tl_analysis_normal_int=\count168
-\l__tl_analysis_index_int=\count169
-\l__tl_analysis_nesting_int=\count170
-\l__tl_analysis_type_int=\count171
-\l__regex_internal_a_int=\count172
-\l__regex_internal_b_int=\count173
-\l__regex_internal_c_int=\count174
-\l__regex_balance_int=\count175
-\l__regex_group_level_int=\count176
-\l__regex_mode_int=\count177
-\c__regex_cs_in_class_mode_int=\count178
-\c__regex_cs_mode_int=\count179
-\l__regex_catcodes_int=\count180
-\l__regex_default_catcodes_int=\count181
-\c__regex_catcode_L_int=\count182
-\c__regex_catcode_O_int=\count183
-\c__regex_catcode_A_int=\count184
-\c__regex_all_catcodes_int=\count185
-\l__regex_show_lines_int=\count186
-\l__regex_min_state_int=\count187
-\l__regex_max_state_int=\count188
-\l__regex_left_state_int=\count189
-\l__regex_right_state_int=\count190
-\l__regex_capturing_group_int=\count191
-\l__regex_min_pos_int=\count192
-\l__regex_max_pos_int=\count193
-\l__regex_curr_pos_int=\count194
-\l__regex_start_pos_int=\count195
-\l__regex_success_pos_int=\count196
-\l__regex_curr_char_int=\count197
-\l__regex_curr_catcode_int=\count198
-\l__regex_last_char_int=\count199
-\l__regex_case_changed_char_int=\count266
-\l__regex_curr_state_int=\count267
-\l__regex_step_int=\count268
-\l__regex_min_active_int=\count269
-\l__regex_max_active_int=\count270
-\l__regex_replacement_csnames_int=\count271
-\l__regex_match_count_int=\count272
-\l__regex_min_submatch_int=\count273
-\l__regex_submatch_int=\count274
-\l__regex_zeroth_submatch_int=\count275
-\g__regex_trace_regex_int=\count276
+\l_keys_choice_int=\count143
+\c__fp_leading_shift_int=\count144
+\c__fp_middle_shift_int=\count145
+\c__fp_trailing_shift_int=\count146
+\c__fp_big_leading_shift_int=\count147
+\c__fp_big_middle_shift_int=\count148
+\c__fp_big_trailing_shift_int=\count149
+\c__fp_Bigg_leading_shift_int=\count150
+\c__fp_Bigg_middle_shift_int=\count151
+\c__fp_Bigg_trailing_shift_int=\count152
+\l__sort_length_int=\count153
+\l__sort_min_int=\count154
+\l__sort_top_int=\count155
+\l__sort_max_int=\count156
+\l__sort_true_max_int=\count157
+\l__sort_block_int=\count158
+\l__sort_begin_int=\count159
+\l__sort_end_int=\count160
+\l__sort_A_int=\count161
+\l__sort_B_int=\count162
+\l__sort_C_int=\count163
+\l__tl_build_start_index_int=\count164
+\l__tl_build_index_int=\count165
+\l__tl_analysis_normal_int=\count166
+\l__tl_analysis_index_int=\count167
+\l__tl_analysis_nesting_int=\count168
+\l__tl_analysis_type_int=\count169
+\l__regex_internal_a_int=\count170
+\l__regex_internal_b_int=\count171
+\l__regex_internal_c_int=\count172
+\l__regex_balance_int=\count173
+\l__regex_group_level_int=\count174
+\l__regex_mode_int=\count175
+\c__regex_cs_in_class_mode_int=\count176
+\c__regex_cs_mode_int=\count177
+\l__regex_catcodes_int=\count178
+\l__regex_default_catcodes_int=\count179
+\c__regex_catcode_L_int=\count180
+\c__regex_catcode_O_int=\count181
+\c__regex_catcode_A_int=\count182
+\c__regex_all_catcodes_int=\count183
+\l__regex_show_lines_int=\count184
+\l__regex_min_state_int=\count185
+\l__regex_max_state_int=\count186
+\l__regex_left_state_int=\count187
+\l__regex_right_state_int=\count188
+\l__regex_capturing_group_int=\count189
+\l__regex_min_pos_int=\count190
+\l__regex_max_pos_int=\count191
+\l__regex_curr_pos_int=\count192
+\l__regex_start_pos_int=\count193
+\l__regex_success_pos_int=\count194
+\l__regex_curr_char_int=\count195
+\l__regex_curr_catcode_int=\count196
+\l__regex_last_char_int=\count197
+\l__regex_case_changed_char_int=\count198
+\l__regex_curr_state_int=\count199
+\l__regex_step_int=\count266
+\l__regex_min_active_int=\count267
+\l__regex_max_active_int=\count268
+\l__regex_replacement_csnames_int=\count269
+\l__regex_match_count_int=\count270
+\l__regex_min_submatch_int=\count271
+\l__regex_submatch_int=\count272
+\l__regex_zeroth_submatch_int=\count273
+\g__regex_trace_regex_int=\count274
 \c_empty_box=\box51
 \l_tmpa_box=\box52
 \l_tmpb_box=\box53
@@ -680,16 +646,16 @@ Package: expl3 2018/03/05 L3 programming layer (code)
 \l__coffin_scaled_total_height_dim=\dimen193
 \l__coffin_scaled_width_dim=\dimen194
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count277
+(/usr/local/texlive/2018/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
+File: l3xdvidpfmx.def 2017/03/18 v L3 Experimental driver: xdvipdfmx
+\g__driver_image_int=\count275
 ))
 Package: xparse 2018/02/21 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count278
-\g__xparse_grabber_int=\count279
-\l__xparse_m_args_int=\count280
-\l__xparse_mandatory_args_int=\count281
-\l__xparse_v_nesting_int=\count282
+\l__xparse_current_arg_int=\count276
+\g__xparse_grabber_int=\count277
+\l__xparse_m_args_int=\count278
+\l__xparse_mandatory_args_int=\count279
+\l__xparse_v_nesting_int=\count280
 )
 .................................................
 . LaTeX info: "xparse/define-command"
@@ -709,23 +675,23 @@ Library (tcolorbox): 'tcblistingsutf8.code.tex' version '4.13'
 Package: listingsutf8 2016/05/16 v1.3 Allow UTF-8 in listings input (HO)
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count283
+\lst@mode=\count281
 \lst@gtempboxa=\box66
 \lst@token=\toks35
-\lst@length=\count284
+\lst@length=\count282
 \lst@currlwidth=\dimen195
-\lst@column=\count285
-\lst@pos=\count286
+\lst@column=\count283
+\lst@pos=\count284
 \lst@lostspace=\dimen196
 \lst@width=\dimen197
-\lst@newlines=\count287
-\lst@lineno=\count288
+\lst@newlines=\count285
+\lst@lineno=\count286
 \lst@maxwidth=\dimen198
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count289
-\lst@skipnumbers=\count290
+\c@lstnumber=\count287
+\lst@skipnumbers=\count288
 \lst@framebox=\box67
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
@@ -734,11 +700,15 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO)
-
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+)
 
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
 )
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
@@ -746,19 +716,18 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks36
+Package pdftexcmds Info: \pdfdraftmode not found.
 )
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/stringenc.sty
-Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO)
 
+Package listingsutf8 Warning: Package loading is aborted because of missing \pd
+f@unescapehex.
+(listingsutf8)                It is provided by pdfTeX >= 1.30.
 
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdfescape.sty
-Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-)))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
 Library (tcolorbox): 'tcblistings.code.tex' version '4.13'
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.te
@@ -770,7 +739,7 @@ Library (tcolorbox): 'tcbprocessing.code.tex' version '4.13'
 Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 69.
 ))
-\c@tcblisting=\count291
+\c@tcblisting=\count289
 )))
 (/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbexternal.code.tex
 Library (tcolorbox): 'tcbexternal.code.tex' version '4.13'
@@ -790,7 +759,7 @@ File: pgflibraryfadings.code.tex 2008/02/07 v3.0.1a (rcs-revision 1.3)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
 Library (tcolorbox): 'tcbposter.code.tex' version '4.13'
 ))
-\c@tcb@cnt@definition=\count292
+\c@tcb@cnt@definition=\count290
  (/usr/local/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/03/24 v5.7 Page Geometry
 
@@ -801,9 +770,9 @@ Package ifvtex Info: VTeX not detected.
 (/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count293
-\Gm@cntv=\count294
-\c@Gm@tempcnt=\count295
+\Gm@cnth=\count291
+\Gm@cntv=\count292
+\c@Gm@tempcnt=\count293
 \Gm@bindingoffset=\dimen199
 \Gm@wd@mp=\dimen256
 \Gm@odd@mp=\dimen257
@@ -812,20 +781,21 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutheight=\dimen260
 \Gm@layouthoffset=\dimen261
 \Gm@layoutvoffset=\dimen262
-\Gm@dimlist=\toks37
+\Gm@dimlist=\toks36
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count296
-\output=\toks38
-\linenoprevgraf=\count297
+Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+\linenopenalty=\count294
+\output=\toks37
+\linenoprevgraf=\count295
 \linenumbersep=\dimen263
 \linenumberwidth=\dimen264
-\c@linenumber=\count298
-\c@pagewiselinenumber=\count299
-\c@LN@truepage=\count300
-\c@internallinenumber=\count301
-\c@internallinenumbers=\count302
+\c@linenumber=\count296
+\c@pagewiselinenumber=\count297
+\c@LN@truepage=\count298
+\c@internallinenumber=\count299
+\c@internallinenumbers=\count300
 \quotelinenumbersep=\dimen265
 \bframerule=\dimen266
 \bframesep=\dimen267
@@ -840,26 +810,25 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip68
 \bibsep=\skip69
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count303
+\c@NAT@ctr=\count301
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hypernat/hypernat.sty
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 24 replaced by U+FFFD.
 Package: hypernat 2001/07/09 v1.0b hyperref and natbib compatibility (jb)
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
-\MT@toks=\toks39
-\MT@count=\count304
+\MT@toks=\toks38
+\MT@count=\count302
 LaTeX Info: Redefining \textls on input line 793.
 \MT@outer@kern=\dimen268
 LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
-\MT@listname@count=\count305
+\MT@listname@count=\count303
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/microtype-luatex.def
-File: microtype-luatex.def 2018/01/14 v2.7a Definitions specific to luatex (RS)
-Lua module: microtype 2018/01/14 2.7a microtype module.
-LaTeX Info: Redefining \lsstyle on input line 679.
-LaTeX Info: Redefining \lslig on input line 679.
-\MT@outer@space=\skip70
+(/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/microtype-xetex.def
+File: microtype-xetex.def 2018/01/14 v2.7a Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 256.
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
@@ -868,11 +837,11 @@ File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
 ))
 (/usr/local/texlive/2018/texmf-dist/tex/latex/ccaption/ccaption.sty
 Package: ccaption 2011/08/07 v3.2c Extended captioning and new floats
-\@contcwidth=\skip71
-\@contindw=\skip72
-\abovelegendskip=\skip73
-\belowlegendskip=\skip74
-\c@newflo@tctr=\count306
+\@contcwidth=\skip70
+\@contindw=\skip71
+\abovelegendskip=\skip72
+\belowlegendskip=\skip73
+\c@newflo@tctr=\count304
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2018-03-20 v2.7m A comprehensive (SI) units package
@@ -882,9 +851,9 @@ Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
 \col@sep=\dimen269
 \ar@mcellbox=\box69
 \extrarowheight=\dimen270
-\NC@list=\toks40
-\extratabsurround=\skip75
-\backup@length=\skip76
+\NC@list=\toks39
+\extratabsurround=\skip74
+\backup@length=\skip75
 \ar@cellbox=\box70
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
@@ -892,29 +861,29 @@ Package: l3keys2e 2018/02/21 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box71
 \l__siunitx_tmp_dim=\dimen271
-\l__siunitx_tmp_int=\count307
-\l__siunitx_number_mantissa_length_int=\count308
-\l__siunitx_number_uncert_length_int=\count309
-\l__siunitx_round_int=\count310
-\l__siunitx_process_decimal_int=\count311
-\l__siunitx_process_uncertainty_int=\count312
-\l__siunitx_process_fixed_int=\count313
-\l__siunitx_process_integer_min_int=\count314
-\l__siunitx_process_precision_int=\count315
-\l__siunitx_group_min_int=\count316
+\l__siunitx_tmp_int=\count305
+\l__siunitx_number_mantissa_length_int=\count306
+\l__siunitx_number_uncert_length_int=\count307
+\l__siunitx_round_int=\count308
+\l__siunitx_process_decimal_int=\count309
+\l__siunitx_process_uncertainty_int=\count310
+\l__siunitx_process_fixed_int=\count311
+\l__siunitx_process_integer_min_int=\count312
+\l__siunitx_process_precision_int=\count313
+\l__siunitx_group_min_int=\count314
 \l__siunitx_angle_marker_box=\box72
 \l__siunitx_angle_unit_box=\box73
 \l__siunitx_angle_marker_dim=\dimen272
 \l__siunitx_angle_unit_dim=\dimen273
-\l__siunitx_unit_int=\count317
-\l__siunitx_unit_denominator_int=\count318
-\l__siunitx_unit_numerator_int=\count319
-\l__siunitx_unit_prefix_int=\count320
-\l__siunitx_unit_prefix_base_int=\count321
-\l__siunitx_unit_prefix_gram_int=\count322
-\l__siunitx_number_product_int=\count323
-\c__siunitx_one_fill_skip=\skip77
-\l__siunitx_table_unit_align_skip=\skip78
+\l__siunitx_unit_int=\count315
+\l__siunitx_unit_denominator_int=\count316
+\l__siunitx_unit_numerator_int=\count317
+\l__siunitx_unit_prefix_int=\count318
+\l__siunitx_unit_prefix_base_int=\count319
+\l__siunitx_unit_prefix_gram_int=\count320
+\l__siunitx_number_product_int=\count321
+\c__siunitx_one_fill_skip=\skip76
+\l__siunitx_table_unit_align_skip=\skip77
 \l__siunitx_table_exponent_dim=\dimen274
 \l__siunitx_table_integer_dim=\dimen275
 \l__siunitx_table_mantissa_dim=\dimen276
@@ -928,8 +897,8 @@ Package: l3keys2e 2018/02/21 LaTeX2e option processing using LaTeX3 keys
 \l__siunitx_table_post_box=\box75
 \l__siunitx_table_mantissa_box=\box76
 \l__siunitx_table_result_box=\box77
-\l__siunitx_table_number_align_skip=\skip79
-\l__siunitx_table_text_align_skip=\skip80
+\l__siunitx_table_number_align_skip=\skip78
+\l__siunitx_table_text_align_skip=\skip79
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -1063,8 +1032,8 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/04/06 v1.3b Input encoding file
-\inpenc@prehook=\toks41
-\inpenc@posthook=\toks42
+\inpenc@prehook=\toks40
+\inpenc@posthook=\toks41
 
 
 Package inputenc Warning: inputenc package ignored with utf8 based engines.
@@ -1086,8 +1055,12 @@ Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
 ))))
-\c@section@level=\count324
+\c@section@level=\count322
 LaTeX Info: Redefining \ref on input line 355.
 LaTeX Info: Redefining \pageref on input line 355.
 )
@@ -1103,12 +1076,12 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \cmidrulesep=\dimen290
 \cmidrulekern=\dimen291
 \defaultaddspace=\dimen292
-\@cmidla=\count325
-\@cmidlb=\count326
+\@cmidla=\count323
+\@cmidlb=\count324
 \@aboverulesep=\dimen293
 \@belowrulesep=\dimen294
-\@thisruleclass=\count327
-\@lastruleclass=\count328
+\@thisruleclass=\count325
+\@lastruleclass=\count326
 \@thisrulewidth=\dimen295
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/rotating.sty
@@ -1117,11 +1090,11 @@ Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count329
-\rotFPtop=\skip81
-\rotFPbot=\skip82
+\c@r@tfl@t=\count327
+\rotFPtop=\skip80
+\rotFPbot=\skip81
 \rot@float@box=\box78
-\rot@mess@toks=\toks43
+\rot@mess@toks=\toks42
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
@@ -1130,35 +1103,35 @@ Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
 \TX@old@col=\dimen298
 \TX@target=\dimen299
 \TX@delta=\dimen300
-\TX@cols=\count330
-\TX@ftn=\toks44
+\TX@cols=\count328
+\TX@ftn=\toks43
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/ltablex/ltablex.sty
 Package: ltablex 2014/08/13 v1.1 Modified tabularx
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip83
-\LTright=\skip84
-\LTpre=\skip85
-\LTpost=\skip86
-\LTchunksize=\count331
+\LTleft=\skip82
+\LTright=\skip83
+\LTpre=\skip84
+\LTpost=\skip85
+\LTchunksize=\count329
 \LTcapwidth=\dimen301
 \LT@head=\box79
 \LT@firsthead=\box80
 \LT@foot=\box81
 \LT@lastfoot=\box82
-\LT@cols=\count332
-\LT@rows=\count333
-\c@LT@tables=\count334
-\c@LT@chunks=\count335
-\LT@p@ftn=\toks45
+\LT@cols=\count330
+\LT@rows=\count331
+\c@LT@tables=\count332
+\c@LT@chunks=\count333
+\LT@p@ftn=\toks44
 ))
 (/usr/local/texlive/2018/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
-\multirow@colwidth=\skip87
-\multirow@cntb=\count336
-\multirow@dima=\skip88
+\multirow@colwidth=\skip86
+\multirow@cntb=\count334
+\multirow@dima=\skip87
 \bigstrutjot=\dimen302
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/pdflscape.sty
@@ -1167,13 +1140,18 @@ Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
-Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-)
+Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 99.
+
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+))
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
 
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
@@ -1187,13 +1165,10 @@ Package hobsub Info: Skipping package `ifpdf' (already loaded).
 Package hobsub Info: Skipping package `etexcmds' (already loaded).
 Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: luatex-loader 2016/05/16 v0.6 Lua module loader (HO)
-
-(/usr/local/texlive/2018/texmf-dist/scripts/oberdiek/oberdiek.luatex.lua)
 Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
-Package hobsub Info: Skipping package `pdfescape' (already loaded).
-Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO)
-
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
 Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
 Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
 )
@@ -1202,7 +1177,7 @@ Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
 Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
 Package: xcolor-patch 2016/05/16 xcolor patch
 Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
-Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package hobsub Info: Skipping package `atbegshi' (already loaded).
 Package hobsub Info: Skipping package `refcount' (already loaded).
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
@@ -1210,13 +1185,13 @@ Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen303
-\Hy@linkcounter=\count337
-\Hy@pagecounter=\count338
+\Hy@linkcounter=\count335
+\Hy@pagecounter=\count336
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count339
+\Hy@SavedSpaceFactor=\count337
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1229,7 +1204,7 @@ Package hyperref Info: Plain pages OFF on input line 4524.
 Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4762.
-\c@Hy@tempcnt=\count340
+\c@Hy@tempcnt=\count338
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
@@ -1237,7 +1212,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5115.
 \XeTeXLinkMargin=\dimen304
-\Fld@menulength=\count341
+\Fld@menulength=\count339
 \Field@Width=\dimen305
 \Fld@charsize=\dimen306
 Package hyperref Info: Hyper figures OFF on input line 6369.
@@ -1249,23 +1224,34 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6394.
 Package hyperref Info: PDF/A mode OFF on input line 6399.
 LaTeX Info: Redefining \ref on input line 6439.
 LaTeX Info: Redefining \pageref on input line 6443.
-\Hy@abspage=\count342
-\c@Item=\count343
-\c@Hfootnote=\count344
+\Hy@abspage=\count340
+\c@Item=\count341
+\c@Hfootnote=\count342
 )
-Package hyperref Info: Driver (autodetected): hluatex.
+Package hyperref Info: Driver (autodetected): hxetex.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hluatex.def
-File: hluatex.def 2018/02/06 v6.86b Hyperref driver for luaTeX
+(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2018/02/06 v6.86b Hyperref driver for XeTeX
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2018/02/06 v6.86b Hyperref: PDF Unicode definition (HO)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/stringenc.sty
+Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box83
+\c@Hy@AnnotLevel=\count343
+\HyField@AnnotCount=\count344
 \Fld@listcount=\count345
 \c@bookmark@seq@number=\count346
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
-2.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
 )
-\Hy@SectionHShift=\skip89
+\Hy@SectionHShift=\skip88
 )
 (/usr/local/texlive/2018/texmf-dist/tex/generic/dirtree/dirtree.sty
 Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
@@ -1295,48 +1281,48 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has section divisions on input line 51.
-\cftparskip=\skip90
-\cftbeforetoctitleskip=\skip91
-\cftaftertoctitleskip=\skip92
-\cftbeforepartskip=\skip93
-\cftpartnumwidth=\skip94
-\cftpartindent=\skip95
-\cftbeforesecskip=\skip96
-\cftsecindent=\skip97
-\cftsecnumwidth=\skip98
-\cftbeforesubsecskip=\skip99
-\cftsubsecindent=\skip100
-\cftsubsecnumwidth=\skip101
-\cftbeforesubsubsecskip=\skip102
-\cftsubsubsecindent=\skip103
-\cftsubsubsecnumwidth=\skip104
-\cftbeforeparaskip=\skip105
-\cftparaindent=\skip106
-\cftparanumwidth=\skip107
-\cftbeforesubparaskip=\skip108
-\cftsubparaindent=\skip109
-\cftsubparanumwidth=\skip110
-\cftbeforeloftitleskip=\skip111
-\cftafterloftitleskip=\skip112
-\cftbeforefigskip=\skip113
-\cftfigindent=\skip114
-\cftfignumwidth=\skip115
+\cftparskip=\skip89
+\cftbeforetoctitleskip=\skip90
+\cftaftertoctitleskip=\skip91
+\cftbeforepartskip=\skip92
+\cftpartnumwidth=\skip93
+\cftpartindent=\skip94
+\cftbeforesecskip=\skip95
+\cftsecindent=\skip96
+\cftsecnumwidth=\skip97
+\cftbeforesubsecskip=\skip98
+\cftsubsecindent=\skip99
+\cftsubsecnumwidth=\skip100
+\cftbeforesubsubsecskip=\skip101
+\cftsubsubsecindent=\skip102
+\cftsubsubsecnumwidth=\skip103
+\cftbeforeparaskip=\skip104
+\cftparaindent=\skip105
+\cftparanumwidth=\skip106
+\cftbeforesubparaskip=\skip107
+\cftsubparaindent=\skip108
+\cftsubparanumwidth=\skip109
+\cftbeforeloftitleskip=\skip110
+\cftafterloftitleskip=\skip111
+\cftbeforefigskip=\skip112
+\cftfigindent=\skip113
+\cftfignumwidth=\skip114
 \c@lofdepth=\count351
 \c@lotdepth=\count352
-\cftbeforelottitleskip=\skip116
-\cftafterlottitleskip=\skip117
-\cftbeforetabskip=\skip118
-\cfttabindent=\skip119
-\cfttabnumwidth=\skip120
+\cftbeforelottitleskip=\skip115
+\cftafterlottitleskip=\skip116
+\cftbeforetabskip=\skip117
+\cfttabindent=\skip118
+\cfttabnumwidth=\skip119
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/fontspec/fontspec.sty
 Package: fontspec 2017/11/09 v2.6g Font selection for XeLaTeX and LuaLaTeX
-Lua module: fontspec 2017/11/09 2.6g Font selection for XeLaTeX and LuaLaTeX
-(/usr/local/texlive/2018/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
-Package: fontspec-luatex 2017/11/09 v2.6g Font selection for XeLaTeX and LuaLaTe
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2017/11/09 v2.6g Font selection for XeLaTeX and LuaLaTe
 X
 \l__fontspec_script_int=\count353
 \l__fontspec_language_int=\count354
@@ -1360,194 +1346,191 @@ LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \fontspec with sig. 'O{}mO{}' on line 545.
+. Defining command \fontspec with sig. 'O{}mO{}' on line 542.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmainfont with sig. 'O{}mO{}' on line 549.
+. Defining command \setmainfont with sig. 'O{}mO{}' on line 546.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setsansfont with sig. 'O{}mO{}' on line 553.
+. Defining command \setsansfont with sig. 'O{}mO{}' on line 550.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmonofont with sig. 'O{}mO{}' on line 557.
+. Defining command \setmonofont with sig. 'O{}mO{}' on line 554.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmathrm with sig. 'O{}mO{}' on line 561.
+. Defining command \setmathrm with sig. 'O{}mO{}' on line 558.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setboldmathrm with sig. 'O{}mO{}' on line 565.
+. Defining command \setboldmathrm with sig. 'O{}mO{}' on line 562.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmathsf with sig. 'O{}mO{}' on line 569.
+. Defining command \setmathsf with sig. 'O{}mO{}' on line 566.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmathtt with sig. 'O{}mO{}' on line 573.
+. Defining command \setmathtt with sig. 'O{}mO{}' on line 570.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setromanfont with sig. 'O{}mO{}' on line 577.
+. Defining command \setromanfont with sig. 'O{}mO{}' on line 574.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontfamily with sig. 'mO{}mO{}' on line 581.
+. Defining command \newfontfamily with sig. 'mO{}mO{}' on line 578.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontface with sig. 'mO{}mO{}' on line 585.
+. Defining command \newfontface with sig. 'mO{}mO{}' on line 582.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \defaultfontfeatures with sig. 't+om' on line 589.
+. Defining command \defaultfontfeatures with sig. 't+om' on line 586.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \addfontfeatures with sig. 'm' on line 593.
+. Defining command \addfontfeatures with sig. 'm' on line 590.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \addfontfeature with sig. 'm' on line 597.
+. Defining command \addfontfeature with sig. 'm' on line 594.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontfeature with sig. 'mm' on line 601.
+. Defining command \newfontfeature with sig. 'mm' on line 598.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newAATfeature with sig. 'mmmm' on line 605.
+. Defining command \newAATfeature with sig. 'mmmm' on line 602.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newopentypefeature with sig. 'mmm' on line 609.
+. Defining command \newopentypefeature with sig. 'mmm' on line 606.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newICUfeature with sig. 'mmm' on line 613.
+. Defining command \newICUfeature with sig. 'mmm' on line 610.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \aliasfontfeature with sig. 'mm' on line 617.
+. Defining command \aliasfontfeature with sig. 'mm' on line 614.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \aliasfontfeatureoption with sig. 'mmm' on line 621.
+. Defining command \aliasfontfeatureoption with sig. 'mmm' on line 618.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontscript with sig. 'mm' on line 625.
+. Defining command \newfontscript with sig. 'mm' on line 622.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontlanguage with sig. 'mm' on line 629.
+. Defining command \newfontlanguage with sig. 'mm' on line 626.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareFontsExtensions with sig. 'm' on line 633.
+. Defining command \DeclareFontsExtensions with sig. 'm' on line 630.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \IfFontFeatureActiveTF with sig. 'mmm' on line 637.
+. Defining command \IfFontFeatureActiveTF with sig. 'mmm' on line 634.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingCommand with sig. 'mO{}m' on line 3366.
+. Defining command \EncodingCommand with sig. 'mO{}m' on line 3632.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingAccent with sig. 'mm' on line 3372.
+. Defining command \EncodingAccent with sig. 'mm' on line 3638.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingSymbol with sig. 'mm' on line 3378.
+. Defining command \EncodingSymbol with sig. 'mm' on line 3644.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingComposite with sig. 'mmm' on line 3384.
+. Defining command \EncodingComposite with sig. 'mmm' on line 3650.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingCompositeCommand with sig. 'mmm' on line 3390.
+. Defining command \EncodingCompositeCommand with sig. 'mmm' on line 3656.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareUnicodeEncoding with sig. 'mm' on line 3415.
+. Defining command \DeclareUnicodeEncoding with sig. 'mm' on line 3681.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \UndeclareSymbol with sig. 'm' on line 3421.
+. Defining command \UndeclareSymbol with sig. 'm' on line 3687.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \UndeclareAccent with sig. 'm' on line 3427.
+. Defining command \UndeclareAccent with sig. 'm' on line 3693.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \UndeclareCommand with sig. 'm' on line 3433.
+. Defining command \UndeclareCommand with sig. 'm' on line 3699.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \UndeclareComposite with sig. 'mm' on line 3440.
+. Defining command \UndeclareComposite with sig. 'mm' on line 3706.
 .................................................
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/fontspec/fontspec.cfg)
-LaTeX Info: Redefining \itshape on input line 3625.
-LaTeX Info: Redefining \slshape on input line 3630.
-LaTeX Info: Redefining \scshape on input line 3635.
-LaTeX Info: Redefining \upshape on input line 3640.
-LaTeX Info: Redefining \em on input line 3670.
-LaTeX Info: Redefining \emph on input line 3695.
-(load luc: /usr/local/texlive/2018/texmf-var/luatex-cache/generic/fonts/otl/lmro
-man12-bold.luc)(load luc: /usr/local/texlive/2018/texmf-var/luatex-cache/generic
-/fonts/otl/lmroman12-italic.luc)
-LaTeX Info: Redefining \- on input line 3749.
+LaTeX Info: Redefining \itshape on input line 3891.
+LaTeX Info: Redefining \slshape on input line 3896.
+LaTeX Info: Redefining \scshape on input line 3901.
+LaTeX Info: Redefining \upshape on input line 3906.
+LaTeX Info: Redefining \em on input line 3936.
+LaTeX Info: Redefining \emph on input line 3961.
+LaTeX Info: Redefining \- on input line 4015.
 .................................................
 . LaTeX info: "xparse/redefine-command"
 . 
-. Redefining command \oldstylenums with sig. 'm' on line 3844.
+. Redefining command \oldstylenums with sig. 'm' on line 4110.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \liningnums with sig. 'm' on line 3848.
+. Defining command \liningnums with sig. 'm' on line 4114.
 .................................................
 )))
 (/usr/local/texlive/2018/texmf-dist/tex/latex/acronym/acronym.sty
@@ -1564,14 +1547,18 @@ Package: suffix 2006/07/15 1.5a Variant command support
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\AC@clearlist=\toks46
+\AC@clearlist=\toks45
 )
 
 LaTeX Warning: Unused global option(s):
     [preprint].
 
-(./panelapprex2025lawless.aux)
-\openout1 = panelapprex2025lawless.aux
+(./panelapprex2025lawless_appnote.aux
+
+LaTeX Warning: Label `fig:uniq_gene_moi' multiply defined.
+
+)
+\openout1 = `panelapprex2025lawless_appnote.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
@@ -1589,46 +1576,18 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
  ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 4.
 
 ABD: EveryShipout initializing macros
-(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count363
-\scratchdimen=\dimen320
-\scratchbox=\box83
-\nofMPsegments=\count364
-\nofMParguments=\count365
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count366
-\MPscratchDim=\dimen321
-\MPnumerator=\count367
-\makeMPintoPDFobject=\count368
-\everyMPtoPDFconversion=\toks48
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-)
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 43
-8.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG
-,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-
-))
-\c@lstlisting=\count369
+\c@lstlisting=\count363
 
 *geometry* driver: auto-detecting
-*geometry* detected driver: luatex
+*geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
-* driver: luatex
+* driver: xetex
 * paper: letterpaper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -1660,19 +1619,15 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Info: Redefining \microtypecontext on input line 4.
-Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
-Package microtype Info: Automatic font expansion enabled (level 2),
-(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
-Package microtype Info: Using default expansion set `basictext'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
-File: mt-LatinModernRoman.cfg 2013/03/13 v1.0 microtype config. file: Latin Mode
-rn Roman (RS)
+File: mt-LatinModernRoman.cfg 2013/03/13 v1.0 microtype config. file: Latin Mod
+ern Roman (RS)
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/translator/translator-basic-dicti
 onary-English.dict
@@ -1686,10 +1641,9 @@ Package hyperref Info: Link coloring ON on input line 4.
 LaTeX Info: Redefining \ref on input line 4.
 LaTeX Info: Redefining \pageref on input line 4.
 LaTeX Info: Redefining \nameref on input line 4.
- (./panelapprex2025lawless.out) (./panelapprex2025lawless.out)
+ (./panelapprex2025lawless_appnote.out) (./panelapprex2025lawless_appnote.out)
 \@outlinefile=\write7
-
-\openout7 = panelapprex2025lawless.out
+\openout7 = `panelapprex2025lawless_appnote.out'.
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
@@ -1752,411 +1706,402 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 4.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 4.
-(load luc: /usr/local/texlive/2018/texmf-var/luatex-cache/generic/fonts/otl/lmro
-man8-regular.luc)(load luc: /usr/local/texlive/2018/texmf-var/luatex-cache/gener
-ic/fonts/otl/lmroman6-regular.luc)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
-RS)
-)(load luc: /usr/local/texlive/2018/texmf-var/luatex-cache/generic/fonts/otl/lms
-ans12-regular.luc)
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-(load luc: /usr/local/texlive/2018/texmf-var/luatex-cache/generic/fonts/otl/lmsa
-ns8-regular.luc)(load luc: /usr/local/texlive/2018/texmf-var/luatex-cache/generi
-c/fonts/otl/lmmono12-regular.luc)
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-(load luc: /usr/local/texlive/2018/texmf-var/luatex-cache/generic/fonts/otl/lmmo
-no8-regular.luc)(load luc: /usr/local/texlive/2018/texmf-var/luatex-cache/generi
-c/fonts/otl/lmroman17-regular.luc)(load luc: /usr/local/texlive/2018/texmf-var/l
-uatex-cache/generic/fonts/otl/lmroman10-regular.luc)(load luc: /usr/local/texliv
-e/2018/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-regular.luc)(load luc: 
-/usr/local/texlive/2018/texmf-var/luatex-cache/generic/fonts/otl/lmsans10-regula
-r.luc)(load luc: /usr/local/texlive/2018/texmf-var/luatex-cache/generic/fonts/ot
-l/lmmono10-regular.luc)(load luc: /usr/local/texlive/2018/texmf-var/luatex-cache
-/generic/fonts/otl/lmroman5-regular.luc) [1
 
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}](load luc
-: /usr/local/texlive/2018/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bol
-d.luc)
-Overfull \hbox (33.25742pt too wide) in paragraph at lines 61--66
-\TU/lmr/m/n/10.95 tion page at [][]$\TU/lmtt/m/n/10.95 https://DylanLawless.git
-hub.io/panelapprex.github.io/landing_
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
+File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
+
+)
+[1
+
+]
+Overfull \hbox (0.35754pt too wide) in paragraph at lines 53--58
+\TU/lmr/m/n/10.95 In benchmarked case studies of immune disease diagnostics, th
+e system achieved
+ []
+
+
+Overfull \hbox (34.26744pt too wide) in paragraph at lines 60--65
+\TU/lmr/m/n/10.95 tion page at [][]$[][][][][] [] [] [] [][][][][][][][][][][][
+] [] [][][][][][] [] [][] [] [][][][][][][][][][][] [] [][][][][][] [] [][] [] 
+[][][][][][][] []
  []
 
 [2
 
 ]
-Package acronym Info: Acronym iem used in text but not spelled out in full in te
-xt on input line 82.
+Package acronym Info: Acronym iem used in text but not spelled out in full in t
+ext on input line 81.
 Package acronym Info: Label `acro:ge' newly defined as it shall be overridden
-although it is yet undefined on input line 101.
+although it is yet undefined on input line 100.
 Package acronym Info: Label `acro:rag' newly defined as it shall be overridden
-although it is yet undefined on input line 110.
+although it is yet undefined on input line 109.
  [3
 
 ]
 Package acronym Info: Label `acro:omim' newly defined as it shall be overridden
-although it is yet undefined on input line 123.
+
+although it is yet undefined on input line 122.
 Package acronym Info: Label `acro:hgnc' newly defined as it shall be overridden
-although it is yet undefined on input line 123.
+
+although it is yet undefined on input line 122.
 Package acronym Info: Label `acro:moi' newly defined as it shall be overridden
-although it is yet undefined on input line 130.
+although it is yet undefined on input line 129.
 Package acronym Info: Label `acro:html' newly defined as it shall be overridden
-although it is yet undefined on input line 136.
+
+although it is yet undefined on input line 135.
  [4]
 Package acronym Info: Label `acro:pid' newly defined as it shall be overridden
-although it is yet undefined on input line 172.
+although it is yet undefined on input line 171.
 Package acronym Info: Label `acro:jaci' newly defined as it shall be overridden
-although it is yet undefined on input line 172.
+
+although it is yet undefined on input line 171.
  [5]
 Package acronym Info: Label `acro:csv' newly defined as it shall be overridden
-although it is yet undefined on input line 188.
+although it is yet undefined on input line 187.
 Package acronym Info: Label `acro:pdf' newly defined as it shall be overridden
-although it is yet undefined on input line 188.
+although it is yet undefined on input line 187.
 Package acronym Info: Label `acro:iei' newly defined as it shall be overridden
-although it is yet undefined on input line 195.
-<../images/screenshot_1.png, id=178, 803.0pt x 884.30376pt>
-File: ../images/screenshot_1.png Graphic file (type png)
-<use ../images/screenshot_1.png>
-Package luatex.def Info: ../images/screenshot_1.png  used on input line 200.
-(luatex.def)             Requested size: 212.47617pt x 233.98856pt.
-<../images/screenshot_2.png, id=179, 799.98875pt x 884.30376pt>
-File: ../images/screenshot_2.png Graphic file (type png)
-<use ../images/screenshot_2.png>
-Package luatex.def Info: ../images/screenshot_2.png  used on input line 201.
-(luatex.def)             Requested size: 212.47617pt x 234.86562pt.
-<../images/benchmark.pdf, id=180, 578.16pt x 361.35pt>
+although it is yet undefined on input line 194.
+File: ../images/screenshot_1.png Graphic file (type bmp)
+<../images/screenshot_1.png>
+File: ../images/screenshot_2.png Graphic file (type bmp)
+<../images/screenshot_2.png>
 File: ../images/benchmark.pdf Graphic file (type pdf)
 <use ../images/benchmark.pdf>
-Package luatex.def Info: ../images/benchmark.pdf  used on input line 202.
-(luatex.def)             Requested size: 368.57964pt x 230.35895pt.
-<../images/validation_counts.pdf, id=182, 794.97pt x 397.485pt>
-File: ../images/validation_counts.pdf Graphic file (type pdf)
-<use ../images/validation_counts.pdf>
-Package luatex.def Info: ../images/validation_counts.pdf  used on input line 219
-.
-(luatex.def)             Requested size: 429.28616pt x 214.65083pt.
  [6]
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
+Overfull \hbox (15.48708pt too wide) in paragraph at lines 240--240
+[]\TU/lmr/bx/n/14.4 Structured inheritance annotations reveal overlapping gene-
+
+ []
+
+Package acronym Info: Label `acro:ar' newly defined as it shall be overridden
+although it is yet undefined on input line 244.
+Package acronym Info: Label `acro:ad' newly defined as it shall be overridden
+although it is yet undefined on input line 244.
+[7] [8] [9
+
+] [10]
+Overfull \hbox (5.11966pt too wide) in paragraph at lines 315--316
+[]\TU/lmr/m/n/12 Demonstration page: [][]$[][][][] [] [] [] [][][][][][][][][][
+][][] [] [][][][][][] [] [][] [] [][][][][][][][][][][] [] [][][][][][] []
+ []
+
+(./panelapprex2025lawless_appnote.bbl [11] [12]) [13]
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
 []|\TU/lmr/bx/n/12 Case
  []
 
 
-Overfull \hbox (3.75526pt too wide) in paragraph at lines 287--287
+Overfull \hbox (3.75526pt too wide) in paragraph at lines 360--360
 \TU/lmr/bx/n/12 study
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
+Overfull \hbox (0.61128pt too wide) in paragraph at lines 360--360
+\TU/lmr/m/n/12 (\TU/lmr/bx/n/12 Ref\TU/lmr/m/n/12 )| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
 []|\TU/lmr/bx/n/12 Causal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-[]|\TU/lmr/bx/n/12 Re-
+Overfull \hbox (0.70334pt too wide) in paragraph at lines 360--360
+[]|\TU/lmr/bx/n/12 Result
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-\TU/lmr/bx/n/12 sult
+Overfull \hbox (24.09134pt too wide) in paragraph at lines 360--360
+[]|\TU/lmr/bx/n/12 Subjective
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-[]|\TU/lmr/bx/n/12 Sub-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-\TU/lmr/bx/n/12 jec-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-\TU/lmr/bx/n/12 tive
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
 \TU/lmr/bx/n/12 best
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-[]|\TU/lmr/bx/n/12 Pan-
+Overfull \hbox (1.17134pt too wide) in paragraph at lines 360--360
+[]|\TU/lmr/bx/n/12 Panels
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-\TU/lmr/bx/n/12 els
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
 \TU/lmr/bx/n/12 with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
 \TU/lmr/bx/n/12 causal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-[]|\TU/lmr/bx/n/12 Sub-
+Overfull \hbox (24.09134pt too wide) in paragraph at lines 360--360
+[]|\TU/lmr/bx/n/12 Subjective
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-\TU/lmr/bx/n/12 jec-
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/bx/n/12 rele-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-\TU/lmr/bx/n/12 tive
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-\TU/lmr/bx/n/12 rel-e-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
 \TU/lmr/bx/n/12 vance
  []
 
 
-Overfull \hbox (2.47932pt too wide) in paragraph at lines 287--287
+Overfull \hbox (2.47934pt too wide) in paragraph at lines 360--360
 []|\TU/lmr/bx/n/12 Causal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
 \TU/lmr/bx/n/12 gene
  []
 
 
-Underfull \hbox (badness 3209) in paragraph at lines 287--287
+Underfull \hbox (badness 3209) in paragraph at lines 360--360
 \TU/lmr/bx/n/12 in all
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
 \TU/lmr/bx/n/12 re-
  []
 
 
-Underfull \hbox (badness 1997) in paragraph at lines 287--287
-\TU/lmr/m/n/12 192 Pri-mary im-mun-od-e-fi-
+Underfull \hbox (badness 4505) in paragraph at lines 360--360
+\TU/lmr/m/n/12 gioedema with Nor-
  []
 
 
-Underfull \hbox (badness 6842) in paragraph at lines 287--287
-\TU/lmr/m/n/12 ti-ple al-ler-gies, and
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+[]|\TU/lmr/m/n/12 SERPING1 Factor
  []
 
 
-Underfull \hbox (badness 2057) in paragraph at lines 287--287
-\TU/lmr/m/n/12 drome caused by a
+Underfull \hbox (badness 3746) in paragraph at lines 360--360
+\TU/lmr/m/n/12 192 Primary immunodefi-
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 287--287
-\TU/lmr/m/n/12 der-mati-tis metabolic
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+[]|\TU/lmr/m/n/12 Severe dermatitis,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-[]|\TU/lmr/m/n/12 Hematopoi-etic stem
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 metabolic wasting
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-\TU/lmr/m/n/12 cell trans-plan-ta-tion
+Underfull \hbox (badness 2012) in paragraph at lines 360--360
+\TU/lmr/m/n/12 syndrome caused by
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-\TU/lmr/m/n/12 in a pa-tient with
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 a novel mutation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-\TU/lmr/m/n/12 proteasome-associated
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 in the N-terminal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-\TU/lmr/m/n/12 au-toin-flam-ma-tory
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 plakin domain of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-[]|\TU/lmr/m/n/12 re-sis-tant cu-ta-neous
+Underfull \hbox (badness 5985) in paragraph at lines 360--360
+\TU/lmr/m/n/12 dermatitis metabolic
  []
 
 
-Underfull \hbox (badness 1997) in paragraph at lines 287--287
-\TU/lmr/m/n/12 192 Pri-mary im-mun-od-e-fi-
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+[]|\TU/lmr/m/n/12 Hematopoietic stem
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 cell transplanta-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 tion in a patient
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 with proteasome-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 associated autoin-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+[]|\TU/lmr/m/n/12 resistant cutaneous
+ []
+
+
+Underfull \hbox (badness 3746) in paragraph at lines 360--360
+\TU/lmr/m/n/12 192 Primary immunodefi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
 []|\TU/lmr/m/n/12 4
  []
 
 
-Underfull \hbox (badness 1997) in paragraph at lines 287--287
-\TU/lmr/m/n/12 192 Pri-mary im-mun-od-e-fi-
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+[]|\TU/lmr/m/n/12 Autoimmune lym-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 phoproliferative
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 syndrome ALPS
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 lymphoproliferation
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 hypergammaglobu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 linemia autoimmune
+ []
+
+
+Underfull \hbox (badness 3746) in paragraph at lines 360--360
+\TU/lmr/m/n/12 192 Primary immunodefi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
 []|\TU/lmr/m/n/12 5*
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-[]|\TU/lmr/m/n/12 Fa-tal com-bined
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+[]|\TU/lmr/m/n/12 Fatal combined
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-\TU/lmr/m/n/12 im-mun-od-e-fi-ciency
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 immunodeficiency
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 287--287
-\TU/lmr/m/n/12 as-so-ci-ated with het-
+Underfull \hbox (badness 3525) in paragraph at lines 360--360
+\TU/lmr/m/n/12 associated with het-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-[]|\TU/lmr/m/n/12 pri-mary im-mun-od-
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+[]|\TU/lmr/m/n/12 primary immunod-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-\TU/lmr/m/n/12 e-fi-ciency re-cur-rent
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 eficiency recurrent
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-\TU/lmr/m/n/12 pneu-mo-nia chronic
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 pneumonia chronic
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 287--287
-\TU/lmr/m/n/12 di-ar-rhea oral thrush
+Underfull \hbox (badness 1975) in paragraph at lines 360--360
+\TU/lmr/m/n/12 diarrhea oral thrush
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-\TU/lmr/m/n/12 bronchiec-ta-sis lym-
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 bronchiectasis lym-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-\TU/lmr/m/n/12 phadenopa-thy hep-
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\TU/lmr/m/n/12 phadenopathy hep-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
 \TU/lmr/m/n/12 atosplenomegaly
  []
 
 
-Underfull \hbox (badness 1681) in paragraph at lines 287--287
-[]|\TU/lmr/m/n/12 192 Pri-mary im-mun-od-e-fi-
+Underfull \hbox (badness 3260) in paragraph at lines 360--360
+[]|\TU/lmr/m/n/12 192 Primary immunodefi-
  []
 
-
-Overfull \hbox (15.08376pt too wide) in paragraph at lines 290--290
-[]\TU/lmr/bx/n/14.4 Struc-tured in-her-i-tance an-no-ta-tions re-veal over-lap-
-ping gene-
- []
-
-Package acronym Info: Label `acro:ar' newly defined as it shall be overridden
-although it is yet undefined on input line 294.
-Package acronym Info: Label `acro:ad' newly defined as it shall be overridden
-although it is yet undefined on input line 294.
-[7] [8] [9<../images/screenshot_1.png><../images/screenshot_2.png><../images/ben
-chmark.pdf>] [10<../images/validation_counts.pdf>] [11
-
-] [12]
-Overfull \hbox (3.05836pt too wide) in paragraph at lines 365--366
-[]\TU/lmr/m/n/12 Demon-stra-tion page: [][]$\TU/lmtt/m/n/12 http://DylanLawless
-.github.io/panelapprex.github.
- []
-
-(./panelapprex2025lawless.bbl [13] [14]) [15]
-<../images/plot_patch2_annotated_example.png, id=317, 361.35pt x 433.62pt>
-File: ../images/plot_patch2_annotated_example.png Graphic file (type png)
-<use ../images/plot_patch2_annotated_example.png>
-Package luatex.def Info: ../images/plot_patch2_annotated_example.png  used on in
-put line 378.
-(luatex.def)             Requested size: 325.215pt x 390.26102pt.
-
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.1'
+File: ../images/validation_counts.pdf Graphic file (type pdf)
+<use ../images/validation_counts.pdf>
+File: ../images/plot_patch2_annotated_example.png Graphic file (type bmp)
+<../images/plot_patch2_annotated_example.png>
 Package acronym Info: Label `acro:iem' newly defined as it shall be overridden
-although it is yet undefined on input line 383.
-
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.1'
-<../images/plot_patch_uniq_gene_moi_summary.pdf, id=318, 578.16pt x 289.08pt>
+although it is yet undefined on input line 408.
 File: ../images/plot_patch_uniq_gene_moi_summary.pdf Graphic file (type pdf)
 <use ../images/plot_patch_uniq_gene_moi_summary.pdf>
-Package luatex.def Info: ../images/plot_patch_uniq_gene_moi_summary.pdf  used on
- input line 390.
-(luatex.def)             Requested size: 429.28616pt x 214.64366pt.
+File: ../images/panelapprex_logo_v2_16x9.png Graphic file (type bmp)
+<../images/panelapprex_logo_v2_16x9.png>
+[14
 
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.2'
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 431.
+ [15] [16] [17]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 431.
+ (./panelapprex2025lawless_appnote.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 431.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 431.
+Package rerunfilecheck Info: File `panelapprex2025lawless_appnote.out' has not 
+changed.
+(rerunfilecheck)             Checksum: 08AE6836DB1F92A20597DEF6F6E601E4.
 
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.2'
-[16
 
-<../images/plot_patch2_annotated_example.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 398.
- [17<../images/plot_patch_uniq_gene_moi_summary.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 398.
- (./panelapprex2025lawless.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 398.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 398.
-Package rerunfilecheck Info: File `panelapprex2025lawless.out' has not changed.
-(rerunfilecheck)             Checksum: F36071097502FB7D62305D6EB0517FE3;1043.
-)
+LaTeX Warning: There were multiply-defined labels.
 
-Here is how much of LuaTeX's memory you used:
- 38798 strings out of 494413
- 100000,1144653 words of node,token memory allocated
- 1562 words of node memory still in use:
-   18 hlist, 2 vlist, 14 rule, 3 glue, 1 kern, 80 attribute, 123 glue_spec, 80 a
-ttribute_list, 1 write, 24 pdf_literal, 12 pdf_action, 24 pdf_colorstack nodes
-   avail lists: 1:4,2:716,3:440,4:195,5:453,6:130,7:9584,8:422,9:785,10:25,11:76
-8
- 41604 multiletter control sequences out of 65536+600000
- 86 fonts using 11390095 bytes
- 65i,12n,101p,908b,912s stack positions out of 5000i,500n,10000p,200000b,100000s
-</usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.ot
-f></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmroman12-italic.
-otf></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.
-otf></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmmono10-regula
-r.otf></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmroman10-bol
-d.otf></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmroman7-regu
-lar.otf></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmroman10-r
-egular.otf></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmroman1
-2-regular.otf></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmrom
-an17-regular.otf>
-Output written on panelapprex2025lawless.pdf (17 pages, 408152 bytes).
+ ) 
+Here is how much of TeX's memory you used:
+ 40691 strings out of 492970
+ 849438 string characters out of 6133938
+ 1015543 words of memory out of 5000000
+ 44089 multiletter control sequences out of 15000+600000
+ 540020 words of font info for 77 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 65i,12n,101p,10573b,896s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-PDF statistics: 396 PDF objects out of 1000 (max. 8388607)
- 310 compressed objects within 4 object streams
- 59 named destinations out of 1000 (max. 131072)
- 376 words of extra memory for PDF output out of 10000 (max. 100000000)
-
+Output written on panelapprex2025lawless_appnote.pdf (17 pages).
