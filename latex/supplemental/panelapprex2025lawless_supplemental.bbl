@@ -1,0 +1,87 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Arruda et~al.(2015)Arruda, Delcaro, Botelho~Palhas, Dias, Muglia,
+  Castelli, Bork, and Moreno]{arruda_genetic_2015}
+Luisa Karla~P. Arruda, Luana Delcaro, Priscila~B. Botelho~Palhas, Marina~M.
+  Dias, Valdair~F. Muglia, Erick~C. Castelli, Konrad Bork, and Adriana~S.
+  Moreno.
+\newblock Genetic {Analysis} {As} a {Practical} {Tool} to {Diagnose}
+  {Hereditary} {Angioedema} with {Normal} {C1} {Inhibitor}: {A} {Case}
+  {Report}.
+\newblock \emph{Journal of Allergy and Clinical Immunology}, 135\penalty0
+  (2):\penalty0 AB197, February 2015.
+\newblock ISSN 00916749.
+\newblock \doi{10.1016/j.jaci.2014.12.1578}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0091674914033594}.
+
+\bibitem[McAleer et~al.(2015)McAleer, Pohler, Smith, Wilson, Cole, MacGowan,
+  Koetsier, Godsel, Harmon, Gruber, Crumrine, Elias, McDermott, Butler,
+  Broderick, Sarig, Sprecher, Green, McLean, and Irvine]{mcaleer_severe_2015}
+Maeve~A. McAleer, Elizabeth Pohler, Frances~J.D. Smith, Neil~J. Wilson,
+  Christian Cole, Stuart MacGowan, Jennifer~L. Koetsier, Lisa~M. Godsel,
+  Robert~M. Harmon, Robert Gruber, Debra Crumrine, Peter~M. Elias, Michael
+  McDermott, Karina Butler, Annemarie Broderick, Ofer Sarig, Eli Sprecher,
+  Kathleen~J. Green, W.H.~Irwin McLean, and Alan~D. Irvine.
+\newblock Severe dermatitis, multiple allergies, and metabolic wasting syndrome
+  caused by a novel mutation in the {N}-terminal plakin domain of desmoplakin.
+\newblock \emph{Journal of Allergy and Clinical Immunology}, 136\penalty0
+  (5):\penalty0 1268--1276, November 2015.
+\newblock ISSN 00916749.
+\newblock \doi{10.1016/j.jaci.2015.05.002}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0091674915006533}.
+
+\bibitem[Verhoeven et~al.(2022)Verhoeven, Schonenberg-Meinema, Ebstein,
+  Papendorf, Baars, Van~Leeuwen, Jansen, Lankester, Van Der~Burg, Florquin,
+  Maas, Van~Koningsbruggen, Krüger, Van Den~Berg, and
+  Kuijpers]{verhoeven_hematopoietic_2022}
+Dorit Verhoeven, Dieneke Schonenberg-Meinema, Frédéric Ebstein, Jonas~J.
+  Papendorf, Paul~A. Baars, Ester~M.M. Van~Leeuwen, Machiel~H. Jansen, Arjan~C.
+  Lankester, Mirjam Van Der~Burg, Sandrine Florquin, Saskia~M. Maas, Silvana
+  Van~Koningsbruggen, Elke Krüger, J.~Merlijn Van Den~Berg, and Taco~W.
+  Kuijpers.
+\newblock Hematopoietic stem cell transplantation in a patient with
+  proteasome-associated autoinflammatory syndrome ({PRAAS}).
+\newblock \emph{Journal of Allergy and Clinical Immunology}, 149\penalty0
+  (3):\penalty0 1120--1127.e8, March 2022.
+\newblock ISSN 00916749.
+\newblock \doi{10.1016/j.jaci.2021.07.039}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0091674921012446}.
+
+\bibitem[Magerus-Chatinet et~al.(2013)Magerus-Chatinet, Stolzenberg,
+  Lanzarotti, Neven, Daussy, Picard, Neveux, Desai, Rao, Ghosh, Madkaikar,
+  Fischer, and Rieux-Laucat]{magerus-chatinet_autoimmune_2013}
+Aude Magerus-Chatinet, Marie-Claude Stolzenberg, Nina Lanzarotti, Bénédicte
+  Neven, Cécile Daussy, Capucine Picard, Nathalie Neveux, Mukesh Desai,
+  Meghana Rao, Kanjaksha Ghosh, Manisha Madkaikar, Alain Fischer, and
+  Frédéric Rieux-Laucat.
+\newblock Autoimmune lymphoproliferative syndrome caused by a homozygous null
+  {FAS} ligand ({FASLG}) mutation.
+\newblock \emph{Journal of Allergy and Clinical Immunology}, 131\penalty0
+  (2):\penalty0 486--490, February 2013.
+\newblock ISSN 00916749.
+\newblock \doi{10.1016/j.jaci.2012.06.011}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0091674912009645}.
+
+\bibitem[Sharfe et~al.(2014)Sharfe, Nahum, Newell, Dadi, Ngan, Pereira,
+  Herbrick, and Roifman]{sharfe_fatal_2014}
+Nigel Sharfe, Amit Nahum, Andrea Newell, Harjit Dadi, Bo~Ngan, Sergio~L.
+  Pereira, Jo-Anne Herbrick, and Chaim~M. Roifman.
+\newblock Fatal combined immunodeficiency associated with heterozygous mutation
+  in {STAT1}.
+\newblock \emph{Journal of Allergy and Clinical Immunology}, 133\penalty0
+  (3):\penalty0 807--817, March 2014.
+\newblock ISSN 00916749.
+\newblock \doi{10.1016/j.jaci.2013.09.032}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0091674913014796}.
+
+\end{thebibliography}
