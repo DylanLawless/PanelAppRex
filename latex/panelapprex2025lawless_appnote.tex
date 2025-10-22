@@ -76,7 +76,7 @@ The dataset is maintained for a minimum of two years following publication.
 \acro{api}[API]{Application Programming Interface}
 \acro{csv}[CSV]{comma-separated values}
 \acro{ge}[GE]{Genomics England}
-\acro{hgnc}[HGNC]{Human genome organisation Gene Nomenclature Committee}
+\acro{hgnc}[HGNC]{Human Genome Organisation Gene Nomenclature Committee}
 \acro{iei}[IEI]{Inborn Errors of Immunity}
 \acro{iem}[IEM]{Inborn Errors of Metabolism}
 \acro{html}[HTML]{HyperText Markup Language}
@@ -86,10 +86,10 @@ The dataset is maintained for a minimum of two years following publication.
 \acro{nhs}[NHS]{National Health Service}
 \acro{omim}[OMIM]{Online Mendelian Inheritance in Man}
 \acro{pdf}[PDF]{Portable Document Format}
-\acro{pid}[PID]{Primary immunodeficiency}
-\acro{rag}[RAG]{Retrieval-augmented generation}
-\acro{rds}[Rds]{R Data Serialization format}
-\acro{tsv}[TSV]{Tab-separated values}
+\acro{pid}[PID]{Primary Immunodeficiency}
+\acro{rag}[RAG]{Retrieval-Augmented Generation}
+\acro{rds}[RDS]{R Data Serialization format}
+\acro{tsv}[TSV]{Tab-Separated Values}
 \end{acronym} 
  
 
@@ -111,10 +111,10 @@ This functionality is enhanced by evidence-based \ac{rag}, allowing users to exp
 \section{Methods}
 
 \subsection{Data}
-The PanelAppRex core model contained 58,592 entries consisting of 52 sets of annotations, including the gene name, disease-gene panel ID, diseases-related features, confidence measurements.
+The PanelAppRex core model contained 58,592 entries consisting of 52 sets of annotations, including the gene name, disease-gene panel ID, disease-related features, confidence measurements.
 Disease interactions were sourced from \ac{ge}’s PanelApp
 \cite{martin_panelapp_2019}.
-Data from gnomAD v4 comprised 807,162 individuals, including 730,947 exomes and 76,215 genomes \cite{karczewski2020mutational}. This dataset provided 786,500,648 single nucleotide variants and 122,583,462 InDels, with variant type counts of 9,643,254 synonymous, 16,412,219 missense, 726,924 nonsense, 1,186,588 frameshift and 542,514 canonical splice site variants. ClinVar data were obtained from the variant summary dataset 
+Data from gnomAD v4 comprised 807,162 individuals, including 730,947 exomes and 76,215 genomes \cite{karczewski2020mutational}. This dataset provided 786,500,648 single nucleotide variants and 122,583,462 indels, with variant type counts of 9,643,254 synonymous, 16,412,219 missense, 726,924 nonsense, 1,186,588 frameshift and 542,514 canonical splice site variants. ClinVar data were obtained from the variant summary dataset 
 %(this version: 16 March 2025)
  available from the NCBI FTP site, and included 6,845,091 entries, which were processed into 91,319 gene classification groups and a total of 38,983 gene classifications 
 % for example, the gene \textit{A1BG} contained four variants classified as likely benign and 102 total entries 
@@ -137,7 +137,7 @@ After querying and selecting a panel, the complete underlying data is returned.
 
 The analysis-ready dataset contains the same dataset in multiple file formats.
 Our recommended strategy is a bioinformatic approach which can use the union of returned panels, or to apply a scoring system to rank panels in multi-group analyses.
-Bioinformatically, users can import the provided, ready-for-use, datasets in TSV or Rds formats.
+Bioinformatically, users can import the provided, ready-for-use, datasets in \ac{tsv} or \ac{rds} formats.
 A typical use case might involve users merging with their own omic data based on gene or Ensembl ID.
 The following code snippet, available in \texttt{minimal\_example.R}, demonstrates how to load the data in R:
 \begin{verbatim}
@@ -184,7 +184,7 @@ The sources, queries, and results are shown in \textbf{Table \ref{tab:benchmark}
 \subsection{Core dataset}
 PanelAppRex successfully aggregated data, currently from 451 panels and several genomics databases, to offer a database and user-friendly search functionality (\textbf{Figure \ref{fig:performance}}).
 Users can retrieve results filtered by gene names, phenotypes, disease groups and other criteria. 
-The system returned a table view with panel details and provided options for exporting results in \ac{csv}, Excel, or \ac{pdf} formats.
+The system returned a table view with panel details and provided options for exporting results in \ac{csv}, Excel, or \ac{pdf}.
 Bioinformatic uses may include generating virtual panels, constructing prior odds, or supporting formal reporting in qualifying variant protocols.
 Summary statistics are reported in 
 \textbf{Figure \ref{fig:summary_stats}}. The majority of genes were cited with high confidence. 
@@ -196,12 +196,16 @@ For example, panel ID 398 contains 572 genes associated with \ac{pid}, also refe
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.49\textwidth]{screenshot_1.png}
-    \includegraphics[width=0.49\textwidth]{screenshot_2.png}    
-    \includegraphics[width=0.85\textwidth]{benchmark.pdf}    
+%    \includegraphics[width=0.49\textwidth]{screenshot_1.png}
+%    \includegraphics[width=0.49\textwidth]{screenshot_2.png}    
+%    \includegraphics[width=0.85\textwidth]{benchmark.pdf}    
+    \includegraphics[width=0.99\textwidth]{figure_1.pdf}    
 \caption{\textbf{PanelAppRex interface displaying search results for a complex query.} Top: screenshots showing the search interface, with the left panel displaying the full database before filtering and the right panel showing detailed results for a selected panel. Bottom: benchmark metrics are presented as follows: (A) for each of the 5 case studies, the total number of panels returned, the number of panels that included the causal gene, and the single best panel selected (always 1 by default); (B) the percentage of all returned panels that included the true causal gene; (C) the percentage of the single best panels that contained the true causal gene.}
     \label{fig:performance}
 \end{figure}
+
+
+
 
 % \FloatBarrier
 \subsection{Validation shows completeness in the core dataset}
@@ -379,28 +383,9 @@ Each bar shows the count of entries with non-missing values for the respective f
     \label{fig:validation}
 \end{figure}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.75\textwidth]{plot_patch2_annotated_example.png}    
+    \includegraphics[width=0.75\textwidth]{plot_patch2_annotated_example.pdf}    
 \caption{\textbf{Summary of gene confidence levels, reuse across panels, and panel sizes in the PanelAppRex dataset.}
 (A) Number of genes per confidence level. 
 (B) Number of panels in which each gene is included, with the example gene \textit{RAG1} highlighted to demonstrate that it is present in 7 panels. 
@@ -420,12 +405,12 @@ Each bar shows the count of entries with non-missing values for the respective f
     \label{fig:uniq_gene_moi}
 \end{figure}
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.99\textwidth]{panelapprex_logo_v2_16x9.png}
-\caption{\textbf{(logo)} PanelAppRex reigns over genomic complexity.
-}
-    \label{fig:uniq_gene_moi}
-\end{figure}
+%\begin{figure}[ht]
+%    \centering
+%    \includegraphics[width=0.99\textwidth]{panelapprex_logo_v2_16x9.png}
+%\caption{\textbf{(logo)} PanelAppRex reigns over genomic complexity.
+%}
+%    \label{fig:logo}
+%\end{figure}
 
 \end{document}

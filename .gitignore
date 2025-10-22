@@ -4,6 +4,7 @@ credentials/creds_api_key.txt
 credentials/creds_geomics_england_panel_app_user.txt
 
 # large data from panel_ai/panel_ai_tables.R
+./data/panel_data_html/
 # src/panel_ai/landing_page*
 # src/panel_ai/panel_data_html/
 

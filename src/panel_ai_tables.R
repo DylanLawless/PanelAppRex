@@ -16,7 +16,7 @@ path_PanelAppData_genes_combined_Rds <- file.path(path_data, "PanelAppData_genes
 df_core <- readRDS(file = path_PanelAppData_genes_combined_Rds)
 df_core <- df_core |> select(panel_id, entity_name, name, everything())
 
-unique_panel_ids <- unique(df_core$panel_id)  |> head(20)
+unique_panel_ids <- unique(df_core$panel_id) # |> head(20)
 
 for (pid in unique_panel_ids) {
   df_subset <- df_core |> filter(panel_id == pid)
