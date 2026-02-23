@@ -1,0 +1,6 @@
+- Mitochondrial respiratory chain complex deficiencies impair oxidative phosphorylation, causing lactic acidosis, neurodegeneration, cardiomyopathy, hypotonia, and developmental delay.
+- Lysosomal storage disorders lead to accumulation of glycosaminoglycans or sphingolipids, resulting in progressive neurodegeneration, seizures, visual loss, hepatosplenomegaly, and skeletal dysplasia.
+- Congenital disorders of glycosylation disrupt protein N- and O-glycosylation, causing psychomotor retardation, hypotonia, dysmorphic features, coagulation defects, and immunodeficiency.
+- Fatty acid beta-oxidation defects cause hypoglycemia, muscle weakness, cardiomyopathy, and metabolic crises due to impaired energy production from fatty acids.
+- Amino acid metabolism defects result in toxic metabolite accumulation, manifesting as developmental delay, seizures, hypotonia, and systemic symptoms including liver and kidney dysfunction.
+- Lipid metabolism abnormalities contribute to familial hyperlipidemias, hypolipidemias, and storage diseases with risk of pancreatitis, atherosclerosis, and organomegaly.

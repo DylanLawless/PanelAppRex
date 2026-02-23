@@ -5,8 +5,17 @@ credentials/creds_geomics_england_panel_app_user.txt
 
 # large data from panel_ai/panel_ai_tables.R
 ./data/panel_data_html/
+.data/panel_data_html_beta
+
+./data/uniprot_kb_up000005640
+./data/uniprot_panelapp
+./data/rag_panels_uniprot
+
 # src/panel_ai/landing_page*
 # src/panel_ai/panel_data_html/
+
+# uniprot large data
+./ref/
 
 .Rhistory
 .DS_Store

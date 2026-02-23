@@ -1,0 +1,6 @@
+- Impaired lymphocyte development and signaling: defects in T-cell receptor complex, B-cell receptor signaling, and co-stimulatory pathways leading to combined immunodeficiency and antibody deficiencies.
+- Dysregulated cytokine and interferon signaling via JAK-STAT and NF-kappa-B pathways causing immune activation defects, autoimmunity, and autoinflammation.
+- DNA repair, chromatin remodeling, and telomere maintenance defects resulting in bone marrow failure syndromes, developmental delay, and increased infection susceptibility.
+- Inflammasome and autophagy pathway abnormalities contributing to autoinflammatory disorders with systemic inflammation and recurrent fevers.
+- Complement system dysregulation associated with atypical hemolytic uremic syndrome, recurrent infections, and immune complex-mediated tissue damage.
+- Clinical phenotypes include recurrent bacterial, viral, and fungal infections, lymphoproliferation, cytopenias, inflammatory bowel disease, and syndromic features such as skeletal anomalies and neurodevelopmental delay.

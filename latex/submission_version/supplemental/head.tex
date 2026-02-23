@@ -1,0 +1,185 @@
+%%%% Document type  %%%%
+\documentclass[preprint,12pt,fleqn]{article}
+ \usepackage{ragged2e}
+\usepackage{authblk}  % Package for author affiliations
+% \usepackage{nopageno} % no page numbers
+\usepackage{placeins} % \FloatBarrier
+
+
+\usepackage[most]{tcolorbox}
+\newtcolorbox[auto counter,number within=chapter]{definition}[1][]{
+  enhanced,
+  breakable,
+  fonttitle=\scshape,
+  title={Definition \thetcbcounter},
+  #1
+}
+
+%%%% Document structure %%%%
+%\usepackage{geometry}
+\usepackage[verbose=true,letterpaper]{geometry}
+\geometry{
+%    a4paper,
+%    left=30mm,
+%    right=30mm,
+%    top=30mm,
+%    bottom=30mm,
+    textheight=9in,
+    textwidth=6in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt,
+   % phone  
+   %a5paper,
+   %width=120mm,
+  %height=180mm,
+}
+
+\usepackage{lineno} % used along with \linenumbers after begin document. 
+\usepackage{setspace} 
+% \setstretch{1.4}
+\makeatletter % The following lines get rid of footer stating pre-preint to elsevier.
+\def\ps@pprintTitle{%
+\let\@oddhead\@empty
+\let\@evenhead\@empty
+\def\@oddfoot{}%
+\let\@evenfoot\@oddfoot}
+\makeatother
+\graphicspath{ {./images/} }
+\usepackage{pgf} % calculate cohort stats percentage
+
+%%%% Bibliography   %%%%
+\usepackage{natbib}
+\setcitestyle{numbers,sort&compress}
+\setcitestyle{sort&compress}
+\usepackage{hypernat} 
+    
+%%%% Aesthetics     %%%%
+\usepackage{microtype}
+% \RequirePackage{times} % Font
+\usepackage{ccaption}
+\usepackage{siunitx}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{nameref}% this allows a reference be named, to print unnumbered references by their section name (used here for linking to Supplemental text in this case).
+
+%%%% Paragraph Formatting %%%
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+
+%%%% Supplemental labels%%%%
+%Define command to start a supplemental section
+%set the supplemental letter used for figures (e.g. Figure E1)
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+         }
+
+%%%% Building tables%%%%
+\usepackage{booktabs} % required for tables
+\usepackage{rotating,tabularx} 
+\newcolumntype{Z}{ >{\centering\arraybackslash}X } % defining table content layout per box
+\usepackage{ltablex} % allow page break between lines in tabularx
+% \usepackage{caption} \captionsetup{font=normalsize} % to set the caption size as normal even when table is tiny.
+\usepackage{multirow}
+\usepackage{pdflscape}
+
+%%%% Colors %%%%
+\usepackage{xcolor} 
+\definecolor{natureblue}{RGB}{5,110,210}
+    \usepackage[colorlinks]{hyperref} 
+\AtBeginDocument{%this allows colours to chage from the defined elsearticle template.
+\hypersetup{
+    	colorlinks=true,
+        linkcolor={natureblue},
+    	citecolor={natureblue},
+        filecolor=blue!50!black,
+        urlcolor=cyan,
+    	}}
+
+\definecolor{kispiblack}{HTML}{333333}
+\definecolor{kispidarkblue}{HTML}{023047}
+\definecolor{kispidarkgreen}{HTML}{006666}
+\definecolor{kispired}{HTML}{C70000}
+\definecolor{kispilink}{HTML}{007DB8}%219EBC
+% \color{kispi_black} %default
+\definecolor{kispiblue}{HTML}{701A57}
+% City sunset: https://www.color-hex.com/color-palette/40131
+\definecolor{colorSUNSET1}{HTML}{eeaf61}
+\definecolor{colorSUNSET2}{HTML}{fb9062}
+\definecolor{colorSUNSET3}{HTML}{ee5d6c}
+\definecolor{colorSUNSET4}{HTML}{ce4993}
+\definecolor{colorSUNSET5}{HTML}{6a0d83}
+\definecolor{natureblue}{RGB}{5,110,210}    
+\usepackage{dirtree}  % Load the dirtree package
+
+
+% command to use these colors and formatting; xspace for correct spacing including with punctuation marks.
+\usepackage{xspace}
+\newcommand{\variablesdarkgreen}[1]{\textbf{\textcolor{kispidarkgreen}{#1}}\xspace}
+
+%%%% Fancy stuff %%%%
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\lhead{My Name}
+%\chead{}
+%\rhead{\thepage}
+%\cfoot{} % get rid of the page number 
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}
+ 
+ 
+%\usepackage{fancyhdr}
+%\usepackage{lastpage}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\rfoot{\thepage}
+%\cfoot{} % get rid of the page number 
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}
+
+ 
+\usepackage{tocloft}  % Customizing the Table of Contents
+\setcounter{tocdepth}{2}
+
+
+%%%% Include code %%%%
+% \usepackage{verbatim}
+
+\usepackage{listings}
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}, % 
+    breakatwhitespace=false,
+    % frame=single,
+    showstringspaces=TRUE, % Don't show spaces in strings as special characters
+    tabsize=2, 
+    language=sh 
+}
+
+\usepackage{fontspec}
+% \setmainfont{IBM Plex Sans}
+% \setmonofont{IBM Plex Mono}
+% \usepackage{unicode-math}
+% \setmathfont{IBM Plex Math}
+
+%\renewcommand{\rmdefault}{ptm}
+%\renewcommand{\sfdefault}{phv}
+
+
+% {{\ttfamily \hyphenchar\the\font=`\-} % set hyphenation for texttt blocks
+
+
+
+
+
+
+
+
+
+% nips 2017 settings
+
