@@ -1,3 +1,67 @@
+# test api ----
+
+# openai_api_test.R
+
+suppressPackageStartupMessages({
+  library(httr)
+  library(jsonlite)
+  library(stringr)
+})
+
+api_key <- readLines(
+  "~/so/data/keys/switzerlandomics_openai_api_key_panelapprex.txt",
+  warn = FALSE
+) |>
+  str_trim()
+
+if (!nzchar(api_key)) stop("OpenAI API key is empty.")
+
+openai_model <- "gpt-4.1-mini"
+# openai_model <- "gpt-5-mini"
+
+body <- list(
+  model = openai_model,
+  temperature = 0,
+  messages = list(
+    list(role = "user", content = "Reply with exactly: this is an api test")
+  )
+)
+
+res <- httr::POST(
+  url = "https://api.openai.com/v1/chat/completions",
+  httr::add_headers(
+    `Content-Type` = "application/json",
+    Authorization = paste("Bearer", api_key)
+  ),
+  body = jsonlite::toJSON(body, auto_unbox = TRUE),
+  encode = "raw"
+)
+
+status <- httr::status_code(res)
+raw_text <- httr::content(res, as = "text", encoding = "UTF-8")
+
+cat("HTTP status:", status, "\n")
+
+if (status != 200L) {
+  err <- tryCatch(jsonlite::fromJSON(raw_text), error = function(e) NULL)
+  if (!is.null(err$error)) {
+    cat("Error code:", err$error$code %||% "NA", "\n")
+    cat("Message:", err$error$message %||% "NA", "\n")
+  } else {
+    cat("Raw response:\n", raw_text, "\n")
+  }
+  stop("OpenAI request failed.")
+}
+
+parsed <- jsonlite::fromJSON(raw_text)
+cat("Model:", parsed$model, "\n")
+cat("Response:\n")
+cat(parsed$choices[[1]]$message$content, "\n")
+
+# `%||%` <- function(x, y) if (is.null(x) || is.na(x) || !nzchar(as.character(x))) y else x
+
+# end test ----
+
 # panel_rag_uniprot_gene_level.R
 
 suppressPackageStartupMessages({
