@@ -72,6 +72,7 @@ The dataset is maintained for a minimum of two years following publication.
                {\endlist}
 \begin{acronym} 
 \acro{ad}[AD]{Autosomal dominant}
+\acro{ai}[AI]{Artificial intelligence}
 \acro{ar}[AR]{Autosomal recessive}
 \acro{api}[API]{Application Programming Interface}
 \acro{csv}[CSV]{comma-separated values}
@@ -168,16 +169,23 @@ This validation step was applied to the full integrated PanelAppRex dataset.
 
 \subsection{Benchmarking for manual queries}
 \noindent
-To mimic a clinician who is trying to diagnose a new disease such as \ac{pid}, we systematically selected genetic diagnosis case studies from the current online catalogue from the \ac{jaci}, using the first five results  \cite{arruda_genetic_2015, 
-mcaleer_severe_2015,
-verhoeven_hematopoietic_2022,
-magerus-chatinet_autoimmune_2013,
-sharfe_fatal_2014}. 
-Although the method presented here is generalisable to genetic diagnosis across disease areas, we chose to validate it using \ac{pid} case studies, as this is the primary focus of our own research.
+%To mimic a clinician who is trying to diagnose a new disease such as \ac{pid}, we systematically selected genetic diagnosis case studies from the current online catalogue from the \ac{jaci}, using the first five results  \cite{arruda_genetic_2015,  mcaleer_severe_2015, verhoeven_hematopoietic_2022, magerus-chatinet_autoimmune_2013, sharfe_fatal_2014}.  Although the method presented here is generalisable to genetic diagnosis across disease areas, we chose to validate it using \ac{pid} case studies, as this is the primary focus of our own research.
+%
+% The clinical background from each of these studies was used to construct keyword queries from patient features, simulating a naïve starting position for a clinician. We then tested whether our PanelAppRex tool could successfully retrieve panels that included the final causal gene reported in each case study.  The sources, queries, and results are shown in \textbf{Table \ref{tab:benchmark}}. 
 
-The clinical background from each of these studies was used to construct keyword queries from patient features, simulating a naïve starting position for a clinician.
-We then tested whether our PanelAppRex tool could successfully retrieve panels that included the final causal gene reported in each case study. 
-The sources, queries, and results are shown in \textbf{Table \ref{tab:benchmark}}. 
+To mimic a clinician who is trying to diagnose a genetic disease, we systematically selected genetic diagnosis case reports that used exome or genome sequencing. We chose the first five eligible case reports from each of three sources: \ac{jaci}, the journal Neurology, and for random cross-disciplinary topics we used pre-defined PubMed search restricted to the last 12 months and free full text, yielding a total of 15 case studies across phenotypes.  This selection allowed us to validate the method across immunological, neurological, and other disease areas.
+
+For each case report, we used only the clinical narrative before any genetic analysis was introduced in the original publication. We used a standardised method to select the phenotype terms from each case report and then rank by most to least importance or relevance. The ranked phenotype terms were then used a keyword queries, simulating a naïve starting position for a clinician. Search terms were added incrementally until no panels matched. We then tested whether our PanelAppRex tool could successfully retrieve panels that included the final causal gene reported in each case study. The sources, queries, and results are shown in \textbf{Table \ref{tab:benchmark}}.
+
+
+\subsection{Applications in AI-based RAG}
+\noindent
+To demonstrate use as part of \ac{ai}-based \ac{rag}, we derived mechanistic text for each gene from UniProtKB human proteome  and merged these summaries with PanelAppRex genes and panel metadata (panel name, disease group, mode of inheritance, and reported phenotypes) to create a single context dataset for each panel.
+We then applied a deterministic GPT-based model (gpt-4.1-mini, OpenAI; temperature 0.1) with a fixed prompt that requested a concise, clinician-facing description of shared mechanisms and phenotypes for the gene set. Across all processed panels, this involved approximately 7 million tokens and 2 million output tokens, corresponding to an input to output ratio of 0.261. The model produced three structured outputs per panel (a detailed analysis section, an overview paragraph, and 3 to 6 bullet points), which we stored together with panel identifiers as a high-level index that can be queried in downstream \ac{rag} workflows.
+% batch 1 = (104,266/4,369,000) = 0.239
+% batch 2 = (77,565/2,586,000) = 0.299
+% total run = (1,818,316/6,955,000) = 0.261 
+
 
 \section{Results}
 \noindent
@@ -200,12 +208,9 @@ For example, panel ID 398 contains 572 genes associated with \ac{pid}, also refe
 %    \includegraphics[width=0.49\textwidth]{screenshot_2.png}    
 %    \includegraphics[width=0.85\textwidth]{benchmark.pdf}    
     \includegraphics[width=0.99\textwidth]{figure_1.pdf}    
-\caption{\textbf{PanelAppRex interface displaying search results for a complex query.} Top: screenshots showing the search interface, with the left panel displaying the full database before filtering and the right panel showing detailed results for a selected panel. Bottom: benchmark metrics are presented as follows: (A) for each of the 5 case studies, the total number of panels returned, the number of panels that included the causal gene, and the single best panel selected (always 1 by default); (B) the percentage of all returned panels that included the true causal gene; (C) the percentage of the single best panels that contained the true causal gene.}
+\caption{\textbf{PanelAppRex interface displaying search results for a complex query.} Top: screenshots showing the search interface, with the left panel displaying the full database before filtering and the right panel showing detailed results for a selected panel. Bottom: benchmark metrics are presented as follows: (A) for each of the fifteen case studies, the total number of panels returned, the number of panels that included the causal gene, and the single best panel selected (always 1 by default); (B) the percentage of all returned panels that included the true causal gene; (C) the percentage of the single best panels that contained the true causal gene.}
     \label{fig:performance}
 \end{figure}
-
-
-
 
 % \FloatBarrier
 \subsection{Validation shows completeness in the core dataset}
@@ -217,29 +222,43 @@ All entries included at least one publication, a disease panel name, a \ac{moi},
 After recovery of missing identifiers, completeness reached 100\% across all these core fields.
 This validated dataset ensures that users can confidently build on a consistent foundation, using standardised and stable identifiers to link or enrich the core data with external resources (\textbf{Figure \ref{fig:validation}}).
 
-
 \subsection{Benchmarking for manual queries confirms accurate retrieval of causal disease genes}
 \noindent
-To evaluate the practical utility of our system on a desktop browser, we applied the benchmarking approach described in methods using five published case studies of \ac{pid}
-\cite{arruda_genetic_2015, 
-mcaleer_severe_2015,
-verhoeven_hematopoietic_2022,
-magerus-chatinet_autoimmune_2013,
-sharfe_fatal_2014}. % results
-The tool's query process retrieved gene panels using natural language-style input. 
-For example, in the first case study on Hereditary Angioedema, the authors reported suspecting that the condition was linked to ``\textit{SERPING1}, Factor XII, and edema" which we used as the query terms. 
-Although the true causal gene term \textit{F12} (using its official \ac{hgnc} name) was not mentioned, the inclusion of the alias name and/or related disease terms enabled the system to correctly retrieve the panel containing \textit{F12} based on the hidden search knowledge.
+%To evaluate the practical utility of our system on a desktop browser, we applied the benchmarking approach described in methods using five published case studies focused on immunology, specifically \ac{pid}, five cases focused on neurological disease, and lastly five randomly assigned topics.
+%% \cite{arruda_genetic_2015, mcaleer_severe_2015, verhoeven_hematopoietic_2022, magerus-chatinet_autoimmune_2013, sharfe_fatal_2014}. % results
+%The tool's query process retrieved gene panels using natural language-style input. 
+%For example, in the first case study on Hereditary Angioedema, the authors reported suspecting that the condition was linked to ``\textit{SERPING1} Factor XII and edema" which we used as the query terms. 
+%Although the true causal gene term \textit{F12} (using its official \ac{hgnc} name) was not mentioned, the inclusion of the alias name and/or related disease terms enabled the system to correctly retrieve the panel containing \textit{F12} based on the hidden search knowledge.
+%
+%While an expert might readily recognise ``Factor XII'' as an alias name for \textit{F12}, this correct query result demonstrates that the system can make such connections automatically, based on its extensive metadata, supporting users with varying levels of genetic expertise.
+%Notably, for all five case studies, all correct causal genes were successfully retrieved by the system despite never appearing explicitly in any of our submitted query terms (\textbf{Table \ref{tab:benchmark}}).
+%
+%In our evaluation, PanelAppRex returned panels in which the causal gene was present in 
+% 93\% - immunology only in version 1
+%85.6\% of all returned panels, with the subjective user-selected ``best panel'' achieving a perfect accuracy of 100\% 
+%(\textbf{Figure \ref{fig:performance}}).  These metrics were derived by comparing the causal gene identified from the case study abstracts to the panels returned by our query, and by applying a subjective relevance measure to mimic intuitive panel selection - acknowledging that certain panels, such as the established \ac{pid} gene panel, are inherently more reliable than broader, less specific panels  (\textbf{Table \ref{tab:benchmark}}).
+%
+%Overall, the results confirm that our approach accurately identifies the most relevant panels and effectively supports clinical decision-making in complex diagnostic scenarios.
 
-While an expert might readily recognise ``Factor XII'' as an alias name for \textit{F12}, this correct query result demonstrates that the system can make such connections automatically, based on its extensive metadata, supporting users with varying levels of genetic expertise.
-Notably, for all five case studies, all correct causal genes were successfully retrieved by the system despite never appearing explicitly in any of our submitted query terms (\textbf{Table \ref{tab:benchmark}}).
+To evaluate the practical utility of our system on a desktop browser, we applied the benchmarking approach to fifteen published genetic diagnosis case studies that used exome or genome sequencing. These comprised five immunology-focused \ac{pid} case reports, five neurology-focused case reports, and five randomly selected domains, as described in Methods. 
+The query process retrieved gene panels using natural language-style input. 
+For example, in the first case study on Hereditary Angioedema, the authors reported suspecting that the condition was linked to ``\textit{SERPING1} Factor XII and edema" which we used as the query terms. 
+Although the true causal gene term \textit{F12} (using its official \ac{hgnc} name) was not mentioned, the inclusion of the alias name and/or related disease terms enabled the system to correctly retrieve the panel containing \textit{F12} based on the hidden search knowledge. 
 
-In our evaluation, PanelAppRex returned panels in which the causal gene was present in 93\% of all returned panels, with the subjective user-selected ``best panel'' achieving a perfect accuracy of 100\% 
+While an expert might readily recognise ``Factor XII'' as an alias name for \textit{F12}, this correct query result demonstrates that the system can make such connections automatically, based on its extensive metadata, supporting users with varying levels of genetic expertise. Most of the case report queries relied purely on phenotypic descriptions without any candidate genes.
+
+Notably, for all case studies, all correct causal genes were successfully retrieved by the system despite never appearing explicitly in any of our submitted query terms (\textbf{Table \ref{tab:benchmark}}).
+In our evaluation, PanelAppRex returned panels in which the causal gene was present in 
+% 93\% - immunology only in version 1
+85.6\% of all returned panels, with the subjective user-selected ``best panel'' achieving a perfect accuracy of 100\% 
 (\textbf{Figure \ref{fig:performance}}).
- These metrics were derived by comparing the causal gene identified from the case study abstracts to the panels returned by our query, and by applying a subjective relevance measure to mimic intuitive panel selection - acknowledging that certain panels, such as the established \ac{pid} gene panel, are inherently more reliable than broader, less specific panels.
+These metrics were derived by comparing the causal gene identified from the case study abstracts to the panels returned by our query, and by applying a subjective relevance measure to mimic intuitive panel selection - acknowledging that certain panels, such as the established \ac{pid} gene panel, are inherently more reliable than broader, less specific panels  (\textbf{Table \ref{tab:benchmark}}).
  
-% (i.e. \ac{pid} panel instead of COVID-19 research panel for  diagnosis of immune disorder}). 
 Overall, the results confirm that our approach accurately identifies the most relevant panels and effectively supports clinical decision-making in complex diagnostic scenarios.
 
+\subsection{Applications in AI-based RAG}
+\noindent
+Across all panels, we used PanelAppRex as the basis for generating AI-derived summaries that captured panel-specific mechanisms and phenotypes, conditioned on the disease context and the unique combination of genes in each panel. These structured overviews are exposed as a research-only info box in the interface, giving users rapid context before expanding the full panel and enriching the semantic query layer used for retrieval. In aggregate, the \ac{rag} step consumed approximately 7 million input tokens and produced 2 million output tokens while condensing the 6.6 million word gene knowledge base into about 135,000 words of panel-level summaries, corresponding to roughly fifty-fold compression of the raw text while retaining panel-specific mechanistic and phenotypic signal.
 
 \subsection{Structured inheritance annotations reveal overlapping gene-MOI relationships}
 
@@ -336,34 +355,34 @@ The study was conducted in accordance with the Declaration of Helsinki.
 *Case study 5 had five individual cases and patient information was significantly longer than other studies. Therefore, we used OpenAI model o3-mini to converted it to a standardised keyword query automatically, thereby removing our subjective bias and aligning with the other queries.
 }
 \label{tab:benchmark}
-\centering
-\resizebox{\textwidth}{!}{
-\begin{tabular}{|
-    p{1cm}|
-    p{4cm}|
-    p{4cm}|
-    p{1.4cm}|
-    p{1.3cm}|
-    p{1.3cm}|
-    p{1.3cm}|
-    p{1.3cm}|
-    p{1.3cm}|
-    p{5cm}|}
-\hline
-\textbf{Case study}	(\textbf{Ref})	 & 	\textbf{Source title}	 & 	\textbf{Query}	 & 	\textbf{Causal gene}	 & 	\textbf{Result panels}	 & 	\textbf{Subjective best panels}	 & 	\textbf{Panels with causal gene}	 & 	\textbf{Subjective relevance ratio}	 & 	\textbf{Causal gene in all results}	 & 	\textbf{Result ID, panelName, geneCount} \\
-\hline																			
-1	\cite{arruda_genetic_2015}	 & 	Genetic Analysis As a Practical Tool to Diagnose Hereditary Angioedema with Normal C1 Inhibitor: A Case Report	 & 	SERPING1 Factor XII edema	 & 	F12	 & 	3	 & 	1	 & 	3	 & 	0.3	 & 	1	 & 	64 COVID-19 research 695; 192 Primary immunodeficiency or monogenic inflammatory bowel disease 572; 311 Research panel - Severe Paediatric Disorders 2691 \\
-\hline																			
-2	\cite{mcaleer_severe_2015}	 & 	Severe dermatitis, multiple allergies, and metabolic wasting syndrome caused by a novel mutation in the N-terminal plakin domain of desmoplakin	 & 	SAM syndrome DSG1 dermatitis metabolic wasting	 & 	DSP	 & 	3	 & 	3	 & 	3	 & 	1	 & 	1	 & 	205 Fetal anomalies 2185; 210 DDG2P 2422; 211 Paediatric disorders 3903 \\
-\hline																			
-3	\cite{verhoeven_hematopoietic_2022}	 & 	Hematopoietic stem cell transplantation in a patient with proteasome-associated autoinflammatory syndrome (PRAAS)	 & 	resistant cutaneous vasculitis SH2D1A	 & 	PSMB4	 & 	3	 & 	1	 & 	2	 & 	0.3	 & 	0.7	 & 	64 COVID-19 research 695; 192 Primary immunodeficiency or monogenic inflammatory bowel disease 572; 311 Research panel - Severe Paediatric Disorders 2691 \\
-\hline																			
-4	\cite{magerus-chatinet_autoimmune_2013}	 & 	Autoimmune lymphoproliferative syndrome caused by a homozygous null FAS ligand (FASLG) mutation	 & 	Autoimmune lymphoproliferative syndrome ALPS lymphoproliferation hypergammaglobulinemia autoimmune cytopenia	 & 	FASLG	 & 	2	 & 	1	 & 	2	 & 	0.5	 & 	1	 & 	64 COVID-19 research 695; 192 Primary immunodeficiency or monogenic inflammatory bowel disease 572 \\
-\hline																			
-5*	\cite{sharfe_fatal_2014}	 & 	Fatal combined immunodeficiency associated with heterozygous mutation in STAT1	 & 	primary immunodeficiency recurrent pneumonia chronic diarrhea oral thrush bronchiectasis lymphadenopathy hepatosplenomegaly autoimmune hepatitis Addison	 & 	STAT1	 & 	1	 & 	1	 & 	1	 & 	1	 & 	1	 & 	192 Primary immunodeficiency or monogenic inflammatory bowel disease 572 \\
-\hline
-\end{tabular}
-}
+%\centering
+%\resizebox{\textwidth}{!}{
+%\begin{tabular}{|
+%    p{1cm}|
+%    p{4cm}|
+%    p{4cm}|
+%    p{1.4cm}|
+%    p{1.3cm}|
+%    p{1.3cm}|
+%    p{1.3cm}|
+%    p{1.3cm}|
+%    p{1.3cm}|
+%    p{5cm}|}
+%\hline
+%\textbf{Case study}	(\textbf{Ref})	 & 	\textbf{Source title}	 & 	\textbf{Query}	 & 	\textbf{Causal gene}	 & 	\textbf{Result panels}	 & 	\textbf{Subjective best panels}	 & 	\textbf{Panels with causal gene}	 & 	\textbf{Subjective relevance ratio}	 & 	\textbf{Causal gene in all results}	 & 	\textbf{Result ID, panelName, geneCount} \\
+%\hline																			
+%1	\cite{arruda_genetic_2015}	 & 	Genetic Analysis As a Practical Tool to Diagnose Hereditary Angioedema with Normal C1 Inhibitor: A Case Report	 & 	SERPING1 Factor XII edema	 & 	F12	 & 	3	 & 	1	 & 	3	 & 	0.3	 & 	1	 & 	64 COVID-19 research 695; 192 Primary immunodeficiency or monogenic inflammatory bowel disease 572; 311 Research panel - Severe Paediatric Disorders 2691 \\
+%\hline																			
+%2	\cite{mcaleer_severe_2015}	 & 	Severe dermatitis, multiple allergies, and metabolic wasting syndrome caused by a novel mutation in the N-terminal plakin domain of desmoplakin	 & 	SAM syndrome DSG1 dermatitis metabolic wasting	 & 	DSP	 & 	3	 & 	3	 & 	3	 & 	1	 & 	1	 & 	205 Fetal anomalies 2185; 210 DDG2P 2422; 211 Paediatric disorders 3903 \\
+%\hline																			
+%3	\cite{verhoeven_hematopoietic_2022}	 & 	Hematopoietic stem cell transplantation in a patient with proteasome-associated autoinflammatory syndrome (PRAAS)	 & 	resistant cutaneous vasculitis SH2D1A	 & 	PSMB4	 & 	3	 & 	1	 & 	2	 & 	0.3	 & 	0.7	 & 	64 COVID-19 research 695; 192 Primary immunodeficiency or monogenic inflammatory bowel disease 572; 311 Research panel - Severe Paediatric Disorders 2691 \\
+%\hline																			
+%4	\cite{magerus-chatinet_autoimmune_2013}	 & 	Autoimmune lymphoproliferative syndrome caused by a homozygous null FAS ligand (FASLG) mutation	 & 	Autoimmune lymphoproliferative syndrome ALPS lymphoproliferation hypergammaglobulinemia autoimmune cytopenia	 & 	FASLG	 & 	2	 & 	1	 & 	2	 & 	0.5	 & 	1	 & 	64 COVID-19 research 695; 192 Primary immunodeficiency or monogenic inflammatory bowel disease 572 \\
+%\hline																			
+%5*	\cite{sharfe_fatal_2014}	 & 	Fatal combined immunodeficiency associated with heterozygous mutation in STAT1	 & 	primary immunodeficiency recurrent pneumonia chronic diarrhea oral thrush bronchiectasis lymphadenopathy hepatosplenomegaly autoimmune hepatitis Addison	 & 	STAT1	 & 	1	 & 	1	 & 	1	 & 	1	 & 	1	 & 	192 Primary immunodeficiency or monogenic inflammatory bowel disease 572 \\
+%\hline
+%\end{tabular}
+%}
 \end{table}
 
 

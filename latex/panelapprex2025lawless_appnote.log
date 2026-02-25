@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.9)  22 OCT 2025 17:12
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.9)  25 FEB 2026 17:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1268,11 +1268,11 @@ Overfull \hbox (34.26744pt too wide) in paragraph at lines 60--65
 
 ]
 Package acronym Info: Acronym iem used in text but not spelled out in full in t
-ext on input line 81.
+ext on input line 82.
 Package acronym Info: Label `acro:ge' newly defined as it shall be overridden
-although it is yet undefined on input line 100.
+although it is yet undefined on input line 101.
 Package acronym Info: Label `acro:rag' newly defined as it shall be overridden
-although it is yet undefined on input line 109.
+although it is yet undefined on input line 110.
 
 
 [3
@@ -1280,356 +1280,125 @@ although it is yet undefined on input line 109.
 ]
 Package acronym Info: Label `acro:omim' newly defined as it shall be overridden
 
-although it is yet undefined on input line 122.
+although it is yet undefined on input line 121.
 Package acronym Info: Label `acro:hgnc' newly defined as it shall be overridden
 
-although it is yet undefined on input line 122.
+although it is yet undefined on input line 121.
 Package acronym Info: Label `acro:moi' newly defined as it shall be overridden
-although it is yet undefined on input line 129.
+although it is yet undefined on input line 130.
 Package acronym Info: Label `acro:html' newly defined as it shall be overridden
 
-although it is yet undefined on input line 135.
+although it is yet undefined on input line 136.
 
 
 [4]
 Package acronym Info: Label `acro:tsv' newly defined as it shall be overridden
-although it is yet undefined on input line 140.
+although it is yet undefined on input line 141.
 Package acronym Info: Label `acro:rds' newly defined as it shall be overridden
-although it is yet undefined on input line 140.
-Package acronym Info: Label `acro:pid' newly defined as it shall be overridden
-although it is yet undefined on input line 171.
+although it is yet undefined on input line 141.
 Package acronym Info: Label `acro:jaci' newly defined as it shall be overridden
 
-although it is yet undefined on input line 171.
+although it is yet undefined on input line 176.
 
 
 [5]
+Package acronym Info: Label `acro:ai' newly defined as it shall be overridden
+although it is yet undefined on input line 183.
 Package acronym Info: Label `acro:csv' newly defined as it shall be overridden
-although it is yet undefined on input line 187.
+although it is yet undefined on input line 195.
 Package acronym Info: Label `acro:pdf' newly defined as it shall be overridden
-although it is yet undefined on input line 187.
+although it is yet undefined on input line 195.
+Package acronym Info: Label `acro:pid' newly defined as it shall be overridden
+although it is yet undefined on input line 202.
 Package acronym Info: Label `acro:iei' newly defined as it shall be overridden
-although it is yet undefined on input line 194.
+although it is yet undefined on input line 202.
+
+
+[6]
 File: ./images/figure_1.pdf Graphic file (type pdf)
 <use ./images/figure_1.pdf>
 
 
-[6]
-Overfull \hbox (15.48708pt too wide) in paragraph at lines 244--244
+[7]
+Overfull \hbox (15.48708pt too wide) in paragraph at lines 263--263
 []\TU/lmr/bx/n/14.4 Structured inheritance annotations reveal overlapping gene-
 
  []
 
 Package acronym Info: Label `acro:ar' newly defined as it shall be overridden
-although it is yet undefined on input line 248.
+although it is yet undefined on input line 267.
 Package acronym Info: Label `acro:ad' newly defined as it shall be overridden
-although it is yet undefined on input line 248.
+although it is yet undefined on input line 267.
 
-
-[7]
 
 [8]
 
-[9
+[9]
+
+[10
 
 ]
 
-[10]
-Overfull \hbox (5.11966pt too wide) in paragraph at lines 319--320
+[11]
+Overfull \hbox (5.11966pt too wide) in paragraph at lines 340--341
 []\TU/lmr/m/n/12 Demonstration page: [][]$[][][][] [] [] [] [][][][][][][][][][
 ][][] [] [][][][][][] [] [][] [] [][][][][][][][][][][] [] [][][][][][] []
  []
 
 (./panelapprex2025lawless_appnote.bbl
 
-[11]
-
-[12])
+[12]
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-[]|\TU/lmr/bx/n/12 Case
- []
 
+[14])
 
-Overfull \hbox (3.75526pt too wide) in paragraph at lines 364--364
-\TU/lmr/bx/n/12 study
- []
-
-
-Overfull \hbox (0.61128pt too wide) in paragraph at lines 364--364
-\TU/lmr/m/n/12 (\TU/lmr/bx/n/12 Ref\TU/lmr/m/n/12 )| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-[]|\TU/lmr/bx/n/12 Causal
- []
-
-
-Overfull \hbox (0.70334pt too wide) in paragraph at lines 364--364
-[]|\TU/lmr/bx/n/12 Result
- []
-
-
-Overfull \hbox (24.09134pt too wide) in paragraph at lines 364--364
-[]|\TU/lmr/bx/n/12 Subjective
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/bx/n/12 best
- []
-
-
-Overfull \hbox (1.17134pt too wide) in paragraph at lines 364--364
-[]|\TU/lmr/bx/n/12 Panels
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/bx/n/12 with
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/bx/n/12 causal
- []
-
-
-Overfull \hbox (24.09134pt too wide) in paragraph at lines 364--364
-[]|\TU/lmr/bx/n/12 Subjective
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/bx/n/12 rele-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/bx/n/12 vance
- []
-
-
-Overfull \hbox (2.47934pt too wide) in paragraph at lines 364--364
-[]|\TU/lmr/bx/n/12 Causal
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/bx/n/12 gene
- []
-
-
-Underfull \hbox (badness 3209) in paragraph at lines 364--364
-\TU/lmr/bx/n/12 in all
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/bx/n/12 re-
- []
-
-
-Underfull \hbox (badness 4505) in paragraph at lines 364--364
-\TU/lmr/m/n/12 gioedema with Nor-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-[]|\TU/lmr/m/n/12 SERPING1 Factor
- []
-
-
-Underfull \hbox (badness 3746) in paragraph at lines 364--364
-\TU/lmr/m/n/12 192 Primary immunodefi-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-[]|\TU/lmr/m/n/12 Severe dermatitis,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/m/n/12 metabolic wasting
- []
-
-
-Underfull \hbox (badness 5985) in paragraph at lines 364--364
-\TU/lmr/m/n/12 dermatitis metabolic
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-[]|\TU/lmr/m/n/12 Hematopoietic stem
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/m/n/12 cell transplanta-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/m/n/12 tion in a patient
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/m/n/12 with proteasome-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/m/n/12 associated autoin-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-[]|\TU/lmr/m/n/12 resistant cutaneous
- []
-
-
-Underfull \hbox (badness 3746) in paragraph at lines 364--364
-\TU/lmr/m/n/12 192 Primary immunodefi-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-[]|\TU/lmr/m/n/12 4
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-[]|\TU/lmr/m/n/12 Autoimmune lym-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/m/n/12 phoproliferative
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/m/n/12 syndrome ALPS
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/m/n/12 lymphoproliferation
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/m/n/12 hypergammaglobu-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/m/n/12 linemia autoimmune
- []
-
-
-Underfull \hbox (badness 3746) in paragraph at lines 364--364
-\TU/lmr/m/n/12 192 Primary immunodefi-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-[]|\TU/lmr/m/n/12 5*
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-[]|\TU/lmr/m/n/12 Fatal combined
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/m/n/12 immunodeficiency
- []
-
-
-Underfull \hbox (badness 3525) in paragraph at lines 364--364
-\TU/lmr/m/n/12 associated with het-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-[]|\TU/lmr/m/n/12 primary immunod-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/m/n/12 eficiency recurrent
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/m/n/12 pneumonia chronic
- []
-
-
-Underfull \hbox (badness 1975) in paragraph at lines 364--364
-\TU/lmr/m/n/12 diarrhea oral thrush
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/m/n/12 bronchiectasis lym-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/m/n/12 phadenopathy hep-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-\TU/lmr/m/n/12 atosplenomegaly
- []
-
-
-Underfull \hbox (badness 3260) in paragraph at lines 364--364
-[]|\TU/lmr/m/n/12 192 Primary immunodefi-
- []
-
+[15]
 File: ./images/validation_counts.pdf Graphic file (type pdf)
 <use ./images/validation_counts.pdf>
 File: ./images/plot_patch2_annotated_example.pdf Graphic file (type pdf)
 <use ./images/plot_patch2_annotated_example.pdf>
 Package acronym Info: Label `acro:iem' newly defined as it shall be overridden
-although it is yet undefined on input line 393.
+although it is yet undefined on input line 414.
 File: ./images/plot_patch_uniq_gene_moi_summary.pdf Graphic file (type pdf)
 <use ./images/plot_patch_uniq_gene_moi_summary.pdf>
 
 
-[14
+[16
 
 ]
 
-[15]
+[17]
 
-[16]
+[18]
 
-[17] (./panelapprex2025lawless_appnote.aux)
+[19] (./panelapprex2025lawless_appnote.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `panelapprex2025lawless_appnote.out' has not 
-changed.
-(rerunfilecheck)             Checksum: 85E0DA9F0F431B317A36E6AA7A88C2A8;2636.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `panelapprex2025lawless_appnote.out' has c
+hanged.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `panelapprex2025lawless_appnote.out'
+:
+(rerunfilecheck)             Before: AA6556D96428029C81907E4C97A88BEF;3350
+(rerunfilecheck)             After:  F3EFF005DB8F33B80ACA8569ADFA188C;3050.
  ) 
 Here is how much of TeX's memory you used:
- 36951 strings out of 473832
- 824579 string characters out of 5729482
- 1328373 words of memory out of 5000000
- 59434 multiletter control sequences out of 15000+600000
+ 36957 strings out of 473832
+ 824645 string characters out of 5729482
+ 1324373 words of memory out of 5000000
+ 59440 multiletter control sequences out of 15000+600000
  568473 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 121i,12n,124p,1027b,1119s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 121i,6n,124p,1027b,1129s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on panelapprex2025lawless_appnote.pdf (17 pages).
+Output written on panelapprex2025lawless_appnote.pdf (19 pages).

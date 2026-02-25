@@ -56,7 +56,9 @@ if (status != 200L) {
 parsed <- jsonlite::fromJSON(raw_text)
 cat("Model:", parsed$model, "\n")
 cat("Response:\n")
-cat(parsed$choices[[1]]$message$content, "\n")
+cat(parsed$choices$message$content, "\n")
+
+# cat(parsed$choices[[0]]$message$content, "\n")
 
 # `%||%` <- function(x, y) if (is.null(x) || is.na(x) || !nzchar(as.character(x))) y else x
 
@@ -72,10 +74,10 @@ suppressPackageStartupMessages({
   library(httr)
   library(jsonlite)
 })
-
-# ------------------------------------------------
-# Config
-# ------------------------------------------------
+  
+# .................................................
+# Config ----
+# .................................................
 panelapp_rds_root <- "../data"
 panelapprex_root  <- "~/mnt/atlas_data_big/data/panelapprex"
 # PanelApp combined data (gene level, multiple panels)
@@ -133,9 +135,9 @@ path_uniprot_gene_rds <- file.path(
 )
 
 
-# ------------------------------------------------
-# Load data
-# ------------------------------------------------
+# .................................................
+# Load data ----
+# .................................................
 
 if (!file.exists(path_panels_rds)) {
   stop("PanelApp RDS not found at: ", path_panels_rds)
@@ -162,6 +164,7 @@ required_panel_cols <- c(
   "mode_of_inheritance",
   "phenotypes"
 )
+
 missing_panel <- setdiff(required_panel_cols, names(df_panels))
 if (length(missing_panel) > 0) {
   stop("df_panels is missing columns: ", paste(missing_panel, collapse = ", "))
@@ -182,10 +185,9 @@ if (process_all_panels) {
 
 cat("Panels to process:", paste(panel_ids, collapse = ", "), "\n")
 
-
-# ---------------------------
+# .................................................
 # reduce content for API ----
-# ---------------------------
+# .................................................
 
 clean_uniprot_for_rag <- function(txt) {
   txt <- ifelse(is.na(txt), "", txt)
@@ -236,9 +238,9 @@ clean_uniprot_for_rag <- function(txt) {
 }
 
 
-# ------------------------------------------------
+# .................................................
 # Static prompts
-# ------------------------------------------------
+# .................................................
 
 system_prompt <- paste(
   "Your task is to compress mechanistic biological knowledge into a brief, high-signal summary",
@@ -256,21 +258,37 @@ system_prompt <- paste(
   sep = " "
 )
 
-# ------------------------------------------------
+# .................................................
 # Main loop over panels
-# ------------------------------------------------
+# .................................................
+
 
 for (pid in panel_ids) {
   cat("\n=== Processing panel", pid, "===\n")
   
   rds_path <- file.path(out_dir_rag, paste0("panel_", pid, "_rag_summary.rds"))
-  txt_path <- file.path(out_dir_rag, paste0("panel_", pid, "_rag_summary.txt"))
   
-  # Skip if already done
-  if (file.exists(rds_path) && file.exists(txt_path)) {
-    cat("Existing summary found for panel", pid, "- skipping.\n")
+  if (file.exists(rds_path)) {
+    cat("Existing summary found for panel", pid, "skipping.\n")
     next
   }
+  
+  txt_full_path <- file.path(out_dir_rag, paste0("panel_", pid, "_rag_full.txt"))
+  txt_res_path <- file.path(out_dir_rag, paste0("panel_", pid, "_rag_result.txt"))
+  txt_over_path <- file.path(out_dir_rag, paste0("panel_", pid, "_rag_overview.txt"))
+  
+  # rest of the loop as before, but remove the second rds_path / txt_* redefinition
+# for (pid in panel_ids) {
+#   cat("\n=== Processing panel", pid, "===\n")
+#   
+#   rds_path <- file.path(out_dir_rag, paste0("panel_", pid, "_rag_summary.rds"))
+#   txt_path <- file.path(out_dir_rag, paste0("panel_", pid, "_rag_summary.txt"))
+#   
+#   # Skip if already done
+#   if (file.exists(rds_path) && file.exists(txt_path)) {
+#     cat("Existing summary found for panel", pid, "- skipping.\n")
+#     next
+#   }
   
   # Extract gene set for this panel
   panel_genes <- df_panels |>
@@ -546,10 +564,10 @@ for (pid in panel_ids) {
     max_chars_per_gene = max_chars_per_gene
   )
   
-  rds_path        <- file.path(out_dir_rag, paste0("panel_", pid, "_rag_summary.rds"))
-  txt_full_path   <- file.path(out_dir_rag, paste0("panel_", pid, "_rag_full.txt"))
-  txt_res_path    <- file.path(out_dir_rag, paste0("panel_", pid, "_rag_result.txt"))
-  txt_over_path   <- file.path(out_dir_rag, paste0("panel_", pid, "_rag_overview.txt"))
+  # rds_path        <- file.path(out_dir_rag, paste0("panel_", pid, "_rag_summary.rds"))
+  # txt_full_path   <- file.path(out_dir_rag, paste0("panel_", pid, "_rag_full.txt"))
+  # txt_res_path    <- file.path(out_dir_rag, paste0("panel_", pid, "_rag_result.txt"))
+  # txt_over_path   <- file.path(out_dir_rag, paste0("panel_", pid, "_rag_overview.txt"))
   
   saveRDS(summary_obj, rds_path)
   writeLines(summary_text,  txt_full_path)   # full reasoning + overview + result
