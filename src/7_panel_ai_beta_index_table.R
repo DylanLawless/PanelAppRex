@@ -335,9 +335,13 @@ dt_small2 <- datatable(
     ),
     initComplete = JS(sprintf("
       function(settings, json) {
+        var api = this.api();
+
         var filter = $('div.dataTables_filter');
         filter.css({'width': '100%%'});
-        filter.find('input').css({
+
+        var input = filter.find('input');
+        input.css({
           'width': '100%%',
           'border': '1px solid #ccc',
           'padding': '8px',
@@ -346,6 +350,7 @@ dt_small2 <- datatable(
           'font-size': '14px',
           'font-family': 'system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif'
         });
+
         $('table.dataTable').css({
           'font-family': 'system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif',
           'table-layout': 'fixed'
@@ -355,6 +360,92 @@ dt_small2 <- datatable(
 
         $('html, body').css({ 'background': 'transparent' });
         $('.dataTables_wrapper').css({ 'background': 'transparent' });
+
+        function normalise(s) {
+          if (!s) return '';
+          return String(s)
+            .toLowerCase()
+            .replace(/[\\u2018\\u2019\\u201C\\u201D]/g, ' ')
+            .replace(/[,.;:()\\[\\]{}<>\"'`~!@#$%%^&*+=\\\\|\\/\\?-]+/g, ' ')
+            .replace(/\\s+/g, ' ')
+            .trim();
+        }
+
+        function tokenise(q) {
+          q = normalise(q);
+          if (!q) return [];
+          var toks = q.split(' ').filter(Boolean);
+          var stop = { and:1, or:1, the:1, a:1, an:1, of:1, to:1, in:1, on:1, for:1, with:1 };
+          toks = toks.filter(function(t){ return t.length > 1 && !stop[t]; });
+
+          var uniq = [];
+          var seen = {};
+          for (var i = 0; i < toks.length; i++) {
+            if (!seen[toks[i]]) { seen[toks[i]] = 1; uniq.push(toks[i]); }
+          }
+          return uniq;
+        }
+
+        // cache: dataIndex -> normalised text for that row
+        var rowCache = Object.create(null);
+
+        function getRowText(dataIndex, data) {
+          if (rowCache[dataIndex]) return rowCache[dataIndex];
+          var txt = normalise(data.join(' '));
+          rowCache[dataIndex] = txt;
+          return txt;
+        }
+
+        // install filter once (shared across tables on the page)
+        if (!$.fn.dataTable.ext.search._panelapp_nlq_installed) {
+          $.fn.dataTable.ext.search.push(function(dtSettings, data, dataIndex) {
+            var toks = dtSettings._panelapp_nlq_tokens || [];
+            if (toks.length === 0) return true;
+
+            // per-table cache (store on dtSettings so multiple tables do not collide)
+            if (!dtSettings._panelapp_rowCache) dtSettings._panelapp_rowCache = Object.create(null);
+            var cache = dtSettings._panelapp_rowCache;
+
+            var rowText;
+            if (cache[dataIndex]) {
+              rowText = cache[dataIndex];
+            } else {
+              rowText = normalise(data.join(' '));
+              cache[dataIndex] = rowText;
+            }
+
+            for (var i = 0; i < toks.length; i++) {
+              if (rowText.indexOf(toks[i]) === -1) return false;
+            }
+            return true;
+          });
+          $.fn.dataTable.ext.search._panelapp_nlq_installed = true;
+        }
+
+        // remove DataTables default handler and use debounced draw
+        input.off('.DT').off('.panelapp');
+
+        var tmr = null;
+        function applyQueryDebounced(raw) {
+          clearTimeout(tmr);
+          tmr = setTimeout(function() {
+            settings._panelapp_nlq_tokens = tokenise(raw);
+
+            // clear cache if you want results to reflect any dynamic changes in row text
+            // (normally not needed, but safe)
+            settings._panelapp_rowCache = Object.create(null);
+
+            api.draw();
+          }, 180);
+        }
+
+        input.on('input.panelapp keyup.panelapp search.panelapp', function() {
+          applyQueryDebounced(this.value);
+        });
+
+        // initial draw state
+        settings._panelapp_nlq_tokens = tokenise(input.val());
+        api.draw();
 
         %s
       }
@@ -373,3 +464,13 @@ landing_page <- file.path(panelapp_rds_root, "landing_page_beta.html")
 saveWidget(dt_small2, landing_page, selfcontained = FALSE)
 
 cat("Saved beta landing page (with AI info icon popover):\n  ", landing_page, "\n")
+
+# The soft match is possible:
+# return true if at least ONE token matches, rather than requiring ALL tokens
+# However filtering is extremely difficult dues to the large kb on every panel causing many overlaps.
+# An option is weighted tokens where not all tokens should be equal. You can give higher weight to:
+# gene symbols (all caps + numbers like SERPING1, F12)
+# longer words (length ≥ 6)
+# rare tokens (only if you want to compute rarity once)
+# Then require a minimum score rather than a minimum count. This helps a lot with “large kb overlaps” because common words contribute almost nothing.
+# Further, if the user types a multi-word phrase, you can give a bonus if the normalised row text contains the normalised query substring. It helps when users paste text.

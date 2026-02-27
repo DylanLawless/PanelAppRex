@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.9)  25 FEB 2026 17:58
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.9)  27 FEB 2026 12:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1256,13 +1256,6 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (34.26744pt too wide) in paragraph at lines 60--65
-\TU/lmr/m/n/10.95 tion page at [][]$[][][][][] [] [] [] [][][][][][][][][][][][
-] [] [][][][][][] [] [][] [] [][][][][][][][][][][] [] [][][][][][] [] [][] [] 
-[][][][][][][] []
- []
-
-
 
 [2
 
@@ -1278,9 +1271,6 @@ although it is yet undefined on input line 110.
 [3
 
 ]
-Package acronym Info: Label `acro:omim' newly defined as it shall be overridden
-
-although it is yet undefined on input line 121.
 Package acronym Info: Label `acro:hgnc' newly defined as it shall be overridden
 
 although it is yet undefined on input line 121.
@@ -1296,6 +1286,9 @@ Package acronym Info: Label `acro:tsv' newly defined as it shall be overridden
 although it is yet undefined on input line 141.
 Package acronym Info: Label `acro:rds' newly defined as it shall be overridden
 although it is yet undefined on input line 141.
+Package acronym Info: Label `acro:omim' newly defined as it shall be overridden
+
+although it is yet undefined on input line 166.
 Package acronym Info: Label `acro:jaci' newly defined as it shall be overridden
 
 although it is yet undefined on input line 176.
@@ -1339,40 +1332,32 @@ although it is yet undefined on input line 267.
 
 ]
 
-[11]
-Overfull \hbox (5.11966pt too wide) in paragraph at lines 340--341
-[]\TU/lmr/m/n/12 Demonstration page: [][]$[][][][] [] [] [] [][][][][][][][][][
-][][] [] [][][][][][] [] [][] [] [][][][][][][][][][][] [] [][][][][][] []
- []
-
-(./panelapprex2025lawless_appnote.bbl
+[11] (./panelapprex2025lawless_appnote.bbl
 
 [12]
 
-[13]
+[13])
 
-[14])
-
-[15]
+[14]
 File: ./images/validation_counts.pdf Graphic file (type pdf)
 <use ./images/validation_counts.pdf>
 File: ./images/plot_patch2_annotated_example.pdf Graphic file (type pdf)
 <use ./images/plot_patch2_annotated_example.pdf>
 Package acronym Info: Label `acro:iem' newly defined as it shall be overridden
-although it is yet undefined on input line 414.
+although it is yet undefined on input line 415.
 File: ./images/plot_patch_uniq_gene_moi_summary.pdf Graphic file (type pdf)
 <use ./images/plot_patch_uniq_gene_moi_summary.pdf>
 
 
-[16
+[15
 
 ]
 
+[16]
+
 [17]
 
-[18]
-
-[19] (./panelapprex2025lawless_appnote.aux)
+[18] (./panelapprex2025lawless_appnote.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1381,24 +1366,17 @@ L3 programming layer <2025-01-18>
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `panelapprex2025lawless_appnote.out' has c
-hanged.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `panelapprex2025lawless_appnote.out'
-:
-(rerunfilecheck)             Before: AA6556D96428029C81907E4C97A88BEF;3350
-(rerunfilecheck)             After:  F3EFF005DB8F33B80ACA8569ADFA188C;3050.
+Package rerunfilecheck Info: File `panelapprex2025lawless_appnote.out' has not 
+changed.
+(rerunfilecheck)             Checksum: F3EFF005DB8F33B80ACA8569ADFA188C;3050.
  ) 
 Here is how much of TeX's memory you used:
  36957 strings out of 473832
  824645 string characters out of 5729482
- 1324373 words of memory out of 5000000
+ 1323373 words of memory out of 5000000
  59440 multiletter control sequences out of 15000+600000
  568473 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 121i,6n,124p,1027b,1129s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 121i,6n,124p,1027b,1119s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on panelapprex2025lawless_appnote.pdf (19 pages).
+Output written on panelapprex2025lawless_appnote.pdf (18 pages).

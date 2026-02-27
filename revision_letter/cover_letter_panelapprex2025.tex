@@ -1,0 +1,141 @@
+\documentclass[12pt,a4paper]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage[backend=bibtex, style=authoryear, natbib=true, sorting=nyt]{biblatex} 
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{
+    linkcolor=blue,         % color of internal links
+    citecolor=black,         % color of citation links
+    urlcolor=blue           % color of URL links
+}
+\usepackage{filecontents}
+\usepackage{geometry}
+\geometry{left=3cm, top=1cm, right=3cm, bottom=2cm} 
+
+% \address{Dylan Lawless@kispi.uzh.ch\\
+% Department of Intensive\\
+% Care and Neonatology,\\
+% University Children's\\
+% Hospital Zürich,\\
+% University of Zürich.
+% }
+\signature{Dylan Lawless, PhD} 
+
+\begin{document} 
+\raggedright
+\begin{letter}{Dear Reviewers,}
+
+% Re: Reply to Reviewer of manuscript entitled ``Archipelago method for variant set association test statistics''
+
+\opening{}
+
+We thank you sincerely for your thoughtful and constructive comments on our manuscript.
+
+We agree fully with your suggestions and believe that the revisions have substantially improved the manuscript.
+
+
+\noindent\rule{\textwidth}{0.4pt}
+
+\textbf{Reviewer: 1}
+
+\textbf{Major comments:}
+
+\textit{\textbf{1.} ... .}
+
+\textbf{Response:} ...
+
+\textbf{Minor comments:}
+
+\textbf{5.} 
+\noindent\rule{\textwidth}{0.4pt}
+
+\textbf{Reviewer: 2}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Associate Editor: DeGiorgio, Michael
+Comments to the Author:
+Thank you for submitting your manuscript for consideration by Bioinformatics Advances.
+
+Your manuscript was assessed by two expert referees. I must also apologize for the delay in returning a decision to you, as I had secured three referees but the third one has not submitted a review and is severely delayed. I therefore elected to make a recommendation based on the two reviews in hand to avoid any further delay.
+
+Overall, the referees were positive but had some concerns that would need to be addressed. Below is a summary of three broad comments that I would like the authors to pay close attention to.
+
+1. How well does PanelAppRex generalize beyond PID use cases? (Reviewer 1)
+
+2. More detail is needed about the RAG implementation. (Reviewers 1 and 2)
+
+3. Improvements in readability of some figures and the user interface are needed. (Reviewer 2)
+
+The referees offer more detailed and comprehensive comments.
+
+Based on this assessment, I recommend major revision.
+
+Reviewer Comments to Authors:
+Reviewer: 1
+
+Comments to the Author
+1) General comments
+This manuscript introduces PanelAppRex, a searchable platform that integrates 58,000 curated gene-disease panel associations from multiple sources. The tool is well-motivated and addresses a pressing need in genomic diagnostics. By offering both a natural language-style query interface and a programmatically accessible dataset, the authors provide a practical solution that serves both clinical diagnostics and bioinformatic integration.
+The design and implementation are well described. Moreover, the authors go beyond tool description by connecting the work to Bayesian genetic risk modelling, showing broader relevance.
+2) Specific comments:
+major:
+1. Generalisability beyond PID use cases
+While the authors claim broad applicability (e.g., “generalizable to genetic diagnosis across disease areas”), all benchmarking is exclusively from primary immunodeficiency (PID) studies. Although the authors state that primary immunodeficiency (PID) constitutes their primary focus, there is no quantitative or qualitative demonstration that PanelAppRex works equally well for other disease categories, particularly those with more complex gene-phenotype relationships (e.g., neurogenetic disorders, cancer panels).
+2. Unclear integration of RAG (Retrieval-Augmented Generation)
+The manuscript mentions use of “evidence-based RAG” in multiple sections but does not explain how this is implemented. Since RAG is typically associated with LLM pipelines, readers need more detail on what data is being retrieved, how evidence is used to re-rank or refine query output, and whether generation plays any role.
+
+Reviewer: 2
+
+Comments to the Author
+This manuscript introduces an aggregated gene panel database called PanelAppRex. Along with streamlining accessibility to gene panel information in one place, the additional implementations equip it as a tool that can handle complex queries for more assisted searching. The authors also incorporate relevant features from other sources, such as allele frequencies and curated classifications, to provide more robust data entries for panels. Overall, the manuscript is well-written and convincingly presents PanelAppRex as a valuable component in the typical workflow for genomic diagnostics. There are some points I would like to bring to attention.
+
+Performance Comparison
+When going through the initial steps of building PanelAppRex, the core of the tool can be understood to be providing credentialed access to the APIs of existing resources, such as GE’s PanelApp. It would be helpful to understand whether further steps taken to make the tool robust and comprehensive, such as using RAG or incorporating additional features, provide an improvement in performance through a comparative analysis, perhaps using the same benchmarking framework, against simply querying the other APIs.  
+
+RAG Implementation
+The use of retrieval augmentation generation proves to be important in cultivating the tool to handle complex queries. My understanding is that it is common for RAG to deal with ranking. If that is the case here, it will be relevant to know how the ranking is handled, as different types of information are pulled from the external sources. It will be valuable for the authors to provide a brief input on how the implementation of RAG was done.
+
+Figure Clarification
+Panel E of Figure S1 is slightly hard to follow. The “100\%” at the top of each panel can be interpreted to be on the basis that the y values of each column in the panel match, but this is not the case with this panel. Additionally, in Section 3.2, it mentions that all gene entries have MOI, which is not the case based on Panel E. My understanding is that the 100\% in this panel could be referring to all unique genes having an MOI annotation, but I am unsure.
+Caption for Panel B of Figure S3 is unclear to me. The x-axis is the number of unique genes, and the number next to each bar appears to represent the number of unique genes for each mode of inheritance. However, this is hard to understand from the caption.
+
+User interface
+The readability of the user interface can sometimes feel inconvenient, as some of the latter columns do not have their respective values right underneath for instant viewing. Instead, it requires that we scroll back to the right to view them. While the tool will likely mostly be used programmatically, it would be helpful to modify this in the UI.
+It appears that the search query box cannot handle certain characters. For example, in the example provided in the manuscript, “SERPING1, Factor XII, and edema”, the commas cause the search to render no results. This can be confirmed as we get three results by changing the commas to “ands” so that the query is now “SERPING1 and Factor XII and edema”.
+
+Search Results for Complex Query - Subjective Best Panel
+For the benchmarking results shown in Table S1, it may be helpful to include which panel was chosen as the subjective user-selected best panel. In a test case such as Case Study 2, where it appears all 3 returned panels were classified as subjective best panels, this minor detail can provide additional clarity.
+
+
+
+
+\noindent\rule{\textwidth}{0.4pt}
+
+We thank you again for your valuable feedback and hope you will agree that the manuscript has been strengthened considerably through your recommendations.
+
+\closing{Yours sincerely,\\
+On behalf of all authors,}
+
+\end{letter}
+\end{document}
+
+%\cc{Cclist} 
+%\ps{adding a postscript} 
+%\encl{list of enclosed material} 
+%\vfill
+%\printbibliography[heading=none]

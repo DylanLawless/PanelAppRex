@@ -47,7 +47,7 @@
 Gene panel data are essential for variant interpretation and genomic diagnostics, but existing resources are fragmented, inconsistently annotated, and not easily accessible for programmatic use. 
 %\vspace{1em}
 %\noindent \textbf{Methods:}\\
-We developed PanelAppRex, a harmonised dataset and interactive search tool that integrates over 58,000 curated gene-disease panel associations, including NHS-approved diagnostic panels. It supports natural language-style queries by gene, phenotype, disease group, and mode of inheritance (MOI), with results returned in machine-readable export formats. 
+We developed PanelAppRex, a harmonised dataset and interactive search tool that integrates over 58,000 curated gene-disease panel associations. It supports natural language-style queries by gene, phenotype, disease group, and mode of inheritance (MOI), with results returned in machine-readable export formats. 
 
 \vspace{1em}
 \noindent \textbf{Results:}\\
@@ -59,8 +59,8 @@ In benchmarked case studies of immune disease diagnostics, the system achieved 1
 \vspace{1em}
 \noindent \textbf{Availability:} The platform data is openly available at  PanelAppRex base [Data set], Zenodo \url{https://doi.org/10.5281/zenodo.15736689}, with
 source code at \url{https://github.com/DylanLawless/PanelAppRex},
-and demonstration page at \url{https://DylanLawless.github.io/panelapprex.github.io/landing_page.html}. 
-PanelAppRex is available under the MIT licence. 
+and demonstration page at \url{https://panelapprex.github.io/landing_page}. 
+% PanelAppRex is available under the MIT licence. 
 The dataset is maintained for a minimum of two years following publication.
 \end{abstract}
 \clearpage
@@ -118,7 +118,7 @@ Data from gnomAD v4 comprised 807,162 individuals, including 730,947 exomes and 
  available from the NCBI FTP site, and included 6,845,091 entries, which were processed into 91,319 gene classification groups and a total of 38,983 gene classifications 
 % for example, the gene \textit{A1BG} contained four variants classified as likely benign and 102 total entries 
 \cite{landrum_clinvar_2018}. 
-Data from Ensembl was sourced for validation of identifiers such as \ac{omim} gene IDs and \ac{hgnc} symbols
+Data from Ensembl was sourced for validation of identifiers such as gene IDs and \ac{hgnc} symbols
 \cite{dyer_ensembl_2025}.
 Disease interactions were compared against \ac{ge}’s PanelApp
 \cite{martin_panelapp_2019}.
@@ -258,7 +258,7 @@ Overall, the results confirm that our approach accurately identifies the most re
 
 \subsection{Applications in AI-based RAG}
 \noindent
-Across all panels, we used PanelAppRex as the basis for generating AI-derived summaries that captured panel-specific mechanisms and phenotypes, conditioned on the disease context and the unique combination of genes in each panel. These structured overviews are exposed as a research-only info box in the interface, giving users rapid context before expanding the full panel and enriching the semantic query layer used for retrieval. In aggregate, the \ac{rag} step consumed approximately 7 million input tokens and produced 2 million output tokens while condensing the 6.6 million word gene knowledge base into about 135,000 words of panel-level summaries, corresponding to roughly fifty-fold compression of the raw text while retaining panel-specific mechanistic and phenotypic signal.
+Across all panels, we used PanelAppRex as the basis for generating AI-derived summaries that captured panel-specific mechanisms and phenotypes, conditioned on the disease context and the unique combination of genes in each panel. These short structured overviews are exposed as a research-only info box in the interface, giving users rapid context before expanding the full panel and enriching the semantic query layer used for retrieval. In aggregate, the \ac{rag} step consumed approximately 7 million input tokens and produced 2 million output tokens while condensing the 6.6 million word gene knowledge base into about 135,000 words of panel-level summaries, corresponding to roughly fifty-fold compression of the raw text while retaining panel-specific mechanistic and phenotypic signal.
 
 \subsection{Structured inheritance annotations reveal overlapping gene-MOI relationships}
 
@@ -286,8 +286,10 @@ Probabilistic models incorporating both observed and unobserved variation can qu
 The dataset also provides a substrate for AI-driven approaches to variant interpretation, including probabilistic inference, reinforcement learning, and deep annotation pipelines
 \cite{jumper_highly_2021, cheng_accurate_2023}.
 
-Several limitations should be acknowledged. Not all known coding genes are currently linked to a disease panel; we prioritised high-confidence, traceable annotations over broad but less reliable coverage. 
+Several limitations should be acknowledged. 
+Not all known coding genes are currently linked to a disease panel; we prioritised high-confidence, traceable annotations over broad but less reliable coverage. 
 Some genes are over-represented across multiple panels due to historical research biases, leading to non-uniform panel enrichment. 
+We performed benchmarks to measure success for both relatively simple gene-phenotype relationships (i.e., \ac{pid}) and more complex relationships (i.e., neurogenetic disorders) but ultimately, a measure of long-term public option will be required to determine the practical benefit.
 Additionally, not all panels returned by queries may be equally informative. 
 For example, during benchmarking, the COVID-19 research panel frequently appeared alongside the \ac{pid} panel due to overlapping genes. 
 While technically accurate, such panels may be less relevant to users focused on clinical  diagnosis of immunodeficiency.
@@ -305,12 +307,13 @@ Future work will focus on expanding supported queries, integrating additional va
 
 \section*{Acknowledgements}
 \noindent
-The use of data from UniProt was licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
 ClinVar asks its users who distribute or copy data to provide attribution to them as a data source in publications and websites \cite{landrum_clinvar_2018}.
-We acknowledge \ac{ge} for providing public access to the PanelApp data.
+The use of data from UniProt was based on Creative Commons Attribution 4.0 International (CC BY 4.0).
+We acknowledge \ac{ge} for providing publicly accessible PanelApp data.
 The use of data from \ac{ge} panelapp was for research purposes and is not for healthcare or commercial services.
 The use of  \ac{ge} panelapp source code was under the Apache License 2.0.
 The experimental (RAG) resource includes machine-assisted annotations generated using the OpenAI API according to their terms of use.
+We do not access \ac{omim} data but instead direct readers using gene identifiers linked to OMIM.org record pages for further reading and acknowledge this resource.
 Ensembl data and code are available without restriction and software is provided under the Apache License 2.0 \cite{dyer_ensembl_2025}. Ensembl and its satellite sites conform to the EBI terms of use; as such we acknowledge attribution to EMBL-EBI for the use of its data resources and tools.
 
 \section*{Contributions}
@@ -337,7 +340,7 @@ The study was conducted in accordance with the Declaration of Helsinki.
 \begin{itemize}
 \item Data: Lawless, D. (2025). PanelAppRex base Zenodo. \url{https://doi.org/10.5281/zenodo.15736689}
 \item Source code: \url{https://github.com/DylanLawless/PanelAppRex}
-\item Demonstration page: \url{http://DylanLawless.github.io/panelapprex.github.io/landing_page.html}. 
+\item Demonstration page: \url{https://panelapprex.github.io/landing_page}. 
 \end{itemize}
 
 \bibliographystyle{unsrtnat}
