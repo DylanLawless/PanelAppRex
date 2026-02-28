@@ -34,95 +34,90 @@ We thank you sincerely for your thoughtful and constructive comments on our manu
 
 We agree fully with your suggestions and believe that the revisions have substantially improved the manuscript.
 
-
 \noindent\rule{\textwidth}{0.4pt}
 
 \textbf{Reviewer: 1}
 
-\textbf{Major comments:}
+\textbf{Major comments:}\\
+\textit{\textbf{1. Generalisability beyond PID use cases.}\\
+While the authors claim broad applicability (e.g., “generalizable to genetic diagnosis across disease areas”), all benchmarking is exclusively from primary immunodeficiency (PID) studies. Although the authors state that primary immunodeficiency (PID) constitutes their primary focus, there is no quantitative or qualitative demonstration that PanelAppRex works equally well for other disease categories, particularly those with more complex gene-phenotype relationships (e.g., neurogenetic disorders, cancer panels). }
 
-\textit{\textbf{1.} ... .}
+\textbf{Response:} Thank you. We agree and have thus expanded the validation studies from five to fifteen. We include the specific focus on neurology, and as you suggested the complexity does appear more prominently and the related panels are notably larger. We added a third category of cross-disciple to get a random sample. The main result, asking whether the causal gene being present in the query output, remained unchanged at 100\% in each study. The increased sample size provides more accurate measurements, of course. We believe this increased sample size provides a fair and reproducible benchmark while still being readable and without adding overhead noise or summary statistics. 
 
-\textbf{Response:} ...
-
-\textbf{Minor comments:}
-
-\textbf{5.} 
+\textit{\textbf{2. Unclear integration of RAG (Retrieval-Augmented Generation).}\\
+The manuscript mentions use of ``evidence-based RAG'' in multiple sections but does not explain how this is implemented. Since RAG is typically associated with LLM pipelines, readers need more detail on what data is being retrieved, how evidence is used to re-rank or refine query output, and whether generation plays any role.}
+ 
+\textbf{Response:} Thank you. We originally considered whether or not to include RAG data in he main results and therefore failed to report it thoroughly. We have now updated to include the full protocol in the open-source repository, and include formal sections in both the methods and results to demonstrate how PanelAppRex's core dataset can be extended and interpreted using this method. We complete the practical demonstration by include the resulting user information button (``Info'') for each panel.  The adds a highly condensed, structured summary which is specific to each unique panel.
+ 
 \noindent\rule{\textwidth}{0.4pt}
+\clearpage
 
 \textbf{Reviewer: 2}
 
+\textbf{Major comments:}\\
+\textit{\textbf{1. Performance comparison.}\\
+When going through the initial steps of building PanelAppRex, the core of the tool can be understood to be providing credentialed access to the APIs of existing resources, such as GE’s PanelApp. It would be helpful to understand whether further steps taken to make the tool robust and comprehensive, such as using RAG or incorporating additional features, provide an improvement in performance through a comparative analysis, perhaps using the same benchmarking framework, against simply querying the other APIs.}
+
+\textbf{Response:} Thank you.
+We have update the manuscript to reflect the claims and practical constraint that motivates our design: PanelAppRex can be downloaded and run locally in protected environments. To demonstrate the accuracy of recovering underlining data, we have clarified the reporting in Figure S1. 
+
+We were also interested in running a direct comparison against “querying the APIs”, because it is an intuitive baseline. In practice, we found two issues that could make such a comparison misleading. First, PanelAppRex is designed to run locally in protected clinical and HPC environments where  internet access is commonly restricted, where live API access is not possible in our intended use setting.
+Second, the ``equivalent'' dataset used by PanelAppRex is assembled from multiple sources that are not currently available from any single API. Building an API-based comparator would therefore require us to design and implement a 
+parallel 
+%multi-source aggregation and harmonisation pipeline for the 
+control arm -- effectively recreating the contribution and making the comparison unfair. 
+
+Based on your recommendation, we have added this rationale in the manuscript. We also noted the limitation of an offline database compared to the strengths of primary-source APIs: for rapidly changing resources, direct API access can provide more frequent updates than an offline snapshot, which we cannot match in the same way.
+
+\textbf{TODO:}
+
+\textbf{Core logic is mostly sound, but one key vulnerability remains: “performance” is left undefined
+Reviewer 2 asked about “improvement in performance”. Your reply argues why an API baseline is misleading and highlights offline use and multi-source integration. That answers “why not compare”, but it still leaves “what performance means here” implicit.
+Risk: reviewer may come back with “ok, but compare on something measurable anyway”.
+Fix at logic level (not rewording): add one sentence naming the surrogate metrics you did evaluate (eg retrieval of causal gene in benchmark, completeness of required fields, reproducibility/offline deployability). You already hint at this in multiple places, but you never explicitly connect it to “performance”.}
+
+\textbf{You say “live API access is not available in the intended use setting.” This is broadly true for many HPC/clinical environments, but it is not universally true.
+Logical risk: an absolute statement can be challenged. You can keep the point but ensure your manuscript claims reflect common constraints rather than universal impossibility. This is not mere rewording, it is about avoiding a falsifiable absolute.}
+
+\textbf{Reviewer frames your tool as providing credentialed access. Your tool is actually an aggregated dataset plus UI. If you do not require credentials for the dataset, the reviewer’s premise is partly off.
+Your response does not explicitly correct that premise. If left uncorrected, it can weaken your argument because you are accepting a framing that makes the API baseline seem more natural than it is.}
 
 
+\textit{\textbf{2. RAG implementation.}\\
+The use of retrieval augmentation generation proves to be important in cultivating the tool to handle complex queries. My understanding is that it is common for RAG to deal with ranking. If that is the case here, it will be relevant to know how the ranking is handled, as different types of information are pulled from the external sources. It will be valuable for the authors to provide a brief input on how the implementation of RAG was done.}
 
+\textbf{Response:} Thank you. You are correct, but in this case we did not use any ranking by the RAG process. We originally considered whether or not to include RAG data in he main results and therefore failed to report it thoroughly. We have now updated to include the full protocol in the open-source repository, and include formal sections in both the methods and results to demonstrate how PanelAppRex's core dataset was used for condensing the raw data into context-aware summaries. We complete the practical demonstration by include the resulting user information button (``Info'') for each panel.  The adds a highly condensed, structured summary which is specific to each unique panel.
 
-
-
-
-
-
-
-
-
-
-
-
-Associate Editor: DeGiorgio, Michael
-Comments to the Author:
-Thank you for submitting your manuscript for consideration by Bioinformatics Advances.
-
-Your manuscript was assessed by two expert referees. I must also apologize for the delay in returning a decision to you, as I had secured three referees but the third one has not submitted a review and is severely delayed. I therefore elected to make a recommendation based on the two reviews in hand to avoid any further delay.
-
-Overall, the referees were positive but had some concerns that would need to be addressed. Below is a summary of three broad comments that I would like the authors to pay close attention to.
-
-1. How well does PanelAppRex generalize beyond PID use cases? (Reviewer 1)
-
-2. More detail is needed about the RAG implementation. (Reviewers 1 and 2)
-
-3. Improvements in readability of some figures and the user interface are needed. (Reviewer 2)
-
-The referees offer more detailed and comprehensive comments.
-
-Based on this assessment, I recommend major revision.
-
-Reviewer Comments to Authors:
-Reviewer: 1
-
-Comments to the Author
-1) General comments
-This manuscript introduces PanelAppRex, a searchable platform that integrates 58,000 curated gene-disease panel associations from multiple sources. The tool is well-motivated and addresses a pressing need in genomic diagnostics. By offering both a natural language-style query interface and a programmatically accessible dataset, the authors provide a practical solution that serves both clinical diagnostics and bioinformatic integration.
-The design and implementation are well described. Moreover, the authors go beyond tool description by connecting the work to Bayesian genetic risk modelling, showing broader relevance.
-2) Specific comments:
-major:
-1. Generalisability beyond PID use cases
-While the authors claim broad applicability (e.g., “generalizable to genetic diagnosis across disease areas”), all benchmarking is exclusively from primary immunodeficiency (PID) studies. Although the authors state that primary immunodeficiency (PID) constitutes their primary focus, there is no quantitative or qualitative demonstration that PanelAppRex works equally well for other disease categories, particularly those with more complex gene-phenotype relationships (e.g., neurogenetic disorders, cancer panels).
-2. Unclear integration of RAG (Retrieval-Augmented Generation)
-The manuscript mentions use of “evidence-based RAG” in multiple sections but does not explain how this is implemented. Since RAG is typically associated with LLM pipelines, readers need more detail on what data is being retrieved, how evidence is used to re-rank or refine query output, and whether generation plays any role.
-
-Reviewer: 2
-
-Comments to the Author
-This manuscript introduces an aggregated gene panel database called PanelAppRex. Along with streamlining accessibility to gene panel information in one place, the additional implementations equip it as a tool that can handle complex queries for more assisted searching. The authors also incorporate relevant features from other sources, such as allele frequencies and curated classifications, to provide more robust data entries for panels. Overall, the manuscript is well-written and convincingly presents PanelAppRex as a valuable component in the typical workflow for genomic diagnostics. There are some points I would like to bring to attention.
-
-Performance Comparison
-When going through the initial steps of building PanelAppRex, the core of the tool can be understood to be providing credentialed access to the APIs of existing resources, such as GE’s PanelApp. It would be helpful to understand whether further steps taken to make the tool robust and comprehensive, such as using RAG or incorporating additional features, provide an improvement in performance through a comparative analysis, perhaps using the same benchmarking framework, against simply querying the other APIs.  
-
-RAG Implementation
-The use of retrieval augmentation generation proves to be important in cultivating the tool to handle complex queries. My understanding is that it is common for RAG to deal with ranking. If that is the case here, it will be relevant to know how the ranking is handled, as different types of information are pulled from the external sources. It will be valuable for the authors to provide a brief input on how the implementation of RAG was done.
-
-Figure Clarification
+\textit{\textbf{3. Figure clarification}
 Panel E of Figure S1 is slightly hard to follow. The “100\%” at the top of each panel can be interpreted to be on the basis that the y values of each column in the panel match, but this is not the case with this panel. Additionally, in Section 3.2, it mentions that all gene entries have MOI, which is not the case based on Panel E. My understanding is that the 100\% in this panel could be referring to all unique genes having an MOI annotation, but I am unsure.
-Caption for Panel B of Figure S3 is unclear to me. The x-axis is the number of unique genes, and the number next to each bar appears to represent the number of unique genes for each mode of inheritance. However, this is hard to understand from the caption.
+Caption for Panel B of Figure S3 is unclear to me. The x-axis is the number of unique genes, and the number next to each bar appears to represent the number of unique genes for each mode of inheritance. However, this is hard to understand from the caption.}
 
-User interface
+\textbf{Response:} Thank you. You were right that the original Figure S1 and its description were incorrect and not  clear. In the previous version, the percentages were not properly rendered, making the text inconsistent. We have now corrected both the figure and the manuscript text. Specifically, we now state the denominator for all panels. 
+
+Percentages show entry-level completeness relative to all gene-panel entries. %with a gene. 
+Panels A and C are the only cases where recovery recovery of a missing ID is not subjective and therefore we include the count before and after. 
+
+We also revised the Results text to remove the incorrect implication that all entries had complete MOI and related annotations in the raw merged dataset. Instead, the revised text now distinguishes fields that were directly present in the integrated dataset from identifier fields that were recovered programmatically using Ensembl biomaRt. In summary, the earlier draft was a problem of figure design and explanation. We have now made the figure self-contained, clarified the denominators in the legend and Results text, and aligned the manuscript wording with what the figure actually shows.
+
+%Thank you. Our figure was not described well. Please find the updated version which now provides a clear description that is self-contained and complete. We mistakenly printed only one \% for each panel. 
+%\textbf{TODO: Ensure the updated caption and main text explicitly state the denominator for each percentage and reconcile the Section 3.2 statement with the figure (eg “after recovery” or “in the final released dataset” vs “raw merged dataset”). Fix the figure for clarity and then answer the Reviewer's precise question: what does the “100\%” mean and why does panel E look inconsistent with the claim that all entries have MOI.}
+
+\textit{\textbf{4. User interface.}\\
 The readability of the user interface can sometimes feel inconvenient, as some of the latter columns do not have their respective values right underneath for instant viewing. Instead, it requires that we scroll back to the right to view them. While the tool will likely mostly be used programmatically, it would be helpful to modify this in the UI.
 It appears that the search query box cannot handle certain characters. For example, in the example provided in the manuscript, “SERPING1, Factor XII, and edema”, the commas cause the search to render no results. This can be confirmed as we get three results by changing the commas to “ands” so that the query is now “SERPING1 and Factor XII and edema”.
+}
 
-Search Results for Complex Query - Subjective Best Panel
-For the benchmarking results shown in Table S1, it may be helpful to include which panel was chosen as the subjective user-selected best panel. In a test case such as Case Study 2, where it appears all 3 returned panels were classified as subjective best panels, this minor detail can provide additional clarity.
+\textbf{Response:} Thank you for noting this. 
+We have updated the demo in several ways to provide a better user interface. 
+The layout, style, and formatting are now fixed. 
+The javascript search protocol has been fixed to allow such characters. Please find that the search input is fixed to allow symbols and other formatting; for instance,  “SERPING1, Factor XII, and edema” now works as expected.
 
+As you noted, our intention is not to provide this service directly, rather to free it for others to reimplement. However a better UI demonstration has been valuable here.
 
+\textit{\textbf{5. Search results for complex query - subjective best panel}.
+For the benchmarking results shown in Table S1, it may be helpful to include which panel was chosen as the subjective user-selected best panel. In a test case such as Case Study 2, where it appears all 3 returned panels were classified as subjective best panels, this minor detail can provide additional clarity.}
 
+\textbf{Response:} Thank you for this suggestion. We agree. These additional columns are now included. Please find the full input, output, and metadata is now available in the table for the readers. 
 
 \noindent\rule{\textwidth}{0.4pt}
 

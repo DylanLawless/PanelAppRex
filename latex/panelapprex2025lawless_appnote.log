@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.9)  27 FEB 2026 12:27
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.9)  28 FEB 2026 12:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1313,70 +1313,70 @@ File: ./images/figure_1.pdf Graphic file (type pdf)
 
 
 [7]
-Overfull \hbox (15.48708pt too wide) in paragraph at lines 263--263
+Overfull \hbox (15.48708pt too wide) in paragraph at lines 262--262
 []\TU/lmr/bx/n/14.4 Structured inheritance annotations reveal overlapping gene-
 
  []
 
 Package acronym Info: Label `acro:ar' newly defined as it shall be overridden
-although it is yet undefined on input line 267.
+although it is yet undefined on input line 266.
 Package acronym Info: Label `acro:ad' newly defined as it shall be overridden
-although it is yet undefined on input line 267.
+although it is yet undefined on input line 266.
 
 
 [8]
 
 [9]
 
-[10
+[10]
+
+[11
 
 ]
 
-[11] (./panelapprex2025lawless_appnote.bbl
+[12] (./panelapprex2025lawless_appnote.bbl
 
-[12]
-
-[13])
+[13]
 
 [14]
+
+[15])
+
+[16]
 File: ./images/validation_counts.pdf Graphic file (type pdf)
 <use ./images/validation_counts.pdf>
 File: ./images/plot_patch2_annotated_example.pdf Graphic file (type pdf)
 <use ./images/plot_patch2_annotated_example.pdf>
 Package acronym Info: Label `acro:iem' newly defined as it shall be overridden
-although it is yet undefined on input line 415.
+although it is yet undefined on input line 424.
 File: ./images/plot_patch_uniq_gene_moi_summary.pdf Graphic file (type pdf)
 <use ./images/plot_patch_uniq_gene_moi_summary.pdf>
 
 
-[15
+[17
 
 ]
 
-[16]
+[18]
 
-[17]
+[19]
 
-[18] (./panelapprex2025lawless_appnote.aux)
+[20] (./panelapprex2025lawless_appnote.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `panelapprex2025lawless_appnote.out' has not 
 changed.
-(rerunfilecheck)             Checksum: F3EFF005DB8F33B80ACA8569ADFA188C;3050.
+(rerunfilecheck)             Checksum: 9B40460705908ECD8B6913690EDA808B;3035.
  ) 
 Here is how much of TeX's memory you used:
  36957 strings out of 473832
  824645 string characters out of 5729482
- 1323373 words of memory out of 5000000
+ 1325373 words of memory out of 5000000
  59440 multiletter control sequences out of 15000+600000
  568473 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 121i,6n,124p,1027b,1119s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 121i,6n,124p,1532b,1129s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on panelapprex2025lawless_appnote.pdf (18 pages).
+Output written on panelapprex2025lawless_appnote.pdf (20 pages).
