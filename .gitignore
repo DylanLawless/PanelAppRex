@@ -16,3 +16,6 @@ ref/uniprot/
 .Rhistory
 .DS_Store
 
+# old landing page
+data/landing_page.html
+data/landing_page_files/
