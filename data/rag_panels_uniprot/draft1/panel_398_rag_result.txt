@@ -1,6 +1,0 @@
-- Defects in adaptive immunity due to impaired T-cell and B-cell development, signaling, and function, leading to immunodeficiency and susceptibility to infections.
-- Dysregulation of cytokine signaling pathways, including interferon and interleukin receptors and downstream JAK-STAT signaling, contributing to immune dysregulation and inflammatory bowel disease.
-- Impaired DNA repair and genomic stability mechanisms affecting lymphocyte maturation and immune tolerance, predisposing to autoimmunity and immunodeficiency.
-- Abnormalities in apoptosis and immune cell homeostasis via death receptor pathways and NF-kappa-B signaling, resulting in lymphoproliferation and autoimmune manifestations.
-- Disruption of vesicular trafficking, lysosomal function, and cytoskeletal dynamics essential for immune cell activation, granule exocytosis, and migration.
-- Complement system dysregulation leading to increased susceptibility to infections and inflammatory complications.
