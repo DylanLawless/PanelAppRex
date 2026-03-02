@@ -1,0 +1,3 @@
+case_study	method	subset_size	query	query_tokens	n_query_tokens	elapsed_total_seconds	top_panel_id	top_panel_name	n_candidate_panels_returned	causal_gene	causal_gene_found_in_any_returned_panel	best_panel_contains_causal_gene	n_api_calls	n_panels_requested	n_panels_indexed
+1	GE_PanelApp_API	100	SERPING1 Factor XII edema	serping1 factor xii edema	4	32.629000000000815	398	Primary immunodeficiency or monogenic inflammatory bowel disease	57	F12	1	1	100	100	99
+1	PanelAppRex_local	100	SERPING1 Factor XII edema	serping1 factor xii edema	4	10.231999999999971	398	Primary immunodeficiency or monogenic inflammatory bowel disease	55	F12	1	1	0	100	99

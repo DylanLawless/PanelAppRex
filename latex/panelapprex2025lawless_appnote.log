@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.9)  28 FEB 2026 12:47
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.9)  2 MAR 2026 18:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1361,22 +1361,38 @@ File: ./images/plot_patch_uniq_gene_moi_summary.pdf Graphic file (type pdf)
 
 [19]
 
-[20] (./panelapprex2025lawless_appnote.aux)
+[20]
+Package acronym Info: Label `acro:api' newly defined as it shall be overridden
+although it is yet undefined on input line 451.
+File: ./images/benchmark_cold_start_manuscript_figure_all_runs.pdf Graphic file
+ (type pdf)
+<use ./images/benchmark_cold_start_manuscript_figure_all_runs.pdf>
+
+
+[21
+
+]
+
+[22] (./panelapprex2025lawless_appnote.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `panelapprex2025lawless_appnote.out' has not 
 changed.
-(rerunfilecheck)             Checksum: 9B40460705908ECD8B6913690EDA808B;3035.
+(rerunfilecheck)             Checksum: E7D8C4BE592CDD9BCF3B3AAF0BB73D47;3148.
  ) 
 Here is how much of TeX's memory you used:
- 36957 strings out of 473832
- 824645 string characters out of 5729482
+ 36974 strings out of 473832
+ 825442 string characters out of 5729482
  1325373 words of memory out of 5000000
- 59440 multiletter control sequences out of 15000+600000
+ 59456 multiletter control sequences out of 15000+600000
  568473 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  121i,6n,124p,1532b,1129s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on panelapprex2025lawless_appnote.pdf (20 pages).
+Output written on panelapprex2025lawless_appnote.pdf (22 pages).
