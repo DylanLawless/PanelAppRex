@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.9)  3 MAR 2026 12:53
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.9)  3 MAR 2026 21:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -686,15 +686,17 @@ Package hyperref Info: Link coloring ON on input line 25.
 
 ]
 
-[2
+[2]
+
+[3
 
 ]
 
-[3] (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+[4] (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 112
+LaTeX Font Info:    Trying to load font information for U+msa on input line 126
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -703,7 +705,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 112
+LaTeX Font Info:    Trying to load font information for U+msb on input line 126
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -713,7 +715,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 
-[4] (./cover_letter_panelapprex2025.aux)
+[5] (./cover_letter_panelapprex2025.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -729,10 +731,10 @@ Package logreq Info: Writing requests to 'cover_letter_panelapprex2025.run.xml'
 Here is how much of TeX's memory you used:
  18610 strings out of 473832
  326294 string characters out of 5729482
- 990901 words of memory out of 5000000
+ 992901 words of memory out of 5000000
  41478 multiletter control sequences out of 15000+600000
  563882 words of font info for 60 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  66i,7n,81p,1912b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on cover_letter_panelapprex2025.pdf (4 pages).
+Output written on cover_letter_panelapprex2025.pdf (5 pages).
