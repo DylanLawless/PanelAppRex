@@ -48,14 +48,9 @@ Gene panel data are essential for variant interpretation and genomic diagnostics
 %\vspace{1em}
 %\noindent \textbf{Methods:}\\
 We developed PanelAppRex, a harmonised dataset and interactive search tool that integrates over 58,000 curated gene-disease panel associations. It supports natural language-style queries by gene, phenotype, disease group, and mode of inheritance (MOI), with results returned in machine-readable export formats. 
-
 \vspace{1em}
 \noindent \textbf{Results:}\\
-In benchmarked case studies of immune disease diagnostics, the system achieved 100\% accuracy in identifying the most relevant gene panel. The underlying dataset includes standardised gene identifiers, disease annotations, MOI, and literature support, enabling seamless integration into bioinformatic pipelines. 
-%\vspace{1em}
-%\noindent \textbf{Conclusion:}\\
-% PanelAppRex aids genetic diagnosis and establishes a structured foundation for modelling genome-wide diagnostic priors for supporting evidence-aware variant interpretation.
-
+In benchmarked case studies spanning immunology, neurology, and other disease areas, the causal gene was recovered in 85.6\% of all returned panels, with the subjective user-selected ``best panel'' achieving a perfect accuracy of 100\%. The underlying dataset includes standardised gene identifiers, disease annotations, MOI, and literature support, enabling seamless integration into bioinformatic pipelines. 
 \vspace{1em}
 \noindent \textbf{Availability:} The platform data is openly available at  PanelAppRex base [Data set], Zenodo \url{https://doi.org/10.5281/zenodo.15736689}, with
 source code at \url{https://github.com/DylanLawless/PanelAppRex},
@@ -104,10 +99,10 @@ Despite their utility, these panel datasets are distributed across multiple plat
 Manual selection, interpretation, and cross-referencing of gene panels remain labour intensive, especially when integrating with other variant-level annotations from genomic resources. 
 
 Accurate causal variant interpretation requires consistent integration of structured annotations from key resources such as \ac{ge}’s PanelApp, ClinVar, UniProt, and Ensembl \cite{martin_panelapp_2019, landrum_clinvar_2018, the_uniprot_consortium_uniprot_2025, dyer_ensembl_2025}. 
-To address this, we developed PanelAppRex, a tool that automates panel aggregation and prepares a machine-readable dataset with complete coverage of core gene-level fields, including gene identifiers, inheritance modes, disease terms, and supporting evidence. 
+To address this, we developed PanelAppRex, a panel aggregation and machine-readable dataset with core gene identifiers required for gene-panel linking, together with structured annotations including inheritance modes, disease terms, and supporting evidence where available.
 The dataset is suitable for integration into AI-based workflows and downstream variant interpretation pipelines. 
 In parallel, PanelAppRex provides a natural language-style search interface that streamlines discovery by supporting queries based on gene names, phenotypes, disease groups, and other key attributes. 
-This functionality is enhanced by evidence-based \ac{rag}, allowing users to explore curated gene panel information efficiently. 
+We further demonstrate how the structured core resource can be extended with an AI-derived summary layer for interpretation and downstream \ac{rag}-style workflows.
 
 \section{Methods}
 
@@ -128,7 +123,6 @@ Disease interactions were compared against \ac{ge}’s PanelApp
 \noindent
 PanelAppRex was implemented in R and integrated data from the sources listed above.
 Reference data was merged for comparison with the core model in two formats: a simplified version (Panel ID, Gene) and a complex version including metadata such as confidence level, \ac{moi}, and disease information, and several metadata summary statistics. In addition, the tool incorporated a search module to execute complex user queries. The search functionality supports queries by gene names, phenotypes, disease names, disease groups, panel names, genomic locations and other identifiers. 
-\ac{rag} was used to improve the natural queries in hidden states based on evidence about the disease and gene function by supplementing the data with additional sources including ClinVar, UniProt, etc. 
 
 \subsection{Usage}
 \noindent
@@ -169,23 +163,17 @@ This validation step was applied to the full integrated PanelAppRex dataset.
 
 \subsection{Benchmarking for manual queries}
 \noindent
-%To mimic a clinician who is trying to diagnose a new disease such as \ac{pid}, we systematically selected genetic diagnosis case studies from the current online catalogue from the \ac{jaci}, using the first five results  \cite{arruda_genetic_2015,  mcaleer_severe_2015, verhoeven_hematopoietic_2022, magerus-chatinet_autoimmune_2013, sharfe_fatal_2014}.  Although the method presented here is generalisable to genetic diagnosis across disease areas, we chose to validate it using \ac{pid} case studies, as this is the primary focus of our own research.
-%
-% The clinical background from each of these studies was used to construct keyword queries from patient features, simulating a naïve starting position for a clinician. We then tested whether our PanelAppRex tool could successfully retrieve panels that included the final causal gene reported in each case study.  The sources, queries, and results are shown in \textbf{Table \ref{tab:benchmark}}. 
-
 To mimic a clinician who is trying to diagnose a genetic disease, we systematically selected genetic diagnosis case reports that used exome or genome sequencing. We chose the first five eligible case reports from each of three sources: \ac{jaci}, the journal Neurology, and for random cross-disciplinary topics we used pre-defined PubMed search restricted to the last 12 months and free full text, yielding a total of 15 case studies across phenotypes.  This selection allowed us to validate the method across immunological, neurological, and other disease areas.
 
-For each case report, we used only the clinical narrative before any genetic analysis was introduced in the original publication. We used a standardised method to select the phenotype terms from each case report and then rank by most to least importance or relevance. The ranked phenotype terms were then used a keyword queries, simulating a naïve starting position for a clinician. Search terms were added incrementally until no panels matched. We then tested whether our PanelAppRex tool could successfully retrieve panels that included the final causal gene reported in each case study. The sources, queries, and results are shown in \textbf{Table \ref{tab:benchmark}}.
+For each case report, we used only the clinical narrative before any genetic analysis was introduced in the original publication. We used a standardised method to select the phenotype terms from each case report and then rank by most to least importance or relevance. The ranked phenotype terms were then used a keyword queries, simulating a naïve starting position for a clinician. Search terms were added incrementally until no panels matched. We then tested whether our PanelAppRex tool could successfully retrieve panels that included the final causal gene reported in each case study. The sources, queries, and results are shown in \textbf{Table \ref{tab:benchmark}}. Benchmarking analyses were performed on the core dataset; the AI-derived demonstration ``Info'' field described below was not used in this evaluation.
 
 
 \subsection{Applications in AI-based RAG}
 \noindent
-To demonstrate use as part of \ac{ai}-based \ac{rag}, we derived mechanistic text for each gene from UniProtKB human proteome  and merged these summaries with PanelAppRex genes and panel metadata (panel name, disease group, mode of inheritance, and reported phenotypes) to create a single context dataset for each panel.
-We then applied a deterministic GPT-based model (gpt-4.1-mini, OpenAI; temperature 0.1) with a fixed prompt that requested a concise, clinician-facing description of shared mechanisms and phenotypes for the gene set. Across all processed panels, this involved approximately 7 million tokens and 2 million output tokens, corresponding to an input to output ratio of 0.261. The model produced three structured outputs per panel (a detailed analysis section, an overview paragraph, and 3 to 6 bullet points), which we stored together with panel identifiers as a high-level index that can be queried in downstream \ac{rag} workflows.
+To demonstrate how the core PanelAppRex dataset can be expanded for AI-assisted interpretation, we generated an optional panel-level summary layer suitable for downstream \ac{rag}-style workflows. For each gene, we retrieved mechanistic text from the UniProtKB human proteome and merged these summaries with PanelAppRex panel membership and metadata, including panel name, disease group, \ac{moi}, and reported phenotypes, to create a context dataset for each panel. We then applied a GPT-based model (gpt-4.1-mini, OpenAI; temperature 0.1) with a fixed prompt requesting a concise clinician-facing description of shared mechanisms and phenotypes across the panel gene set. Across all processed panels, this involved approximately 7 million input tokens and 2 million output tokens. The model produced three structured outputs per panel, consisting of a detailed analysis section, an overview paragraph, and 3 to 6 bullet points. These outputs were stored together with panel identifiers and exposed in the demonstration interface as an experimental panel ``Info'' field. This AI-derived summary layer was not used for the panel-ranking benchmarks reported in this study.
 % batch 1 = (104,266/4,369,000) = 0.239
 % batch 2 = (77,565/2,586,000) = 0.299
 % total run = (1,818,316/6,955,000) = 0.261 
-
 
 \section{Results}
 \noindent
@@ -215,10 +203,9 @@ For example, panel ID 398 contains 572 genes associated with \ac{pid}, also refe
 % \FloatBarrier
 \subsection{Validation of completeness in the core dataset}
 \noindent
-%The raw dataset exhibited near-complete coverage in most fields after merging the core dataset. 
-%Specifically, 99.9915\% of gene entries had \ac{hgnc} symbols % (58587/58592)*100 and 99.2315\% had Ensembl gene IDs. % (57844/58292)*100
-% All entries included at least one publication, a disease panel name, a \ac{moi}, and an \ac{omim} gene ID (100\% each).  After recovery of missing identifiers, completeness reached 100\% across all these core fields. This validated dataset ensures that users can confidently build on a consistent foundation, using standardised and stable identifiers to link or enrich the core data with external resources (\textbf{Figure \ref{fig:validation}}).
-To assess whether the dataset was analysis-ready, we audited completeness of key annotation fields required for joining, filtering, and interpretation (\textbf{Figure \ref{fig:validation}}). For publications, disease panel names, \ac{moi}, and OMIM gene identifiers, we report entry-level completeness across all gene-panel entries. For HGNC and Ensembl gene identifiers, we used automated recovery of missing IDs from Ensembl as it is not a subjective decision. After recovery, the core identifiers required for gene-panel linking were present at 100\% completeness. A small number of entries are incomplete for Ensembl ID such as \textit{HPE1} because it is a phenotype identifier rather than gene name, and is thus not present on HGNC. Some secondary annotation fields remained incomplete such as \ac{moi}, and we did not attempt to fill them in the core dataset because this would require non-primary-source decisions which are better reserved for independent downstream implementations. The validated dataset therefore provides a stable and analysis-ready identifier layer for downstream integration (\textbf{Figure \ref{fig:validation}}).
+% To assess whether the dataset was analysis-ready, we audited completeness of key annotation fields required for joining, filtering, and interpretation (\textbf{Figure \ref{fig:validation}}). For publications, disease panel names, \ac{moi}, and OMIM gene identifiers, we report entry-level completeness across all gene-panel entries. For HGNC and Ensembl gene identifiers, we used automated recovery of missing IDs from Ensembl as it is not a subjective decision. After recovery, the core identifiers required for gene-panel linking were present at 100\% completeness. A small number of entries are incomplete for Ensembl ID such as \textit{HPE1} because it is a phenotype identifier rather than gene name, and is thus not present on HGNC. Some secondary annotation fields remained incomplete such as \ac{moi}, and we did not attempt to fill them in the core dataset because this would require non-primary-source decisions which are better reserved for independent downstream implementations. The validated dataset therefore provides a stable and analysis-ready identifier layer for downstream integration (\textbf{Figure \ref{fig:validation}}).
+To assess whether the dataset was analysis-ready, we audited completeness of key annotation fields required for joining, filtering, and interpretation (\textbf{Figure \ref{fig:validation}}). 
+We report entry-level completeness across all gene-disease panel entries. For HGNC and Ensembl gene identifiers, we additionally used automated recovery of missing IDs from Ensembl because these identifier mappings are not subjective. After recovery, the core identifiers required for gene-panel linking were present at 100\% completeness. A small number of entries are incomplete for Ensembl ID such as \textit{HPE1} because it is a phenotype identifier rather than gene name, and is thus not present on HGNC. Some secondary annotation fields remained incomplete, including \ac{moi}, and we did not attempt to fill these in the core dataset because doing so would require non-primary-source decisions better reserved for downstream implementations. The validated dataset therefore provides a stable and analysis-ready identifier layer for downstream integration while preserving the original availability of secondary annotations.
 
 \subsection{Benchmarking for manual queries confirms accurate retrieval of causal disease genes}
 \noindent
@@ -256,8 +243,8 @@ Overall, the results confirm that our approach accurately identifies the most re
 
 \subsection{Applications in AI-based RAG}
 \noindent
-Across all panels, we used PanelAppRex as the basis for generating AI-derived summaries that captured panel-specific mechanisms and phenotypes, conditioned on the disease context and the unique combination of genes in each panel. These short structured overviews are exposed as a research-only info box in the interface, giving users rapid context before expanding the full panel and enriching the semantic query layer used for retrieval. In aggregate, the \ac{rag} step consumed approximately 7 million input tokens and produced 2 million output tokens while condensing the 6.6 million word gene knowledge base into about 135,000 words of panel-level summaries, corresponding to roughly fifty-fold compression of the raw text while retaining panel-specific mechanistic and phenotypic signal.
-The same protocol is easily modifiable to allow real-time \ac{rag} requests from users, either on from commercial provides like OpenAI API or local open-weight models inside protected research environments by simply redirecting the \texttt{system\_prompt} and \texttt{writeLines} functions as shown in our code repository.
+Across all panels, we used the core PanelAppRex dataset to generate AI-derived panel summaries that captured panel-specific mechanisms and phenotypes conditioned on disease context and gene composition. 
+These structured summaries are exposed in the interface as an experimental panel ``Info'' field, intended as a demonstration of how the core dataset can be extended for AI-assisted interpretation. In aggregate, this step consumed approximately 7 million input tokens and produced 2 million output tokens while condensing the 6.6 million-word gene knowledge base into approximately 135,000 words of panel-level summaries, corresponding to roughly fifty-fold compression. This summary layer demonstrates how the structured PanelAppRex core can be extended for AI-assisted interpretation and future downstream \ac{rag}-style applications. The benchmarking analyses reported here were performed on the core structured dataset and did not depend on this additional AI-derived field.
 
 \subsection{Structured inheritance annotations reveal overlapping gene-MOI relationships}
 
@@ -271,11 +258,10 @@ enabled by PanelAppRex, including \ac{moi}-filtered search and model-based prior
 \FloatBarrier
 \section{Discussion}
 \noindent
-PanelAppRex provides an accessible and validated platform for querying, aggregating, and exporting curated disease-gene panel data. Designed for both clinical and research use, it simplifies study planning and variant interpretation through a user-friendly interface, while also offering a harmonised dataset for programmatic workflows. The core model integrates over 58,000 panel-gene associations, with full coverage of key fields including \ac{hgnc} symbols, Ensembl IDs, \ac{omim} annotations, \ac{moi}, and supporting publications.
-
+PanelAppRex provides an accessible and validated platform for querying, aggregating, and exporting curated disease-gene panel data. Designed for both clinical and research use, it simplifies study planning and variant interpretation through a user-friendly interface, while also offering a harmonised dataset for programmatic workflows. 
+The core model integrates over 58,000 panel-gene associations, with complete coverage of the core gene identifiers required for gene-panel linking after recovery, alongside structured disease annotations, \ac{hgnc} symbols, \ac{moi}, OMIM-linked identifiers, and supporting publications where available.
 Beyond immediate usability, PanelAppRex lays a foundation for genome-wide statistical modelling of disease risk. 
 With annotations for gene-disease relationships, the dataset provides a core building block towards rigorous estimation of the prior probability of observing  variant classifications (e.g. benign, pathogenic) under different disease \ac{moi}.
-%This helps address a persistent challenge in clinical genetics: the lack of principled priors for variant interpretation that account not only for known pathogenic variants (true positives), but also for unobserved variants and negative evidence (false negative causal pathogenic variant and true negative absence of causal variants) \cite{hannah_using_2024, zschocke_mendelian_2023}. 
 This addresses a key challenge in clinical genetics: the absence of principled priors for variant interpretation that incorporate not only known pathogenic variants (true positives), but also unobserved pathogenic variants (false negatives) and the absence of pathogenic findings (true negatives) \cite{hannah_using_2024, zschocke_mendelian_2023}.
 By integrating high-resolution allele frequencies from gnomAD \cite{karczewski2020mutational}, curated classifications from ClinVar \cite{landrum_clinvar_2018}, and structured gene-disease associations \cite{martin_panelapp_2019}, 
 PanelAppRex can enable the derivation of calibrated genome-wide priors for Bayesian models of genetic risk.
@@ -284,6 +270,8 @@ These capabilities go beyond panel lookup to support evidence-aware diagnostics.
 Probabilistic models incorporating both observed and unobserved variation can quantify uncertainty, resolve ambiguous findings, and refine variant prioritisation, scaling naturally to support complex, multi-gene disorders. 
 The dataset also provides a substrate for AI-driven approaches to variant interpretation, including probabilistic inference, reinforcement learning, and deep annotation pipelines
 \cite{jumper_highly_2021, cheng_accurate_2023}.
+
+We also included an AI-derived panel-summary layer as an example extension of the structured core resource. It provides concise panel-level context for interpretation and illustrates how PanelAppRex could support future \ac{rag}-style and other AI-assisted workflows. The manual-query benchmarking reported here evaluated only the core deterministic search over the structured dataset and did not use the optional AI summary layer.
 
 Several limitations should be acknowledged. 
 Not all known coding genes are currently linked to a disease panel; we prioritised high-confidence, traceable annotations over broad but less reliable coverage. 
@@ -294,7 +282,9 @@ For example, during benchmarking, the COVID-19 research panel frequently appeare
 While technically accurate, such panels may be less relevant to users focused on clinical  diagnosis of immunodeficiency.
 % To consider typical user expectations, we included a subjective ``best match'' choice in each case study.
 In bioinformatic workflows, these choices can be refined systematically or excluded using filters or downstream logic.
-In case study three, for example, a disease-based query returned three panels, one of which did not contain the causal gene. This is expected, as broader classifications may include non-specific panels, hindering sensitivity. However, the query was still considered 100\% successful, as the causal gene appeared in the combined result set, consistent with the recommended bioinformatic strategy of using the union of returned panels.
+In case study three, for example, a disease-based query returned three panels, one of which did not contain the causal gene. This is expected, as broader classifications may include non-specific panels, hindering sensitivity. 
+However, the query was still considered successful in this benchmark framework, because the causal gene appeared in the combined result set, consistent with the recommended bioinformatic strategy of using the union of returned panels.
+% However, the query was still considered 100\% successful, as the causal gene appeared in the combined result set, consistent with the recommended bioinformatic strategy of using the union of returned panels.
 We note that a pre-compiled offline database is useful for secured computing environments but it misses out on the benefits of well maintained primary source APIs: for rapidly changing resources, direct API access can provide more frequent updates than an offline snapshot, which we cannot match in the same way.
 
 PanelAppRex bridges expert-curated panel knowledge with genome-scale statistical reasoning. 

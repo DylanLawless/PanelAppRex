@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.9)  2 MAR 2026 18:39
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.9)  3 MAR 2026 13:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1291,20 +1291,18 @@ Package acronym Info: Label `acro:omim' newly defined as it shall be overridden
 although it is yet undefined on input line 166.
 Package acronym Info: Label `acro:jaci' newly defined as it shall be overridden
 
-although it is yet undefined on input line 176.
+although it is yet undefined on input line 172.
 
 
 [5]
-Package acronym Info: Label `acro:ai' newly defined as it shall be overridden
-although it is yet undefined on input line 183.
 Package acronym Info: Label `acro:csv' newly defined as it shall be overridden
-although it is yet undefined on input line 195.
+although it is yet undefined on input line 189.
 Package acronym Info: Label `acro:pdf' newly defined as it shall be overridden
-although it is yet undefined on input line 195.
+although it is yet undefined on input line 189.
 Package acronym Info: Label `acro:pid' newly defined as it shall be overridden
-although it is yet undefined on input line 202.
+although it is yet undefined on input line 196.
 Package acronym Info: Label `acro:iei' newly defined as it shall be overridden
-although it is yet undefined on input line 202.
+although it is yet undefined on input line 196.
 
 
 [6]
@@ -1313,15 +1311,15 @@ File: ./images/figure_1.pdf Graphic file (type pdf)
 
 
 [7]
-Overfull \hbox (15.48708pt too wide) in paragraph at lines 262--262
+Overfull \hbox (15.48708pt too wide) in paragraph at lines 256--256
 []\TU/lmr/bx/n/14.4 Structured inheritance annotations reveal overlapping gene-
 
  []
 
 Package acronym Info: Label `acro:ar' newly defined as it shall be overridden
-although it is yet undefined on input line 266.
+although it is yet undefined on input line 260.
 Package acronym Info: Label `acro:ad' newly defined as it shall be overridden
-although it is yet undefined on input line 266.
+although it is yet undefined on input line 260.
 
 
 [8]
@@ -1348,7 +1346,7 @@ File: ./images/validation_counts.pdf Graphic file (type pdf)
 File: ./images/plot_patch2_annotated_example.pdf Graphic file (type pdf)
 <use ./images/plot_patch2_annotated_example.pdf>
 Package acronym Info: Label `acro:iem' newly defined as it shall be overridden
-although it is yet undefined on input line 424.
+although it is yet undefined on input line 420.
 File: ./images/plot_patch_uniq_gene_moi_summary.pdf Graphic file (type pdf)
 <use ./images/plot_patch_uniq_gene_moi_summary.pdf>
 
@@ -1363,7 +1361,7 @@ File: ./images/plot_patch_uniq_gene_moi_summary.pdf Graphic file (type pdf)
 
 [20]
 Package acronym Info: Label `acro:api' newly defined as it shall be overridden
-although it is yet undefined on input line 451.
+although it is yet undefined on input line 447.
 File: ./images/benchmark_cold_start_manuscript_figure_all_runs.pdf Graphic file
  (type pdf)
 <use ./images/benchmark_cold_start_manuscript_figure_all_runs.pdf>
@@ -1387,12 +1385,12 @@ changed.
 (rerunfilecheck)             Checksum: E7D8C4BE592CDD9BCF3B3AAF0BB73D47;3148.
  ) 
 Here is how much of TeX's memory you used:
- 36974 strings out of 473832
- 825442 string characters out of 5729482
+ 36970 strings out of 473832
+ 825395 string characters out of 5729482
  1325373 words of memory out of 5000000
- 59456 multiletter control sequences out of 15000+600000
+ 59452 multiletter control sequences out of 15000+600000
  568473 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 121i,6n,124p,1532b,1129s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 121i,6n,124p,1532b,1127s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on panelapprex2025lawless_appnote.pdf (22 pages).
