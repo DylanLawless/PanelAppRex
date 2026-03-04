@@ -1,7 +1,7 @@
-\input{head.tex}
+	\input{head.tex}
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL ./submission_version/panelapprex2025lawless_appnote_v0.tex   Mon Mar  2 12:12:10 2026
-%DIF ADD ./panelapprex2025lawless_appnote.tex                         Mon Mar  2 12:12:10 2026
+%DIF ADD ./panelapprex2025lawless_appnote.tex                         Wed Mar  4 10:01:57 2026
 \usepackage[printonlyused,withpage,nohyperlinks]{acronym}
 %DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
 %DIF UNDERLINE PREAMBLE %DIF PREAMBLE
@@ -51,61 +51,70 @@
 \newcommand{\GHI}{2}
 \newcommand{\LEEDS}{3}
 \newcommand{\IPSNEO}{4}
-%\newcommand{\KISPIIMM}{3}
-% \newcommand{\METAB}{4}
+%DIF < \newcommand{\KISPIIMM}{3}
+%DIF <  \newcommand{\METAB}{4}
 
 \author[\QUANT]{Quant Group} 
 \author[\GHI]{Simon Boutry}% \textsuperscript{†}}
 \author[\GHI]{Ali Saadat}% \textsuperscript{†}} \textsuperscript{†}}
-%\author[\METAB]{D. Sean Froese}
+%DIF < \author[\METAB]{D. Sean Froese}
 \author[\LEEDS]{Sinisa Savic}% orcid.org/0000-0001-7910-0554
 \author[\IPSNEO]{Luregn J. Schlapbach}
 \author[\GHI]{Jacques Fellay}
 \author[\IPSNEO]{Dylan Lawless \thanks{Addresses for correspondence: \href{mailto:Dylan.Lawless@kispi.uzh.ch}{Dylan.Lawless@kispi.uzh.ch}}
 }
 
-%\author[\KISPIIMM]{Maarja Soomann}% \textsuperscript{†}} \textsuperscript{†}}
-%\author[\KISPIIMM]{Johannes Trück}
+%DIF < \author[\KISPIIMM]{Maarja Soomann}% \textsuperscript{†}} \textsuperscript{†}}
+%DIF < \author[\KISPIIMM]{Johannes Trück}
 \affil[\QUANT]{The quantitative omic epidemiology group.} 
 \affil[\GHI]{Global Health Institute, School of Life Sciences, École Polytechnique Fédérale de Lausanne, Switzerland.}
 \affil[\LEEDS]{Leeds Institute of Rheumatic and Musculoskeletal Medicine, University of Leeds, Leeds, UK.}
 \affil[\IPSNEO]{Department of Intensive Care and Neonatology, University Children's Hospital Zurich, University of Zurich, Zurich, Switzerland.}
 
-% \affil[\METAB]{Division of Metabolism and Children’s Research Center, University Children’s Hospital Zürich, University of Zurich, Zurich, Switzerland.}
+%DIF <  \affil[\METAB]{Division of Metabolism and Children’s Research Center, University Children’s Hospital Zürich, University of Zurich, Zurich, Switzerland.}
+\DIFdelbegin %DIFDELCMD < 
 
+%DIFDELCMD < %%%
+%DIF < \affil[\KISPIIMM]{Division of Immunology and the Children’s Research Center, University Children’s Hospital Zurich, University of Zurich, Zurich, Switzerland.}
+%DIFDELCMD < 
 
-
-%\affil[\KISPIIMM]{Division of Immunology and the Children’s Research Center, University Children’s Hospital Zurich, University of Zurich, Zurich, Switzerland.}
-
-\maketitle
+%DIFDELCMD < %%%
+\DIFdelend \maketitle
 \justify
 
-%  Word count: ~2560
+%DIF <   Word count: ~2560
+\DIFdelbegin %DIFDELCMD < 
 
-\clearpage
+%DIFDELCMD < %%%
+\DIFdelend \clearpage
 \begin{abstract}
-% \noindent \textbf{Purpose:}\\
+%DIF <  \noindent \textbf{Purpose:}\\
 \noindent \textbf{Motivation:}\\
 Gene panel data are essential for variant interpretation and genomic diagnostics, but existing resources are fragmented, inconsistently annotated, and not easily accessible for programmatic use. 
-%\vspace{1em}
-%\noindent \textbf{Methods:}\\
+%DIF < \vspace{1em}
+%DIF < \noindent \textbf{Methods:}\\
 We developed PanelAppRex, a harmonised dataset and interactive search tool that integrates over 58,000 curated gene-disease panel associations\DIFdelbegin \DIFdel{, including NHS-approved diagnostic panels}\DIFdelend . It supports natural language-style queries by gene, phenotype, disease group, and mode of inheritance (MOI), with results returned in machine-readable export formats. 
 
 \vspace{1em}
-\noindent \textbf{Results:}\\
-In benchmarked case studies of immune disease diagnostics, the system achieved 100\% accuracy in identifying the most relevant gene panel. The underlying dataset includes standardised gene identifiers, disease annotations, MOI, and literature support, enabling seamless integration into bioinformatic pipelines. 
-%\vspace{1em}
-%\noindent \textbf{Conclusion:}\\
-% PanelAppRex aids genetic diagnosis and establishes a structured foundation for modelling genome-wide diagnostic priors for supporting evidence-aware variant interpretation.
+\DIFaddbegin 
+
+\DIFaddend \noindent \textbf{Results:}\\
+\DIFdelbegin \DIFdel{In benchmarked case studies of immune disease diagnostics, the system achieved 100\% accuracy in identifying the most relevant gene panel. The underlying }\DIFdelend \DIFaddbegin \DIFadd{The resulting }\DIFaddend dataset includes standardised gene identifiers, disease annotations, MOI, and literature support, enabling seamless integration into bioinformatic pipelines. 
+%DIF < \vspace{1em}
+%DIF < \noindent \textbf{Conclusion:}\\
+%DIF <  PanelAppRex aids genetic diagnosis and establishes a structured foundation for modelling genome-wide diagnostic priors for supporting evidence-aware variant interpretation.
+\DIFaddbegin \DIFadd{We benchmarked fifteen case studies spanning immunology, neurology, and additional disease areas. Under the recommended usage, in which the union of returned panels is considered, the causal gene was recovered in every case. Across all returned panels, the causal gene was present in 85.6\% of panels. For manual interface interpretation, the causal gene was present in the user-selected best-fit panel(s) in all fifteen benchmarked cases.
+}\DIFaddend 
 
 \vspace{1em}
-\noindent \textbf{Availability:} The platform data is openly available at  PanelAppRex base [Data set], Zenodo \url{https://doi.org/10.5281/zenodo.15736689}, with
+\DIFaddbegin 
+
+\DIFaddend \noindent \textbf{Availability:} The platform data is openly available at  PanelAppRex base [Data set], Zenodo \url{https://doi.org/10.5281/zenodo.15736689}, with
 source code at \url{https://github.com/DylanLawless/PanelAppRex},
 and demonstration page at \DIFdelbegin %DIFDELCMD < \url{https://DylanLawless.github.io/panelapprex.github.io/landing_page.html}%%%
 \DIFdel{. 
 PanelAppRex is available under the MIT licence. 
 }\DIFdelend \DIFaddbegin \url{https://panelapprex.github.io/landing_page}\DIFadd{. 
-%DIF >  PanelAppRex is available under the MIT licence. 
 }\DIFaddend The dataset is maintained for a minimum of two years following publication.
 \end{abstract}
 \clearpage
@@ -149,10 +158,10 @@ Despite their utility, these panel datasets are distributed across multiple plat
 Manual selection, interpretation, and cross-referencing of gene panels remain labour intensive, especially when integrating with other variant-level annotations from genomic resources. 
 
 Accurate causal variant interpretation requires consistent integration of structured annotations from key resources such as \ac{ge}’s PanelApp, ClinVar, UniProt, and Ensembl \cite{martin_panelapp_2019, landrum_clinvar_2018, the_uniprot_consortium_uniprot_2025, dyer_ensembl_2025}. 
-To address this, we developed PanelAppRex, a tool that automates panel aggregation and prepares a machine-readable dataset with complete coverage of core gene-level fields, including gene identifiers, inheritance modes, disease terms, and supporting evidence. 
+To address this, we developed PanelAppRex, a \DIFdelbegin \DIFdel{tool that automates }\DIFdelend panel aggregation and \DIFdelbegin \DIFdel{prepares a }\DIFdelend machine-readable dataset with \DIFdelbegin \DIFdel{complete coverage of core gene-level fields, including gene identifiers , }\DIFdelend \DIFaddbegin \DIFadd{core gene identifiers required for gene-panel linking, together with structured annotations including }\DIFaddend inheritance modes, disease terms, and supporting evidence \DIFaddbegin \DIFadd{where available}\DIFaddend .
 The dataset is suitable for integration into AI-based workflows and downstream variant interpretation pipelines. 
 In parallel, PanelAppRex provides a natural language-style search interface that streamlines discovery by supporting queries based on gene names, phenotypes, disease groups, and other key attributes. 
-This functionality is enhanced by evidence-based \ac{rag}, allowing users to explore curated gene panel information efficiently. 
+\DIFdelbegin \DIFdel{This functionality is enhanced by evidence-based }\DIFdelend \DIFaddbegin \DIFadd{We further demonstrate how the structured core resource can be extended with an AI-derived summary layer for interpretation and downstream }\DIFaddend \ac{rag}\DIFdelbegin \DIFdel{, allowing users to explore curated gene panel information efficiently}\DIFdelend \DIFaddbegin \DIFadd{-style workflows}\DIFaddend .
 
 \section{Methods}
 
@@ -166,7 +175,7 @@ The PanelAppRex core model contained 58,592 entries consisting of 52 sets of ann
 }\DIFdelend Data from gnomAD v4 comprised 807,162 individuals, including 730,947 exomes and 76,215 genomes \cite{karczewski2020mutational}. This dataset provided 786,500,648 single nucleotide variants and 122,583,462 indels, with variant type counts of 9,643,254 synonymous, 16,412,219 missense, 726,924 nonsense, 1,186,588 frameshift and 542,514 canonical splice site variants. ClinVar data were obtained from the variant summary dataset 
 %(this version: 16 March 2025)
  available from the NCBI FTP site, and included 6,845,091 entries, which were processed into 91,319 gene classification groups and a total of 38,983 gene classifications 
-% for example, the gene \textit{A1BG} contained four variants classified as likely benign and 102 total entries 
+%DIF <  for example, the gene \textit{A1BG} contained four variants classified as likely benign and 102 total entries 
 \cite{landrum_clinvar_2018}. 
 Data from Ensembl was sourced for validation of identifiers such as \DIFdelbegin %DIFDELCMD < \ac{omim} %%%
 \DIFdelend gene IDs and \ac{hgnc} symbols
@@ -181,12 +190,14 @@ Data from Ensembl was sourced for validation of identifiers such as \DIFdelbegin
 \noindent
 PanelAppRex was implemented in R and integrated data from the sources listed above.
 \DIFdelbegin \DIFdel{It performed credentialed access to APIs to retrieve all approved panels, merging them into }\DIFdelend \DIFaddbegin \DIFadd{Reference data was merged for comparison with the core model in }\DIFaddend two formats: a simplified version (Panel ID, Gene) and a complex version including metadata such as confidence level, \ac{moi}, and disease information, and several metadata summary statistics. In addition, the tool incorporated a search module to execute complex user queries. The search functionality supports queries by gene names, phenotypes, disease names, disease groups, panel names, genomic locations and other identifiers. 
-\ac{rag} was used to improve the natural queries in hidden states based on evidence about the disease and gene function by supplementing the data with additional sources including ClinVar, UniProt, etc. 
+\DIFdelbegin %DIFDELCMD < \ac{rag} %%%
+\DIFdel{was used to improve the natural queries in hidden states based on evidence about the disease and gene function by supplementing the data with additional sources including ClinVar, UniProt, etc. 
+}\DIFdelend 
 
 \subsection{Usage}
 \noindent
 We provide both a pre-compiled user interface and an analysis-ready dataset.
-On a desktop browser, the user interface allows for queries via the integrated search bar in \ac{html}, where a JavaScript function splits the query into individual terms and progressively filters all entries - retaining only those that match all active terms while ignoring unmatched ones. This enables users to perform complex, partial matching queries (e.g. ``paediatric \textit{RAG1} primary immunodeficiency skin disorder'') to rapidly identify the panel most closely associated with their hypothesis on primary immunodeficiency and paediatric skin disorders.
+On a desktop browser, the user interface allows for queries via the integrated search bar in \ac{html}, where a JavaScript function splits the query into individual terms and progressively filters all entries\DIFdelbegin \DIFdel{- }\DIFdelend \DIFaddbegin \DIFadd{, }\DIFaddend retaining only those that match all active terms while ignoring unmatched ones. This enables users to perform complex, partial matching queries (e.g. ``paediatric \textit{RAG1} primary immunodeficiency skin disorder'') to rapidly identify the panel most closely associated with their hypothesis on primary immunodeficiency and paediatric skin disorders.
 After querying and selecting a panel, the complete underlying data is returned.
 
 The analysis-ready dataset contains the same dataset in multiple file formats.
@@ -222,50 +233,52 @@ This validation step was applied to the full integrated PanelAppRex dataset.
 
 \subsection{Benchmarking for manual queries}
 \noindent
-%DIF > To mimic a clinician who is trying to diagnose a new disease such as \ac{pid}, we systematically selected genetic diagnosis case studies from the current online catalogue from the \ac{jaci}, using the first five results  \cite{arruda_genetic_2015,  mcaleer_severe_2015, verhoeven_hematopoietic_2022, magerus-chatinet_autoimmune_2013, sharfe_fatal_2014}.  Although the method presented here is generalisable to genetic diagnosis across disease areas, we chose to validate it using \ac{pid} case studies, as this is the primary focus of our own research.
-%DIF > 
-%DIF >  The clinical background from each of these studies was used to construct keyword queries from patient features, simulating a naïve starting position for a clinician. We then tested whether our PanelAppRex tool could successfully retrieve panels that included the final causal gene reported in each case study.  The sources, queries, and results are shown in \textbf{Table \ref{tab:benchmark}}. 
-\DIFaddbegin 
-
-\DIFaddend To mimic a clinician who is trying to diagnose a \DIFdelbegin \DIFdel{new diseasesuch as }%DIFDELCMD < \ac{pid}%%%
-\DIFdelend \DIFaddbegin \DIFadd{genetic disease}\DIFaddend , we systematically selected genetic diagnosis case \DIFdelbegin \DIFdel{studies from the current online catalogue from the }\DIFdelend \DIFaddbegin \DIFadd{reports that used exome or genome sequencing. We chose the first five eligible case reports from each of three sources: }\DIFaddend \ac{jaci}, \DIFdelbegin \DIFdel{using the first five results  \mbox{%DIFAUXCMD
+To mimic a clinician \DIFdelbegin \DIFdel{who is trying }\DIFdelend \DIFaddbegin \DIFadd{attempting }\DIFaddend to diagnose a \DIFdelbegin \DIFdel{new diseasesuch as }%DIFDELCMD < \ac{pid}%%%
+\DIFdelend \DIFaddbegin \DIFadd{genetic disease}\DIFaddend , we systematically selected \DIFdelbegin \DIFdel{genetic diagnosis case studies from the current online catalogue from the }\DIFdelend \DIFaddbegin \DIFadd{published genetic case reports. We chose the first five eligible case reports from each of three sources: }\DIFaddend \ac{jaci}, \DIFdelbegin \DIFdel{using the first five results  \mbox{%DIFAUXCMD
 \cite{arruda_genetic_2015, 
 mcaleer_severe_2015,
 verhoeven_hematopoietic_2022,
 magerus-chatinet_autoimmune_2013,
 sharfe_fatal_2014}}\hskip0pt%DIFAUXCMD
-.  Although the method presented here is generalisable to genetic diagnosis across disease areas, we chose to validate it using }%DIFDELCMD < \ac{pid} %%%
-\DIFdel{case studies, as this is the primary focus of our own research.
-}\DIFdelend \DIFaddbegin \DIFadd{the journal Neurology, and for random cross-disciplinary topics we used pre-defined PubMed search restricted to the last 12 months and free full text, yielding a total of 15 case studies across phenotypes.  This selection allowed us to validate the method across immunological, neurological, and other disease areas.
+. Although the method presented here is generalisable to genetic diagnosis across disease areas, we chose to validate it using }%DIFDELCMD < \ac{pid} %%%
+\DIFdel{case studies, as this is the primary focus of our own research. }\DIFdelend \DIFaddbegin \DIFadd{the journal Neurology, and a pre-defined cross-disciplinary PubMed search, yielding a total of fifteen case studies across phenotypes.
 }\DIFaddend 
 
-\DIFdelbegin \DIFdel{The clinical background from each of these studies was used to construct keyword queriesfrom patient features}\DIFdelend \DIFaddbegin \DIFadd{For each case report, we used only the clinical narrative before any genetic analysis was introduced in the original publication. We used a standardised method to select the phenotype terms from each case report and then rank by most to least importance or relevance. The ranked phenotype terms were then used a keyword queries}\DIFaddend , simulating a naïve starting position for a clinician. \DIFaddbegin \DIFadd{Search terms were added incrementally until no panels matched. }\DIFaddend We then tested whether our PanelAppRex tool could successfully retrieve panels that included the final causal gene reported in each case study. The sources, queries, and results are shown in \textbf{Table \ref{tab:benchmark}}.
+\DIFdelbegin \DIFdel{The clinical background from each of these studies was used to construct keyword queriesfrom patient features}\DIFdelend \DIFaddbegin \DIFadd{For the cross-disciplinary set, PubMed was searched using the query ``(genetic) AND (case report}[\DIFadd{Title}]\DIFadd{)'', restricted to the last twelve months and Free Full Text (accessed February 2026). We then screened the results for clinical genetic case reports using exome or genome analysis and selected the first five eligible studies. The combined set allowed us to assess the method across immunological, neurological, and additional disease areas in a small benchmark set.
+}
 
+\DIFadd{For each case report, we used only the clinical narrative presented before any genetic analysis or molecular diagnosis was introduced in the original publication. Using the same procedure across studies, phenotype terms were extracted from this pre-genetic clinical description and ranked from most to least specific or relevant. Query construction was completed before checking the PanelAppRex results. No causal gene names were added unless they appeared explicitly in the original clinical description, and no additional synonyms or aliases were introduced manually.
+}
+
+\DIFadd{For the unusually long fifth case study, which described five individual patients, we used an OpenAI o3-mini model only to standardise extraction of phenotype keywords from the pre-genetic clinical case description text. No information from the genetic results or discussion was provided to the model, and the extracted terms were then ranked using the same procedure as for the other case studies.
+}
+
+\DIFadd{The ranked phenotype terms were then used as keyword queries}\DIFaddend , simulating a naïve \DIFdelbegin \DIFdel{starting position for a clinician. We then tested whether our PanelAppRex tool could successfully retrieve panels that included the final causal gene reported in }\DIFdelend \DIFaddbegin \DIFadd{clinical starting point. Search terms were added incrementally until no panels matched. We then assessed whether PanelAppRex retrieved at least one panel containing the reported causal gene for }\DIFaddend each case study. \DIFdelbegin \DIFdel{The sources, queries, and results are shown in }\DIFdelend \DIFaddbegin \DIFadd{For manual interface use, we also recorded the user-selected best-fit panel(s). This was a judgement-based assessment intended to reflect plausible user choice, defined as the returned panel or panels considered most clinically aligned with the pre-genetic case description. Where several returned panels appeared similarly appropriate, more than one panel could be recorded. The full list of included studies, source links, input queries, returned panels, user-selected best-fit panel choices, and benchmark outputs is provided in }\DIFaddend \textbf{Table\DIFaddbegin \DIFadd{~}\DIFaddend \ref{tab:benchmark}}. \DIFaddbegin \DIFadd{Benchmarking analyses were performed on the core dataset; the AI-derived demonstration ``Info'' field described below was not used in this evaluation.
+}\DIFaddend 
 
 \DIFaddbegin \subsection{\DIFadd{Applications in AI-based RAG}}
 \noindent
-\DIFadd{To demonstrate use as part of }\ac{ai}\DIFadd{-based }\ac{rag}\DIFadd{, we derived mechanistic text for each gene from UniProtKB human proteome  and merged these summaries with PanelAppRex genes and panel metadata (panel name, disease group, mode of inheritance, and reported phenotypes) to create a single context dataset for each panel.
-We then applied a deterministic GPT-based model (gpt-4.1-mini, OpenAI; temperature 0.1) with a fixed prompt that requested a concise, clinician-facing description of shared mechanisms and phenotypes for the gene set. Across all processed panels, this involved approximately 7 million tokens and 2 million output tokens, corresponding to an input to output ratio of 0.261. The model produced three structured outputs per panel (a detailed analysis section, an overview paragraph, and 3 to 6 bullet points), which we stored together with panel identifiers as a high-level index that can be queried in downstream }\ac{rag} \DIFadd{workflows.
+\DIFadd{To demonstrate how the core PanelAppRex dataset can be expanded for AI-assisted interpretation, we generated an optional panel-level summary layer suitable for downstream }\ac{rag}\DIFadd{-style workflows. For each gene, we retrieved mechanistic text from the UniProtKB human proteome and merged these summaries with PanelAppRex panel membership and metadata, including panel name, disease group, }\ac{moi}\DIFadd{, and reported phenotypes, to create a context dataset for each panel. We then applied a GPT-based model (gpt-4.1-mini, OpenAI; temperature 0.1) with a fixed prompt requesting a concise clinician-facing description of shared mechanisms and phenotypes across the panel gene set. Across all processed panels, this involved approximately 7 million input tokens and 2 million output tokens. The model produced three structured outputs per panel, consisting of a detailed analysis section, an overview paragraph, and 3 to 6 bullet points. These outputs were stored together with panel identifiers and exposed in the demonstration interface as an experimental panel ``Info'' field. This AI-derived summary layer was not used for the panel-ranking benchmarks reported in this study.
 %DIF >  batch 1 = (104,266/4,369,000) = 0.239
 %DIF >  batch 2 = (77,565/2,586,000) = 0.299
 %DIF >  total run = (1,818,316/6,955,000) = 0.261 
 }
 
-
 \DIFaddend \section{Results}
 \noindent
 \subsection{Core dataset}
-PanelAppRex successfully aggregated data, currently from 451 panels and several genomics databases, to offer a database and user-friendly search functionality (\textbf{Figure \ref{fig:performance}}).
+PanelAppRex successfully aggregated data \DIFdelbegin \DIFdel{, currently from }\DIFdelend \DIFaddbegin \DIFadd{for }\DIFaddend 451 panels \DIFdelbegin \DIFdel{and several genomics databases, }\DIFdelend to offer a database and user-friendly search functionality (\textbf{Figure \ref{fig:performance}}).
 Users can retrieve results filtered by gene names, phenotypes, disease groups and other criteria. 
-The system returned a table view with panel details and provided options for exporting results in \ac{csv}, Excel, or \ac{pdf}.
+The \DIFdelbegin \DIFdel{system returned }\DIFdelend \DIFaddbegin \DIFadd{browser-based user interface system also provides }\DIFaddend a table view with panel details and provided options for exporting results in \ac{csv}, Excel, or \ac{pdf} \DIFaddbegin \DIFadd{format}\DIFaddend .
 Bioinformatic uses may include generating virtual panels, constructing prior odds, or supporting formal reporting in qualifying variant protocols.
 Summary statistics are reported in 
-\textbf{Figure \ref{fig:summary_stats}}. The majority of genes were cited with high confidence. 
-Panel reuse varied across genes, with some like \textit{RAG1} appearing in up to 7 distinct panels 
+\textbf{Figure \ref{fig:summary_stats}}. 
+\DIFdelbegin \DIFdel{The majority of genes were cited with high confidence. 
+}\DIFdelend Panel reuse varied across genes, with some like \textit{RAG1} appearing in up to 7 distinct panels 
 (\textbf{Figure \ref{fig:summary_stats} B}). 
 The majority of panels had fewer than 1000 genes.
-For example, panel ID 398 contains 572 genes associated with \ac{pid}, also referred to as \ac{iei}, while panel ID 1220 includes 1675 genes linked to \ac{iei} and unexplained death in infancy 
-(\textbf{Figure \ref{fig:summary_stats} C}).
+For example, \DIFdelbegin \DIFdel{panel ID 398 contains 572 genes associated with }\DIFdelend \DIFaddbegin \DIFadd{the panel related to }\DIFaddend \ac{pid}, also referred to as \ac{iei}, \DIFdelbegin \DIFdel{while panel ID 1220 includes 1675 genes }\DIFdelend \DIFaddbegin \DIFadd{contains 572 genes, while the panel }\DIFaddend linked to \ac{iei} and unexplained death in infancy \DIFaddbegin \DIFadd{includes 1675 genes
+}\DIFaddend (\textbf{Figure \ref{fig:summary_stats} C}).
 
 \begin{figure}[ht]
     \centering
@@ -273,43 +286,28 @@ For example, panel ID 398 contains 572 genes associated with \ac{pid}, also refe
 %    \includegraphics[width=0.49\textwidth]{screenshot_2.png}    
 %    \includegraphics[width=0.85\textwidth]{benchmark.pdf}    
     \includegraphics[width=0.99\textwidth]{figure_1.pdf}    
-\caption{\textbf{PanelAppRex interface displaying search results for a complex query.} Top: screenshots showing the search interface, with the left panel displaying the full database before filtering and the right panel showing detailed results for a selected panel. Bottom: benchmark metrics are presented as follows: (A) for each of the \DIFdelbeginFL \DIFdelFL{5 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{fifteen }\DIFaddendFL case studies, the total number of panels returned \DIFaddbeginFL \DIFaddFL{after query input}\DIFaddendFL , the number of panels that included the causal gene, and the single best panel selected (always 1 by default); (B) the percentage of all returned panels that included the true causal gene; (C) the percentage of the single best panels that contained the true causal gene.}
+\caption{\textbf{PanelAppRex interface displaying search results for a complex query.} Top: screenshots showing the search interface, with the left panel displaying the full database before filtering and the right panel showing detailed results for a selected panel. Bottom: benchmark metrics are presented as follows: (A) for each of the \DIFdelbeginFL \DIFdelFL{5 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{fifteen }\DIFaddendFL case studies, the total number of panels returned \DIFaddbeginFL \DIFaddFL{after query input}\DIFaddendFL , the number of panels that included the causal gene, and the \DIFdelbeginFL \DIFdelFL{single best }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{user-selected best-fit }\DIFaddendFL panel\DIFdelbeginFL \DIFdelFL{selected }\DIFdelendFL (\DIFdelbeginFL \DIFdelFL{always 1 by default}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{s}\DIFaddendFL ); (B) the percentage of all returned panels that included the true causal gene; (C) the percentage of \DIFdelbeginFL \DIFdelFL{the single best panels }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{user-selected best-fit panel(s) }\DIFaddendFL that contained the true causal gene.}
     \label{fig:performance}
 \end{figure}
+
 
 % \FloatBarrier
 \subsection{Validation \DIFdelbegin \DIFdel{shows }\DIFdelend \DIFaddbegin \DIFadd{of }\DIFaddend completeness in the core dataset}
 \noindent
 \DIFdelbegin \DIFdel{The raw dataset exhibited near-complete coverage in most fields after merging the core dataset . 
-Specifically, 99.9915\% of gene entries had }%DIFDELCMD < \ac{hgnc} %%%
-\DIFdel{symbols %DIF <  (58587/58592)*100
+Specifically, 99.9915\% of gene entrieshad }\DIFdelend \DIFaddbegin \DIFadd{To assess whether the dataset was analysis-ready, we audited completeness of key annotation fields required for joining, filtering, and interpretation (}\textbf{\DIFadd{Figure \ref{fig:validation}}}\DIFadd{). 
+We report entry-level completeness across all gene-disease panel entries. For }\DIFaddend \ac{hgnc} \DIFdelbegin \DIFdel{symbols %DIF <  (58587/58592)*100
 and 99.2315\% had Ensembl gene IDs. %DIF <  (57844/58292)*100
-All entries included at least one publication, a disease panel name, a }\DIFdelend %DIF > The raw dataset exhibited near-complete coverage in most fields after merging the core dataset. 
-%DIF > Specifically, 99.9915\% of gene entries had \ac{hgnc} symbols % (58587/58592)*100 and 99.2315\% had Ensembl gene IDs. % (57844/58292)*100
-%DIF >  All entries included at least one publication, a disease panel name, a \ac{moi}, and an \ac{omim} gene ID (100\% each).  After recovery of missing identifiers, completeness reached 100\% across all these core fields. This validated dataset ensures that users can confidently build on a consistent foundation, using standardised and stable identifiers to link or enrich the core data with external resources (\textbf{Figure \ref{fig:validation}}).
-\DIFaddbegin \DIFadd{To assess whether the dataset was analysis-ready, we audited completeness of key annotation fields required for joining, filtering, and interpretation (}\textbf{\DIFadd{Figure \ref{fig:validation}}}\DIFadd{). For publications, disease panel names, }\DIFaddend \ac{moi}, and \DIFdelbegin \DIFdel{an }%DIFDELCMD < \ac{omim} %%%
-\DIFdel{gene ID (100\% each). After }\DIFdelend \DIFaddbegin \DIFadd{OMIM gene identifiers, we report entry-level completeness across all gene-panel entries. For HGNC and Ensembl gene identifiers, we used automated }\DIFaddend recovery of missing \DIFdelbegin \DIFdel{identifiers, completeness reached }\DIFdelend \DIFaddbegin \DIFadd{IDs from Ensembl as it is not a subjective decision. After recovery, the core identifiers required for gene-panel linking were present at }\DIFaddend 100\% \DIFdelbegin \DIFdel{across all these core fields. This validated dataset ensures that users can confidently build on a consistent foundation, using standardised and stable identifiers to link or enrich the core data with external resources }\DIFdelend \DIFaddbegin \DIFadd{completeness. A small number of entries are incomplete for Ensembl ID such as }\textit{\DIFadd{HPE1}} \DIFadd{because it is a phenotype identifier rather than gene name, and is thus not present on HGNC. Some secondary annotation fields remained incomplete such as }\ac{moi}\DIFadd{, and we did not attempt to fill them in the core dataset because this would require non-primary-source decisions which are better reserved for independent downstream implementations. The validated dataset therefore provides a stable and analysis-ready identifier layer for downstream integration }\DIFaddend (\textbf{Figure \ref{fig:validation}}).
+All entries included at least one publication, a disease panel name, a }\DIFdelend \DIFaddbegin \DIFadd{and Ensembl gene identifiers, we additionally used automated recovery of missing IDs from Ensembl because these identifier mappings are not subjective. 
+After recovery, the core identifiers required for gene-panel linking were complete for all valid gene entries. A small number of panel entries do not have gene-specific fields (i.e. Ensembl gene ID) because they are not genes. For example, HPE1 is a phenotype identifier rather than a gene symbol and therefore is not represented in }\ac{hgnc} \DIFadd{or Ensembl gene records.
+Some secondary annotation fields remained incomplete, including }\DIFaddend \ac{moi}\DIFdelbegin \DIFdel{, and an }%DIFDELCMD < \ac{omim} %%%
+\DIFdel{gene ID (100\% each).
+After recovery of missing identifiers, completeness reached 100\% across all these core fields. This validated dataset ensures that users can confidently build on a consistent foundation, using standardised and stable identifiers to link or enrich the core data with external resources (}\textbf{\DIFdel{Figure \ref{fig:validation}}}%DIFAUXCMD
+\DIFdel{)}\DIFdelend \DIFaddbegin \DIFadd{, and we did not attempt to fill these in the core dataset because doing so would require non-primary-source decisions better reserved for downstream implementations. The validated dataset therefore provides a stable and analysis-ready identifier layer for downstream integration while preserving the original availability of secondary annotations}\DIFaddend .
 
 \subsection{Benchmarking for manual queries confirms accurate retrieval of causal disease genes}
 \noindent
-%DIF > To evaluate the practical utility of our system on a desktop browser, we applied the benchmarking approach described in methods using five published case studies focused on immunology, specifically \ac{pid}, five cases focused on neurological disease, and lastly five randomly assigned topics.
-%DIF > % \cite{arruda_genetic_2015, mcaleer_severe_2015, verhoeven_hematopoietic_2022, magerus-chatinet_autoimmune_2013, sharfe_fatal_2014}. % results
-%DIF > The tool's query process retrieved gene panels using natural language-style input. 
-%DIF > For example, in the first case study on Hereditary Angioedema, the authors reported suspecting that the condition was linked to ``\textit{SERPING1} Factor XII and edema" which we used as the query terms. 
-%DIF > Although the true causal gene term \textit{F12} (using its official \ac{hgnc} name) was not mentioned, the inclusion of the alias name and/or related disease terms enabled the system to correctly retrieve the panel containing \textit{F12} based on the hidden search knowledge.
-%DIF > 
-%DIF > While an expert might readily recognise ``Factor XII'' as an alias name for \textit{F12}, this correct query result demonstrates that the system can make such connections automatically, based on its extensive metadata, supporting users with varying levels of genetic expertise.
-%DIF > Notably, for all five case studies, all correct causal genes were successfully retrieved by the system despite never appearing explicitly in any of our submitted query terms (\textbf{Table \ref{tab:benchmark}}).
-%DIF > 
-%DIF > In our evaluation, PanelAppRex returned panels in which the causal gene was present in 
-%DIF >  93\% - immunology only in version 1
-%DIF > 85.6\% of all returned panels, with the subjective user-selected ``best panel'' achieving a perfect accuracy of 100\% 
-%DIF > (\textbf{Figure \ref{fig:performance}}).  These metrics were derived by comparing the causal gene identified from the case study abstracts to the panels returned by our query, and by applying a subjective relevance measure to mimic intuitive panel selection - acknowledging that certain panels, such as the established \ac{pid} gene panel, are inherently more reliable than broader, less specific panels  (\textbf{Table \ref{tab:benchmark}}).
-%DIF > 
-%DIF > Overall, the results confirm that our approach accurately identifies the most relevant panels and effectively supports clinical decision-making in complex diagnostic scenarios.
-\DIFaddbegin 
-
-\DIFaddend To evaluate the practical utility of our system on a desktop browser, we applied the benchmarking approach \DIFdelbegin \DIFdel{described in methods using five published case studies of }\DIFdelend \DIFaddbegin \DIFadd{to fifteen published genetic diagnosis case studies that used exome or genome sequencing. These comprised five immunology-focused }\DIFaddend \ac{pid} \DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+To evaluate the practical utility of our system on a desktop browser, we applied the benchmarking approach \DIFdelbegin \DIFdel{described in methods using five published case studies of }\DIFdelend \DIFaddbegin \DIFadd{to fifteen published genetic diagnosis case studies that used exome or genome sequencing. These comprised five immunology-focused }\DIFaddend \ac{pid} \DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
 \cite{arruda_genetic_2015, 
 mcaleer_severe_2015,
 verhoeven_hematopoietic_2022,
@@ -320,28 +318,29 @@ sharfe_fatal_2014}}\hskip0pt%DIFAUXCMD
 The tool's }\DIFdelend \DIFaddbegin \DIFadd{case reports, five neurology-focused case reports, and five randomly selected domains, as described in Methods. 
 The }\DIFaddend query process retrieved gene panels using natural language-style input. 
 For example, in the first case study on Hereditary Angioedema, the authors reported suspecting that the condition was linked to ``\textit{SERPING1} \DIFdelbegin \DIFdel{, Factor XII , }\DIFdelend \DIFaddbegin \DIFadd{Factor XII }\DIFaddend and edema" which we used as the query terms. 
-Although the true causal gene term \textit{F12} (using its official \ac{hgnc} name) was not mentioned, the inclusion of the alias name and/or related disease terms enabled the system to correctly retrieve the panel containing \textit{F12} based on the hidden search knowledge. 
+Although the true causal gene term \textit{F12} (using its official \ac{hgnc} name) was not mentioned, the inclusion of the alias name and \DIFdelbegin \DIFdel{/or }\DIFdelend related disease terms enabled the system to \DIFdelbegin \DIFdel{correctly }\DIFdelend retrieve the panel containing \textit{F12} \DIFdelbegin \DIFdel{based on the hidden search knowledge}\DIFdelend \DIFaddbegin \DIFadd{through indexed metadata}\DIFaddend .
 
-While an expert might readily recognise ``Factor XII'' as an alias name for \textit{F12}, this correct query result demonstrates that the system can make such connections automatically, based on its extensive metadata, supporting users with varying levels of genetic expertise. \DIFaddbegin \DIFadd{Most of the case report queries relied purely on phenotypic descriptions without any candidate genes.
+While an expert might readily recognise ``Factor XII'' as an alias name for \textit{F12}, this correct query result demonstrates that the system can make such connections automatically, based on its extensive metadata, supporting users with varying levels of genetic expertise. \DIFdelbegin \DIFdel{Notably, for all five case studies, all correct causal genes were successfully retrieved by the system despite never }\DIFdelend \DIFaddbegin \DIFadd{Most of the case report queries relied purely on phenotypic descriptions without any candidate genes.
 }
 
-\DIFaddend Notably, for all \DIFdelbegin \DIFdel{five }\DIFdelend case studies, all correct causal genes were successfully retrieved by the system despite never appearing explicitly in any of our submitted query terms (\textbf{Table \ref{tab:benchmark}}).
-\DIFdelbegin %DIFDELCMD < 
+\DIFadd{Across the fifteen benchmarked case studies, the system retrieved at least one panel containing the reported causal gene, despite these genes not }\DIFaddend appearing explicitly in \DIFdelbegin \DIFdel{any of }\DIFdelend our submitted query terms (\textbf{Table \ref{tab:benchmark}}).
 
-%DIFDELCMD < %%%
-\DIFdelend In our evaluation, PanelAppRex returned panels in which the causal gene was present in 
-\DIFdelbegin \DIFdel{93}\DIFdelend %DIF >  93\% - immunology only in version 1
-\DIFaddbegin \DIFadd{85.6}\DIFaddend \% of all returned panels, with the subjective user-selected ``best panel'' achieving a perfect accuracy of 100\% 
-(\textbf{Figure \ref{fig:performance}}).
-These metrics were derived by comparing the causal gene identified from the case study abstracts to the panels returned by our query, and by applying a subjective relevance measure to mimic intuitive panel selection - acknowledging that certain panels, such as the established \ac{pid} gene panel, are inherently more reliable than broader, less specific panels  \DIFaddbegin \DIFadd{(}\textbf{\DIFadd{Table \ref{tab:benchmark}}}\DIFadd{)}\DIFaddend .
+\DIFdelbegin \DIFdel{In our evaluation, PanelAppRex returned panels in which }\DIFdelend %DIF > In our evaluation, PanelAppRex returned panels in which the causal gene was present in  85.6\% of all returned panels, with the subjective user-selected ``best panel'' containing the causal gene in all fifteen cases (\textbf{Figure \ref{fig:performance}}).
+ \DIFaddbegin 
+
+ \DIFadd{Under the recommended usage, in which the union of all returned panels is considered, the causal gene was recovered in all fifteen benchmarked cases. Across all returned panels, }\DIFaddend the causal gene was present in \DIFdelbegin \DIFdel{93\% of all returned panels, with the subjective }\DIFdelend \DIFaddbegin \DIFadd{85.6\% of panels. For manual interface interpretation, the causal gene was present in the }\DIFaddend user-selected \DIFdelbegin \DIFdel{``best panel'' achieving a perfect accuracy of 100\% 
+(}\DIFdelend \DIFaddbegin \DIFadd{best-fit panel(s) in all fifteen benchmarked cases (}\DIFaddend \textbf{Figure \ref{fig:performance}}).
+ \DIFaddbegin 
+
+\DIFaddend These metrics were derived by comparing the causal gene identified from \DIFdelbegin \DIFdel{the case study abstracts }\DIFdelend \DIFaddbegin \DIFadd{each case study }\DIFaddend to the panels returned by \DIFdelbegin \DIFdel{our query, and by applying a subjective relevance measure to mimic intuitive panel selection - }\DIFdelend \DIFaddbegin \DIFadd{the query. For automated use, we recommend considering the union of returned panels. For manual interface use, we also recorded a user-selected best-fit panel assessment intended to reflect plausible user choice, }\DIFaddend acknowledging that certain panels, such as the established \ac{pid} gene panel, \DIFdelbegin \DIFdel{are inherently more reliable }\DIFdelend \DIFaddbegin \DIFadd{may be more clinically aligned }\DIFaddend than broader, less specific panels \DIFaddbegin \DIFadd{(}\textbf{\DIFadd{Table \ref{tab:benchmark}}}\DIFadd{)}\DIFaddend .
 
 %DIF <  (i.e. \ac{pid} panel instead of COVID-19 research panel for  diagnosis of immune disorder}). 
-Overall, the results confirm that our approach accurately identifies the most relevant panels and effectively supports clinical decision-making in complex diagnostic scenarios.
+\DIFdelbegin \DIFdel{Overall, the results confirm that our approach accurately identifies the most relevant panels and effectively supports clinical decision-making }\DIFdelend \DIFaddbegin \DIFadd{Overall, these results suggest that the approach can identify relevant panels in this benchmark setting and may be useful for supporting panel selection }\DIFaddend in complex diagnostic scenarios.
 
 \DIFaddbegin \subsection{\DIFadd{Applications in AI-based RAG}}
 \noindent
-\DIFadd{Across all panels, we used PanelAppRex as the basis for generating AI-derived summaries that captured panel-specific mechanisms and phenotypes, conditioned on the disease context and the unique combination of genes in each panel. These short structured overviews are exposed as a research-only info box in the interface, giving users rapid context before expanding the full panel and enriching the semantic query layer used for retrieval. In aggregate, the }\ac{rag} \DIFadd{step consumed approximately 7 million input tokens and produced 2 million output tokens while condensing the 6.6 million word gene knowledge base into about 135,000 words of panel-level summaries, corresponding to roughly fifty-fold compression of the raw text while retaining panel-specific mechanistic and phenotypic signal.
-The same protocol is easily modifiable to allow real-time }\ac{rag} \DIFadd{requests from users, either on from commercial provides like OpenAI API or local open-weight models inside protected research environments by simply redirecting the }\texttt{\DIFadd{system\_prompt}} \DIFadd{and }\texttt{\DIFadd{writeLines}} \DIFadd{functions as shown in our code repository.
+\DIFadd{Across all panels, we used the core PanelAppRex dataset combined with }\ac{rag} \DIFadd{on the UniProtKB human proteome to generate AI-derived panel summaries that captured panel-specific mechanisms and phenotypes conditioned on disease context and gene composition. 
+These structured summaries are exposed in the interface as an experimental panel ``Info'' field, intended as a demonstration of how the core dataset can be extended for AI-assisted interpretation. In aggregate, this step consumed approximately 7 million input tokens and produced 2 million output tokens while condensing the 6.6 million-word gene knowledge base into approximately 135,000 words of panel-level summaries, corresponding to roughly fifty-fold compression. This summary layer demonstrates how the structured PanelAppRex core can be extended for AI-assisted interpretation and future downstream }\ac{rag}\DIFadd{-style applications. The benchmarking analyses reported here were performed on the core structured dataset and did not depend on this additional AI-derived field.
 }
 
 \DIFaddend \subsection{Structured inheritance annotations reveal overlapping gene-MOI relationships}
@@ -352,46 +351,65 @@ The most common annotations were \ac{ar} and \ac{ad}, consistent with their prev
 These structured inheritance annotations underpin key applications 
 enabled by PanelAppRex, including \ac{moi}-filtered search and model-based prior estimation.
 
-
 \FloatBarrier
 \section{Discussion}
 \noindent
-PanelAppRex provides an accessible and validated platform for querying, aggregating, and exporting curated disease-gene panel data. Designed for both clinical and research use, it simplifies study planning and variant interpretation through a user-friendly interface, while also offering a harmonised dataset for programmatic workflows. The core model integrates over 58,000 panel-gene associations, with full coverage of key fields including \ac{hgnc} symbols, Ensembl IDs, \ac{omim} annotations, \ac{moi}, and supporting publications.
+PanelAppRex provides an accessible \DIFdelbegin \DIFdel{and validated }\DIFdelend platform for querying, aggregating, and exporting curated disease-gene panel data\DIFaddbegin \DIFadd{, with initial benchmarking in published case studies}\DIFaddend .
+Designed for both clinical and research use, it simplifies study planning and variant interpretation through a user-friendly interface, while also offering a harmonised dataset for programmatic workflows. 
+The core model integrates over 58,000 panel-gene associations, with \DIFdelbegin \DIFdel{full coverage of key fields including }\DIFdelend \DIFaddbegin \DIFadd{complete coverage of the core identifiers required for linking valid gene entries after recovery, alongside structured disease annotations, }\DIFaddend \ac{hgnc} symbols, \DIFdelbegin \DIFdel{Ensembl IDs, }%DIFDELCMD < \ac{omim} %%%
+\DIFdel{annotations, }\DIFdelend \ac{moi}, \DIFaddbegin \DIFadd{OMIM-linked identifiers, }\DIFaddend and supporting publications \DIFaddbegin \DIFadd{where available}\DIFaddend .
 
-Beyond immediate usability, PanelAppRex lays a foundation for genome-wide statistical modelling of disease risk. 
-With annotations for gene-disease relationships, the dataset provides a core building block towards rigorous estimation of the prior probability of observing  variant classifications (e.g. benign, pathogenic) under different disease \ac{moi}.
-%This helps address a persistent challenge in clinical genetics: the lack of principled priors for variant interpretation that account not only for known pathogenic variants (true positives), but also for unobserved variants and negative evidence (false negative causal pathogenic variant and true negative absence of causal variants) \cite{hannah_using_2024, zschocke_mendelian_2023}. 
-This addresses a key challenge in clinical genetics: the absence of principled priors for variant interpretation that incorporate not only known pathogenic variants (true positives), but also unobserved pathogenic variants (false negatives) and the absence of pathogenic findings (true negatives) \cite{hannah_using_2024, zschocke_mendelian_2023}.
+Beyond immediate usability, PanelAppRex \DIFdelbegin \DIFdel{lays a foundation for genome-wide }\DIFdelend \DIFaddbegin \DIFadd{provides a structured resource that may support future }\DIFaddend statistical modelling of \DIFdelbegin \DIFdel{disease risk}\DIFdelend \DIFaddbegin \DIFadd{disease-associated variation}\DIFaddend . 
+With annotations for gene-disease relationships, the dataset \DIFdelbegin \DIFdel{provides a core building block towards rigorous estimation of the prior probability }\DIFdelend \DIFaddbegin \DIFadd{may be useful for future work on estimating prior probabilities }\DIFaddend of observing variant classifications (e.g. benign, pathogenic) under different disease \ac{moi}. 
+%DIF < This helps address a persistent challenge in clinical genetics: the lack of principled priors for variant interpretation that account not only for known pathogenic variants (true positives), but also for unobserved variants and negative evidence (false negative causal pathogenic variant and true negative absence of causal variants) \cite{hannah_using_2024, zschocke_mendelian_2023}. 
+\DIFdelbegin \DIFdel{This addresses a key }\DIFdelend \DIFaddbegin \DIFadd{This relates to a broader }\DIFaddend challenge in clinical genetics: the absence of principled priors for variant interpretation that incorporate not only known pathogenic variants (true positives), but also unobserved pathogenic variants (false negatives) and the absence of pathogenic findings (true negatives) \cite{hannah_using_2024, zschocke_mendelian_2023}. 
 By integrating high-resolution allele frequencies from gnomAD \cite{karczewski2020mutational}, curated classifications from ClinVar \cite{landrum_clinvar_2018}, and structured gene-disease associations \cite{martin_panelapp_2019}, 
-PanelAppRex can enable the derivation of calibrated genome-wide priors for Bayesian models of genetic risk.
+PanelAppRex \DIFdelbegin \DIFdel{can enable the derivation of calibrated genome-wide priors for Bayesian }\DIFdelend \DIFaddbegin \DIFadd{may support future downstream development of quantitative }\DIFaddend models of genetic risk.
 
-These capabilities go beyond panel lookup to support evidence-aware diagnostics. 
-Probabilistic models incorporating both observed and unobserved variation can quantify uncertainty, resolve ambiguous findings, and refine variant prioritisation, scaling naturally to support complex, multi-gene disorders. 
-The dataset also provides a substrate for AI-driven approaches to variant interpretation, including probabilistic inference, reinforcement learning, and deep annotation pipelines
-\cite{jumper_highly_2021, cheng_accurate_2023}.
+These capabilities \DIFdelbegin \DIFdel{go beyond panel lookup to support evidence-aware diagnostics. 
+Probabilistic models incorporating both observed and unobserved variation can quantify uncertainty, resolve ambiguous findings, and refine variant prioritisation, scaling naturally to support complex, multi-gene disorders.
+The dataset also provides a substrate for AI-driven }\DIFdelend \DIFaddbegin \DIFadd{extend panel lookup by supporting structured retrieval, filtering, and downstream analysis in diagnostic and research workflows. 
+Probabilistic modelling, uncertainty estimation, and related approaches remain potential downstream applications.
+}
+
+\DIFadd{The dataset may also provide a useful substrate for future AI-assisted }\DIFaddend approaches to variant interpretation, including probabilistic inference \DIFdelbegin \DIFdel{, reinforcement learning, and deep annotation pipelines
+\mbox{%DIFAUXCMD
+\cite{jumper_highly_2021, cheng_accurate_2023}}\hskip0pt%DIFAUXCMD
+.
+}\DIFdelend \DIFaddbegin \DIFadd{and annotation workflows
+\mbox{%DIFAUXCMD
+\cite{jumper_highly_2021, cheng_accurate_2023}}\hskip0pt%DIFAUXCMD
+.
+We included an AI-derived panel-summary layer as an example extension of the structured core resource. It provides concise panel-level context for interpretation and illustrates how PanelAppRex could support future }\ac{rag}\DIFadd{-style and other AI-assisted workflows. 
+}\DIFaddend 
 
 Several limitations should be acknowledged. 
 Not all known coding genes are currently linked to a disease panel; we prioritised high-confidence, traceable annotations over broad but less reliable coverage. 
 Some genes are over-represented across multiple panels due to historical research biases, leading to non-uniform panel enrichment. 
-\DIFaddbegin \DIFadd{We performed benchmarks to measure success for both relatively simple gene-phenotype relationships (i.e., }\ac{pid}\DIFadd{) and more complex relationships (i.e., neurogenetic disorders) but ultimately, a measure of long-term public option will be required to determine the practical benefit.
+\DIFaddbegin \DIFadd{We benchmarked the approach in both relatively simple gene-phenotype relationships (e.g. }\ac{pid}\DIFadd{) and more complex settings such as neurogenetic disorders, but the benchmark remained limited to 15 published case studies. 
+The user-selected best-fit panel assessment was included to reflect plausible manual interface use and should be interpreted as a judgement-based measure rather than a formal objective ranking metric.
+Broader real-world evaluation will be needed to determine practical benefit across disease areas.
 }\DIFaddend Additionally, not all panels returned by queries may be equally informative. 
 For example, during benchmarking, the COVID-19 research panel frequently appeared alongside the \ac{pid} panel due to overlapping genes. 
 While technically accurate, such panels may be less relevant to users focused on clinical  diagnosis of immunodeficiency.
-% To consider typical user expectations, we included a subjective ``best match'' choice in each case study.
+%DIF <  To consider typical user expectations, we included a subjective ``best match'' choice in each case study.
 In bioinformatic workflows, these choices can be refined systematically or excluded using filters or downstream logic.
-In \DIFdelbegin \DIFdel{one of the five case studies, }\DIFdelend \DIFaddbegin \DIFadd{case study three, for example, }\DIFaddend a disease-based query returned three panels, one of which did not contain the causal gene. This is expected, as broader classifications may include non-specific panels, hindering sensitivity. However, the query was still considered 100\% successful, as the causal gene appeared in the combined result set, consistent with the recommended bioinformatic strategy of using the union of returned panels.
-\DIFaddbegin \DIFadd{We note that a pre-compiled offline database is useful for secured computing environments but it misses out on the benefits of well maintained primary source APIs: for rapidly changing resources, direct API access can provide more frequent updates than an offline snapshot, which we cannot match in the same way.
+In \DIFdelbegin \DIFdel{one of the five case studies, }\DIFdelend \DIFaddbegin \DIFadd{case study three, for example, }\DIFaddend a disease-based query returned three panels, one of which did not contain the causal gene. This is expected, as broader classifications may include non-specific panels, hindering sensitivity. 
+However, the query was still considered \DIFdelbegin \DIFdel{100\% successful , as }\DIFdelend \DIFaddbegin \DIFadd{successful in this benchmark framework, because }\DIFaddend the causal gene appeared in the combined result set, consistent with the recommended bioinformatic strategy of using the union of returned panels.
+\DIFaddbegin \DIFadd{We note that a pre-compiled offline database is useful in secure computing environments, but it does not provide the same update frequency as well-maintained primary-source APIs. For rapidly changing resources, direct API access can offer more current data than an offline snapshot.
 }\DIFaddend 
 
-PanelAppRex bridges expert-curated panel knowledge with genome-scale statistical reasoning. 
-It offers a robust tool for interactive search, a validated dataset for programmatic access, and a scalable framework for quantitative genomic modelling. 
-Future work will focus on expanding supported queries, integrating additional variant types and annotations, and enabling more sophisticated applications in variant interpretation and risk estimation.
+PanelAppRex \DIFdelbegin \DIFdel{bridges expert-curated panel knowledge with genome-scale statistical reasoning. 
+It offers a robust tool }\DIFdelend \DIFaddbegin \DIFadd{provides a structured and practical resource }\DIFaddend for interactive search \DIFdelbegin \DIFdel{, a validated dataset for programmatic access , and a scalable framework for quantitative genomic modelling}\DIFdelend \DIFaddbegin \DIFadd{and programmatic access to curated disease-gene panel information}\DIFaddend . 
+Future work will focus on expanding supported queries, integrating additional variant types and annotations, and \DIFdelbegin \DIFdel{enabling more sophisticated }\DIFdelend \DIFaddbegin \DIFadd{evaluating more advanced }\DIFaddend applications in variant interpretation and risk estimation.
 
-%\section{Conclusion}
-%\noindent
-%PanelAppRex offers a robust solution for bioinformatically aggregating and querying gene panel data. Its additional user interface with sophisticated search feature simplifies data exploration and enhances variant interpretation. 
+%DIF < \section{Conclusion}
+%DIF < \noindent
+%DIF < PanelAppRex offers a robust solution for bioinformatically aggregating and querying gene panel data. Its additional user interface with sophisticated search feature simplifies data exploration and enhances variant interpretation. 
+\DIFdelbegin %DIFDELCMD < 
 
-\section*{Acknowledgements}
+%DIFDELCMD < %%%
+\DIFdelend \section*{Acknowledgements}
 \noindent
 \DIFaddbegin \DIFadd{ClinVar asks its users who distribute or copy data to provide attribution to them as a data source in publications and websites \mbox{%DIFAUXCMD
 \cite{landrum_clinvar_2018}}\hskip0pt%DIFAUXCMD
@@ -412,7 +430,7 @@ We do not access }\ac{omim} \DIFadd{data but instead direct readers using gene i
 \noindent 
 DL designed and performed analyses and wrote the manuscript.
 SB, AS, SS, JF, LJS designed analysis and wrote the manuscript.
-%JF, LJS supervised the work, and applied for funding.
+%DIF < JF, LJS supervised the work, and applied for funding.
 The Quant Group is a collaboration across multiple institutions where authors contribute equally; the members on this project were DL, SB, and AS.
 
 \section*{Competing interest}
@@ -444,12 +462,12 @@ The study was conducted in accordance with the Declaration of Helsinki.
 \beginsupplement
 \section{Supplemental} \label{Supplemental_text}
 
-
 \begin{table}[htbp]
 \caption{\textbf{Summary of case study queries and PanelAppRex results.} 
-\DIFaddbeginFL \DIFaddFL{We recommend automated command-line use that accounts for all query results. 
-For manual interface users, subjective decisions are naturally expected. We therefore measured }\DIFaddendFL ``\DIFdelbeginFL \DIFdelFL{Subjective }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{subjective }\DIFaddendFL best panels'' \DIFdelbeginFL \DIFdelFL{are }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{as }\DIFaddendFL those reasonably preferable to the clinical query and unlikely to be excluded by users. In the benchmark scenario, broad or less relevant panels (e.g. ``COVID-19 research'') might be deprioritised in favour of more clinically aligned options such as ``Fetal anomalies'', or ``Paediatric disorders''. \DIFdelbeginFL \DIFdelFL{Summarised }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{The results are summarised }\DIFaddendFL in \textbf{Figure \ref{fig:performance}}.
-*Case study 5 had five individual cases and patient information was significantly longer than other studies. Therefore, we used OpenAI model o3-mini to converted \DIFdelbeginFL \DIFdelFL{it }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{each }\DIFaddendFL to a standardised keyword query automatically, thereby removing our subjective bias and aligning with the other queries.}
+\DIFdelbeginFL \DIFdelFL{``Subjective best panels'' are those reasonably preferable to }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{We recommend automated use that accounts for }\DIFaddendFL the \DIFdelbeginFL \DIFdelFL{clinical }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{union of all }\DIFaddendFL query \DIFaddbeginFL \DIFaddFL{results. For manual interface use, judgement-based panel selection is naturally expected. We therefore recorded the user-selected best-fit panel(s), defined as the returned panel or panels judged most clinically aligned with the pre-genetic case description }\DIFaddendFL and \DIFdelbeginFL \DIFdelFL{unlikely }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{most likely }\DIFaddendFL to be \DIFdelbeginFL \DIFdelFL{excluded }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{prioritised }\DIFaddendFL by \DIFdelbeginFL \DIFdelFL{users}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{a user}\DIFaddendFL . In \DIFdelbeginFL \DIFdelFL{the benchmark scenario}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{this context}\DIFaddendFL , \DIFdelbeginFL \DIFdelFL{broad or }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{broader but }\DIFaddendFL less \DIFdelbeginFL \DIFdelFL{relevant }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{specific }\DIFaddendFL panels (\DIFdelbeginFL \DIFdelFL{e.g. }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{for example, }\DIFaddendFL ``COVID-19 research'' \DIFdelbeginFL \DIFdelFL{) might be deprioritised in favour of more clinically aligned options such as ``Fetal anomalies'', }\DIFdelendFL or ``Paediatric disorders''\DIFdelbeginFL \DIFdelFL{. Summarised in }\textbf{\DIFdelFL{Figure \ref{fig:performance}}}%DIFAUXCMD
+\DIFdelFL{.
+*Case study 5 had five individual cases and patient information was significantly longer than other studies. Therefore, we used OpenAI model o3-mini }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{) may be deprioritised relative }\DIFaddendFL to \DIFdelbeginFL \DIFdelFL{converted it to a standardised keyword query automatically, thereby removing our subjective bias }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{panels whose title }\DIFaddendFL and \DIFdelbeginFL \DIFdelFL{aligning with }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{scope more closely match }\DIFaddendFL the \DIFdelbeginFL \DIFdelFL{other queries}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{presenting condition}\DIFaddendFL . \DIFaddbeginFL \DIFaddFL{The results are summarised in }\textbf{\DIFaddFL{Figure \ref{fig:performance}}}\DIFaddFL{.
+}\DIFaddendFL }
 \label{tab:benchmark}
 \DIFdelbeginFL %DIFDELCMD < \centering
 %DIFDELCMD < \resizebox{\textwidth}{!}{
@@ -480,46 +498,16 @@ For manual interface users, subjective decisions are naturally expected. We ther
 %DIFDELCMD < \end{tabular}
 %DIFDELCMD < }
 %DIFDELCMD < %%%
-\DIFdelendFL %DIF > \centering
-%DIF > \resizebox{\textwidth}{!}{
-%DIF > \begin{tabular}{|
-%DIF >     p{1cm}|
-%DIF >     p{4cm}|
-%DIF >     p{4cm}|
-%DIF >     p{1.4cm}|
-%DIF >     p{1.3cm}|
-%DIF >     p{1.3cm}|
-%DIF >     p{1.3cm}|
-%DIF >     p{1.3cm}|
-%DIF >     p{1.3cm}|
-%DIF >     p{5cm}|}
-%DIF > \hline
-%DIF > \textbf{Case study}	(\textbf{Ref})	 & 	\textbf{Source title}	 & 	\textbf{Query}	 & 	\textbf{Causal gene}	 & 	\textbf{Result panels}	 & 	\textbf{Subjective best panels}	 & 	\textbf{Panels with causal gene}	 & 	\textbf{Subjective relevance ratio}	 & 	\textbf{Causal gene in all results}	 & 	\textbf{Result ID, panelName, geneCount} \\
-%DIF > \hline																			
-%DIF > 1	\cite{arruda_genetic_2015}	 & 	Genetic Analysis As a Practical Tool to Diagnose Hereditary Angioedema with Normal C1 Inhibitor: A Case Report	 & 	SERPING1 Factor XII edema	 & 	F12	 & 	3	 & 	1	 & 	3	 & 	0.3	 & 	1	 & 	64 COVID-19 research 695; 192 Primary immunodeficiency or monogenic inflammatory bowel disease 572; 311 Research panel - Severe Paediatric Disorders 2691 \\
-%DIF > \hline																			
-%DIF > 2	\cite{mcaleer_severe_2015}	 & 	Severe dermatitis, multiple allergies, and metabolic wasting syndrome caused by a novel mutation in the N-terminal plakin domain of desmoplakin	 & 	SAM syndrome DSG1 dermatitis metabolic wasting	 & 	DSP	 & 	3	 & 	3	 & 	3	 & 	1	 & 	1	 & 	205 Fetal anomalies 2185; 210 DDG2P 2422; 211 Paediatric disorders 3903 \\
-%DIF > \hline																			
-%DIF > 3	\cite{verhoeven_hematopoietic_2022}	 & 	Hematopoietic stem cell transplantation in a patient with proteasome-associated autoinflammatory syndrome (PRAAS)	 & 	resistant cutaneous vasculitis SH2D1A	 & 	PSMB4	 & 	3	 & 	1	 & 	2	 & 	0.3	 & 	0.7	 & 	64 COVID-19 research 695; 192 Primary immunodeficiency or monogenic inflammatory bowel disease 572; 311 Research panel - Severe Paediatric Disorders 2691 \\
-%DIF > \hline																			
-%DIF > 4	\cite{magerus-chatinet_autoimmune_2013}	 & 	Autoimmune lymphoproliferative syndrome caused by a homozygous null FAS ligand (FASLG) mutation	 & 	Autoimmune lymphoproliferative syndrome ALPS lymphoproliferation hypergammaglobulinemia autoimmune cytopenia	 & 	FASLG	 & 	2	 & 	1	 & 	2	 & 	0.5	 & 	1	 & 	64 COVID-19 research 695; 192 Primary immunodeficiency or monogenic inflammatory bowel disease 572 \\
-%DIF > \hline																			
-%DIF > 5*	\cite{sharfe_fatal_2014}	 & 	Fatal combined immunodeficiency associated with heterozygous mutation in STAT1	 & 	primary immunodeficiency recurrent pneumonia chronic diarrhea oral thrush bronchiectasis lymphadenopathy hepatosplenomegaly autoimmune hepatitis Addison	 & 	STAT1	 & 	1	 & 	1	 & 	1	 & 	1	 & 	1	 & 	192 Primary immunodeficiency or monogenic inflammatory bowel disease 572 \\
-%DIF > \hline
-%DIF > \end{tabular}
-%DIF > }
-\end{table}
-
+\DIFdelendFL \end{table}
 
 \DIFaddbegin \vspace{4em}
-
 
 \DIFaddend \begin{figure}[ht]
     \centering
     \includegraphics[width=0.99\textwidth]{validation_counts.pdf}
 \caption{\DIFdelbeginFL \textbf{\DIFdelFL{Validation and recovery of core annotation fields in the PanelAppRex dataset.}}
 %DIFAUXCMD
-\DIFdelendFL \DIFaddbeginFL \textbf{\DIFaddFL{Validation of completeness major annotation fields in the core dataset.}}
+\DIFdelendFL \DIFaddbeginFL \textbf{\DIFaddFL{Validation of completeness for major annotation fields in the core dataset.}}
 \DIFaddendFL (A) \DIFdelbeginFL \DIFdelFL{Unique genes and }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Entry-level completeness of }\DIFaddendFL HGNC \DIFdelbeginFL \DIFdelFL{IDs }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{identifiers }\DIFaddendFL before and after \DIFdelbeginFL \DIFdelFL{retrieving missing HGNC entries via }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{recovery using }\DIFaddendFL Ensembl \DIFdelbeginFL \DIFdelFL{.
 (B) Availability }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{biomaRt with HGNC symbol input, shown together with the total number }\DIFaddendFL of \DIFdelbeginFL \DIFdelFL{publication annotations for }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{unique }\DIFaddendFL genes \DIFaddbeginFL \DIFaddFL{in the dataset as a reference}\DIFaddendFL .
 (\DIFdelbeginFL \DIFdelFL{C}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{B}\DIFaddendFL ) \DIFdelbeginFL \DIFdelFL{Unique genes and }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Entry-level completeness of }\DIFaddendFL Ensembl gene \DIFdelbeginFL \DIFdelFL{IDs }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{identifiers }\DIFaddendFL before and after \DIFdelbeginFL \DIFdelFL{biomart-based }\DIFdelendFL recovery \DIFdelbeginFL \DIFdelFL{of missing }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{using }\DIFaddendFL Ensembl \DIFdelbeginFL \DIFdelFL{IDs}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{biomaRt with HGNC symbol input, shown together with the total number of unique genes in the dataset as a reference}\DIFaddendFL .
@@ -527,31 +515,22 @@ For manual interface users, subjective decisions are naturally expected. We ther
 (}\DIFaddendFL D) \DIFdelbeginFL \DIFdelFL{Gene }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Entry-level completeness of disease panel annotations, shown as the number of gene-panel }\DIFaddendFL entries with \DIFdelbeginFL \DIFdelFL{associated }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{a gene and the number with a }\DIFaddendFL disease panel \DIFdelbeginFL \DIFdelFL{names}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{name}\DIFaddendFL .
 (E) \DIFdelbeginFL \DIFdelFL{Gene }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Entry-level completeness of mode of inheritance annotations, shown as the number of gene-panel }\DIFaddendFL entries with \DIFdelbeginFL \DIFdelFL{annotated }%DIFDELCMD < \ac{moi}%%%
 \DIFdelendFL \DIFaddbeginFL \DIFaddFL{a gene and the number with a recorded mode of inheritance}\DIFaddendFL .
-(F) \DIFdelbeginFL \DIFdelFL{Gene entries linked to an }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Entry-level completeness of }\DIFaddendFL OMIM gene \DIFdelbeginFL \DIFdelFL{ID.
-Each bar shows }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{identifier annotations, shown as }\DIFaddendFL the \DIFdelbeginFL \DIFdelFL{count }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{number }\DIFaddendFL of \DIFaddbeginFL \DIFaddFL{gene-panel }\DIFaddendFL entries with \DIFdelbeginFL \DIFdelFL{non-missing values for }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{a gene and }\DIFaddendFL the \DIFdelbeginFL \DIFdelFL{respective field}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{number with an OMIM gene identifier}\DIFaddendFL .
-\DIFdelbeginFL \DIFdelFL{Updated fields (HGNC }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{For all panels the percentages are calculated relative to total gene-panel entries, except for panels A }\DIFaddendFL and \DIFdelbeginFL \DIFdelFL{Ensembl ID) reflect values recovered via external lookup using HGNC symbols. Percentage shows }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{B where }\DIFaddendFL the \DIFdelbeginFL \DIFdelFL{complete recovery }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{additional ``unique genes'' bars are calculated relative to the total number }\DIFaddendFL of \DIFdelbeginFL \DIFdelFL{coverage across features}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{unique genes}\DIFaddendFL .
+(F) \DIFdelbeginFL \DIFdelFL{Gene }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Entry-level completeness of OMIM gene identifier annotations, shown as the number of gene-panel }\DIFaddendFL entries \DIFdelbeginFL \DIFdelFL{linked to }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{with a gene and the number with }\DIFaddendFL an OMIM gene \DIFdelbeginFL \DIFdelFL{ID}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{identifier}\DIFaddendFL .
+\DIFdelbeginFL \DIFdelFL{Each bar shows }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{For all panels }\DIFaddendFL the \DIFdelbeginFL \DIFdelFL{count of }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{percentages are calculated relative to total gene-panel }\DIFaddendFL entries\DIFdelbeginFL \DIFdelFL{with non-missing values }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{, except }\DIFaddendFL for \DIFaddbeginFL \DIFaddFL{panels A and B where }\DIFaddendFL the \DIFdelbeginFL \DIFdelFL{respective field}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{additional ``unique genes'' bars are calculated relative to the total number of unique genes}\DIFaddendFL . \DIFdelbeginFL \DIFdelFL{Updated fields (HGNC and Ensembl ID) reflect values recovered via external lookup using HGNC symbols. Percentage shows }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Entry-level refers to }\DIFaddendFL the \DIFdelbeginFL \DIFdelFL{complete recovery }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{initial merging }\DIFaddendFL of \DIFdelbeginFL \DIFdelFL{coverage across features}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{data from independent sources}\DIFaddendFL . 
 }
     \label{fig:validation}
 \end{figure}
-
-
-
-
-
-
-
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.75\textwidth]{plot_patch2_annotated_example.pdf}    
 \caption{\textbf{Summary of gene confidence levels, reuse across panels, and panel sizes in the PanelAppRex dataset.}
-(A) Number of genes per confidence level. 
+(A) Number of genes per confidence level \DIFaddbeginFL \DIFaddFL{as reported by }\ac{GE}\DIFaddendFL . 
 (B) Number of panels in which each gene is included, with the example gene \textit{RAG1} highlighted to demonstrate that it is present in 7 panels. 
-(C) Number of genes per panel, with two representative panels annotated: panel ID 398 (\ac{pid}/\ac{iei}) and panel ID 1220 (\ac{iem}).
+(C) Number of genes per panel, with two representative panels annotated: \DIFdelbeginFL \DIFdelFL{panel ID 398 (}\DIFdelendFL \ac{pid}/\ac{iei} \DIFdelbeginFL \DIFdelFL{) }\DIFdelendFL and \DIFdelbeginFL \DIFdelFL{panel ID 1220 (}\DIFdelendFL \ac{iem}\DIFdelbeginFL \DIFdelFL{)}\DIFdelendFL .
 }
     \label{fig:summary_stats}
 \end{figure}
-
 
 \begin{figure}[ht]
     \centering
@@ -563,12 +542,54 @@ Each bar shows }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{identifier annotations, sh
     \label{fig:uniq_gene_moi}
 \end{figure}
 
-%\begin{figure}[ht]
-%    \centering
-%    \includegraphics[width=0.99\textwidth]{panelapprex_logo_v2_16x9.png}
-%\caption{\textbf{(logo)} PanelAppRex reigns over genomic complexity.
-%}
-%    \label{fig:logo}
-%\end{figure}
+%DIF < \begin{figure}[ht]
+%DIF <     \centering
+%DIF <     \includegraphics[width=0.99\textwidth]{panelapprex_logo_v2_16x9.png}
+%DIF < \caption{\textbf{(logo)} PanelAppRex reigns over genomic complexity.
+%DIF < }
+%DIF <     \label{fig:logo}
+%DIF < \end{figure}
+\DIFaddbegin \FloatBarrier
+\subsection{\DIFadd{Performance}}
+\noindent
+\DIFadd{To assess whether PanelAppRex improves practical query performance beyond direct use of a comparable resource, we performed a cold-start benchmark against a best-case }\ac{ge} \DIFadd{PanelApp }\ac{api} \DIFadd{workflow by re-using the first validation case query, ``}\textit{\DIFadd{SERPING1}}\DIFadd{, Factor XII, and edema'' (}\textbf{\DIFadd{Figure \ref{fig:benchmark_cold_start}}}\DIFadd{). We used the same query in both settings. This comparison is not fully like-for-like, because the }\ac{ge} \DIFadd{PanelApp }\ac{api} \DIFadd{does not accept the same phenotype-style query and return a ranked panel result directly. Instead, panel data must first be retrieved and assembled before ranking can begin. To make the comparison as favourable as possible to the }\ac{api} \DIFadd{workflow, we deliberately included the known relevant panel from validation case study 1 and then increased the number of queried panels. In practice, a user would not usually know that panel in advance.
+}
+
+\DIFadd{PanelAppRex local was faster at every tested subset size for time to final ranked result. The }\ac{api} \DIFadd{workflow also required increasing numbers of panel-level requests in order to assemble the returned data before ranking could begin. Queries with more than 100 panel calls resulted in the }\ac{ge} \ac{api} \DIFadd{returning HTTP 429 rate-limiting fair usage errors, so larger panel sets could not be evaluated in this benchmark without introducing additional delays. In addition, the }\ac{api} \DIFadd{comparator returned only panel content, whereas PanelAppRex provided the pre-integrated local dataset together with the annotations used elsewhere in the platform such as gene function and disease details.
+}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\textwidth]{benchmark_cold_start_manuscript_figure_all_runs.pdf}
+\caption{\textbf{\DIFaddFL{Cold-start benchmark of PanelAppRex local against a best-case }\ac{ge} \DIFaddFL{PanelApp }\ac{api} \DIFaddFL{workflow.}}
+\DIFaddFL{The same clinical query from case study 1 was used in both settings. The x axis shows the number of panels in each benchmark set. For each run, the same growing panel set was used in both arms. The }\ac{api} \DIFaddFL{comparator was deliberately made favourable by including the known relevant panel and then increasing the number of additional panels retrieved. 
+(A) End-to-end elapsed time from query to final ranked result. 
+(B) Mean number of }\ac{api} \DIFaddFL{calls required to retrieve and assemble the queried }\ac{ge} \DIFaddFL{panels before ranking. PanelAppRex local required no live }\ac{api} \DIFaddFL{calls at query time.
+(C) Mean number of candidate panels returned after applying the input query to the retrieved panel set. For this speed benchmark, candidate panels were counted using at least one matching query term. After 150 panels in the benchmark set, the }\ac{ge} \ac{api} \DIFaddFL{returned HTTP 429 rate-limiting errors, so larger runs could not be completed in this benchmark.
+}}
+    \label{fig:benchmark_cold_start}
+\end{figure}
+
+
+\FloatBarrier
+\subsection{\DIFadd{Example AI-based }\ac{rag} \DIFadd{summary}}
+
+\DIFadd{We used the core PanelAppRex dataset combined with RAG on the UniProtKB human proteome to generate AI-derived panel summaries that captured panel-specific mechanisms and phenotypes conditioned on disease context and gene composition. To demonstrate the results here, we show the first panel from the user interface, ``Thoracic aortic aneurysm or dissection'', which contains 65 genes. The AI-based RAG ``Info'' summary for this panel was:
+}
+
+\noindent \textbf{\textit{\DIFadd{Overview}}}\\
+\textit{\DIFadd{This gene set primarily encompasses disorders of connective tissue and vascular smooth muscle leading to thoracic aortic aneurysm and dissection. Clinical features include progressive dilation and rupture risk of the thoracic aorta, arterial tortuosity, joint hypermobility, skin laxity, skeletal deformities such as scoliosis and pectus excavatum, ocular abnormalities like lens dislocation, and systemic manifestations of connective tissue fragility. Many syndromes represented show autosomal dominant inheritance with variable expressivity and overlap with Marfan, Loeys-Dietz, and Ehlers-Danlos syndromes.}}
+
+\noindent \textbf{\textit{\DIFadd{Summary}}}
+\begin{itemize}
+\item \textit{\DIFadd{Defects in collagen synthesis, processing, and fibril assembly compromise connective tissue strength, leading to vascular fragility and skeletal abnormalities.}}
+\item \textit{\DIFadd{Impaired elastic fiber formation and maintenance disrupt aortic wall elasticity, predisposing to aneurysm and dissection.}}
+\item \textit{\DIFadd{Dysregulated TGF-beta signaling pathways alter vascular smooth muscle cell function and extracellular matrix remodeling, contributing to arterial tortuosity and aneurysm formation.}}
+\item \textit{\DIFadd{Smooth muscle contractile apparatus dysfunction affects vascular tone and structural integrity, increasing risk of thoracic aortic aneurysm.}}
+\item \textit{\DIFadd{Phenotypes include thoracic aortic aneurysm and dissection, joint hypermobility, skin hyperextensibility, skeletal deformities (scoliosis, pectus excavatum), and ocular features such as ectopia lentis.}}
+\item \textit{\DIFadd{Syndromic presentations overlap with connective tissue disorders including Loeys-Dietz syndrome, Ehlers-Danlos syndrome (vascular and classic types), and Marfan syndrome.}}
+\end{itemize}
+\DIFaddend 
+
 
 \end{document}

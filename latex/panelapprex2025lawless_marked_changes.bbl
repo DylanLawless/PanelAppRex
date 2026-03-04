@@ -1,0 +1,222 @@
+\begin{thebibliography}{15}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Martin et~al.(2019)Martin, Williams, Foulger, Leigh, Daugherty,
+  Niblock, Leong, Smith, Gerasimenko, Haraldsdottir, Thomas, Scott, Baple,
+  Tucci, Brittain, De~Burca, Ibañez, Kasperaviciute, Smedley, Caulfield,
+  Rendon, and McDonagh]{martin_panelapp_2019}
+Antonio~Rueda Martin, Eleanor Williams, Rebecca~E. Foulger, Sarah Leigh,
+  Louise~C. Daugherty, Olivia Niblock, Ivone U.~S. Leong, Katherine~R. Smith,
+  Oleg Gerasimenko, Eik Haraldsdottir, Ellen Thomas, Richard~H. Scott, Emma
+  Baple, Arianna Tucci, Helen Brittain, Anna De~Burca, Kristina Ibañez, Dalia
+  Kasperaviciute, Damian Smedley, Mark Caulfield, Augusto Rendon, and Ellen~M.
+  McDonagh.
+\newblock {PanelApp} crowdsources expert knowledge to establish consensus
+  diagnostic gene panels.
+\newblock \emph{Nature Genetics}, 51\penalty0 (11):\penalty0 1560--1565,
+  November 2019.
+\newblock ISSN 1061-4036, 1546-1718.
+\newblock \doi{10.1038/s41588-019-0528-2}.
+\newblock URL \url{https://www.nature.com/articles/s41588-019-0528-2}.
+
+\bibitem[Landrum et~al.(2018)Landrum, Lee, Benson, Brown, Chao, Chitipiralla,
+  Gu, Hart, Hoffman, Jang, Karapetyan, Katz, Liu, Maddipatla, Malheiro,
+  McDaniel, Ovetsky, Riley, Zhou, Holmes, Kattman, and
+  Maglott]{landrum_clinvar_2018}
+Melissa~J Landrum, Jennifer~M Lee, Mark Benson, Garth~R Brown, Chen Chao,
+  Shanmuga Chitipiralla, Baoshan Gu, Jennifer Hart, Douglas Hoffman, Wonhee
+  Jang, Karen Karapetyan, Kenneth Katz, Chunlei Liu, Zenith Maddipatla, Adriana
+  Malheiro, Kurt McDaniel, Michael Ovetsky, George Riley, George Zhou,
+  J~Bradley Holmes, Brandi~L Kattman, and Donna~R Maglott.
+\newblock {ClinVar}: improving access to variant interpretations and supporting
+  evidence.
+\newblock \emph{Nucleic Acids Research}, 46\penalty0 (D1):\penalty0
+  D1062--D1067, January 2018.
+\newblock ISSN 0305-1048, 1362-4962.
+\newblock \doi{10.1093/nar/gkx1153}.
+\newblock URL \url{http://academic.oup.com/nar/article/46/D1/D1062/4641904}.
+
+\bibitem[{The UniProt Consortium} et~al.(2025){The UniProt Consortium},
+  Bateman, Martin, Orchard, Magrane, Adesina, Ahmad, Bowler-Barnett, and
+  others.]{the_uniprot_consortium_uniprot_2025}
+{The UniProt Consortium}, Alex Bateman, Maria-Jesus Martin, Sandra Orchard,
+  Michele Magrane, Aduragbemi Adesina, Shadab Ahmad, Bowler-Barnett, and
+  others.
+\newblock {UniProt}: the {Universal} {Protein} {Knowledgebase} in 2025.
+\newblock \emph{Nucleic Acids Research}, 53\penalty0 (D1):\penalty0 D609--D617,
+  January 2025.
+\newblock ISSN 0305-1048, 1362-4962.
+\newblock \doi{10.1093/nar/gkae1010}.
+\newblock URL \url{https://academic.oup.com/nar/article/53/D1/D609/7902999}.
+
+\bibitem[Dyer et~al.(2025)Dyer, Austine-Orimoloye, Azov, Barba, Barnes,
+  Barrera-Enriquez, Becker, Bennett, Beracochea, and
+  others.]{dyer_ensembl_2025}
+Sarah~C Dyer, Olanrewaju Austine-Orimoloye, Andrey~G Azov, Matthieu Barba,
+  If~Barnes, Vianey~Paola Barrera-Enriquez, Arne Becker, Ruth Bennett, Martin
+  Beracochea, and others.
+\newblock Ensembl 2025.
+\newblock \emph{Nucleic Acids Research}, 53\penalty0 (D1):\penalty0 D948--D957,
+  January 2025.
+\newblock ISSN 0305-1048, 1362-4962.
+\newblock \doi{10.1093/nar/gkae1071}.
+\newblock URL \url{https://academic.oup.com/nar/article/53/D1/D948/7916352}.
+
+\bibitem[Karczewski et~al.(2020)Karczewski, Francioli, Tiao, Cummings,
+  Alf{\"o}ldi, Wang, Collins, Laricchia, Ganna, Birnbaum,
+  et~al.]{karczewski2020mutational}
+Konrad~J Karczewski, Laurent~C Francioli, Grace Tiao, Beryl~B Cummings, Jessica
+  Alf{\"o}ldi, Qingbo Wang, Ryan~L Collins, Kristen~M Laricchia, Andrea Ganna,
+  Daniel~P Birnbaum, et~al.
+\newblock The mutational constraint spectrum quantified from variation in
+  141,456 humans.
+\newblock \emph{Nature}, 581\penalty0 (7809):\penalty0 434--443, 2020.
+
+\bibitem[Steffen Durinck
+  {\textless}Biomartdev@Gmail.~Com{\textgreater}(2017)]{steffen_durinck_biomart}
+Wolfgang~Huber Steffen Durinck {\textless}Biomartdev@Gmail.~Com{\textgreater}.
+\newblock {biomaRt}, 2017.
+\newblock URL \url{https://bioconductor.org/packages/biomaRt}.
+
+\bibitem[Arruda et~al.(2015)Arruda, Delcaro, Botelho~Palhas, Dias, Muglia,
+  Castelli, Bork, and Moreno]{arruda_genetic_2015}
+Luisa Karla~P. Arruda, Luana Delcaro, Priscila~B. Botelho~Palhas, Marina~M.
+  Dias, Valdair~F. Muglia, Erick~C. Castelli, Konrad Bork, and Adriana~S.
+  Moreno.
+\newblock Genetic {Analysis} {As} a {Practical} {Tool} to {Diagnose}
+  {Hereditary} {Angioedema} with {Normal} {C1} {Inhibitor}: {A} {Case}
+  {Report}.
+\newblock \emph{Journal of Allergy and Clinical Immunology}, 135\penalty0
+  (2):\penalty0 AB197, February 2015.
+\newblock ISSN 00916749.
+\newblock \doi{10.1016/j.jaci.2014.12.1578}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0091674914033594}.
+
+\bibitem[McAleer et~al.(2015)McAleer, Pohler, Smith, Wilson, Cole, MacGowan,
+  Koetsier, Godsel, Harmon, Gruber, Crumrine, Elias, McDermott, Butler,
+  Broderick, Sarig, Sprecher, Green, McLean, and Irvine]{mcaleer_severe_2015}
+Maeve~A. McAleer, Elizabeth Pohler, Frances~J.D. Smith, Neil~J. Wilson,
+  Christian Cole, Stuart MacGowan, Jennifer~L. Koetsier, Lisa~M. Godsel,
+  Robert~M. Harmon, Robert Gruber, Debra Crumrine, Peter~M. Elias, Michael
+  McDermott, Karina Butler, Annemarie Broderick, Ofer Sarig, Eli Sprecher,
+  Kathleen~J. Green, W.H.~Irwin McLean, and Alan~D. Irvine.
+\newblock Severe dermatitis, multiple allergies, and metabolic wasting syndrome
+  caused by a novel mutation in the {N}-terminal plakin domain of desmoplakin.
+\newblock \emph{Journal of Allergy and Clinical Immunology}, 136\penalty0
+  (5):\penalty0 1268--1276, November 2015.
+\newblock ISSN 00916749.
+\newblock \doi{10.1016/j.jaci.2015.05.002}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0091674915006533}.
+
+\bibitem[Verhoeven et~al.(2022)Verhoeven, Schonenberg-Meinema, Ebstein,
+  Papendorf, Baars, Van~Leeuwen, Jansen, Lankester, Van Der~Burg, Florquin,
+  Maas, Van~Koningsbruggen, Krüger, Van Den~Berg, and
+  Kuijpers]{verhoeven_hematopoietic_2022}
+Dorit Verhoeven, Dieneke Schonenberg-Meinema, Frédéric Ebstein, Jonas~J.
+  Papendorf, Paul~A. Baars, Ester~M.M. Van~Leeuwen, Machiel~H. Jansen, Arjan~C.
+  Lankester, Mirjam Van Der~Burg, Sandrine Florquin, Saskia~M. Maas, Silvana
+  Van~Koningsbruggen, Elke Krüger, J.~Merlijn Van Den~Berg, and Taco~W.
+  Kuijpers.
+\newblock Hematopoietic stem cell transplantation in a patient with
+  proteasome-associated autoinflammatory syndrome ({PRAAS}).
+\newblock \emph{Journal of Allergy and Clinical Immunology}, 149\penalty0
+  (3):\penalty0 1120--1127.e8, March 2022.
+\newblock ISSN 00916749.
+\newblock \doi{10.1016/j.jaci.2021.07.039}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0091674921012446}.
+
+\bibitem[Magerus-Chatinet et~al.(2013)Magerus-Chatinet, Stolzenberg,
+  Lanzarotti, Neven, Daussy, Picard, Neveux, Desai, Rao, Ghosh, Madkaikar,
+  Fischer, and Rieux-Laucat]{magerus-chatinet_autoimmune_2013}
+Aude Magerus-Chatinet, Marie-Claude Stolzenberg, Nina Lanzarotti, Bénédicte
+  Neven, Cécile Daussy, Capucine Picard, Nathalie Neveux, Mukesh Desai,
+  Meghana Rao, Kanjaksha Ghosh, Manisha Madkaikar, Alain Fischer, and
+  Frédéric Rieux-Laucat.
+\newblock Autoimmune lymphoproliferative syndrome caused by a homozygous null
+  {FAS} ligand ({FASLG}) mutation.
+\newblock \emph{Journal of Allergy and Clinical Immunology}, 131\penalty0
+  (2):\penalty0 486--490, February 2013.
+\newblock ISSN 00916749.
+\newblock \doi{10.1016/j.jaci.2012.06.011}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0091674912009645}.
+
+\bibitem[Sharfe et~al.(2014)Sharfe, Nahum, Newell, Dadi, Ngan, Pereira,
+  Herbrick, and Roifman]{sharfe_fatal_2014}
+Nigel Sharfe, Amit Nahum, Andrea Newell, Harjit Dadi, Bo~Ngan, Sergio~L.
+  Pereira, Jo-Anne Herbrick, and Chaim~M. Roifman.
+\newblock Fatal combined immunodeficiency associated with heterozygous mutation
+  in {STAT1}.
+\newblock \emph{Journal of Allergy and Clinical Immunology}, 133\penalty0
+  (3):\penalty0 807--817, March 2014.
+\newblock ISSN 00916749.
+\newblock \doi{10.1016/j.jaci.2013.09.032}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0091674913014796}.
+
+\bibitem[Hannah et~al.(2024)Hannah, Drumm, Nykamp, Pramparo, Steiner, and
+  Schrodi]{hannah_using_2024}
+William~B. Hannah, Mitchell~L. Drumm, Keith Nykamp, Tiziano Pramparo, Robert~D.
+  Steiner, and Steven~J. Schrodi.
+\newblock Using genomic databases to determine the frequency and
+  population-based heterogeneity of autosomal recessive conditions.
+\newblock \emph{Genetics in Medicine Open}, 2:\penalty0 101881, 2024.
+\newblock ISSN 29497744.
+\newblock \doi{10.1016/j.gimo.2024.101881}.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S2949774424010276}.
+
+\bibitem[Zschocke et~al.(2023)Zschocke, Byers, and
+  Wilkie]{zschocke_mendelian_2023}
+Johannes Zschocke, Peter~H. Byers, and Andrew O.~M. Wilkie.
+\newblock Mendelian inheritance revisited: dominance and recessiveness in
+  medical genetics.
+\newblock \emph{Nature Reviews Genetics}, 24\penalty0 (7):\penalty0 442--463,
+  July 2023.
+\newblock ISSN 1471-0056, 1471-0064.
+\newblock \doi{10.1038/s41576-023-00574-0}.
+\newblock URL \url{https://www.nature.com/articles/s41576-023-00574-0}.
+
+\bibitem[Jumper et~al.(2021)Jumper, Evans, Pritzel, Green, Figurnov,
+  Ronneberger, Tunyasuvunakool, Bates, Žídek, Potapenko, Bridgland, Meyer,
+  Kohl, Ballard, Cowie, Romera-Paredes, Nikolov, Jain, Adler, Back, Petersen,
+  Reiman, Clancy, Zielinski, Steinegger, Pacholska, Berghammer, Bodenstein,
+  Silver, Vinyals, Senior, Kavukcuoglu, Kohli, and
+  Hassabis]{jumper_highly_2021}
+John Jumper, Richard Evans, Alexander Pritzel, Tim Green, Michael Figurnov,
+  Olaf Ronneberger, Kathryn Tunyasuvunakool, Russ Bates, Augustin Žídek, Anna
+  Potapenko, Alex Bridgland, Clemens Meyer, Simon A.~A. Kohl, Andrew~J.
+  Ballard, Andrew Cowie, Bernardino Romera-Paredes, Stanislav Nikolov, Rishub
+  Jain, Jonas Adler, Trevor Back, Stig Petersen, David Reiman, Ellen Clancy,
+  Michal Zielinski, Martin Steinegger, Michalina Pacholska, Tamas Berghammer,
+  Sebastian Bodenstein, David Silver, Oriol Vinyals, Andrew~W. Senior, Koray
+  Kavukcuoglu, Pushmeet Kohli, and Demis Hassabis.
+\newblock Highly accurate protein structure prediction with {AlphaFold}.
+\newblock \emph{Nature}, 596\penalty0 (7873):\penalty0 583--589, August 2021.
+\newblock ISSN 0028-0836, 1476-4687.
+\newblock \doi{10.1038/s41586-021-03819-2}.
+\newblock URL \url{https://www.nature.com/articles/s41586-021-03819-2}.
+
+\bibitem[Cheng et~al.(2023)Cheng, Novati, Pan, Bycroft, Žemgulytė, Applebaum,
+  Pritzel, Wong, Zielinski, Sargeant, Schneider, Senior, Jumper, Hassabis,
+  Kohli, and Avsec]{cheng_accurate_2023}
+Jun Cheng, Guido Novati, Joshua Pan, Clare Bycroft, Akvilė Žemgulytė, Taylor
+  Applebaum, Alexander Pritzel, Lai~Hong Wong, Michal Zielinski, Tobias
+  Sargeant, Rosalia~G. Schneider, Andrew~W. Senior, John Jumper, Demis
+  Hassabis, Pushmeet Kohli, and Žiga Avsec.
+\newblock Accurate proteome-wide missense variant effect prediction with
+  {AlphaMissense}.
+\newblock \emph{Science}, 381\penalty0 (6664):\penalty0 eadg7492, September
+  2023.
+\newblock ISSN 0036-8075, 1095-9203.
+\newblock \doi{10.1126/science.adg7492}.
+\newblock URL \url{https://www.science.org/doi/10.1126/science.adg7492}.
+
+\end{thebibliography}
