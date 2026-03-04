@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.9)  3 MAR 2026 22:33
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.9)  4 MAR 2026 10:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1256,11 +1256,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 ]
 Package acronym Info: Acronym iem used in text but not spelled out in full in t
-ext on input line 82.
+ext on input line 65.
 Package acronym Info: Label `acro:ge' newly defined as it shall be overridden
-although it is yet undefined on input line 101.
+although it is yet undefined on input line 84.
 Package acronym Info: Label `acro:rag' newly defined as it shall be overridden
-although it is yet undefined on input line 110.
+although it is yet undefined on input line 93.
 
 
 [3
@@ -1268,38 +1268,38 @@ although it is yet undefined on input line 110.
 ]
 Package acronym Info: Label `acro:hgnc' newly defined as it shall be overridden
 
-although it is yet undefined on input line 121.
+although it is yet undefined on input line 103.
 Package acronym Info: Label `acro:moi' newly defined as it shall be overridden
-although it is yet undefined on input line 130.
+although it is yet undefined on input line 112.
 Package acronym Info: Label `acro:html' newly defined as it shall be overridden
 
-although it is yet undefined on input line 135.
+although it is yet undefined on input line 117.
 
 
 [4]
 Package acronym Info: Label `acro:tsv' newly defined as it shall be overridden
-although it is yet undefined on input line 140.
+although it is yet undefined on input line 122.
 Package acronym Info: Label `acro:rds' newly defined as it shall be overridden
-although it is yet undefined on input line 140.
+although it is yet undefined on input line 122.
 Package acronym Info: Label `acro:omim' newly defined as it shall be overridden
 
-although it is yet undefined on input line 165.
+although it is yet undefined on input line 147.
 Package acronym Info: Label `acro:jaci' newly defined as it shall be overridden
 
-although it is yet undefined on input line 171.
+although it is yet undefined on input line 153.
 
 
 [5]
 
 [6]
 Package acronym Info: Label `acro:csv' newly defined as it shall be overridden
-although it is yet undefined on input line 194.
+although it is yet undefined on input line 175.
 Package acronym Info: Label `acro:pdf' newly defined as it shall be overridden
-although it is yet undefined on input line 194.
+although it is yet undefined on input line 175.
 Package acronym Info: Label `acro:pid' newly defined as it shall be overridden
-although it is yet undefined on input line 202.
+although it is yet undefined on input line 182.
 Package acronym Info: Label `acro:iei' newly defined as it shall be overridden
-although it is yet undefined on input line 202.
+although it is yet undefined on input line 182.
 File: ./images/figure_1.pdf Graphic file (type pdf)
 <use ./images/figure_1.pdf>
 
@@ -1307,15 +1307,15 @@ File: ./images/figure_1.pdf Graphic file (type pdf)
 [7]
 
 [8]
-Overfull \hbox (15.48708pt too wide) in paragraph at lines 261--261
+Overfull \hbox (15.48708pt too wide) in paragraph at lines 228--228
 []\TU/lmr/bx/n/14.4 Structured inheritance annotations reveal overlapping gene-
 
  []
 
 Package acronym Info: Label `acro:ar' newly defined as it shall be overridden
-although it is yet undefined on input line 265.
+although it is yet undefined on input line 232.
 Package acronym Info: Label `acro:ad' newly defined as it shall be overridden
-although it is yet undefined on input line 265.
+although it is yet undefined on input line 232.
 
 
 [9]
@@ -1338,18 +1338,18 @@ File: ./images/validation_counts.pdf Graphic file (type pdf)
 File: ./images/plot_patch2_annotated_example.pdf Graphic file (type pdf)
 <use ./images/plot_patch2_annotated_example.pdf>
 Package acronym Info: Label `acro:GE' newly defined as it shall be overridden
-although it is yet undefined on input line 389.
+although it is yet undefined on input line 349.
 
 
-Package acronym Warning: Acronym GE is not defined on input line 389.
+Package acronym Warning: Acronym GE is not defined on input line 349.
 
 
-Package acronym Warning: Acronym GE is not defined on input line 389.
+Package acronym Warning: Acronym GE is not defined on input line 349.
 
 Package acronym Info: Label `acro:iem' newly defined as it shall be overridden
-although it is yet undefined on input line 389.
+although it is yet undefined on input line 349.
 
-Package acronym Warning: Acronym GE is not defined on input line 389.
+Package acronym Warning: Acronym GE is not defined on input line 349.
 
 File: ./images/plot_patch_uniq_gene_moi_summary.pdf Graphic file (type pdf)
 <use ./images/plot_patch_uniq_gene_moi_summary.pdf>
@@ -1365,7 +1365,7 @@ File: ./images/plot_patch_uniq_gene_moi_summary.pdf Graphic file (type pdf)
 
 [19]
 Package acronym Info: Label `acro:api' newly defined as it shall be overridden
-although it is yet undefined on input line 406.
+although it is yet undefined on input line 366.
 File: ./images/benchmark_cold_start_manuscript_figure_all_runs.pdf Graphic file
  (type pdf)
 <use ./images/benchmark_cold_start_manuscript_figure_all_runs.pdf>
@@ -1378,10 +1378,10 @@ File: ./images/benchmark_cold_start_manuscript_figure_all_runs.pdf Graphic file
 [21]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ac' on input line 424.
+(hyperref)                removing `\@ac' on input line 384.
 
 
-Overfull \hbox (2.15604pt too wide) in paragraph at lines 438--439
+Overfull \hbox (2.15604pt too wide) in paragraph at lines 398--399
 []\TU/lmr/m/it/12 Syndromic presentations overlap with connective tissue disord
 ers including Loeys-
  []

@@ -42,20 +42,23 @@ We agree fully with your suggestions and believe that the revisions have substan
 \textit{\textbf{1. Generalisability beyond PID use cases.}\\
 While the authors claim broad applicability (e.g., “generalizable to genetic diagnosis across disease areas”), all benchmarking is exclusively from primary immunodeficiency (PID) studies. Although the authors state that primary immunodeficiency (PID) constitutes their primary focus, there is no quantitative or qualitative demonstration that PanelAppRex works equally well for other disease categories, particularly those with more complex gene-phenotype relationships (e.g., neurogenetic disorders, cancer panels). }
 
-\textbf{Response:} Thank you. We agree and have therefore expanded the validation studies from five to fifteen. We include the specific focus on neurology, and as you suggested the complexity does appear more prominently and the related panels are notably larger. We also added a third cross-disciplinary category to provide a broader sample. 
+%\textbf{Response:} Thank you. We agree and have therefore expanded the validation studies from five to fifteen. We include the specific focus on neurology, and as you suggested the complexity does appear more prominently and the related panels are notably larger. We also added a third cross-disciplinary category to provide a broader sample. 
+%
+%Under the recommended computational use, where all returned panels are considered jointly, the main result remained unchanged: in all fifteen studies, the query results included the causal gene. For manual use, the causal gene was present in 85.6\% of all returned panels, and it was present in the subjective user-selected best panel in all fifteen studies. The increased sample size provides a more informative benchmark while remaining readable and reproducible.
 
-Under the recommended computational use, where all returned panels are considered jointly, the main result remained unchanged: in all fifteen studies, the query results included the causal gene. For manual use, the causal gene was present in 85.6\% of all returned panels, and it was present in the subjective user-selected best panel in all fifteen studies. The increased sample size provides a more informative benchmark while remaining readable and reproducible.
 
+\textbf{Response:} Thank you. We agree and have expanded the benchmark from five to fifteen case studies, comprising five immunology, five neurology, and five cross-disciplinary cases. This broader set is now described in the Methods and Results and reported in Figure 1 and Table S1.
+
+Using the recommended computational interpretation, in which all returned panels are considered jointly, at least one returned panel contained the causal gene in all fifteen cases. Across all returned panels, the causal gene was present in 85.6\% of panels, and it was present in the user-selected best-fit panel(s) in all fifteen cases. We believe this provides a broader, while still manageable, benchmark across disease areas.
 
 \textit{\textbf{2. Unclear integration of RAG (Retrieval-Augmented Generation).}\\
 The manuscript mentions use of ``evidence-based RAG'' in multiple sections but does not explain how this is implemented. Since RAG is typically associated with LLM pipelines, readers need more detail on what data is being retrieved, how evidence is used to re-rank or refine query output, and whether generation plays any role.}
- 
-\textbf{Response:} Thank you. We agree that our previous wording was too broad and did not clearly demonstrate the AI-based extension or distinguish it from the core search workflow. In the revised manuscript, we now clarify that the benchmarked PanelAppRex search operates on the structured core dataset using deterministic term-based matching, and that the AI/RAG component was not used to re-rank or refine the reported query results.
 
-Instead, we included the AI-derived layer as a demonstration of how the core resource can be extended for future RAG-style workflows. For this step, we retrieved mechanistic gene text from UniProtKB and combined it with PanelAppRex panel membership and metadata, including panel name, disease group, reported phenotypes, and mode of inheritance. We then used a fixed-prompt GPT-based model to generate concise panel-level summaries. These outputs are shown in the interface as an experimental ``Info'' field for each panel and are intended to provide rapid interpretive context rather than to determine panel ranking.
+\textbf{Response:} Thank you. We agree that our previous wording was too broad and did not clearly distinguish the AI-based extension from the core search workflow. In the revised manuscript, we now clarify that the benchmarked PanelAppRex search operates on the structured core dataset using deterministic term-based matching, and that the AI-derived component was not used to re-rank or refine the reported query results.
 
-We have revised the Methods, Results, and Discussion accordingly so that the manuscript now states explicitly what data were retrieved, what was generated, and where the resulting summaries appear in the interface. We also clarify that this AI-derived panel-summary field can optionally be included in the searchable index in deployed versions of the interface, whereas the manual-query benchmarking reported here was performed on the core structured dataset and did not use the optional AI summary layer.
+Instead, we included the AI-derived layer as a demonstration of how the core resource can be extended. For this step, we retrieved mechanistic gene text from UniProtKB and combined it with PanelAppRex panel membership and metadata, including panel name, disease group, reported phenotypes, and mode of inheritance. We then used a fixed-prompt GPT-based model to generate concise panel-level summaries. These outputs are shown in the interface as an experimental ``Info'' field for each panel and are intended to provide rapid interpretive context rather than to determine panel ranking.
 
+We have revised the Methods, Results, Discussion, and Supplemental accordingly so that the manuscript now states explicitly what data were retrieved, what was generated, and where the resulting summaries appear in the interface. We also clarify that the manual-query benchmarking reported here was performed on the core structured dataset and did not use the optional AI summary layer.
 
 \noindent\rule{\textwidth}{0.4pt}
 \clearpage
@@ -66,57 +69,64 @@ We have revised the Methods, Results, and Discussion accordingly so that the man
 \textit{\textbf{1. Performance comparison.}\\
 When going through the initial steps of building PanelAppRex, the core of the tool can be understood to be providing credentialed access to the APIs of existing resources, such as GE’s PanelApp. It would be helpful to understand whether further steps taken to make the tool robust and comprehensive, such as using RAG or incorporating additional features, provide an improvement in performance through a comparative analysis, perhaps using the same benchmarking framework, against simply querying the other APIs.}
 
-\textbf{Response:} Thank you for this suggestion. We agree that comparison against an upstream API is an intuitive baseline, although it is not fully like-for-like here for two reasons: an API-based comparator first requires construction of a retrieval and harmonisation pipeline, and the GE PanelApp API does not accept the same phenotype-style query and return a ranked panel result directly. Nevertheless, to address the point in good faith, we completed the performance study and added the result to the revised manuscript in the Supplemental section and Figure S4.
+\textbf{Response:} Thank you. We agree that comparison with an upstream API is a useful baseline. We therefore added a supplementary benchmark comparing PanelAppRex with a GE PanelApp API workflow using the same case-study query, ``\textit{SERPING1} Factor XII and edema''. This analysis is now described in the Supplementary Methods and shown in Figure S4.
 
-We compared PanelAppRex against a GE PanelApp API workflow using the first case from our validation studies, ``\textit{SERPING1} Factor XII and edema'' for a total of 161 tests. We used the same query on both databases. To make the comparison as favourable as possible to the GE API, we deliberately included the known relevant panel (panel 398) in in the API request in addition to an increasing number of queried panels to mimic a natural naiive user searching for matches.
+Because the GE PanelApp API does not accept the same phenotype-style query and return ranked panel results directly, this comparison is necessarily indirect. The API workflow required repeated panel-level retrieval and local assembly before ranking, whereas PanelAppRex queried a pre-built local resource. We therefore present this analysis as a practical supplementary comparison rather than a one-to-one benchmark.
 
-PanelAppRex was faster at every tested subset size for time to final ranked result. In contrast, the API workflow required repeated panel-level requests and local assembly of the returned data before ranking could begin. The maximum number of panel queries was 150 since sequential queries greater than this cause the GE API to return HTTP 429 rate-limiting errors. 
-%The full set of candidate panels cannot be evaluated in this setting with adding significant delays.
-GE has around 400 panels so the user cannot complete a full query in a single fair-use process.
+In this benchmark, PanelAppRex was faster at each tested subset size for time to final ranked result. The API workflow was also constrained by rate limiting, with HTTP 429 errors occurring at higher numbers of sequential panel queries. We also note in the revised manuscript that live primary-source APIs provide more up-to-date content than an offline snapshot, which remains an important advantage of those resources.
 
-We have clarified this interpretation in the manuscript. PanelAppRex is a pre-built local resource designed for protected clinical and research environments, where live internet access may not be available, and it integrates information from multiple upstream resources. The online UI offers a fast manual search option. By contrast, the API performance comparator used only one upstream source and required reconstruction of a searchable dataset before ranking. We therefore view this analysis as an informative but constrained comparison rather than a fully equivalent one-to-one benchmark. We placed it in the Supplemental section because it addresses the reviewer’s point directly, but is not central to the main claim of the manuscript. 
-
-Based on your suggestions, we note in the revised manuscript that live primary-source APIs are valuable and can provide fresher updates than an offline snapshot, which remains an important advantage of those resources.
+%\textbf{Response:} Thank you for this suggestion. We agree that comparison against an upstream API is an intuitive baseline, although it is not fully like-for-like here for two reasons: an API-based comparator first requires construction of a retrieval and harmonisation pipeline, and the GE PanelApp API does not accept the same phenotype-style query and return a ranked panel result directly. Nevertheless, to address the point in good faith, we completed the performance study and added the result to the revised manuscript in the Supplemental section and Figure S4.
+%
+%We compared PanelAppRex against a GE PanelApp API workflow using the first case from our validation studies, ``\textit{SERPING1} Factor XII and edema'' for a total of 161 tests. We used the same query on both databases. To make the comparison as favourable as possible to the GE API, we deliberately included the known relevant panel (panel 398) in in the API request in addition to an increasing number of queried panels to mimic a natural naiive user searching for matches.
+%
+%PanelAppRex was faster at every tested subset size for time to final ranked result. In contrast, the API workflow required repeated panel-level requests and local assembly of the returned data before ranking could begin. The maximum number of panel queries was 150 since sequential queries greater than this cause the GE API to return HTTP 429 rate-limiting errors. 
+%GE has around 400 panels so the user cannot complete a full query in a single fair-use process.
+%
+%We have clarified this interpretation in the manuscript. PanelAppRex is a pre-built local resource designed for protected clinical and research environments, where live internet access may not be available, and it integrates information from multiple upstream resources. The online UI offers a fast manual search option. By contrast, the API performance comparator used only one upstream source and required reconstruction of a searchable dataset before ranking. We therefore view this analysis as an informative but constrained comparison rather than a fully equivalent one-to-one benchmark. We placed it in the Supplemental section because it addresses the reviewer’s point directly, but is not central to the main claim of the manuscript. 
+%
+%Based on your suggestions, we note in the revised manuscript that live primary-source APIs are valuable and can provide fresher updates than an offline snapshot, which remains an important advantage of those resources.
 
 \textit{\textbf{2. RAG implementation.}\\
 The use of retrieval augmentation generation proves to be important in cultivating the tool to handle complex queries. My understanding is that it is common for RAG to deal with ranking. If that is the case here, it will be relevant to know how the ranking is handled, as different types of information are pulled from the external sources. It will be valuable for the authors to provide a brief input on how the implementation of RAG was done.}
 
-\textbf{Response:} Thank you. You are correct that RAG is often used in ranking-oriented workflows; however, that was not its role in our implementation. In the revised manuscript, we now clarify that the reported panel ranking and manual-query benchmarking were performed using the structured core PanelAppRex dataset with deterministic term-based matching, and not by the AI/RAG component.
+\textbf{Response:} Thank you. We agree that this required clarification. In our implementation, the AI-derived component was not used for ranking. The reported panel ranking and manual-query benchmarking were performed using the structured core PanelAppRex dataset with deterministic term-based matching.
 
-We also now provide a description of the AI-based extension itself. For this step, we retrieved mechanistic gene text from UniProtKB and combined it with PanelAppRex panel membership and metadata, including panel name, disease group, reported phenotypes, and mode of inheritance. We then used a fixed-prompt GPT-based model to generate concise panel-level summaries for each panel. In the demonstration interface, these outputs are shown as an experimental ``Info'' field that provides rapid interpretive context. Because this field is part of the indexed table, it can also support searchable deployment variants built on the same framework. It was not used to rank or refine the benchmarked query results.
+We have now added a concise description of the optional AI-derived summary layer. Mechanistic gene text was retrieved from UniProtKB and combined with panel membership and metadata, including panel name, disease group, reported phenotypes, and mode of inheritance. A fixed-prompt GPT-based model was then used to generate concise panel-level summaries, shown in the interface as an experimental ``Info'' field. This field provides interpretive context and was not used to rank or refine the benchmarked query results.
 
-We have revised the Methods, Results, and Discussion accordingly so that the implementation and role of this AI-derived summary layer are now described explicitly.
+These clarifications have been added to the Methods, Results, and Discussion.
+
+%\textbf{Response:} Thank you. You are correct that RAG is often used in ranking-oriented workflows; however, that was not its role in our implementation. In the revised manuscript, we now clarify that the reported panel ranking and manual-query benchmarking were performed using the structured core PanelAppRex dataset with deterministic term-based matching, and not by the AI/RAG component.
+%
+%We also now provide a description of the AI-based extension itself. For this step, we retrieved mechanistic gene text from UniProtKB and combined it with PanelAppRex panel membership and metadata, including panel name, disease group, reported phenotypes, and mode of inheritance. We then used a fixed-prompt GPT-based model to generate concise panel-level summaries for each panel. In the demonstration interface, these outputs are shown as an experimental ``Info'' field that provides rapid interpretive context. Because this field is part of the indexed table, it can also support searchable deployment variants built on the same framework. It was not used to rank or refine the benchmarked query results.
+%
+%We have revised the Methods, Results, and Discussion accordingly so that the implementation and role of this AI-derived summary layer are now described explicitly.
 
 \textit{\textbf{3. Figure clarification}
 Panel E of Figure S1 is slightly hard to follow. The “100\%” at the top of each panel can be interpreted to be on the basis that the y values of each column in the panel match, but this is not the case with this panel. Additionally, in Section 3.2, it mentions that all gene entries have MOI, which is not the case based on Panel E. My understanding is that the 100\% in this panel could be referring to all unique genes having an MOI annotation, but I am unsure.
 Caption for Panel B of Figure S3 is unclear to me. The x-axis is the number of unique genes, and the number next to each bar appears to represent the number of unique genes for each mode of inheritance. However, this is hard to understand from the caption.}
 
-\textbf{Response:} Thank you. You were right that the original Figure S1 and its description were incorrect and not  clear. In the previous version, the percentages were not properly rendered, making the text inconsistent. We have now corrected both the figure and the manuscript text. Specifically, we now state the denominator for all panels. 
+\textbf{Response:} Thank you. We corrected the figure, revised the caption to state the denominator explicitly for each panel, and amended the Results text so that it no longer implies complete MOI annotation in the raw merged dataset.
 
-Percentages show entry-level completeness relative to all gene-panel entries. 
-Panels A and B are the only cases where recovery of a missing ID is used and therefore we include the count before and after. 
+We also clarified the legend and Results text so that the figure is self-contained and aligned with what is shown.
 
-We also revised the Results text to remove the incorrect implication that all entries had complete MOI and related annotations in the raw merged dataset. Instead, the revised text now distinguishes fields that were directly present in the integrated dataset from identifier fields that were recovered programmatically using Ensembl biomaRt. Simply, the earlier draft was a problem of figure design and explanation. We have now made the figure self-contained, clarified the denominators in the legend and Results text, and aligned the manuscript wording with what the figure actually shows.
-
-%Thank you. Our figure was not described well. Please find the updated version which now provides a clear description that is self-contained and complete. We mistakenly printed only one \% for each panel. 
-%\textbf{TODO: Ensure the updated caption and main text explicitly state the denominator for each percentage and reconcile the Section 3.2 statement with the figure (eg “after recovery” or “in the final released dataset” vs “raw merged dataset”). Fix the figure for clarity and then answer the Reviewer's precise question: what does the “100\%” mean and why does panel E look inconsistent with the claim that all entries have MOI.}
+%\textbf{Response:} Thank you. You were right that the original Figure S1 and its description were incorrect and not  clear. In the previous version, the percentages were not properly rendered, making the text inconsistent. We have now corrected both the figure and the manuscript text. Specifically, we now state the denominator for all panels. 
+%
+%Percentages show entry-level completeness relative to all gene-panel entries. 
+%Panels A and B are the only cases where recovery of a missing ID is used and therefore we include the count before and after. 
+%
+%We also revised the Results text to remove the incorrect implication that all entries had complete MOI and related annotations in the raw merged dataset. Instead, the revised text now distinguishes fields that were directly present in the integrated dataset from identifier fields that were recovered programmatically using Ensembl biomaRt. Simply, the earlier draft was a problem of figure design and explanation. We have now made the figure self-contained, clarified the denominators in the legend and Results text, and aligned the manuscript wording with what the figure actually shows.
 
 \textit{\textbf{4. User interface.}\\
 The readability of the user interface can sometimes feel inconvenient, as some of the latter columns do not have their respective values right underneath for instant viewing. Instead, it requires that we scroll back to the right to view them. While the tool will likely mostly be used programmatically, it would be helpful to modify this in the UI.
 It appears that the search query box cannot handle certain characters. For example, in the example provided in the manuscript, “SERPING1, Factor XII, and edema”, the commas cause the search to render no results. This can be confirmed as we get three results by changing the commas to “ands” so that the query is now “SERPING1 and Factor XII and edema”.
 }
 
-\textbf{Response:} Thank you for noting this. 
-We have updated the demo in several ways to provide a better user interface. 
-The layout, style, and formatting are now fixed. 
-The javascript search protocol has been fixed to allow such characters. Please find that the search input is fixed to allow symbols and other formatting; for instance,  “SERPING1, Factor XII, and edema” now works as expected.
-
-As you noted, our intention is not to provide this service directly, rather to free it for others to reimplement. However a better UI demonstration has been valuable here.
+\textbf{Response:} Thank you for noting this. We revised the demo interface to improve column readability and corrected the search parsing so that punctuation and symbols are now handled appropriately. The example query “SERPING1, Factor XII, and edema” now returns results as expected.
 
 \textit{\textbf{5. Search results for complex query - subjective best panel}.
 For the benchmarking results shown in Table S1, it may be helpful to include which panel was chosen as the subjective user-selected best panel. In a test case such as Case Study 2, where it appears all 3 returned panels were classified as subjective best panels, this minor detail can provide additional clarity.}
 
-\textbf{Response:} Thank you for this suggestion. We agree. These additional columns are now included. Please find the full input, output, and metadata is now available in the table for the readers. 
+\textbf{Response:} Thank you. We agree and have revised the manuscript accordingly. Specifically, Table S1 now includes the user-selected best-fit panel(s) for each case together with the corresponding query input, returned panels, and associated metadata.
 
 \noindent\rule{\textwidth}{0.4pt}
 
