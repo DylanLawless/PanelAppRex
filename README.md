@@ -90,8 +90,6 @@ If you are performing WGS analysis and score a variant due to it being a "diseas
 An example is a panel of 572 PID genes which are well established as consensus in the community.
 Another example is a panel with 1675 genes which are associated with unexplained death in infancy and sudden unexplained death in childhood.
 
-## References
-The PanelAppRex core model contained 58,592 entries containing annotation fields, including the gene name, disease-gene panel ID, disease-related features, confidence measurements. Data from gnomAD v4 comprised 807,162 individuals, including 730,947 exomes and 76,215 genomes. This dataset provided 786,500,648 single nucleotide variants and 122,583,462 indels, with variant type counts of 9,643,254 synonymous, 16,412,219 missense, 726,924 nonsense, 1,186,588 frameshift and 542,514 canonical splice site variants. ClinVar data were obtained from the variant summary dataset available from the NCBI FTP site, and included 6,845,091 entries, which were processed into 91,319 gene classification groups and a total of 38,983 gene classifications. Data from Ensembl was sourced for validation of identifiers such as gene IDs and Human Genome Organisation Gene Nomenclature Committee (HGNC) symbols. Disease interactions were compared against GE’s PanelApp.
 
 ## Recommendations
 PanelAppRex is made with care but is produced for research. Clinical applications should refer to accredited clinical sources. 
@@ -103,8 +101,11 @@ The goal of PanelAppRex is to prepare a single dataset that is flexible and inst
 ## Contributing
 Contributions to PanelAppRex are welcome. Please submit a pull request with your updates.
 
-## License
-This project is licensed under the MIT License - see the `LICENSE.md` file for details.
+## References
+The PanelAppRex core model contained 58,592 entries containing annotation fields, including the gene name, disease-gene panel ID, disease-related features, confidence measurements. Data from gnomAD v4 comprised 807,162 individuals, including 730,947 exomes and 76,215 genomes. This dataset provided 786,500,648 single nucleotide variants and 122,583,462 indels, with variant type counts of 9,643,254 synonymous, 16,412,219 missense, 726,924 nonsense, 1,186,588 frameshift and 542,514 canonical splice site variants. ClinVar data were obtained from the variant summary dataset available from the NCBI FTP site, and included 6,845,091 entries, which were processed into 91,319 gene classification groups and a total of 38,983 gene classifications. Data from Ensembl was sourced for validation of identifiers such as gene IDs and Human Genome Organisation Gene Nomenclature Committee (HGNC) symbols. Disease interactions were compared against GE’s PanelApp.
 
 ## Acknowledgements
-Special thanks to Genomics England for providing public access to the PanelApp data.
+ClinVar asks its users who distribute or copy data to provide attribution to them as a data source in publications and websites. The use of data from UniProt was based on Creative Commons Attribution 4.0 International (CC BY 4.0). We acknowledge GE for providing publicly accessible PanelApp data. The use of data from GE PanelApp was for research purposes and is not for healthcare or commercial services. The use of GE PanelApp source code was under the Apache License 2.0. The experimental (RAG) resource includes machine-assisted annotations generated using the OpenAI API according to their terms of use. We do not access OMIM data but instead direct readers using gene identifiers linked to OMIM.org record pages for further reading and acknowledge this resource. Ensembl data and code are available without restriction and software is provided under the Apache License 2.0. Ensembl and its satellite sites conform to the EBI terms of use; as such we acknowledge attribution to EMBL-EBI for the use of its data resources and tools.
+
+## License
+This project is licensed under the MIT License - see the `LICENSE.md` file for details.
