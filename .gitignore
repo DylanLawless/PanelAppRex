@@ -19,3 +19,5 @@ ref/uniprot/
 # old landing page
 data/landing_page.html
 data/landing_page_files/
+
+temp_submission_revision

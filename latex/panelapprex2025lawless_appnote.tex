@@ -95,7 +95,7 @@ We further demonstrate how the structured core resource can be extended with an 
 \section{Methods}
 
 \subsection{Data}
-The PanelAppRex core model contained 58,592 entries consisting of 52 sets of annotations, including the gene name, disease-gene panel ID, disease-related features, confidence measurements.
+The PanelAppRex core model contained 58,592 entries containing annotation fields, including the gene name, disease-gene panel ID, disease-related features, confidence measurements.
 Data from gnomAD v4 comprised 807,162 individuals, including 730,947 exomes and 76,215 genomes \cite{karczewski2020mutational}. This dataset provided 786,500,648 single nucleotide variants and 122,583,462 indels, with variant type counts of 9,643,254 synonymous, 16,412,219 missense, 726,924 nonsense, 1,186,588 frameshift and 542,514 canonical splice site variants. ClinVar data were obtained from the variant summary dataset 
 %(this version: 16 March 2025)
  available from the NCBI FTP site, and included 6,845,091 entries, which were processed into 91,319 gene classification groups and a total of 38,983 gene classifications 
@@ -117,9 +117,9 @@ We provide both a pre-compiled user interface and an analysis-ready dataset.
 On a desktop browser, the user interface allows for queries via the integrated search bar in \ac{html}, where a JavaScript function splits the query into individual terms and progressively filters all entries, retaining only those that match all active terms while ignoring unmatched ones. This enables users to perform complex, partial matching queries (e.g. ``paediatric \textit{RAG1} primary immunodeficiency skin disorder'') to rapidly identify the panel most closely associated with their hypothesis on primary immunodeficiency and paediatric skin disorders.
 After querying and selecting a panel, the complete underlying data is returned.
 
-The analysis-ready dataset contains the same dataset in multiple file formats.
+The analysis-ready dataset contains the dataset in multiple file formats.
 Our recommended strategy is a bioinformatic approach which can use the union of returned panels, or to apply a scoring system to rank panels in multi-group analyses.
-Bioinformatically, users can import the provided, ready-for-use, datasets in \ac{tsv} or \ac{rds} formats.
+Bioinformatically, users can import the provided ready-for-use datasets in \ac{tsv} or \ac{rds} formats.
 A typical use case might involve users merging with their own omic data based on gene or Ensembl ID.
 The following code snippet, available in \texttt{minimal\_example.R}, demonstrates how to load the data in R:
 \begin{verbatim}
@@ -172,7 +172,7 @@ To demonstrate how the core PanelAppRex dataset can be expanded for AI-assisted 
 \subsection{Core dataset}
 PanelAppRex successfully aggregated data for 451 panels to offer a database and user-friendly search functionality (\textbf{Figure \ref{fig:performance}}).
 Users can retrieve results filtered by gene names, phenotypes, disease groups and other criteria. 
-The browser-based user interface system also provides a table view with panel details and provided options for exporting results in \ac{csv}, Excel, or \ac{pdf} format.
+The browser-based user interface system also provides a table view with panel details and provides options for exporting results in \ac{csv}, Excel, or \ac{pdf} format.
 Bioinformatic uses may include generating virtual panels, constructing prior odds, or supporting formal reporting in qualifying variant protocols.
 Summary statistics are reported in 
 \textbf{Figure \ref{fig:summary_stats}}. 
@@ -275,8 +275,8 @@ Future work will focus on expanding supported queries, integrating additional va
 ClinVar asks its users who distribute or copy data to provide attribution to them as a data source in publications and websites \cite{landrum_clinvar_2018}.
 The use of data from UniProt was based on Creative Commons Attribution 4.0 International (CC BY 4.0).
 We acknowledge \ac{ge} for providing publicly accessible PanelApp data.
-The use of data from \ac{ge} panelapp was for research purposes and is not for healthcare or commercial services.
-The use of  \ac{ge} panelapp source code was under the Apache License 2.0.
+The use of data from \ac{ge} PanelApp was for research purposes and is not for healthcare or commercial services.
+The use of  \ac{ge} PanelApp source code was under the Apache License 2.0.
 The experimental (RAG) resource includes machine-assisted annotations generated using the OpenAI API according to their terms of use.
 We do not access \ac{omim} data but instead direct readers using gene identifiers linked to OMIM.org record pages for further reading and acknowledge this resource.
 Ensembl data and code are available without restriction and software is provided under the Apache License 2.0 \cite{dyer_ensembl_2025}. Ensembl and its satellite sites conform to the EBI terms of use; as such we acknowledge attribution to EMBL-EBI for the use of its data resources and tools.
@@ -285,9 +285,9 @@ Ensembl data and code are available without restriction and software is provided
 \noindent 
 DL designed and performed analyses and wrote the manuscript.
 SB, AS, SS, JF, LJS designed analysis and wrote the manuscript.
-The Quant Group is a collaboration across multiple institutions where authors contribute equally; the members on this project were DL, SB, and AS.
+The Quant Group is a collaboration across multiple institutions where authors contribute equally; the members of this project were DL, SB, and AS.
 
-\section*{Competing interest}
+\section*{Competing interests}
 \noindent
 The authors declare no competing interest. 
 
