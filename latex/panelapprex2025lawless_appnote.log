@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.9)  4 MAR 2026 10:27
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.9)  9 MAR 2026 17:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1338,18 +1338,18 @@ File: ./images/validation_counts.pdf Graphic file (type pdf)
 File: ./images/plot_patch2_annotated_example.pdf Graphic file (type pdf)
 <use ./images/plot_patch2_annotated_example.pdf>
 Package acronym Info: Label `acro:GE' newly defined as it shall be overridden
-although it is yet undefined on input line 349.
+although it is yet undefined on input line 353.
 
 
-Package acronym Warning: Acronym GE is not defined on input line 349.
+Package acronym Warning: Acronym GE is not defined on input line 353.
 
 
-Package acronym Warning: Acronym GE is not defined on input line 349.
+Package acronym Warning: Acronym GE is not defined on input line 353.
 
 Package acronym Info: Label `acro:iem' newly defined as it shall be overridden
-although it is yet undefined on input line 349.
+although it is yet undefined on input line 353.
 
-Package acronym Warning: Acronym GE is not defined on input line 349.
+Package acronym Warning: Acronym GE is not defined on input line 353.
 
 File: ./images/plot_patch_uniq_gene_moi_summary.pdf Graphic file (type pdf)
 <use ./images/plot_patch_uniq_gene_moi_summary.pdf>
@@ -1365,7 +1365,7 @@ File: ./images/plot_patch_uniq_gene_moi_summary.pdf Graphic file (type pdf)
 
 [19]
 Package acronym Info: Label `acro:api' newly defined as it shall be overridden
-although it is yet undefined on input line 366.
+although it is yet undefined on input line 370.
 File: ./images/benchmark_cold_start_manuscript_figure_all_runs.pdf Graphic file
  (type pdf)
 <use ./images/benchmark_cold_start_manuscript_figure_all_runs.pdf>
@@ -1378,10 +1378,10 @@ File: ./images/benchmark_cold_start_manuscript_figure_all_runs.pdf Graphic file
 [21]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ac' on input line 384.
+(hyperref)                removing `\@ac' on input line 388.
 
 
-Overfull \hbox (2.15604pt too wide) in paragraph at lines 398--399
+Overfull \hbox (2.15604pt too wide) in paragraph at lines 402--403
 []\TU/lmr/m/it/12 Syndromic presentations overlap with connective tissue disord
 ers including Loeys-
  []
@@ -1402,10 +1402,10 @@ changed.
 Here is how much of TeX's memory you used:
  36965 strings out of 473832
  825113 string characters out of 5729482
- 1324373 words of memory out of 5000000
+ 1323373 words of memory out of 5000000
  59445 multiletter control sequences out of 15000+600000
  568481 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 121i,6n,124p,1612b,1115s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 121i,6n,124p,1612b,1113s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on panelapprex2025lawless_appnote.pdf (22 pages).
